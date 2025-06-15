@@ -1,0 +1,1 @@
+from frequest import get, post, put, patch, delete

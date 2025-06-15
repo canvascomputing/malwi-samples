@@ -1,0 +1,1 @@
+from colorfades import color

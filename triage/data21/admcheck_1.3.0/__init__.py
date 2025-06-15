@@ -1,0 +1,1 @@
+from admcheck.main import *

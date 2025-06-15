@@ -1,0 +1,1 @@
+from .excot import ran

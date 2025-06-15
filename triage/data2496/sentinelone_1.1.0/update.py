@@ -1,0 +1,23 @@
+
+class Package(object):
+    def __init__(self, **kwargs):
+        self.accounts = kwargs.get('accounts', None)
+        self.createdAt = kwargs.get('createdAt', None)
+        self.fileExtension = kwargs.get('fileExtension', None)
+        self.fileName = kwargs.get('fileName', None)
+        self.fileSize = kwargs.get('fileSize', None)
+        self.id = kwargs.get('id', None)
+        self.link = kwargs.get('link', None)
+        self.majorVersion = kwargs.get('majorVersion', None)
+        self.minorVersion = kwargs.get('minorVersion', None)
+        self.osArch = kwargs.get('osArch', None)
+        self.osType = kwargs.get('osType', None)
+        self.packageType = kwargs.get('packageType', None)
+        self.platformType = kwargs.get('platformType', None)
+        self.rangerVersion = kwargs.get('rangerVersion', None)
+        self.scopeLevel = kwargs.get('scopeLevel', None)
+        self.sha1 = kwargs.get('sha1', None)
+        self.sites = kwargs.get('sites', None)
+        self.status = kwargs.get('status', None)
+        self.updatedAt = kwargs.get('updatedAt', None)
+        self.version = kwargs.get('version', None)

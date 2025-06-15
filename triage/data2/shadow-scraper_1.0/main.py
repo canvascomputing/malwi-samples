@@ -1,0 +1,1 @@
+print("ShadowForeigner owns you")

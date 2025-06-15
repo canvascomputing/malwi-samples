@@ -1,0 +1,1 @@
+from postgresserializer.serializer import MAX_FILE_SIZE_ALLOWED

