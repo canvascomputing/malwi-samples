@@ -1,1 +1,0 @@
-from coloreq import color

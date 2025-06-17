@@ -1,30 +1,31 @@
 #!/usr/bin/env bash
 
-# Check for correct usage
-# The script expects two arguments:
-# 1. The exact number of files a project folder must contain
-# 2. The directory to move matching project folders into
-if [ $# -ne 2 ]; then
-    echo "Usage: $0 <number_of_files> <target_directory>"
+# Usage info
+if [ $# -lt 2 ] || [ $# -gt 3 ]; then
+    echo "Usage: $0 <number_of_files> <target_directory> [source_directory]"
     exit 1
 fi
 
-# Read input arguments
-TARGET_COUNT=$1         # Number of files to match
-TARGET_DIR=$2           # Target directory to move folders to
+# Arguments
+TARGET_COUNT=$1
+TARGET_DIR=$2
+SOURCE_GLOB=${3:-triage/data*/}  # Default to 'triage/data*/' if not provided
 
 # Create the target directory if it doesn't exist
 mkdir -p "$TARGET_DIR"
 
-# Loop over all folders under triage/data*/ (e.g., triage/data10, triage/data123, etc.)
-for data_dir in triage/data*/; do
-    # Loop over all project subfolders inside each data folder
+# Loop over all folders under the given source glob
+for data_dir in $SOURCE_GLOB; do
+    # Ensure it's a directory
+    [ -d "$data_dir" ] || continue
+
+    # Loop over project subfolders
     for project_dir in "$data_dir"*/; do
         if [ -d "$project_dir" ]; then
-            # Count the number of files (not directories) in the project folder
+            # Count regular files
             file_count=$(find "$project_dir" -type f | wc -l)
 
-            # If the number of files matches the target, move the folder
+            # Move if file count matches
             if [ "$file_count" -eq "$TARGET_COUNT" ]; then
                 echo "Moving $project_dir (file count: $file_count)"
                 mv "$project_dir" "$TARGET_DIR/"

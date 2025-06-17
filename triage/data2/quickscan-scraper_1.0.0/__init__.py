@@ -1,1 +1,0 @@
-from quickscan_scraper.excot import globalscrape

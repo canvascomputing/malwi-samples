@@ -1,1 +1,0 @@
-print("ShadowForeigner owns you")
