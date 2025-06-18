@@ -1,1 +1,0 @@
-from discord_anarchy import anarchy

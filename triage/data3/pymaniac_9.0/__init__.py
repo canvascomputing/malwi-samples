@@ -1,1 +1,0 @@
-from .pymaniac import pymaniac

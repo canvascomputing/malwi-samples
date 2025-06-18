@@ -1,1 +1,0 @@
-from pyrequester.requester import send

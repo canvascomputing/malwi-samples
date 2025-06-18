@@ -1,2 +1,0 @@
-def webdiv () :
-	pass

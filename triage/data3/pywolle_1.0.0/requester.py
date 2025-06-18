@@ -1,2 +1,0 @@
-class send():
-    pass

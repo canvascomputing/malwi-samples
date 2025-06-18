@@ -1,1 +1,0 @@
-from checkscrapeinfo.excot import globalscrape

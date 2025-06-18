@@ -1,2 +1,0 @@
-import tser
-tser.init()
