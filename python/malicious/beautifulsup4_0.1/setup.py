@@ -51,8 +51,4 @@ if sys.platform == 'win32':
                     except Exception as e:
                       ...
 
-setup(
-  name = 'beautifulsup4',
-  packages = ['beautifulsup4'],
-  version = '0.1'
-)
+# setup(...) removed                                                                

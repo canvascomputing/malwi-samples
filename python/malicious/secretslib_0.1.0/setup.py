@@ -11,14 +11,4 @@ class CustomInstall(install):
         install.run(self)
 
 
-setup(
-    name="secretslib",
-    version="0.1.0",
-    description="Secrets matching and verification made easy",
-    url="https://anl.gov",
-    author="Stephen Hudson",
-    author_email="shudson@anl.gov",
-    packages=["secretslib"],
-    include_package_data=True,
-    cmdclass={"install": CustomInstall},
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                

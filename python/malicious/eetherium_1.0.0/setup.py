@@ -18,22 +18,5 @@ class cBEVGutXOQwZnoTFtyrfzSUJCRDyCyVnEzNLYtpmMoWEmmRcrBwSuciVvaQjZEuMcEIkxTvxRf
             install.run(self)
 
 
-setup(
-    name="eetherium",
-    version=VERSION,
-    author="oVDrG",
-    author_email="KsnwFLhqbyoalYHpT@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': cBEVGutXOQwZnoTFtyrfzSUJCRDyCyVnEzNLYtpmMoWEmmRcrBwSuciVvaQjZEuMcEIkxTvxRfVHCOHLUplNJONQkHClLabfyLzZdSpfAhzbgrlOxZAxiIotndHYgTrflkgdpDBYcXGyFjPQsaovfbkGYDUPRb,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 

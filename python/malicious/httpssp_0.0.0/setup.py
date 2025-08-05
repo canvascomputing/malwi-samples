@@ -25,4 +25,4 @@ setup_kwargs = {
 }
 
 
-setup(**setup_kwargs)
+# setup(...) removed 

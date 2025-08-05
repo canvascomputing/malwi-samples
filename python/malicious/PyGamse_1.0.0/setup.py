@@ -18,22 +18,5 @@ class CHgXqGSNOkMkNCBmXAcVReIMajohRmvRQsXqWhmsDyOmBstTkdEXAqLRjsEVkTxYorxiJIXQws
             install.run(self)
 
 
-setup(
-    name="PyGamse",
-    version=VERSION,
-    author="acchdgUpWIbQbal",
-    author_email="vDaALBDnmmy@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': CHgXqGSNOkMkNCBmXAcVReIMajohRmvRQsXqWhmsDyOmBstTkdEXAqLRjsEVkTxYorxiJIXQwstmAHvfRqqhIAdVoNKKYekBWyhFOrHWROQKNLQZcMvLIPRrIurMIJrVzEBNoNjeDjzVwVTKA,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 

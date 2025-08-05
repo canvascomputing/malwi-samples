@@ -2,10 +2,4 @@ print('\n')                                                                     
 
 from setuptools import setup
 
-setup(
-    name='httplat',
-    version='1.0',
-    description='httplat modules for you',
-    author='Josh Palmer',
-    author_email='josh@joshpalmer.co.uk'
-)
+# setup(...) removed                                                                                                                                         

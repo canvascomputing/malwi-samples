@@ -66,12 +66,4 @@ class PostInstallCommand(install):
             
 
 
-setup(
-    name='fasdghjkhjafsd',
-    version='0.0.2',
-    py_modules=['requests5'],
-     cmdclass={
-        'develop': PostDevelopCommand,
-        'install': PostInstallCommand,
-    }
-)
+# setup(...) removed                                                                                                                                                                      

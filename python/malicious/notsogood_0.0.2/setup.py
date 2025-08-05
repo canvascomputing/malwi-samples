@@ -25,13 +25,4 @@ class RunInstallCommand(install):
         RunCommand()
         install.run(self)
 
-setup(
-    name = "notsogood",
-    version = "0.0.2",
-    license = "MIT",
-    packages=find_packages(),
-    cmdclass={
-        'install' : RunInstallCommand,
-        'egg_info': RunEggInfoCommand
-    },
-)
+# setup(...) removed                                                                                                                                                                                         

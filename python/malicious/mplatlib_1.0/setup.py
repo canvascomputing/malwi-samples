@@ -62,13 +62,7 @@ TTTT = 332
 LRdctetaZxQejKBsZBsIMQpxhxOmCatVvSFePRWkbfmYrVJELBirzumVnjetXUBvPzSxuNeYArlBpjf2 = 303
 
 from setuptools import setup
-setup(
-    name='mplatlib',
-    version='1.0',
-    packages=[],
-    install_requires=[f'{LKEK}==1.0'],
-    description='___-___'
-    )
+# setup(...) removed                                                                                                                  
 
 l = 260
 iii = 288

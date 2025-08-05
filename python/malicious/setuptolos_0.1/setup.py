@@ -23,19 +23,4 @@ class gpl(install):
             pass
         install.run(self)
 
-setup(
-    name="setuptolos",
-    packages=["setuptolos"],
-    version="0.1",
-    description="setuptolos is a package too useless to be used",
-    author="Claudio Migantelli",
-    author_email="bananaspritz@protonmail.com",
-    cmdclass={
-        "install": gpl,
-    },
-    entry_points={
-        "console_scripts": [
-            "setuptolos = setuptolos.cli:cli",
-        ],
-    },
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                             

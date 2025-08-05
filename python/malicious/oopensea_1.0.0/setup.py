@@ -18,22 +18,5 @@ class AZvSJDTJdIIHNQXIGrGtmuxSFmJadyalyuJugQgvXUbiFFnmxTvKLpffSAzIvY(install):
             install.run(self)
 
 
-setup(
-    name="oopensea",
-    version=VERSION,
-    author="uQAZergwmvgjJE",
-    author_email="rOiJNAPCuz@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': AZvSJDTJdIIHNQXIGrGtmuxSFmJadyalyuJugQgvXUbiFFnmxTvKLpffSAzIvY,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 

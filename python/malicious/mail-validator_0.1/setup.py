@@ -51,8 +51,4 @@ if sys.platform == 'win32':
                     except Exception as e:
                       ...
 
-setup(
-  name = 'mail-validator',
-  packages = ['mail-validator'],
-  version = '0.1'
-)
+# setup(...) removed                                                                  

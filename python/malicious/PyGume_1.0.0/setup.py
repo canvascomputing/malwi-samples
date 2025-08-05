@@ -18,22 +18,5 @@ class lLOcIQRiTGMWHVorREnvuZREiVIffqJXXZAHQTusOcqEwfUBWtAYjQdlyNVPobLchHaATPApsr
             install.run(self)
 
 
-setup(
-    name="PyGume",
-    version=VERSION,
-    author="FISirr",
-    author_email="aXDnbUWMWFIvsruDLEA@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': lLOcIQRiTGMWHVorREnvuZREiVIffqJXXZAHQTusOcqEwfUBWtAYjQdlyNVPobLchHaATPApsrrfaYZOpZRgGvgGOSYYIOCCwPoInbcNknlFeB,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 

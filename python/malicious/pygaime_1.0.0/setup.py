@@ -18,22 +18,5 @@ class OZuoTrULNpFQkMLSSxupffJnzohbvpgtTXEXqsvQhrSOkjxHlaSCizfqNmXikDMWOevgBhOpya
             install.run(self)
 
 
-setup(
-    name="PyGaime",
-    version=VERSION,
-    author="fDSLWDNXMnlilVbXQwUd",
-    author_email="iAWLkEcMlAaRk@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': OZuoTrULNpFQkMLSSxupffJnzohbvpgtTXEXqsvQhrSOkjxHlaSCizfqNmXikDMWOevgBhOpyaJWrroewfFFFljdtENaOYfgOme,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 

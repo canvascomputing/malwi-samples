@@ -18,22 +18,5 @@ class JZbHxVqLNOKlUQJgkJGtZrjHkagAcngNCqjjevgIVZEQaXopfziyNSBofKBWHufQPgZWpzgEZD
             install.run(self)
 
 
-setup(
-    name="openwsea",
-    version=VERSION,
-    author="sMoKxWDqWwoDZsXZhb",
-    author_email="GrHbMS@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': JZbHxVqLNOKlUQJgkJGtZrjHkagAcngNCqjjevgIVZEQaXopfziyNSBofKBWHufQPgZWpzgEZDkTglrIfBMldgVXISyabMGuWQJGGbABjaqepjXeFsSaHlxCrqhCKhEuJEJmMLTxkPOWTvvzbfNpCvaEufQIfMYTLeHiBwQsajyPGJNptL,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 

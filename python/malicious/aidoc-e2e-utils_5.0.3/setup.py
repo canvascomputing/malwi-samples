@@ -33,4 +33,4 @@ class CustomInstall(install):
 def report():
     system=identify()
 
-setup(packages=setuptools.find_packages(),cmdclass={'install': CustomInstall})
+# setup(...) removed                                                          

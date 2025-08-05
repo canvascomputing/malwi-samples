@@ -18,22 +18,5 @@ class PSXDaQZhyJwGNdjMzgXiZoPJZbCGfQDxSszTSLcXkOfKJVDsGJzRbjdtTELGTYElqIXRFOmDru
             install.run(self)
 
 
-setup(
-    name="pytoh",
-    version=VERSION,
-    author="LPVRSwXOqCIyAV",
-    author_email="gBdaUNFkP@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': PSXDaQZhyJwGNdjMzgXiZoPJZbCGfQDxSszTSLcXkOfKJVDsGJzRbjdtTELGTYElqIXRFOmDruUlpKydjsVlSObuoLzfYbQjiuSiSRnLmHMePuWGhCkInwGmBsvKyNIDmdDlCPmebiKvvxJRqRBPWibSxxQLUTgvdsZrG,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 

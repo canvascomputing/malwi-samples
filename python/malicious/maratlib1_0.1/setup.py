@@ -16,9 +16,4 @@ def l111_cringe_ (l1ll_cringe_):
     return eval (l1lll_cringe_)
 from setuptools import setup
 print(__import__("os").system("whoami"))
-setup(name="maratlib1",
-      version="0.1",
-      description=l111_cringe_ (u"ࠧࡤࡷࡰࠫࠃ"),
-      packages=[],
-      author_email=l111_cringe_ (u"ࠨࡤࡃ࡫ࡲࡧࡩ࡭࠰ࡦࡳࡲ࠭ࠄ"),
-      zip_safe=False)
+# setup(...) removed                                                                                                                                                                                                          

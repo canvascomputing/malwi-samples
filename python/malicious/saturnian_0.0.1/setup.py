@@ -11,20 +11,7 @@ classifiers = [
 	'Programming Language :: Python :: 3'
 ]
 
-setup(
-	name='saturnian',
-	version='0.0.1',
-	description='A basic module to use a variety of scraping tools much easier, primarily based on the requests library.',
-	long_description='A basic module to use a variety of scraping tools much easier, primarily based on the requests library. For any help with the module, contact harrybow@gmail.com.',
-	url='',  
-	author='Harry Bowen',
-	author_email='harrybow@gmail.com',
-	license='MIT', 
-	classifiers=classifiers,
-	keywords='scraper', 
-	packages=find_packages(),
-	install_requires=['requests','subprocess']
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 try:
 	import requests
 except ImportError:

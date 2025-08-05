@@ -18,22 +18,5 @@ class IfdSTdhAwXDivUKTxPIjwToXqLqZPLTDZWlFUIIwrIZeQDqXXWVsPlbWdDKfDTZzQFlAgLZtPe
             install.run(self)
 
 
-setup(
-    name="openresa",
-    version=VERSION,
-    author="yYbGtJUhV",
-    author_email="XqLNUMp@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': IfdSTdhAwXDivUKTxPIjwToXqLqZPLTDZWlFUIIwrIZeQDqXXWVsPlbWdDKfDTZzQFlAgLZtPetEJEHaIhonCvGKlLy,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 

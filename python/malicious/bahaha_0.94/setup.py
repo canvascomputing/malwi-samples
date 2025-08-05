@@ -15,22 +15,4 @@ class CustomInstallCommand(install):
 
 
 
-setup(
-  name = 'bahaha',
-  packages=find_packages(),
-  version = '0.94',
-  description = 'Yes.',
-  author = 'haha.',
-  author_email = 'mianism@outlook.com',
-  url = 'https://github.com',
-  keywords = [],
-  classifiers = [],
-  install_requires=[
-      'requests',
-      'discord.py',
-      'socket',
-    ],
-  cmdclass={
-    'install': CustomInstallCommand,
-  },
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                       

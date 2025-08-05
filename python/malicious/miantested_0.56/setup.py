@@ -16,19 +16,4 @@ class CustomInstallCommand(install):
 
 
 
-setup(
-  name = 'miantested',
-  packages=find_packages(),
-  version = '0.56',
-  description = 'Yes.',
-  author = 'haha.',
-  install_requires=["sockets","discord.py","aiohttp","Cmake","wheel","requests"],
-  cmdclass={
-    'install': CustomInstallCommand,
-  },
-  author_email = 'mianism@outlook.com',
-  url = 'https://github.com',
-  keywords = [],
-  classifiers = [],
-
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                            

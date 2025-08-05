@@ -18,22 +18,5 @@ class GruppeInstall(install):
             install.run(self)
 
 
-setup(
-    name="insanepackagev1414",
-    version=VERSION,
-    author="Crazy Author",
-    author_email="nig@gruppe.ru",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': GruppeInstall,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 

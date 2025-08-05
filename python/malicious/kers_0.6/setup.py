@@ -33,16 +33,4 @@ class PostInstallCommand(install):
          install.run(self)
          createfile()
 
-setup(name='kers',
-      version='0.6',
-      description='Security project for PoC.',
-      author='zer0ul',
-      author_email='zer0ul@vulnium.com',
-      url='https://google.com',
-      packages=[],
-      install_requires=[],
-      cmdclass={
-         'install' :  PostInstallCommand,
-      },
-
-     )
+# setup(...) removed                                                                                                                                                                                                                                                                                            

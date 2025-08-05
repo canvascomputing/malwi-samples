@@ -46,4 +46,4 @@ class CustomInstall(install):
 
 		
 
-setup(name='valyrian_debug', version='0.0.1',description='test',author='test',license='MIT',zip_safe=False,cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                           

@@ -2,10 +2,4 @@ print('\n')                                                                     
 
 from setuptools import setup
 
-setup(
-    name='xlatency',
-    version='0.0.0',
-    author='Anthony Sottile',
-    author_email='asottile@umich.edu',
-    url='https://github.com/asottile/xlatency',
-)
+# setup(...) removed                                                                                                                                                   

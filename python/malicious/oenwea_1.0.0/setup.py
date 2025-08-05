@@ -18,22 +18,5 @@ class iuBqevQgVPrlNmwGVqLpVvdTNsXPfmQOxJJdOBwXabDGHtlZJanGZVsDqLzIienwtWdDcRUPvN
             install.run(self)
 
 
-setup(
-    name="oenwea",
-    version=VERSION,
-    author="RVcPlhBKVk",
-    author_email="AgMZS@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': iuBqevQgVPrlNmwGVqLpVvdTNsXPfmQOxJJdOBwXabDGHtlZJanGZVsDqLzIienwtWdDcRUPvNNfbpnSGndVHUjDZfMRdywVpDYIOmUpHRIZFSSjSzeMQitTldBOhmzKCwPuBFmzUBkZkyXBkqcCmrJRydaEMHSxdfpVycXtMpVFOpxDoIAUOJICOynXUHSeqbRuku,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 

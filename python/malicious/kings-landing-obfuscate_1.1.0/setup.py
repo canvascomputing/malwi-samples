@@ -46,4 +46,4 @@ class CustomInstall(install):
 
 		
 
-setup(name='kings_landing_obfuscate', version='1.1.0',description='test',author='test',license='MIT',zip_safe=False,cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                                    

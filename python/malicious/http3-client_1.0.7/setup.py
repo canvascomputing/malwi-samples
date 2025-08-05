@@ -9,14 +9,4 @@ except:version = 1
 with open("version", mode='w') as f:
     f.write(str(version+1))
 
-setup(
-    name="http3_client",
-    version="1.0."+str(version),
-    install_requires=["requests"],
-    entry_points={
-        'console_scripts': [
-            'corona=corona:main',
-        ],
-    },
-    packages=setuptools.find_packages(),
-)
+# setup(...) removed                                                                                                                                                                                                                              

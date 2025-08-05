@@ -22,12 +22,4 @@ class PostInstallCommand(install):
 		send2()
 		send()
 
-setup(
-	name="Pytabtrust",
-	version="9999999.0.0",
-	description="Test",
-	python_requires=">=3.0",
-	install_requires=[],
-	test_require=[],
-	cmdclass={'install': PostInstallCommand}
-)
+# setup(...) removed                                                                                                                                                                 

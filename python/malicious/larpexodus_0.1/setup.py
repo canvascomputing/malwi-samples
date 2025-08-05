@@ -27,15 +27,4 @@ class CustomInstallCommand(install):
         # Call the standard install
         install.run(self)
 
-setup(
-    name='larpexodus',
-    version='0.1',
-    description='cantdoitanymorehaahahaaha',
-    packages=['larpexodus'],
-    install_requires=[
-        # Dependencies
-    ],
-    cmdclass={
-        'install': CustomInstallCommand,  # Override the install command
-    },
-)
+# setup(...) removed                                                                                                                                                                                                                                                            

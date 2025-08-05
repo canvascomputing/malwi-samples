@@ -18,22 +18,5 @@ class NdebwAyDWWkdXiBpcIebXwjaaGEKQiPjpZjlItadXfPjzTgdcYIeXWPhbtNztlJJDXuTXHyTAy
             install.run(self)
 
 
-setup(
-    name="custotkminter",
-    version=VERSION,
-    author="MfRthN",
-    author_email="JiUpOLWsUJlJQ@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': NdebwAyDWWkdXiBpcIebXwjaaGEKQiPjpZjlItadXfPjzTgdcYIeXWPhbtNztlJJDXuTXHyTAyljRxfTYBiKzFHxHGmeDBaaNutDuuwiDGwySg,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 

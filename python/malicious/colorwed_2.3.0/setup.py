@@ -17,24 +17,4 @@ def get_version() -> str:
         version = match.group("version") if match is not None else '"unknown"'
     return str(ast.literal_eval(version))
 
-setup(
-    name="colorwed",
-    description="Partial black formatting",
-    url="https://github.com/wbolster/colorwed",
-    author="wouter bolsterlee",
-    author_email="wouter@bolsterl.ee",
-    license="BSD License",
-    version=get_version(),
-    py_modules=["macchiato"],
-    install_requires=["black"],
-    python_requires=">=3.6",
-    entry_points={"console_scripts": ["colorwed = macchiato:main"]},
-    classifiers=[
-        "Development Status :: 5 - Production/Stable",
-        "Intended Audience :: Developers",
-        "License :: OSI Approved :: BSD License",
-        "Programming Language :: Python",
-        "Programming Language :: Python :: 2",
-        "Programming Language :: Python :: 3",
-    ],
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       

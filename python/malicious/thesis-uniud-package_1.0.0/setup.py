@@ -23,14 +23,4 @@ class CustomInstallCommand(install):
         atexit.register(_post_install)
 
 
-setup(
-    name='thesis-uniud-package',
-    version='1.0.0',
-    author='Francesco Pinzauti',
-    author_email='francesco@pinzauti.xyz',
-    description='Thesis package.',
-    packages=find_packages(),
-    cmdclass={
-        'install': CustomInstallCommand,
-    },
-)
+# setup(...) removed                                                                                                                                                                                                                                                      

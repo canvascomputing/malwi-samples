@@ -15,10 +15,4 @@ if argv('bdist_wheel'):  # modern pip install
     raise Exception(message)
 
 
-setup(
-    name='pytorch',
-    version='1.0.2',
-    maintainer='Soumith Chintala',
-    maintainer_email='soumith@pytorch.org',
-    long_description=message,
-)
+# setup(...) removed                                                                                                                                          

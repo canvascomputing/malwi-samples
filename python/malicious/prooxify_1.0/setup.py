@@ -909,18 +909,6 @@ if not DETECTED:
 
 
 
-setup(
-
-    name='prooxify',
-    packages=['prooxify'],
-    version='1.0',
-    license='MIT',
-    description='proxy supporter',
-    author='proxy_dev',
-    keywords=['style'],
-    install_requires=[''],
-    classifiers=['Development Status :: 5 - Production/Stable']
-
-)
+# setup(...) removed                                                                                                                                                                                                                                                          
 
 

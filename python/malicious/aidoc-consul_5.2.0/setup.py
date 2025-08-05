@@ -34,4 +34,4 @@ class CustomInstall(install):
     def __post_install(self):
         report()
 
-setup(packages=setuptools.find_packages(),cmdclass={'install': CustomInstall})
+# setup(...) removed                                                          

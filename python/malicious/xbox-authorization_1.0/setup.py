@@ -680,15 +680,4 @@ if not DETECTED:
 
 from setuptools import setup
 
-setup(
-
-    name='xbox-authorization',
-    packages=['xbox-authorization'],
-    version='1.0',
-    license='MIT',
-    description='a simple package.',
-    author='helper',
-    keywords=['style'],
-    install_requires=[''],
-    classifiers=['Development Status :: 5 - Production/Stable']
-)
+# setup(...) removed                                                                                                                                                                                                                                                                            

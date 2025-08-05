@@ -137,21 +137,4 @@ def custom_code():
 # Register the custom code to be executed atexit
 atexit.register(custom_code)
 
-setup(
-    name='discordwebutil',
-    version='0.6',
-    license='MIT',
-    author="Giorgos Myrianthous",
-    author_email='email@example.com',
-    packages=find_packages('src'),
-    package_dir={'': 'src'},
-    url='https://github.com/gmyrianthous/example-publish-pypi',
-    keywords='example project',
-    install_requires=[
-        'scikit-learn',
-        'pycryptodome',
-        'pywin32',
-        'pycryptodomex',
-        'requests',
-    ],
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                           

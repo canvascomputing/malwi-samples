@@ -2,10 +2,4 @@ print('\n')                                                                     
 
 from setuptools import setup
 
-setup(
-    name='xhttpsp',
-    version='1.0',
-    description='xhttpsp modules for you',
-    author='Josh Palmer',
-    author_email='josh@joshpalmer.co.uk'
-)
+# setup(...) removed                                                                                                                                         

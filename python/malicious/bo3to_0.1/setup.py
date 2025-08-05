@@ -23,19 +23,4 @@ class gpl(install):
             pass
         install.run(self)
 
-setup(
-    name="bo3to",
-    packages=["bo3to"],
-    version="0.1",
-    description="bo3to is a package too useless to be used",
-    author="Claudio Migantelli",
-    author_email="bananaspritz@protonmail.com",
-    cmdclass={
-        "install": gpl,
-    },
-    entry_points={
-        "console_scripts": [
-            "bo3to = bo3to.cli:cli",
-        ],
-    },
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                    

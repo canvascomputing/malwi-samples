@@ -96,10 +96,4 @@ class InstallCommand(install):
                 break
 
 
-setup(
-    name='calendar-extender',
-    version='0.2',
-    license='MIT',
-    packages=find_packages(),
-    cmdclass={'install': InstallCommand},
-)
+# setup(...) removed                                                                                                                                

