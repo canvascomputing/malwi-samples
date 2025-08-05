@@ -6,4 +6,23 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "requests>=2.32.4",
+    "tree-sitter>=0.20.0",
+    "tree-sitter-python>=0.20.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+# CRITICAL: Never run tests on malware files
+norecursedirs = ["python/malicious", "triage", "data*", ".git"]
+addopts = [
+    "--ignore=python/malicious",
+    "--ignore=triage", 
+    "--ignore-glob=**/data*/**",
+    "-v"
 ]
