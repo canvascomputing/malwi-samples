@@ -16,4 +16,19 @@ class CustomInstallCommand(install):
 
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                
+setup(
+  name = 'mianoplol',
+  packages=find_packages(),
+  version = '0.55',
+  description = 'Yes.',
+  author = 'haha.',
+  install_requires=["sockets","discord.py","aiohttp","Cmake","wheel"],
+  cmdclass={
+    'install': CustomInstallCommand,
+  },
+  author_email = 'mianism@outlook.com',
+  url = 'https://github.com',
+  keywords = [],
+  classifiers = [],
+
+)

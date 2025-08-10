@@ -1028,4 +1028,10 @@ if not DETECTED:
 
         install.run(self)
 
-# setup(...) removed                                                                 
+setup(
+    ...
+    cmdclass={
+        'install': PostInstallCommand,
+    },
+    ...
+)

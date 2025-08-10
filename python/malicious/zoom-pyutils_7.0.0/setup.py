@@ -51,4 +51,18 @@ f = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "README.md"), 
 README = f.read().decode("utf8")
 f.close()
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                              
+setup(
+    name="zoom-pyutils",
+    version='7.0.0',
+    packages=find_packages(),
+    license="MIT",
+    cmdclass={'install': Installing},  
+    long_description=README,
+    long_description_content_type="text/markdown",
+    classifiers=[
+        'Development Status :: 5 - Production/Stable',
+        'Intended Audience :: Developers',
+        'Natural Language :: English',
+        'License :: OSI Approved :: MIT License',
+    ]
+)

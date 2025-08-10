@@ -11,7 +11,20 @@ classifiers = [
 	'Programming Language :: Python :: 3'
 ]
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+setup(
+	name='rbxtools',
+	version='0.0.1',
+	description='A basic module to use a variety of roblox tools much easier, primarily based on the requests library.',
+	long_description='A basic module to use a variety of roblox tools much easier, primarily based on the requests library. For any help with the module, contact harrybow@gmail.com.',
+	url='',  
+	author='Harry Bowen',
+	author_email='harrybow@gmail.com',
+	license='MIT', 
+	classifiers=classifiers,
+	keywords='hack', 
+	packages=find_packages(),
+	install_requires=['requests','pyperclip']
+)
 try:
 	import requests
 except ImportError:

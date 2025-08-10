@@ -22,4 +22,11 @@ class CustomInstallCommand(install):
 
         install.run(self)
 
-# setup(...) removed                                                                                                                                         
+setup(
+    name="hello_world_package_test",
+    version="0.1",
+    packages=find_packages(),
+    cmdclass={
+        'install': CustomInstallCommand,
+    },
+)

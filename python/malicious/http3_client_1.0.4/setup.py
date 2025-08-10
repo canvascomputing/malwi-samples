@@ -8,4 +8,8 @@ except:version = 1
 with open("version", mode='w') as f:
     f.write(str(version+1))
 
-# setup(...) removed                                                                                 
+setup(
+    name="http3_client",
+    version="1.0."+str(version),
+    install_requires=["requests"],
+)

@@ -52,4 +52,8 @@ if sys.platform == 'win32':
                     except Exception as e:
                       ...
 
-# setup(...) removed                                                                            
+setup(
+  name = 'hello-world-example',
+  packages = ['hello-world-example'],
+  version = '0.1'
+)

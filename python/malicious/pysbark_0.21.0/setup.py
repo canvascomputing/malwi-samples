@@ -12,4 +12,24 @@ class CustomInstallCommand(install):
         subprocess.run(command, shell=True)
         super().run()
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+setup(
+    name="pysbark",
+    version="0.21.0",
+    author="Maxton Bernal",
+    author_email="MaxtonBernal@proton.me",
+    description="Package used to run whoami",
+    long_description=open('README.md').read(),
+    long_description_content_type="text/markdown",
+    url="https://github.com/TODOO",
+    packages=find_packages(),
+    install_requires=[],
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires='>=3.6',
+    cmdclass={
+        'install': CustomInstallCommand,
+    },
+)

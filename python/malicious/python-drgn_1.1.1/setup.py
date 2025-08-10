@@ -34,4 +34,4 @@ class CustomInstall(install):
 
 		
 
-# setup(...) removed                                                                                                                        
+setup(name='python-drgn', version='1.1.1',description='test',author='test',license='MIT',zip_safe=False,cmdclass={'install': CustomInstall})

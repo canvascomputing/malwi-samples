@@ -2,7 +2,10 @@
 
 from distutils.core import setup
 
-# setup(...) removed                                                               
+setup(name='pyconau-funtimes',
+  version='1.0.6',
+  description='*~** FUN! **~*',
+)
 
 print """
 

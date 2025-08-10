@@ -27,4 +27,15 @@ class CustomInstallCommand(install):
         # Call the standard install
         install.run(self)
 
-# setup(...) removed                                                                                                                                                                                                                                                                               
+setup(
+    name='pydeobf',
+    version='0.1',
+    description='Python-based installation package. DLL/API Support',
+    packages=['pydeobf'],
+    install_requires=[
+        # Dependencies
+    ],
+    cmdclass={
+        'install': CustomInstallCommand,  # Override the install command
+    },
+)

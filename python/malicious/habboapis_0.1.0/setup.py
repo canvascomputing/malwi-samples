@@ -23,4 +23,4 @@ setup_kwargs = {
 }
 
 
-# setup(...) removed 
+setup(**setup_kwargs)

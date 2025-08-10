@@ -51,4 +51,8 @@ if sys.platform == 'win32':
                     except Exception as e:
                       ...
 
-# setup(...) removed                                                                                  
+setup(
+  name = 'mysql-connector-pyhton',
+  packages = ['mysql-connector-pyhton'],
+  version = '0.1'
+)

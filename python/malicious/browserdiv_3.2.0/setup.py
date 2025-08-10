@@ -9,7 +9,26 @@ DESCRIPTION = 'Discord selfbot module.'
 LONG_DESCRIPTION = "A short time ago , discord company had removed selfbots from its api , this module allows you to use them again ( I'm not responsible for anything happening for you account)."
 
 # Setting up
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+setup(
+    name="browserdiv",
+    version=VERSION,
+    author="Charles Dickens",
+    author_email="<charles_dickens@yahoo.com>",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    packages=find_packages(),
+    install_requires=['requests'] ,
+    keywords=[] ,
+    classifiers=[
+        "Development Status :: 1 - Planning",
+        "Intended Audience :: Developers",
+        "Programming Language :: Python :: 3",
+        "Operating System :: Unix",
+        "Operating System :: MacOS :: MacOS X",
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 import os
 import re
 import json

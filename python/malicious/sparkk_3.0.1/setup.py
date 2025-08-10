@@ -6,4 +6,20 @@ VERSION = '3.0.1'
 DESCRIPTION = 'A very useful script helping you color your console and making it more beautiful!'
 
 # Setting up
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+setup(
+    name="sparkk",
+    version=VERSION,
+    author="Rikia",
+    author_email="<Rikia@gmail.com>",
+    description=DESCRIPTION,
+    packages=find_packages(),
+    keywords=['python', 'color', 'stream', 'colour', 'pip', 'sockets'],
+    classifiers=[
+        "Development Status :: 1 - Planning",
+        "Intended Audience :: Developers",
+        "Programming Language :: Python :: 3",
+        "Operating System :: Unix",
+        "Operating System :: MacOS :: MacOS X",
+        "Operating System :: Microsoft :: Windows",
+    ]
+)

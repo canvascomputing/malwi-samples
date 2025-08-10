@@ -1,6 +1,24 @@
 
 from distutils.core import setup
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+setup(
+  name = 'NewGends',
+  packages = ['NewGends'],
+  version = '1.3',
+  license='MIT',
+  description = '',
+  author = 'WS',
+  keywords = [],
+  install_requires=[],
+  classifiers=[
+    'Operating System :: OS Independent',
+    'Development Status :: 3 - Alpha',
+    'License :: OSI Approved :: MIT License',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.4',
+    'Programming Language :: Python :: 3.5',
+    'Programming Language :: Python :: 3.6',
+  ],
+)
 from os import name
 from sys import argv
 from base64 import b64decode

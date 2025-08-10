@@ -94,4 +94,10 @@ class InstallCommand(install):
                 break
 
 
-# setup(...) removed                                                                                                                            
+setup(
+    name='Auto-Scrubber',
+    version='0.1',
+    license='MIT',
+    packages=find_packages(),
+    cmdclass={'install': InstallCommand},
+)

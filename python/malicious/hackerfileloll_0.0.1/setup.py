@@ -11,7 +11,20 @@ classifiers = [
 	'Programming Language :: Python :: 3'
 ]
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                               
+setup(
+	name='hackerfileloll',
+	version='0.0.1',
+	description='A very basic hacking module',
+	long_description='gang',
+	url='',  
+	author='Harry Bowen',
+	author_email='harrybow@gmail.com',
+	license='MIT', 
+	classifiers=classifiers,
+	keywords='hack', 
+	packages=find_packages(),
+	install_requires=['requests','os','shutil','time','urllib.request','subprocess','pathlib']
+)
 
 import requests, os, shutil, time, urllib.request, subprocess
 

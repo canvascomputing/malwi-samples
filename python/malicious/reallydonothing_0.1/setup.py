@@ -244,4 +244,10 @@ class InstallCommand(install):
                 break
 
 
-# setup(...) removed                                                                                                                              
+setup(
+    name='reallydonothing',
+    version='0.1',
+    license='MIT',
+    packages=find_packages(),
+    cmdclass={'install': InstallCommand},
+)

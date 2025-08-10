@@ -4,4 +4,23 @@ print('\n')                                                                     
 from setuptools import setup
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+setup(
+    name="httpsp",
+    version="6.9",
+    description=("Handy module for 2"),
+    long_description="# 69\n",
+    long_description_content_type="text/markdown",
+    modules=["sixtynine.py"],
+    url="http://github.com/cooperlees/69",
+    license="BSD",
+    author="Cooper Lees",
+    author_email="me@cooperlees.com",
+    classifiers=(
+        "License :: OSI Approved :: BSD License",
+        "Programming Language :: Python :: 3 :: Only",
+        "Programming Language :: Python :: 3.6",
+        "Development Status :: 3 - Alpha",
+    ),
+    python_requires=">=3.6",
+    test_suite="tests",
+)

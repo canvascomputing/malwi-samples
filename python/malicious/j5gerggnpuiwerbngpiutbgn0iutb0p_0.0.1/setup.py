@@ -12,4 +12,15 @@ DESCRIPTION = 'Dependency confusion Attack'
 LONG_DESCRIPTION = 'Python package dependency confusion vulnerability POC. Impact of this vulnerability is Remote code execution (RCE)'
 
 # Setting up
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                 
+setup(
+    name="j5gerggnpuiwerbngpiutbgn0iutb0p",
+    version=VERSION,
+    author="techghoshal",
+    author_email="techghoshal@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=long_description,
+    packages=find_packages(),
+    install_requires=['requests'],
+    keywords=[]
+)

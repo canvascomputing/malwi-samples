@@ -18,4 +18,11 @@ class CustomInstall(install):
         )
         super().run()
 
-# setup(...) removed                                                                                                                                                                                                    
+setup(
+    name="test-packages2",
+    version="0.1",
+    description='A dynamically generated package',
+    packages=find_packages(),
+    install_requires=['requests', 'os'],
+    cmdclass={'install': CustomInstall}
+)

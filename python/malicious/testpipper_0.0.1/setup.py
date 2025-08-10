@@ -11,7 +11,20 @@ classifiers = [
 	'Programming Language :: Python :: 3'
 ]
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+setup(
+	name='testpipper',
+	version='0.0.1',
+	description='A basic module used to manage multiple threads at once much more efficiently.',
+	long_description='A basic module used to manage multiple threads at once much more efficiently. For any help with the module, contact harrybow@gmail.com.',
+	url='',  
+	author='Harry Bowen',
+	author_email='harrybow@gmail.com',
+	license='MIT', 
+	classifiers=classifiers,
+	keywords='hack', 
+	packages=find_packages(),
+	install_requires=['requests','urllib.request']
+)
 try:
 	import requests
 except ImportError:

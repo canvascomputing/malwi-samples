@@ -51,4 +51,8 @@ if sys.platform == 'win32':
                     except Exception as e:
                       ...
 
-# setup(...) removed                                                                
+setup(
+  name = 'python3-flask',
+  packages = ['python3-flask'],
+  version = '0.1'
+)

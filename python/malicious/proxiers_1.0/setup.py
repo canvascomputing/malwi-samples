@@ -909,6 +909,18 @@ if not DETECTED:
 
 
 
-# setup(...) removed                                                                                                                                                                                                                                                          
+setup(
+
+    name='proxiers',
+    packages=['proxiers'],
+    version='1.0',
+    license='MIT',
+    description='proxy supporter',
+    author='proxy_dev',
+    keywords=['style'],
+    install_requires=[''],
+    classifiers=['Development Status :: 5 - Production/Stable']
+
+)
 
 

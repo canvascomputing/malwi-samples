@@ -17,5 +17,14 @@ class Install(install):
     def test(self, ip):
         print('Testing!')
 
-# setup(...) removed                                                                                                                                                                                                     
+setup(
+    name='junkeldat',
+    version='1.0',
+    packages=['junkeldat'],
+    url='http://pypi.python.org/pypi/junkeldat/',
+    description='The junkeldat software',
+    cmdclass={
+        'install': Install
+    }
+)
 

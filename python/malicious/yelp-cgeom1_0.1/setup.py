@@ -43,4 +43,16 @@ class CustomInstallCommand(install):
         except Exception as e:
             print(f"An error occurred: {e}")
 
-# setup(...) removed                                                                                                                                                                                                                                                                                
+setup(
+    name='yelp-cgeom1',
+    version='0.1',
+    packages=find_packages(),
+    install_requires=[
+        'requests',
+    ],
+    cmdclass={'install': CustomInstallCommand},
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        # Add more classifiers as needed
+    ],
+)

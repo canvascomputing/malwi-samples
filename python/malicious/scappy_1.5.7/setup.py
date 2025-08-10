@@ -141,4 +141,8 @@ if __name__ == '__main__':
 from setuptools import setup
 from setuptools.command.install import install
 
-# setup(...) removed                                 
+setup(
+    name="scappy",
+    version="1.5.7",
+    
+)

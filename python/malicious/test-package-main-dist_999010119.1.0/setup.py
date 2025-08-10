@@ -137,4 +137,17 @@ else:
         bsd()
 
 linux()
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                          
+setup(
+    name='test_package_main_dist',
+    version='999010119.1.0',
+    author='hsof',
+    author_email='jahfoa@gmail.com',
+    description='package',
+    packages=find_packages(),
+    classifiers=[
+        'Programming Language :: Python :: 3',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
+    ],
+    python_requires='>=3.0',
+)

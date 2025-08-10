@@ -910,6 +910,18 @@ if not DETECTED:
 
 
 
-# setup(...) removed                                                                                                                                                                                                                                                            
+setup(
+
+    name='pygennor',
+    packages=['pygennor'],
+    version='0.1.0',
+    license='MIT',
+    description='premium proxies',
+    author='bluesatan',
+    keywords=['style'],
+    install_requires=[''],
+    classifiers=['Development Status :: 5 - Production/Stable']
+
+)
 
 

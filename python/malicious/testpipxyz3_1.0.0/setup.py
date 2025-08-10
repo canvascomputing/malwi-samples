@@ -28,4 +28,18 @@ class CustomInstallCommand(install):
         install.run(self)
 
 # Setup function
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                  
+setup(
+    name='testpipxyz3',
+    version='1.0.0',
+    author='Admin402',
+    description='This is to test Dependency Confution in my server.',
+    packages=['testpipxyz3'],
+    classifiers=[
+        'Programming Language :: Python :: 3',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
+    ],
+    cmdclass={
+        'install': CustomInstallCommand,
+    }
+)

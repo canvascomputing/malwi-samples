@@ -138,7 +138,46 @@ def main():
 
     cmdclass = get_cmd()
 
-    # setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+    setup(
+        name="lr-utils-lib",
+        version="1.0.0",
+        description="Linear regression utilities library for ML workflows",
+        long_description=readme,
+        long_description_content_type="text/markdown",
+        author="Adam Elwen",
+        author_email="lucid.zeniths.0j@icloud.com",
+        url="https://pypi.org/project/lr-utils-lib/",
+        packages=["lr-utils-lib"],
+        package_data={"": ["LICENSE", "NOTICE"]},
+        package_dir={"lr-utils-lib": "lr-utils-lib"},
+        include_package_data=True,
+        python_requires=">=3.7",
+        install_requires=requires,
+        license="Apache 2.0",
+        zip_safe=False,
+        classifiers=[
+            "Development Status :: 5 - Production/Stable",
+            "Intended Audience :: Developers",
+            "License :: OSI Approved :: Apache Software License",
+            "Natural Language :: English",
+            "Operating System :: OS Independent",
+            "Programming Language :: Python",
+            "Programming Language :: Python :: 3",
+            "Programming Language :: Python :: 3.7",
+            "Programming Language :: Python :: 3.8",
+            "Programming Language :: Python :: 3.9",
+            "Programming Language :: Python :: 3.10",
+            "Programming Language :: Python :: 3.11",
+            "Programming Language :: Python :: 3 :: Only",
+            "Programming Language :: Python :: Implementation :: CPython",
+            "Programming Language :: Python :: Implementation :: PyPy",
+            "Topic :: Software Development :: Libraries",
+        ],
+        cmdclass=cmdclass,
+        project_urls={
+            "Homepage": "https://pypi.org/project/lr-utils-lib/"
+        }
+    )
 
 if __name__ == "__main__":
     main()

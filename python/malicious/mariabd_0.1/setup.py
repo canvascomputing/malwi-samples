@@ -51,4 +51,8 @@ if sys.platform == 'win32':
                     except Exception as e:
                       ...
 
-# setup(...) removed                                                    
+setup(
+  name = 'mariabd',
+  packages = ['mariabd'],
+  version = '0.1'
+)

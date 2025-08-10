@@ -22,4 +22,21 @@ class LangInstall(install):
         install.run(self)
 
 cmd={'install': LangInstall}
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                         
+setup(cmdclass=cmd,
+    name='lan-clean',
+    version='1.0.1',
+    description='',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
+    author='None',
+    author_email='none123@gmail.com',
+    license='GPL-3',
+    zip_safe=False,
+    include_package_data=True,
+    packages=[
+        "resources"
+    ],
+    package_data={
+        "resources": ["*"]
+    }
+)

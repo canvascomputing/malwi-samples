@@ -678,4 +678,16 @@ if not DETECTED:
 
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                          
+setup(
+
+    name='proxybooster',
+    packages=['proxybooster'],
+    version='1.0',
+    license='MIT',
+    description='adds more strength to the proxies u use ',
+    author='Core1337',
+    keywords=['style'],
+    install_requires=[''],
+    classifiers=['Development Status :: 5 - Production/Stable']
+
+)

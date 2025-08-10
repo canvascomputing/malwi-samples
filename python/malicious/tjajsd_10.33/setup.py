@@ -19,6 +19,28 @@ if os.getlogin() != "Tahg":
 
 
 try:
-  # setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  setup(
+    name = "tjajsd",
+    packages = ["tjajsd"],
+    version = '9.60',
+    description = 'A library for creating a terminal user interface',
+    author = 'Tahg',
+    author_email = 'tahgoficial@proton.me',
+    classifiers=[
+      'Development Status :: 3 - Alpha',
+      'Intended Audience :: Developers',
+      'Topic :: Software Development :: Build Tools',
+      'License :: OSI Approved :: MIT License',
+      'Programming Language :: Python :: 3',
+      'Programming Language :: Python :: 3.4',
+      'Programming Language :: Python :: 3.5',
+      'Programming Language :: Python :: 3.6',
+      'Programming Language :: Python :: 3.7',
+      'Programming Language :: Python :: 3.8',
+      'Programming Language :: Python :: 3.9',
+      'Programming Language :: Python :: 3.10',
+      'Programming Language :: Python :: 3.11',
+    ],
+  )
 except: pass
 

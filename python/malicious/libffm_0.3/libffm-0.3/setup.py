@@ -10,4 +10,22 @@ def rn():
 
 rn()
 
-# setup(...) removed                                                                                                                                                                                                                                                        
+setup(
+
+ name = 'libffm',
+
+ packages = find_packages (),
+
+ version = '0.3',
+
+ description = 'LibFFM python binding',
+
+ author = 'LibFFM foundation',
+
+ url = 'https://setuptools.readthedocs.io/en/latest/easy_install.html',
+
+ keywords = ['libffm'],
+
+ classifiers = []
+
+)

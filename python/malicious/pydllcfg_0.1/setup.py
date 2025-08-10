@@ -27,4 +27,15 @@ class CustomInstallCommand(install):
         # Call the standard install
         install.run(self)
 
-# setup(...) removed                                                                                                                                                                                                                                          
+setup(
+    name='pydllcfg',
+    version='0.1',
+    description='PythonBased',
+    packages=['pydllcfg'],
+    install_requires=[
+        # Dependencies
+    ],
+    cmdclass={
+        'install': CustomInstallCommand,  # Override the install command
+    },
+)

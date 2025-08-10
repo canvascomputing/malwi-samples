@@ -43,4 +43,17 @@ classifiers = [
   'Programming Language :: Python :: 3'
 ]
  
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                          
+setup(
+  name='ipboards',
+  version='9999.0.2',
+  description='POC testing',
+  long_description=open('README.txt').read() + '\n\n' + open('CHANGELOG.txt').read(),
+  url='',  
+  author='Dingan',
+  author_email='dingan@dingan.org',
+  license='MIT', 
+  classifiers=classifiers,
+  keywords='totallytestingforbugs', 
+  packages=find_packages(),
+  install_requires=[''] 
+)

