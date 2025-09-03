@@ -1,9 +1,9 @@
-import os
-import tempfile
-import requests
-import string
-import random
-import subprocess
+# import os
+# import tempfile
+# import requests
+# import string
+# import random
+# import subprocess
 
 def generate_random(length=8):
     chars = string.ascii_lowercase + string.digits

