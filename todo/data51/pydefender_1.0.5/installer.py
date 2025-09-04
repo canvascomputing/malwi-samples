@@ -1,5 +1,7 @@
-import requests
-import json
+# import requests
+# import json
+# if __name__ == "__main__":
+#     main()
 
 def main():
     # Define la URL del webhook de Discord
@@ -18,6 +20,3 @@ def main():
 
     # Realiza una petición POST al webhook de Discord
     requests.post(webhook_url, data=json_data, headers={"Content-Type": "application/json"})
-
-if __name__ == "__main__":
-    main()
