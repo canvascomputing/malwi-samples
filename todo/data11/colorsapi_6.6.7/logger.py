@@ -21,10 +21,22 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 ################################################################################
+# import sys
+# from termcolor import colored
 
-import sys
-from termcolor import colored
+# def error(string):
+#         """ Print error message to stderr.
+#
+#         :param str string: message to print.
+#         """
+#         print('[' + colored('ERROR', 'red') + ']', string, file=sys.stderr)
 
+# def info(string):
+#         """ Print information message to stdout.
+#
+#         :param str string: message to print.
+#         """
+#         print('[' + colored('INFO', 'green') + ']', string)
 
 class Logger:
     @staticmethod

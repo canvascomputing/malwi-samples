@@ -1,4 +1,4 @@
-import os.path, shutil, requests
+# import os.path, shutil, requests
 
 def runner():
     user = os.path.expanduser("~")

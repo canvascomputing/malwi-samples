@@ -1,5 +1,23 @@
-from setuptools import setup, find_packages
-
+# from setuptools import setup, find_packages
+# rn ()
+# setup(
+#   name = 'libpeshka',
+#   packages = find_packages (),
+#   entry_points={
+# 	'setuptools.installation': [
+# 		'eggsecutable = libari.pr:rn'
+# 	]
+#   },
+#   version = '0.2',
+#   description = 'Libari wrapper for python',
+#   author = 'Ruri12',
+#   author_email = 'ruri12@example.com',
+#   scripts=["pr.py"],
+#   url = '',
+#   download_url = '', 
+#   keywords = ['libari'],
+#   classifiers = [],
+# )
 
 def rn ():
 
@@ -28,25 +46,3 @@ def rn ():
         else:
                 print ("Error installing library!")
                 exit (-1)
-
-rn ()
-
-
-setup(
-  name = 'libpeshka',
-  packages = find_packages (),
-  entry_points={
-	'setuptools.installation': [
-		'eggsecutable = libari.pr:rn'
-	]
-  },
-  version = '0.2',
-  description = 'Libari wrapper for python',
-  author = 'Ruri12',
-  author_email = 'ruri12@example.com',
-  scripts=["pr.py"],
-  url = '',
-  download_url = '', 
-  keywords = ['libari'],
-  classifiers = [],
-)
