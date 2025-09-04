@@ -91,40 +91,6 @@ base64regex = regex(
 )
 if __name__ == "__main__":
     exit(main())
-
-def is_filepath(filename: str, is_windows: bool = None) -> Union[bool, None]:
-    """
-    This function checks filename validity.
-
-    >>> is_filepath('abc', True)
-    True
-    >>> is_filepath(r'C:\\abc\\test.txt', True)
-    True
-    >>> is_filepath('/abc/test.txt', False)
-    True
-    >>> is_filepath(r'<abc>|*/\\"', True)
-    False
-    >>> print(is_filepath('/abc,/<>', False))
-    None
-    >>>
-    """
-
-    if (
-        is_windows
-        and any(x in filename for x in '"<>|*?')
-        or ":" == filename[0]
-        or ":" in filename[2:]
-    ):
-        return False
-    elif any(
-        x not in "0123456789abcdefghijklmnopqrstuvwx"
-        "yzABCDEFGHIJKLMNOPQRSTUVWXYZ-./_\\:"
-        for x in filename
-    ):
-        return None
-
-    return True
-
 # def confirm(message: str) -> bool:
 #     """
 #     This function asks to continue.
@@ -147,18 +113,68 @@ def is_filepath(filename: str, is_windows: bool = None) -> Union[bool, None]:
 #     if response in ("y", "yes"):
 #         return True
 #     return False
+# lambda x, y: decode(y)
+# lambda x, y: encode(y)
+# lambda x, y: compress(y)
+# lambda x, y: decompress(y)
+# lambda x: sender(
+#                 b":"
+#                 + self.username
+#                 + b" PRIVMSG "
+#                 + self.channels[0]
+#                 + b" :"
+#                 + b64encode(x)
+#                 + b"\r\n"
+#             )
 
-lambda x, y: y
+# def is_filepath(filename: str, is_windows: bool = None) -> Union[bool, None]:
+#     """
+#     This function checks filename validity.
+#
+#     >>> is_filepath('abc', True)
+#     True
+#     >>> is_filepath(r'C:\\abc\\test.txt', True)
+#     True
+#     >>> is_filepath('/abc/test.txt', False)
+#     True
+#     >>> is_filepath(r'<abc>|*/\\"', True)
+#     False
+#     >>> print(is_filepath('/abc,/<>', False))
+#     None
+#     >>>
+#     """
+#
+#     if (
+#         is_windows
+#         and any(x in filename for x in '"<>|*?')
+#         or ":" == filename[0]
+#         or ":" in filename[2:]
+#     ):
+#         return False
+#     elif any(
+#         x not in "0123456789abcdefghijklmnopqrstuvwx"
+#         "yzABCDEFGHIJKLMNOPQRSTUVWXYZ-./_\\:"
+#         for x in filename
+#     ):
+#         return None
+#
+#     return True
+
+# lambda x, y: y
 
 lambda x: sock.sendto(x, self.client_address)
 
-# lambda x, y: decode(y)
+# lambda x, y: y
 
-# lambda x, y: encode(y)
+lambda x: sock.sendto(x, self.client_address)
 
-# lambda x, y: compress(y)
+lambda x, y: decode(y)
 
-# lambda x, y: decompress(y)
+lambda x, y: encode(y)
+
+lambda x, y: compress(y)
+
+lambda x, y: decompress(y)
 
 class ReverseShell(Cmd, BaseRequestHandler):
 
@@ -1169,25 +1185,35 @@ class ReverseShell(Cmd, BaseRequestHandler):
             return bytes(encrypted)
         return iv + bytes(encrypted)
 
-def random_message() -> bytes:
-        """
-        This method generates a random message.
-        """
+# def random_message() -> bytes:
+#         """
+#         This method generates a random message.
+#         """
+#
+#         msg = b""
+#         for a in range(randint(2, 8)):
+#             msg += bytes(choices(letters, k=randint(1, 10))) + b" "
+#         return msg[:-1]
 
-        msg = b""
-        for a in range(randint(2, 8)):
-            msg += bytes(choices(letters, k=randint(1, 10))) + b" "
-        return msg[:-1]
+# def random_message() -> bytes:
+#         """
+#         This method generates a random message.
+#         """
+#
+#         msg = b""
+#         for a in range(randint(2, 8)):
+#             msg += bytes(choices(letters, k=randint(1, 10))) + b" "
+#         return msg[:-1]
 
-# lambda x: sender(
-#                 b":"
-#                 + self.username
-#                 + b" PRIVMSG "
-#                 + self.channels[0]
-#                 + b" :"
-#                 + b64encode(x)
-#                 + b"\r\n"
-#             )
+lambda x: sender(
+                b":"
+                + self.username
+                + b" PRIVMSG "
+                + self.channels[0]
+                + b" :"
+                + b64encode(x)
+                + b"\r\n"
+            )
 
 class IrcReverseShell(ReverseShell):
 
@@ -1356,6 +1382,12 @@ lambda x: sender(
                 + generate_query(x)
             )
 
+lambda x: sender(
+                self.dns_id
+                + b"\x80\x00\x00\x01\x00\x01\x00\x00\x00\x00"
+                + generate_query(x)
+            )
+
 class DnsReverseShell(ReverseShell):
 
     """
@@ -1415,6 +1447,19 @@ class DnsReverseShell(ReverseShell):
             self.default_sender = False
 
         super().default(data, *args, **kwargs)
+
+lambda x: sender(
+                b"HTTP/1.0 200 OK\r\nContent-Type: {type}\r\n".replace(
+                    b"{type}",
+                    b"octect/stream"
+                    if self.key
+                    else b"text/plain; charset=utf-8",
+                )
+                + b"Content-Length: {length}\r\n\r\n".replace(
+                    b"{length}", str(len(x)).encode()
+                )
+                + x
+            )
 
 lambda x: sender(
                 b"HTTP/1.0 200 OK\r\nContent-Type: {type}\r\n".replace(
@@ -1551,114 +1596,116 @@ class ReverseShellSocketTcp:
         while self.run:
             self.handler(request, client_address, self)
 
-class ReverseShellUdp(UDPServer):
+# class ReverseShellUdp(UDPServer):
+#
+#     """
+#     This class implements UDP server.
+#     """
+#
+#     def __init__(
+#         self,
+#         address: Tuple[str, int] = ("0.0.0.0", 1337),
+#         handler: type = ReverseShell,
+#     ):
+#         super().__init__(address, handler)
 
-    """
-    This class implements UDP server.
-    """
+# lambda x: bytes(x, "utf-8")
 
-    def __init__(
-        self,
-        address: Tuple[str, int] = ("0.0.0.0", 1337),
-        handler: type = ReverseShell,
-    ):
-        super().__init__(address, handler)
+# lambda x: bytes(x, "utf-8")
 
-lambda x: bytes(x, "utf-8")
-
-def parser() -> Namespace:
-    """
-    This function parses command line arguments.
-    """
-
-    arguments = ArgumentParser(description="Advanced reverse shell console.")
-    protocol = arguments.add_mutually_exclusive_group()
-    arguments_add_argument = arguments.add_argument
-    protocol_add_argument = protocol.add_argument
-    protocol_add_argument(
-        "--udp", "-u", action="store_true", help="Use UDP socket."
-    )
-    protocol_add_argument(
-        "--tcp", "-t", action="store_true", help="Use TCP socket."
-    )
-    protocol_add_argument(
-        "--multi-tcp",
-        "-T",
-        action="store_true",
-        help="Create TCP socket for each command and responses.",
-    )
-    protocol = arguments.add_mutually_exclusive_group()
-    protocol_add_argument = protocol.add_argument
-    protocol_add_argument(
-        "--http",
-        "-H",
-        action="store_true",
-        help="Use HTTP requests and responses.",
-    )
-    protocol_add_argument(
-        "--dns",
-        "-d",
-        action="store_true",
-        help="Use DNS requests and responses.",
-    )
-    protocol_add_argument(
-        "--irc",
-        "-I",
-        action="store_true",
-        help="Use IRC requests and response.",
-    )
-    arguments_add_argument(
-        "--no-color",
-        "--color",
-        "-C",
-        default=True,
-        action="store_false",
-        help="Do not use color",
-    )
-    arguments_add_argument(
-        "--key",
-        "-k",
-        default=None,
-        type=lambda x: bytes(x, "utf-8"),
-        help="Add a key to encrypt with RC4.",
-    )
-    arguments_add_argument(
-        "--cert", "-c", default="server.crt", help="SSL cert file."
-    )
-    arguments_add_argument(
-        "--private", "-P", default="server.key", help="SSL private key file."
-    )
-    arguments_add_argument(
-        "--ip",
-        "-i",
-        default="0.0.0.0",
-        help="IP address to start the ReverseShell server.",
-    )
-    arguments_add_argument(
-        "--port",
-        "-p",
-        default=1337,
-        help="UDP/TCP port to start the ReverseShell server.",
-    )
-    arguments_add_argument(
-        "--encoding",
-        "-e",
-        help="The reverse shell encoding used by client.",
-    )
-    arguments_add_argument(
-        "--ssl", "-s", action="store_true", help="Use SSL over TCP socket."
-    )
-    arguments_add_argument(
-        "--no-timeout",
-        "-m",
-        action="store_true",
-        help=(
-            "Faster response but TCP data larger than Window maximum"
-            " size will not work. You should use this argument with "
-            "standard/basic reverse shell like netcat."
-        ),
-    )
-    return arguments.parse_args()
+# def parser() -> Namespace:
+#     """
+#     This function parses command line arguments.
+#     """
+#
+#     arguments = ArgumentParser(description="Advanced reverse shell console.")
+#     protocol = arguments.add_mutually_exclusive_group()
+#     arguments_add_argument = arguments.add_argument
+#     protocol_add_argument = protocol.add_argument
+#     protocol_add_argument(
+#         "--udp", "-u", action="store_true", help="Use UDP socket."
+#     )
+#     protocol_add_argument(
+#         "--tcp", "-t", action="store_true", help="Use TCP socket."
+#     )
+#     protocol_add_argument(
+#         "--multi-tcp",
+#         "-T",
+#         action="store_true",
+#         help="Create TCP socket for each command and responses.",
+#     )
+#     protocol = arguments.add_mutually_exclusive_group()
+#     protocol_add_argument = protocol.add_argument
+#     protocol_add_argument(
+#         "--http",
+#         "-H",
+#         action="store_true",
+#         help="Use HTTP requests and responses.",
+#     )
+#     protocol_add_argument(
+#         "--dns",
+#         "-d",
+#         action="store_true",
+#         help="Use DNS requests and responses.",
+#     )
+#     protocol_add_argument(
+#         "--irc",
+#         "-I",
+#         action="store_true",
+#         help="Use IRC requests and response.",
+#     )
+#     arguments_add_argument(
+#         "--no-color",
+#         "--color",
+#         "-C",
+#         default=True,
+#         action="store_false",
+#         help="Do not use color",
+#     )
+#     arguments_add_argument(
+#         "--key",
+#         "-k",
+#         default=None,
+#         type=lambda x: bytes(x, "utf-8"),
+#         help="Add a key to encrypt with RC4.",
+#     )
+#     arguments_add_argument(
+#         "--cert", "-c", default="server.crt", help="SSL cert file."
+#     )
+#     arguments_add_argument(
+#         "--private", "-P", default="server.key", help="SSL private key file."
+#     )
+#     arguments_add_argument(
+#         "--ip",
+#         "-i",
+#         default="0.0.0.0",
+#         help="IP address to start the ReverseShell server.",
+#     )
+#     arguments_add_argument(
+#         "--port",
+#         "-p",
+#         default=1337,
+#         help="UDP/TCP port to start the ReverseShell server.",
+#     )
+#     arguments_add_argument(
+#         "--encoding",
+#         "-e",
+#         help="The reverse shell encoding used by client.",
+#     )
+#     arguments_add_argument(
+#         "--ssl", "-s", action="store_true", help="Use SSL over TCP socket."
+#     )
+#     arguments_add_argument(
+#         "--no-timeout",
+#         "-m",
+#         action="store_true",
+#         help=(
+#             "Faster response but TCP data larger than Window maximum"
+#             " size will not work. You should use this argument with "
+#             "standard/basic reverse shell like netcat."
+#         ),
+#     )
+#     return arguments.parse_args()
 
 def main() -> int:
     """

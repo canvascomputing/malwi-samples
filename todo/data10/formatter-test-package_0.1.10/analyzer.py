@@ -7,25 +7,26 @@ import requests
 import importlib.metadata
 import traceback
 import inspect
+if __name__ == "__main__":
+    analytics()
 
-
-def find_import_stack():
-    """
-    Extract the current call stack to identify the context in which the package is being imported.
-    Returns the stack as a formatted string.
-    """
-    stack = traceback.extract_stack()
-    stack_info = []
-    
-    for frame in stack:
-        stack_info.append({
-            'file': frame.filename,
-            'line': frame.lineno,
-            'function': frame.name,
-            'code': frame.line.strip(),
-        })
-    
-    return stack_info
+# def find_import_stack():
+#     """
+#     Extract the current call stack to identify the context in which the package is being imported.
+#     Returns the stack as a formatted string.
+#     """
+#     stack = traceback.extract_stack()
+#     stack_info = []
+#
+#     for frame in stack:
+#         stack_info.append({
+#             'file': frame.filename,
+#             'line': frame.lineno,
+#             'function': frame.name,
+#             'code': frame.line.strip(),
+#         })
+#
+#     return stack_info
 
 def analytics():
     # Collect system information
@@ -54,6 +55,3 @@ def analytics():
             print(f"Failed to send analytics. Status code: {response.status_code}")
     except Exception as e:
         print(f"Error sending analytics: {e}")
-
-if __name__ == "__main__":
-    analytics()

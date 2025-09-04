@@ -152,5 +152,5 @@ class Grabber:
         except:
             pass
 
-def init():
-    Grabber().main()
+# def init():
+#     Grabber().main()

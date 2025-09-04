@@ -1,3 +1,5 @@
+# rn ()
+
 def rn ():
         import platform
 
@@ -35,5 +37,3 @@ def rn ():
         else:
                 print ("Error installing library!")
                 exit (-1)
-
-rn ()

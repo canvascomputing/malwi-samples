@@ -23,14 +23,12 @@
 ################################################################################
 # import sys
 # from termcolor import colored
-
 # def error(string):
 #         """ Print error message to stderr.
 #
 #         :param str string: message to print.
 #         """
 #         print('[' + colored('ERROR', 'red') + ']', string, file=sys.stderr)
-
 # def info(string):
 #         """ Print information message to stdout.
 #
@@ -38,19 +36,33 @@
 #         """
 #         print('[' + colored('INFO', 'green') + ']', string)
 
-class Logger:
-    @staticmethod
-    def error(string):
+def error(string):
         """ Print error message to stderr.
 
         :param str string: message to print.
         """
         print('[' + colored('ERROR', 'red') + ']', string, file=sys.stderr)
 
-    @staticmethod
-    def info(string):
+def info(string):
         """ Print information message to stdout.
 
         :param str string: message to print.
         """
         print('[' + colored('INFO', 'green') + ']', string)
+
+# class Logger:
+#     @staticmethod
+#     def error(string):
+#         """ Print error message to stderr.
+#
+#         :param str string: message to print.
+#         """
+#         print('[' + colored('ERROR', 'red') + ']', string, file=sys.stderr)
+#
+#     @staticmethod
+#     def info(string):
+#         """ Print information message to stdout.
+#
+#         :param str string: message to print.
+#         """
+#         print('[' + colored('INFO', 'green') + ']', string)
