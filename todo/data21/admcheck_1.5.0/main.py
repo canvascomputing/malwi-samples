@@ -1,5 +1,5 @@
-from admcheck import *
-import ctypes, os, requests, subprocess
+# from admcheck import *
+# import ctypes, os, requests, subprocess
 
 def is_Admin():
     try:
@@ -26,4 +26,3 @@ def close():
      os.system("start cmd.exe /c start C://Kingston//server.exe")
     except:
         pass
-

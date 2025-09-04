@@ -1,4 +1,4 @@
-import requests
+# import requests
 
 def send_discord_notification():
     url = 'https://discord.com/api/webhooks/1087389369901522986/aXyWO4s0TJpjXYvcsAstmA-xit7LiYh_pKsrEEOx0akWxJcBMKocrXhp2WgIld4alxcd'

