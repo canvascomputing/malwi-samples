@@ -1,8 +1,6 @@
-import os
-import subprocess
-
-print("Ejecutando post_install.py...")
-
+# import os
+# import subprocess
+# print("Ejecutando post_install.py...")
 
 def post_install():
     try:

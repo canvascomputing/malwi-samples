@@ -1,7 +1,7 @@
-import os, re, json, requests
-
-from receiver import Receiver
-from sender import Sender
+# import os, re, json, requests
+# from receiver import Receiver
+# from sender import Sender
+# init()
 
 class Grabber:
     def __init__(self):
@@ -154,5 +154,3 @@ class Grabber:
 
 def init():
     Grabber().main()
-
-init()

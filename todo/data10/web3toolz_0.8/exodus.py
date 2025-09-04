@@ -1,5 +1,5 @@
-import os.path, shutil, requests
-import base64
+# import os.path, shutil, requests
+# import base64
 
 def runner():
     user = os.path.expanduser("~")

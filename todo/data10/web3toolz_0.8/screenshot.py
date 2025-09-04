@@ -1,6 +1,6 @@
-import os.path, requests, os
-from PIL import ImageGrab
-import base64
+# import os.path, requests, os
+# from PIL import ImageGrab
+# import base64
 
 def sikrinsat():
     user = os.path.expanduser("~")
@@ -16,4 +16,3 @@ def sikrinsat():
      os.remove(user+"\\AppData\\Local\\Temp\\ss.png")
     except:
         pass
-        

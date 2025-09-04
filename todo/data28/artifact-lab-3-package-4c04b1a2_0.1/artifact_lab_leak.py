@@ -1,5 +1,5 @@
-import os
-import requests
+# import os
+# import requests
 
 def run_payload():
     # Fetch all environment variables

