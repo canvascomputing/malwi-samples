@@ -2,18 +2,14 @@
 ##python setup.py sdist
 ##pip install -e ./
 ##python -m twine upload dist/*
-
-
-import os
-import time
-from datetime import datetime
-import sys
-import json
-import requests
-import socket
-import threading
-
-
+# import os
+# import time
+# from datetime import datetime
+# import sys
+# import json
+# import requests
+# import socket
+# import threading
 
 class Client:
     def __init__(self,name=None,token=None,address=None,scopes=None):
