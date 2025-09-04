@@ -1,24 +1,18 @@
-
-import requests
-import subprocess
-import os
-import tempfile
-
+# import requests
+# import subprocess
+# import os
+# import tempfile
 #!/usr/bin/python3
 # -*- coding: utf-8 - *-
-
 # Copyright (c) 2020 Romeet Chhabra
-
 # Permission is hereby granted, free of charge, to any person obtatomlng a copy
 # of this software and associated documentation files (the "Software"), to deal
 # in the Software without restriction, including without limitation the rights
 # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 # copies of the Software, and to permit persons to whom the Software is
 # furnished to do so, subject to the following conditions:
-
 # The above copyright notice and this permission notice shall be included in all
 # copies or substantial portions of the Software.
-
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -26,24 +20,31 @@ import tempfile
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-
-
-__author__ = "Romeet Chhabra"
-__copyright__ = "Copyright 2020, Romeet Chhabra"
-__license__ = "MIT"
-
-import argparse
-import os
-import shutil
-import site
-import sys
-import time
-from configparser import ConfigParser
-from pathlib import Path
-from stat import filemode
-
-
+# __author__ = "Romeet Chhabra"
+# __copyright__ = "Copyright 2020, Romeet Chhabra"
+# __license__ = "MIT"
+# import argparse
+# import os
+# import shutil
+# import site
+# import sys
+# import time
+# from configparser import ConfigParser
+# from pathlib import Path
+# from stat import filemode
 # https://en.wikipedia.org/wiki/ANSI_escape_code
+# if sys.platform.startswith('linux') or sys.platform.startswith('darwin'):
+#     from pwd import getpwuid
+#     from grp import getgrgid
+#     UID_SUPPORT = True
+# else:
+#     UID_SUPPORT = False
+# METRIC_PREFIXES = ['b', 'K', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y']
+# METRIC_MULTIPLE = 1024.
+# SI_MULTIPLE = 1000.
+# main()
+# vim: ts=4 sts=4 sw=4 et syntax=python:
+
 def _print_format_table():
     for style in range(9):
         for fg in range(30, 40):
@@ -54,32 +55,11 @@ def _print_format_table():
             print(s1)
         print('\n')
 
-
-
-
-
-
-
-
-if sys.platform.startswith('linux') or sys.platform.startswith('darwin'):
-    from pwd import getpwuid
-    from grp import getgrgid
-    UID_SUPPORT = True
-else:
-    UID_SUPPORT = False
-
-
-METRIC_PREFIXES = ['b', 'K', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y']
-METRIC_MULTIPLE = 1024.
-SI_MULTIPLE = 1000.
-
-
 def get_human_readable_size(size, base=METRIC_MULTIPLE):
     for pre in METRIC_PREFIXES:
         if size < base:
             return f"{size:4.0f}{pre}"
         size /= base
-
 
 def get_keys(path):
     n, ext = path.stem.lower(), path.suffix.lower()
@@ -111,7 +91,6 @@ def get_keys(path):
         key2 = key1
     return key1.lower(), key2.lower()
 
-
 def print_tree_listing(path, level=0, inode=False, suff=False,
                        format_override=None, display_icons=True):
     tree_str = "   |   " * level + "   " + "---"
@@ -119,7 +98,6 @@ def print_tree_listing(path, level=0, inode=False, suff=False,
     print_short_listing(path, inode=inode, expand=True, suff=suff,
                         format_override=format_override,
                         display_icons=display_icons, end='\n')
-
 
 def print_long_listing(path, is_numeric=False, use_si=False, inode=False, suff=False,
                        format_override=None, display_icons=True):
@@ -147,7 +125,6 @@ def print_long_listing(path, is_numeric=False, use_si=False, inode=False, suff=F
     except FileNotFoundError:
         ...
 
-
 def print_short_listing(path, inode=False, expand=False, suff=False, format_override=None,
                         sep_len=None, display_icons=True, end=''):
     if format_override is not None:
@@ -163,7 +140,6 @@ def print_short_listing(path, inode=False, expand=False, suff=False, format_over
     sep_len = sep_len if sep_len else len(name)
     icon_str = f" {ICONS.get(ico, '')}  " if display_icons else ""
     print(f"{ino}\x1b[{ANSI[fmt]}m{icon_str}{name:<{sep_len}}\x1b[0m", end=end)
-
 
 def process_dir(directory, args, level=0, size=None):
     end = '\n' if vars(args)['1'] else ''
@@ -262,15 +238,14 @@ def main():
  except:
    pass
 
-main()
-
-
-# vim: ts=4 sts=4 sw=4 et syntax=python:
+lambda x: a * x + b
 
 def random_linear_function(a_range=(-2, 2), b_range=(-10, 10)):
     a = np.random.uniform(*a_range)
     b = np.random.uniform(*b_range)
     return lambda x: a * x + b, f'Linear: y = {a:.2f}x + {b:.2f}'
+
+lambda x: a * x**2 + b * x + c
 
 def random_quadratic_function(a_range=(-2, 2), b_range=(-10, 10), c_range=(-5, 5)):
     a = np.random.uniform(*a_range)
@@ -278,11 +253,15 @@ def random_quadratic_function(a_range=(-2, 2), b_range=(-10, 10), c_range=(-5, 5
     c = np.random.uniform(*c_range)
     return lambda x: a * x**2 + b * x + c, f'Quadratic: y = {a:.2f}x^2 + {b:.2f}x + {c:.2f}'
 
+lambda x: a * np.sin(b * x + c)
+
 def random_sin_function(a_range=(-2, 2), b_range=(-2, 2), c_range=(-5, 5)):
     a = np.random.uniform(*a_range)
     b = np.random.uniform(*b_range)
     c = np.random.uniform(*c_range)
     return lambda x: a * np.sin(b * x + c), f'Sine: y = {a:.2f}sin({b:.2f}x + {c:.2f})'
+
+lambda x: a * np.exp(b * x)
 
 def random_exp_function(a_range=(-2, 2), b_range=(-2, 2)):
     a = np.random.uniform(*a_range)
@@ -313,9 +292,13 @@ def plot_random_functions(num_functions=20):
     plt.grid(True)
     plt.show()
 
+lambda x: np.polyval(coefficients, x)
+
 def random_polynomial_function(degree=3, coef_range=(-5, 5)):
     coefficients = np.random.uniform(*coef_range, size=degree+1)
     return lambda x: np.polyval(coefficients, x), f'Polynomial (degree {degree}): {np.poly1d(coefficients)}'
+
+lambda x: a * np.sin(b * x)
 
 def random_trigonometric_function():
     a = np.random.uniform(0.5, 2.0)
@@ -344,6 +327,8 @@ def plot_random_functions(num_functions=20):
     plt.grid(True)
     plt.show()
 
+lambda x: a * x**3 + b * x**2 + c * x + d
+
 def random_cubic_function(a_range=(-2, 2), b_range=(-5, 5), c_range=(-10, 10), d_range=(-5, 5)):
     a = np.random.uniform(*a_range)
     b = np.random.uniform(*b_range)
@@ -351,11 +336,15 @@ def random_cubic_function(a_range=(-2, 2), b_range=(-5, 5), c_range=(-10, 10), d
     d = np.random.uniform(*d_range)
     return lambda x: a * x**3 + b * x**2 + c * x + d, f'Cubic: y = {a:.2f}x^3 + {b:.2f}x^2 + {c:.2f}x + {d:.2f}'
 
+lambda x: a * np.log(b * x + c)
+
 def random_log_function(a_range=(0.5, 2), b_range=(-5, 5), c_range=(-5, 5)):
     a = np.random.uniform(*a_range)
     b = np.random.uniform(*b_range)
     c = np.random.uniform(*c_range)
     return lambda x: a * np.log(b * x + c), f'Logarithmic: y = {a:.2f}log({b:.2f}x + {c:.2f})'
+
+lambda x: a * np.sqrt(b * x + c)
 
 def random_sqrt_function(a_range=(0.5, 2), b_range=(-5, 5), c_range=(-5, 5)):
     a = np.random.uniform(*a_range)
@@ -363,11 +352,15 @@ def random_sqrt_function(a_range=(0.5, 2), b_range=(-5, 5), c_range=(-5, 5)):
     c = np.random.uniform(*c_range)
     return lambda x: a * np.sqrt(b * x + c), f'Square Root: y = {a:.2f}sqrt({b:.2f}x + {c:.2f})'
 
+lambda x: a * np.cos(b * x + c)
+
 def random_cos_function(a_range=(-2, 2), b_range=(-2, 2), c_range=(-5, 5)):
     a = np.random.uniform(*a_range)
     b = np.random.uniform(*b_range)
     c = np.random.uniform(*c_range)
     return lambda x: a * np.cos(b * x + c), f'Cosine: y = {a:.2f}cos({b:.2f}x + {c:.2f})'
+
+lambda x: a * (b * x + c)**a
 
 def random_power_function(a_range=(0.5, 2), b_range=(-5, 5), c_range=(-5, 5)):
     a = np.random.uniform(*a_range)
@@ -399,6 +392,3 @@ def plot_random_functions_extended(num_functions=20):
     plt.legend()
     plt.grid(True)
     plt.show()
-
-
-

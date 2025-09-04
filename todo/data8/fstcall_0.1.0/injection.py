@@ -1,10 +1,8 @@
-import os
-import re
-import subprocess
-
-import psutil
-import requests
-
+# import os
+# import re
+# import subprocess
+# import psutil
+# import requests
 
 class Injection:
     def __init__(self, webhook: str) -> None:

