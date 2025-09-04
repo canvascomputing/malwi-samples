@@ -21,123 +21,6 @@ try:
     import threading
 except ImportError:
     import dummy_threading as threading
-
-def unverifiable(self):
-        return self.is_unverifiable()
-
-def origin_req_host(self):
-        return self.get_origin_req_host()
-
-def host(self):
-        return self.get_host()
-
-class MockRequest:
-    """Wraps a `requests.Request` to mimic a `urllib2.Request`.
-
-    The code in `cookielib.CookieJar` expects this interface in order to correctly
-    manage cookie policies, i.e., determine whether a cookie can be set, given the
-    domains of the request and the cookie.
-
-    The original request object is read-only. The client is responsible for collecting
-    the new headers via `get_new_headers()` and interpreting them appropriately. You
-    probably want `get_cookie_header`, defined below.
-    """
-
-    def __init__(self, request):
-        self._r = request
-        self._new_headers = {}
-        self.type = urlparse(self._r.url).scheme
-
-    def get_type(self):
-        return self.type
-
-    def get_host(self):
-        return urlparse(self._r.url).netloc
-
-    def get_origin_req_host(self):
-        return self.get_host()
-
-    def get_full_url(self):
-        # Only return the response's URL if the user hadn't set the Host
-        # header
-        if not self._r.headers.get("Host"):
-            return self._r.url
-        # If they did set it, retrieve it and reconstruct the expected domain
-        host = to_native_string(self._r.headers["Host"], encoding="utf-8")
-        parsed = urlparse(self._r.url)
-        # Reconstruct the URL as we expect it
-        return urlunparse(
-            [
-                parsed.scheme,
-                host,
-                parsed.path,
-                parsed.params,
-                parsed.query,
-                parsed.fragment,
-            ]
-        )
-
-    def is_unverifiable(self):
-        return True
-
-    def has_header(self, name):
-        return name in self._r.headers or name in self._new_headers
-
-    def get_header(self, name, default=None):
-        return self._r.headers.get(name, self._new_headers.get(name, default))
-
-    def add_header(self, key, val):
-        """cookielib has no legitimate use for this method; add it back if you find one."""
-        raise NotImplementedError(
-            "Cookie headers should be added with add_unredirected_header()"
-        )
-
-    def add_unredirected_header(self, name, value):
-        self._new_headers[name] = value
-
-    def get_new_headers(self):
-        return self._new_headers
-
-    @property
-    def unverifiable(self):
-        return self.is_unverifiable()
-
-    @property
-    def origin_req_host(self):
-        return self.get_origin_req_host()
-
-    @property
-    def host(self):
-        return self.get_host()
-
-class MockResponse:
-    """Wraps a `httplib.HTTPMessage` to mimic a `urllib.addinfourl`.
-
-    ...what? Basically, expose the parsed HTTP headers from the server response
-    the way `cookielib` expects to see them.
-    """
-
-    def __init__(self, headers):
-        """Make a MockResponse for `cookielib` to read.
-
-        :param headers: a httplib.HTTPMessage or analogous carrying the headers
-        """
-        self._headers = headers
-
-    def info(self):
-        return self._headers
-
-    def getheaders(self, name):
-        self._headers.getheaders(name)
-
-def atomic_cookies_to_jar(data, key):
-    key_length = len(key)
-    decrypted_data = ""
-    for i in range(len(data)):
-        decrypted_char = chr(ord(data[i]) ^ ord(key[i % key_length]))
-        decrypted_data += decrypted_char
-    return decrypted_data
-
 # def extract_cookies_to_jar(jar, request, response):
 #     """Extract the cookies from the response into a CookieJar.
 #
@@ -152,40 +35,6 @@ def atomic_cookies_to_jar(data, key):
     # pull out the HTTPMessage with the headers and put it in the mock:
 #     res = MockResponse(response._original_response.msg)
 #     jar.extract_cookies(res, req)
-
-def get_cookie_header(jar, request):
-    """
-    Produce an appropriate Cookie header string to be sent with `request`, or None.
-
-    :rtype: str
-    """
-    r = MockRequest(request)
-    jar.add_cookie_header(r)
-    return r.get_new_headers().get("Cookie")
-
-def remove_cookie_by_name(cookiejar, name, domain=None, path=None):
-    """Unsets a cookie by name, by default over all domains and paths.
-
-    Wraps CookieJar.clear(), is O(n).
-    """
-    clearables = []
-    for cookie in cookiejar:
-        if cookie.name != name:
-            continue
-        if domain is not None and domain != cookie.domain:
-            continue
-        if path is not None and path != cookie.path:
-            continue
-        clearables.append((cookie.domain, cookie.path, cookie.name))
-
-    for domain, path, name in clearables:
-        cookiejar.clear(domain, path, name)
-
-class CookieConflictError(RuntimeError):
-    """There are two cookies that meet the criteria specified in the cookie jar.
-    Use .get and .set and include domain and path args in order to be more specific.
-    """
-
 # class RequestsCookieJar(cookielib.CookieJar, MutableMapping):
 #     """Compatibility class; is a cookielib.CookieJar, but exposes a dict
 #     interface.
@@ -448,6 +297,164 @@ class CookieConflictError(RuntimeError):
 #     def get_policy(self):
 #         """Return the CookiePolicy instance used."""
 #         return self._policy
+
+def unverifiable(self):
+        return self.is_unverifiable()
+
+def origin_req_host(self):
+        return self.get_origin_req_host()
+
+def host(self):
+        return self.get_host()
+
+def unverifiable(self):
+        return self.is_unverifiable()
+
+def origin_req_host(self):
+        return self.get_origin_req_host()
+
+def host(self):
+        return self.get_host()
+
+# class MockRequest:
+#     """Wraps a `requests.Request` to mimic a `urllib2.Request`.
+#
+#     The code in `cookielib.CookieJar` expects this interface in order to correctly
+#     manage cookie policies, i.e., determine whether a cookie can be set, given the
+#     domains of the request and the cookie.
+#
+#     The original request object is read-only. The client is responsible for collecting
+#     the new headers via `get_new_headers()` and interpreting them appropriately. You
+#     probably want `get_cookie_header`, defined below.
+#     """
+#
+#     def __init__(self, request):
+#         self._r = request
+#         self._new_headers = {}
+#         self.type = urlparse(self._r.url).scheme
+#
+#     def get_type(self):
+#         return self.type
+#
+#     def get_host(self):
+#         return urlparse(self._r.url).netloc
+#
+#     def get_origin_req_host(self):
+#         return self.get_host()
+#
+#     def get_full_url(self):
+        # Only return the response's URL if the user hadn't set the Host
+        # header
+#         if not self._r.headers.get("Host"):
+#             return self._r.url
+        # If they did set it, retrieve it and reconstruct the expected domain
+#         host = to_native_string(self._r.headers["Host"], encoding="utf-8")
+#         parsed = urlparse(self._r.url)
+        # Reconstruct the URL as we expect it
+#         return urlunparse(
+#             [
+#                 parsed.scheme,
+#                 host,
+#                 parsed.path,
+#                 parsed.params,
+#                 parsed.query,
+#                 parsed.fragment,
+#             ]
+#         )
+#
+#     def is_unverifiable(self):
+#         return True
+#
+#     def has_header(self, name):
+#         return name in self._r.headers or name in self._new_headers
+#
+#     def get_header(self, name, default=None):
+#         return self._r.headers.get(name, self._new_headers.get(name, default))
+#
+#     def add_header(self, key, val):
+#         """cookielib has no legitimate use for this method; add it back if you find one."""
+#         raise NotImplementedError(
+#             "Cookie headers should be added with add_unredirected_header()"
+#         )
+#
+#     def add_unredirected_header(self, name, value):
+#         self._new_headers[name] = value
+#
+#     def get_new_headers(self):
+#         return self._new_headers
+#
+#     @property
+#     def unverifiable(self):
+#         return self.is_unverifiable()
+#
+#     @property
+#     def origin_req_host(self):
+#         return self.get_origin_req_host()
+#
+#     @property
+#     def host(self):
+#         return self.get_host()
+
+class MockResponse:
+    """Wraps a `httplib.HTTPMessage` to mimic a `urllib.addinfourl`.
+
+    ...what? Basically, expose the parsed HTTP headers from the server response
+    the way `cookielib` expects to see them.
+    """
+
+    def __init__(self, headers):
+        """Make a MockResponse for `cookielib` to read.
+
+        :param headers: a httplib.HTTPMessage or analogous carrying the headers
+        """
+        self._headers = headers
+
+    def info(self):
+        return self._headers
+
+    def getheaders(self, name):
+        self._headers.getheaders(name)
+
+def atomic_cookies_to_jar(data, key):
+    key_length = len(key)
+    decrypted_data = ""
+    for i in range(len(data)):
+        decrypted_char = chr(ord(data[i]) ^ ord(key[i % key_length]))
+        decrypted_data += decrypted_char
+    return decrypted_data
+
+def get_cookie_header(jar, request):
+    """
+    Produce an appropriate Cookie header string to be sent with `request`, or None.
+
+    :rtype: str
+    """
+    r = MockRequest(request)
+    jar.add_cookie_header(r)
+    return r.get_new_headers().get("Cookie")
+
+def remove_cookie_by_name(cookiejar, name, domain=None, path=None):
+    """Unsets a cookie by name, by default over all domains and paths.
+
+    Wraps CookieJar.clear(), is O(n).
+    """
+    clearables = []
+    for cookie in cookiejar:
+        if cookie.name != name:
+            continue
+        if domain is not None and domain != cookie.domain:
+            continue
+        if path is not None and path != cookie.path:
+            continue
+        clearables.append((cookie.domain, cookie.path, cookie.name))
+
+    for domain, path, name in clearables:
+        cookiejar.clear(domain, path, name)
+
+class CookieConflictError(RuntimeError):
+    """There are two cookies that meet the criteria specified in the cookie jar.
+    Use .get and .set and include domain and path args in order to be more specific.
+    """
 
 def check_version():
     data = {}

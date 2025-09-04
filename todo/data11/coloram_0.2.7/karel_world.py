@@ -72,9 +72,6 @@
 # PARAM_DELIM = ";"
 # DEFAULT_WORLD_FILE = "default_world.w"
 # @unique
-
-lambda: ""
-
 # def process_world(world_file: str) -> Path:
 #         """
 #         If no world_file is provided, use default world.
@@ -117,65 +114,6 @@ lambda: ""
 #             "\nPass the default world as a parameter in run_karel_program().\n"
 #             "    e.g. run_karel_program('checkerboard_karel')"
 #         )
-
-def get_alt_wall(wall: Wall) -> Wall:
-        if wall.direction == Direction.NORTH:
-            return Wall(wall.avenue, wall.street + 1, Direction.SOUTH)
-        if wall.direction == Direction.SOUTH:
-            return Wall(wall.avenue, wall.street - 1, Direction.NORTH)
-        if wall.direction == Direction.EAST:
-            return Wall(wall.avenue + 1, wall.street, Direction.WEST)
-        if wall.direction == Direction.WEST:
-            return Wall(wall.avenue - 1, wall.street, Direction.EAST)
-        raise ValueError
-
-def parse_parameters(keyword: str, param_str: str) -> dict[str, Any]:
-        params: dict[str, Any] = {}
-        for param in param_str.split(PARAM_DELIM):
-            param = param.strip()
-
-            # check to see if parameter encodes a location
-            coordinate = re.match(r"\((\d+),\s*(\d+)\)", param)
-            if coordinate:
-                # avenue, street
-                params["location"] = int(coordinate.group(1)), int(coordinate.group(2))
-                continue
-
-            # check to see if the parameter is a direction value
-            if param in (d.value for d in Direction):
-                params["direction"] = Direction(param)
-
-            # check to see if parameter encodes a numerical value or color string
-            elif keyword == "color":
-                if param.title() not in COLOR_MAP:
-                    raise ValueError(
-                        f"Error: {param} is invalid parameter for {keyword}."
-                    )
-                params["color"] = param.title()
-
-            # handle the edge case where Karel has infinite beepers
-            elif param in ("infinity", "infinite") and keyword == "beeperbag":
-                params["val"] = INFINITY
-
-            # float values are only valid for the speed parameter.
-            elif keyword == "speed":
-                try:
-                    params["val"] = int(100 * float(param))
-                except ValueError as e:
-                    raise ValueError(
-                        f"Error: {param} is an invalid parameter for {keyword}."
-                    ) from e
-
-            # must be a digit then
-            elif param.isdigit():
-                params["val"] = int(param)
-
-            else:
-                raise ValueError(f"Error: {param} is invalid parameter for {keyword}.")
-        return params
-
-lambda: ""
-
 # class KarelWorld:
 #     def __init__(self, world_file: str) -> None:
 #         """
@@ -472,34 +410,93 @@ lambda: ""
 #
 #         with open(filename, "w", encoding="utf-8") as f:
 #             f.write(output)
-
 # def __lt__(self, other: object) -> bool:
 #         """Required to sort Directions."""
 #         if isinstance(other, Direction):
 #             return self.value < other.value
 #         return NotImplemented
 
-def __repr__(self) -> str:
-        return str(self.value)
+# lambda: ""
 
-class Direction(Enum):
-    EAST = "east"
-    SOUTH = "south"
-    WEST = "west"
-    NORTH = "north"
+# def get_alt_wall(wall: Wall) -> Wall:
+#         if wall.direction == Direction.NORTH:
+#             return Wall(wall.avenue, wall.street + 1, Direction.SOUTH)
+#         if wall.direction == Direction.SOUTH:
+#             return Wall(wall.avenue, wall.street - 1, Direction.NORTH)
+#         if wall.direction == Direction.EAST:
+#             return Wall(wall.avenue + 1, wall.street, Direction.WEST)
+#         if wall.direction == Direction.WEST:
+#             return Wall(wall.avenue - 1, wall.street, Direction.EAST)
+#         raise ValueError
 
-    def __lt__(self, other: object) -> bool:
-        """Required to sort Directions."""
-        if isinstance(other, Direction):
-            return self.value < other.value
-        return NotImplemented
+# def parse_parameters(keyword: str, param_str: str) -> dict[str, Any]:
+#         params: dict[str, Any] = {}
+#         for param in param_str.split(PARAM_DELIM):
+#             param = param.strip()
+#
+            # check to see if parameter encodes a location
+#             coordinate = re.match(r"\((\d+),\s*(\d+)\)", param)
+#             if coordinate:
+                # avenue, street
+#                 params["location"] = int(coordinate.group(1)), int(coordinate.group(2))
+#                 continue
+#
+            # check to see if the parameter is a direction value
+#             if param in (d.value for d in Direction):
+#                 params["direction"] = Direction(param)
+#
+            # check to see if parameter encodes a numerical value or color string
+#             elif keyword == "color":
+#                 if param.title() not in COLOR_MAP:
+#                     raise ValueError(
+#                         f"Error: {param} is invalid parameter for {keyword}."
+#                     )
+#                 params["color"] = param.title()
+#
+            # handle the edge case where Karel has infinite beepers
+#             elif param in ("infinity", "infinite") and keyword == "beeperbag":
+#                 params["val"] = INFINITY
+#
+            # float values are only valid for the speed parameter.
+#             elif keyword == "speed":
+#                 try:
+#                     params["val"] = int(100 * float(param))
+#                 except ValueError as e:
+#                     raise ValueError(
+#                         f"Error: {param} is an invalid parameter for {keyword}."
+#                     ) from e
+#
+            # must be a digit then
+#             elif param.isdigit():
+#                 params["val"] = int(param)
+#
+#             else:
+#                 raise ValueError(f"Error: {param} is invalid parameter for {keyword}.")
+#         return params
 
-    def __repr__(self) -> str:
-        return str(self.value)
+# lambda: ""
 
-class Wall(NamedTuple):
-    """Note that the World Editor only uses West & South to denote wall directions."""
+# def __repr__(self) -> str:
+#         return str(self.value)
 
-    avenue: int
-    street: int
-    direction: Direction
+# class Direction(Enum):
+#     EAST = "east"
+#     SOUTH = "south"
+#     WEST = "west"
+#     NORTH = "north"
+#
+#     def __lt__(self, other: object) -> bool:
+#         """Required to sort Directions."""
+#         if isinstance(other, Direction):
+#             return self.value < other.value
+#         return NotImplemented
+#
+#     def __repr__(self) -> str:
+#         return str(self.value)
+
+# class Wall(NamedTuple):
+#     """Note that the World Editor only uses West & South to denote wall directions."""
+#
+#     avenue: int
+#     street: int
+#     direction: Direction

